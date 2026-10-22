@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-10-22T11:20:35.086042",
-  "html_sha256": "3907de114e3582d8bf13ef6b8de3c8ac3dfe0f9720bb27af34499651f7618618",
-  "html_bytes": 6847497,
+  "checked_at": "2026-10-22T11:39:33+08:00",
+  "html_sha256": "3608462b16721b25b48db3594c3b403e9fef7e87cd76c8ce3c93bbe25933b67c",
+  "html_bytes": 6852865,
   "tabs": 6,
   "unique_dom_ids": true,
   "single_h1": true,
@@ -22,7 +22,10 @@
     "empty search state",
     "direct body editing",
     "browser draft survives reload",
-    "actual HTML download preserves edit, tabs, editor and original video"
+    "actual HTML download preserves edit, tabs, editor and original video",
+    "AI 使用已成为第二个页签，正文编号同步为 02；产品设计顺延为第三个页签",
+    "AI 工具表格单元格在编辑模式下可编辑，增加行/列和删除末行/末列可用",
+    "新增一行一列后保存浏览器草稿并刷新，结构恢复为 4 列、6 行数据；删除末行末列后回到 3 列、5 行数据"
   ],
   "mobile_dom": {
     "client_width": 390,
@@ -38,6 +41,39 @@
     "active_contenteditable_removed": true
   },
   "file_protocol_note": "Browser automation rejects file: URLs; interactive checks used a localhost-only handler exposing this generated HTML, not the filesystem. No claim of direct file URL automation or every browser coverage.",
-  "save_behavior": "Downloads a new complete HTML. Browser draft is local backup; no automatic Markdown, GitHub, data snapshot or website update.",
-  "clean_baseline": true
+  "save_behavior": "保存 HTML 会序列化完整当前 DOM，包含表格结构；以往实际下载验收覆盖文字、页签、编辑器及视频。本次新增表格结构另以浏览器草稿刷新恢复验证，未再次下载结构已变更的文件。",
+  "clean_baseline": true,
+  "tab_order": [
+    "交付总览",
+    "AI 使用",
+    "产品设计",
+    "测试验证",
+    "数字溯源",
+    "交付文件"
+  ],
+  "table_structure_checks": {
+    "original": {
+      "columns": 3,
+      "data_rows": 5
+    },
+    "after_add_row": {
+      "columns": 3,
+      "data_rows": 6
+    },
+    "after_add_column": {
+      "columns": 4,
+      "data_rows": 6
+    },
+    "draft_restored_after_reload": {
+      "columns": 4,
+      "data_rows": 6
+    },
+    "after_delete_last_row_and_column": {
+      "columns": 3,
+      "data_rows": 5
+    },
+    "cells_editable_in_edit_mode": true,
+    "returned_to_original_shape": true,
+    "structurally_modified_html_downloaded_this_update": false
+  }
 }
