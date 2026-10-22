@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-10-22T10:52:00.073373",
+  "scope": "Final current documents, local links, release files, runtime build and public browser flow; packaging receipt supplied with standalone final bundle.",
+  "product_url": "https://emberscrolls.top/ChainScope-0.3.22/dist/",
+  "repository": "https://github.com/caiwenjie295-hash/ChainScope",
+  "repository_visibility": "public",
+  "browser_flow": [
+    "select AI",
+    "start analysis",
+    "select thermal segment",
+    "select Envicool",
+    "expand AI summary",
+    "comparability and transmission visible"
+  ],
+  "snapshot_checks": 1516,
+  "snapshot_sha256": "d2d4c5d9f6b00850aef8cb8b9db3c4a67d72feddd07f9916bb7956637181729b",
+  "video_sha256": "718432ba6cb80b3db783104180bd8b3e37dc97933314b990fc4716d1b8973508",
+  "video_duration": 60.0,
+  "video_audio_tracks": 0,
+  "video_verification": "bytes identical to previously fully decoded verified master",
+  "superseded_status_text_removed": true,
+  "research_unittest": "historical run: 20 passed, 2 failures, 4 errors incl import placeholders; not rerun or fixed by this documentation pass",
+  "source_evidence_limits": "16 non-null metrics have only non-public URL sources; original evidence missing; no complete independent fact audit",
+  "network_observations": "some direct requests timed out; actual online browser flow passed; raw HTTP attempts retained"
+}

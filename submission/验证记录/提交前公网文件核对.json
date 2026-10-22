@@ -1,0 +1,57 @@
+{
+  "checked_at": "2026-10-22T10:44:58.614542",
+  "base_url": "https://emberscrolls.top/ChainScope-0.3.22/dist/",
+  "results": [
+    {
+      "path": "./",
+      "status": 200,
+      "bytes": 588,
+      "matches_build": true,
+      "sha256": "130b5da2f2266671bc6fbab891a63190f5b15180010c4329c3e949ece84daa04"
+    },
+    {
+      "path": "agent_architecture.html",
+      "error": "<urlopen error _ssl.c:1063: The handshake operation timed out>",
+      "retry": {
+        "status": 200,
+        "matches_build": true,
+        "sha256": "bfa09cc4a567fb9d3f0678f609f3162bba01bfca98118db68b0cd09924aa06dc"
+      }
+    },
+    {
+      "path": "cost_performance.html",
+      "status": 200,
+      "bytes": 581,
+      "matches_build": true,
+      "sha256": "b0a3a5d4c3a5e3cab02d63e99cc291cedcf9d07f56ba7b7dcbcbd207a1c87487"
+    },
+    {
+      "path": "prod_loop.html",
+      "status": 200,
+      "bytes": 557,
+      "matches_build": true,
+      "sha256": "4f352372615dfe8b0fd266e403b44d0ae9c96a6f81012319d39b63cbda4b75bd"
+    },
+    {
+      "path": "assets/main-D7T4KlsH.js",
+      "error": "The read operation timed out",
+      "retry": {
+        "error": "<urlopen error _ssl.c:1063: The handshake operation timed out>"
+      }
+    },
+    {
+      "path": "assets/main-Bc9PywLa.css",
+      "status": 200,
+      "bytes": 91898,
+      "matches_build": true,
+      "sha256": "095daf4d71fd23b35bfbd4efe1d45925880fd0a6800fc383c75ef0f290afc535"
+    },
+    {
+      "path": "data/snapshot.json",
+      "status": 200,
+      "bytes": 344596,
+      "matches_build": true,
+      "sha256": "d2d4c5d9f6b00850aef8cb8b9db3c4a67d72feddd07f9916bb7956637181729b"
+    }
+  ]
+}

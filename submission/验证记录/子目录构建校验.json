@@ -1,0 +1,116 @@
+{
+  "checked_at": "2026-10-22T10:36:04.485513",
+  "status": "passed",
+  "build": "TypeScript and Vite passed",
+  "layouts": [
+    "domain root",
+    "/ChainScope-0.3.22/dist/"
+  ],
+  "http_checks": [
+    {
+      "url": "http://127.0.0.1:60009/",
+      "status": 200,
+      "assets": [
+        "./assets/main-D7T4KlsH.js",
+        "./assets/main-Bc9PywLa.css"
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:60009/index.html",
+      "status": 200,
+      "assets": [
+        "./assets/main-D7T4KlsH.js",
+        "./assets/main-Bc9PywLa.css"
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:60009/agent_architecture.html",
+      "status": 200,
+      "assets": [
+        "./assets/main-D7T4KlsH.js",
+        "./assets/main-Bc9PywLa.css"
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:60009/cost_performance.html",
+      "status": 200,
+      "assets": [
+        "./assets/main-D7T4KlsH.js",
+        "./assets/main-Bc9PywLa.css"
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:60009/prod_loop.html",
+      "status": 200,
+      "assets": [
+        "./assets/main-D7T4KlsH.js",
+        "./assets/main-Bc9PywLa.css"
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:60009/?concept=concept.ai&stage=structure&company=envicool&summary=1",
+      "status": 200,
+      "assets": [
+        "./assets/main-D7T4KlsH.js",
+        "./assets/main-Bc9PywLa.css"
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:5174/ChainScope-0.3.22/dist/",
+      "status": 200,
+      "assets": [
+        "./assets/main-D7T4KlsH.js",
+        "./assets/main-Bc9PywLa.css"
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:5174/ChainScope-0.3.22/dist/index.html",
+      "status": 200,
+      "assets": [
+        "./assets/main-D7T4KlsH.js",
+        "./assets/main-Bc9PywLa.css"
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:5174/ChainScope-0.3.22/dist/agent_architecture.html",
+      "status": 200,
+      "assets": [
+        "./assets/main-D7T4KlsH.js",
+        "./assets/main-Bc9PywLa.css"
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:5174/ChainScope-0.3.22/dist/cost_performance.html",
+      "status": 200,
+      "assets": [
+        "./assets/main-D7T4KlsH.js",
+        "./assets/main-Bc9PywLa.css"
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:5174/ChainScope-0.3.22/dist/prod_loop.html",
+      "status": 200,
+      "assets": [
+        "./assets/main-D7T4KlsH.js",
+        "./assets/main-Bc9PywLa.css"
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:5174/ChainScope-0.3.22/dist/?concept=concept.ai&stage=structure&company=envicool&summary=1",
+      "status": 200,
+      "assets": [
+        "./assets/main-D7T4KlsH.js",
+        "./assets/main-Bc9PywLa.css"
+      ]
+    }
+  ],
+  "snapshot_rule_checks": 1516,
+  "snapshot_unchanged": true,
+  "original_homepage_preserved": true,
+  "missing_json_status": 404,
+  "browser_verified": [
+    "company summary at nested URL",
+    "navigation to architecture and data loaded"
+  ],
+  "scope": "本地 HTTP 与真实浏览器验证；未上传到腾讯云，未验证目标 Nginx 配置；原研究端未通过的测试状态不变。"
+}

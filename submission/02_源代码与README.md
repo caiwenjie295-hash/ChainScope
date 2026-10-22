@@ -2,24 +2,26 @@
 
 面向个人投资者的 AI 产业链研究 Web 原型：从 AI 概念进入产业结构，选择公司查看基础信息、财务指标、已有 AI 总结、概念证据、中外比较和事件路径。
 
-界面版本 **0.3.22**；研究版本 **2026-10-22.p2.deep.b1h.p1.c**；数据截至 **2026-10-21**。本说明依据 2026-10-22 的文件检查及本机验证更新。
+界面版本 **0.3.22**；研究版本 **2026-10-22.p2.deep.b1h.p1.c**；数据截至 **2026-10-21**。本说明依据 2026-10-22 的源码、快照、构建和公网浏览器验证更新。
 
 ## 1. 源代码与访问入口
 
 - 公开源码仓库：[caiwenjie295-hash/ChainScope](https://github.com/caiwenjie295-hash/ChainScope)。
 - 当前公开仓库是本地项目的发布快照。原始开发基线为本地提交 `1cb9e86`、标签 `v0.3.22`；本仓库的提交历史从公开发布开始，原始本地历史保留在原源码包中。
 - 本地入口：[http://127.0.0.1:5173/](http://127.0.0.1:5173/)，需要先按下文启动服务。
-- 公网产品 URL：**尚未记录，腾讯云部署完成后补充**。GitHub 仓库页面不能替代可操作产品网址。
-- [60 秒流程演示视频](demo/ChainScope_60秒流程演示_无旁白.mp4) · [AI 使用与验证记录](submission/03_AI使用与验证记录.md) · [测试说明](submission/04_测试说明.md)。
-- [部署说明](deployment/部署说明.md) · [提交要求核对（发布前盘点）](submission/05_提交要求逐项核对.md)。
+- 公网产品 URL：[打开 ChainScope](https://emberscrolls.top/ChainScope-0.3.22/dist/)。2026-10-22 已从外网浏览器验证公司总结、研究数据加载及研究流程导航。
+- [60 秒流程演示视频](https://github.com/caiwenjie295-hash/ChainScope/blob/main/demo/ChainScope_60秒流程演示_无旁白.mp4) · [AI 使用与验证记录](https://github.com/caiwenjie295-hash/ChainScope/blob/main/submission/03_AI使用与验证记录.md) · [测试说明](https://github.com/caiwenjie295-hash/ChainScope/blob/main/submission/04_测试说明.md)。
+- [子目录部署说明](https://github.com/caiwenjie295-hash/ChainScope/blob/main/deployment/子目录部署说明.md) · [提交总览](https://github.com/caiwenjie295-hash/ChainScope/blob/main/submission/00_提交说明.md) · [要求核对](https://github.com/caiwenjie295-hash/ChainScope/blob/main/submission/05_提交要求逐项核对.md) · [溯源索引](https://github.com/caiwenjie295-hash/ChainScope/blob/main/submission/06_关键数字与结论溯源索引.md)。
 
-公开源码中保留研究结果、来源 ID、定位与已公开材料，受限接口和片段的原始摘录已从来源索引的公开副本移除；原始接口响应、财报缓存、凭证和逐次模型轨迹没有上传。因此本包支持前端运行和快照规则校验，不承诺完整研究离线重放。缺件及公开副本差异见 [发布记录](PUBLIC_RELEASE.md)。
+公开源码中保留研究结果、来源 ID、定位与已公开材料，受限接口和片段的原始摘录已从来源索引的公开副本移除；原始接口响应、财报缓存、凭证和逐次模型轨迹没有上传。因此本包支持前端运行和快照规则校验，不承诺完整研究离线重放。缺件及公开副本差异见 [发布记录](https://github.com/caiwenjie295-hash/ChainScope/blob/main/PUBLIC_RELEASE.md)。
 
 ## 2. 产品选择与范围
 
 选择“AI 产业链跨市场公司研究”，是为了把分散的公司业务与财务信息整理为可追溯的研究入口，帮助用户判断公司与概念的关联是否有证据、财务数据能否比较，以及哪些结论只是推断。
 
 当前前端仅开放 AI；白酒、智能驾驶等入口标注为 Demo。主流程为：勾选 AI → 开始分析 → 产业结构 → 环节公司列表 → 公司基础信息 → AI智能总结。市值榜、证据等级说明和研究流程页用于辅助理解。
+
+产业结构图采用项目定义的技术功能分类：主题 → 产业分支 → 具体环节；公司归属按主营业务证据说明，部分分类边为推断。`concepts[]` 另记录数据商概念板的层级与成分，两者并非同一套分类体系。板块成分命中不等于主营业务归属，也不等于已确认专项收入。
 
 当前发布快照共 **27 家公司**，其中 **17 家 reviewed、10 家 candidate**；有 **116 条来源、6 组中外对照、9 个事件、40 个图谱节点**。reviewed 表示已有经整理的研究内容，不代表所有公司均完成相同深度研究。早期第二轮只有 8 家公司，不能用该阶段数字描述当前覆盖。
 
@@ -44,7 +46,7 @@ npm run build
 npm run preview -- --host 127.0.0.1 --port 4173 --strictPort
 ```
 
-产物位于 `frontend/dist/`。静态部署时发布这个目录，并部署到站点根路径；前端以 `/data/snapshot.json` 绝对路径取数。多页入口包括 `index.html`、`agent_architecture.html`、`cost_performance.html`、`prod_loop.html`，应一并保留。
+产物位于 `frontend/dist/`。静态部署时发布其中的全部内容，可放在域名根目录或子目录；页面资源、研究数据和导航使用相对路径。子目录 URL 以 `/` 结尾或明确指定 `index.html`。多页入口包括 `index.html`、`agent_architecture.html`、`cost_performance.html`、`prod_loop.html`，应一并保留。
 
 ## 4. 环境变量和外部配置
 
@@ -113,15 +115,15 @@ python -m unittest discover -s tests -v
 
 **本次全套未通过**：当前基础验证环境发现 26 项（含模块加载错误占位），20 通过、2 失败、4 错误。原因包括缺少 `artifacts/` 原件、缺少研究依赖，以及旧用例将公司数写死为 9 而当前值为 17。模块加载失败使部分用例未执行；不能据此声称全套测试通过。
 
-`data/` 与前端快照已提供，因此浏览器演示和快照校验可独立运行；但当前目录及原始 ZIP 均没有 `artifacts/`、`reports/`，原 README 指向的两份研究报告亦无法打开。缺少原始接口响应、财报和模型轨迹，完整研究链路目前无法离线重放。历史 README 中“无需网络可重放”的前提是原本已有完整缓存，本包不满足这一前提。
+`data/` 与前端快照已提供，因此浏览器演示和快照校验可独立运行；但公开源码及原始 ZIP 未附研究原件目录 `artifacts/raw/`、`artifacts/public/`、`artifacts/round2/runs/` 和 `reports/`，原 README 指向的两份研究报告亦无法打开。缺少原始接口响应、财报和模型轨迹，完整研究链路目前无法离线重放。历史 README 中“无需网络可重放”的前提是原本已有完整缓存，本包不满足这一前提。
 
 不要为查看前端而重跑在线研究。补齐缓存、许可、依赖和凭证后，才能逐段复现 `collect.py` / `fetch_public.py` → 整理研究 → 模型编排 → 校验 → 发布。在线流程会产生真实请求与费用，部分披露如 Eaton 的人工事实转录也不能自动重建。
 
-`export_frontend.py` 仅生成旧 P1 编辑备份；当前 P2 发布入口为 `export_p2_joinable.py`，带 `--sync-public` 时才同步前端。更新数据后需重新运行校验和 `refresh_research_validation.py` 并构建；本次没有重导出研究数据，也未改变快照。
+`export_frontend.py` 仅生成旧 P1 编辑备份；当前 P2 发布入口为 `export_p2_joinable.py`，带 `--sync-public` 时才同步前端。更新数据后需重新运行校验和 `refresh_research_validation.py` 并构建；本次未重导出研究数据，修正子目录资源和导航路径时保持快照字节不变。
 
 ## 8. 已知边界与未做事项
 
-- 尚未记录公网产品地址、未做自动部署；公开源码仓库已建立。
+- 公网产品和公开源码仓库已发布；尚未实现自动部署。
 - 未接入真实用户点击触发研究、实时行情、定时刷新或全市场自动审计。
 - 未实现账户、多租户、用户 Key、计费和队列调度。
 - 部分公司缺少同口径中外对照、专项收入或完整四项研究块；不能补造 pair 或数字。
@@ -142,4 +144,9 @@ python -m unittest discover -s tests -v
 | `tests/` | 口径、引用、空值、假 A 和影响方向闸门测试 |
 | `docs/` | 产品方向、数据契约、历史验收与版本记录 |
 
-交付文档和检查记录位于 `submission/`，视频位于 `demo/`，部署材料位于 `deployment/`。部分文档保留了发布前盘点状态；当前仓库发布状态以本 README 与 `PUBLIC_RELEASE.md` 为准。
+交付文档和检查记录位于 `submission/`，视频位于 `demo/`，部署材料位于 `deployment/`。当前提交说明已统一到公网发布状态；原始验证日志保留其执行时的结果，未把旧日志改写为新测试结果。
+
+
+### 2026-10-22 子目录部署修正
+
+生产构建改用相对资源、数据和导航路径，四个页面支持同级静态部署到域名根目录或子文件夹。保留原主站时，可将 dist 内全部内容放入网站根目录下的 ChainScope/，通过 /ChainScope/ 访问。完整说明见 deployment/子目录部署说明.md（公开仓库）；修正包的构建校验与原研究测试结果应分开看待。
