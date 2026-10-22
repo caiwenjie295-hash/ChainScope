@@ -1,0 +1,43 @@
+{
+  "checked_at": "2026-10-22T11:20:35.086042",
+  "html_sha256": "3907de114e3582d8bf13ef6b8de3c8ac3dfe0f9720bb27af34499651f7618618",
+  "html_bytes": 6847497,
+  "tabs": 6,
+  "unique_dom_ids": true,
+  "single_h1": true,
+  "external_script_or_font_dependencies": false,
+  "javascript_syntax_checks": 2,
+  "embedded_video_sha256": "718432ba6cb80b3db783104180bd8b3e37dc97933314b990fc4716d1b8973508",
+  "embedded_video_playback": {
+    "duration": 60,
+    "readyState": 4,
+    "playing_confirmed": true
+  },
+  "metrics": 97,
+  "restricted_only": 16,
+  "browser_checks": [
+    "all six tabs selected correctly",
+    "arrow-key tab navigation",
+    "restricted filter 16 of 97",
+    "empty search state",
+    "direct body editing",
+    "browser draft survives reload",
+    "actual HTML download preserves edit, tabs, editor and original video"
+  ],
+  "mobile_dom": {
+    "client_width": 390,
+    "scroll_width": 390,
+    "horizontal_overflow": false
+  },
+  "saved_revision_checks": {
+    "download_bytes": 6948940,
+    "edited_text_persisted": true,
+    "editor_retained": true,
+    "tab_count": 6,
+    "embedded_video_sha256": "718432ba6cb80b3db783104180bd8b3e37dc97933314b990fc4716d1b8973508",
+    "active_contenteditable_removed": true
+  },
+  "file_protocol_note": "Browser automation rejects file: URLs; interactive checks used a localhost-only handler exposing this generated HTML, not the filesystem. No claim of direct file URL automation or every browser coverage.",
+  "save_behavior": "Downloads a new complete HTML. Browser draft is local backup; no automatic Markdown, GitHub, data snapshot or website update.",
+  "clean_baseline": true
+}
