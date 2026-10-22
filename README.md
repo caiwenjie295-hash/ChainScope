@@ -143,3 +143,8 @@ python -m unittest discover -s tests -v
 | `docs/` | 产品方向、数据契约、历史验收与版本记录 |
 
 交付文档和检查记录位于 `submission/`，视频位于 `demo/`，部署材料位于 `deployment/`。部分文档保留了发布前盘点状态；当前仓库发布状态以本 README 与 `PUBLIC_RELEASE.md` 为准。
+
+
+### 2026-10-22 子目录部署修正
+
+生产构建改用相对资源、数据和导航路径，四个页面支持同级静态部署到域名根目录或子文件夹。保留原主站时，可将 dist 内全部内容放入网站根目录下的 ChainScope/，通过 /ChainScope/ 访问。完整说明见 deployment/子目录部署说明.md（公开仓库）；修正包的构建校验与原研究测试结果应分开看待。

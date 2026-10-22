@@ -15,6 +15,8 @@ try {
 }
 
 export default defineConfig({
+  // Keep production files portable between a domain root and a subdirectory.
+  base: './',
   plugins: [react()],
   define: {
     __APP_VERSION__: JSON.stringify(packageInfo.version),

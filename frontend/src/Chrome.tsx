@@ -6,15 +6,15 @@ import type { Snapshot } from './types'
 export type PageKey = 'graph' | 'architecture' | 'cost' | 'prodLoop'
 
 const navItems: Array<{ href: string; key: PageKey; label: string; icon: typeof Network }> = [
-  { href: '/', key: 'graph', label: '研究', icon: Network },
-  { href: '/agent_architecture.html', key: 'architecture', label: '研究流程', icon: Boxes },
-  { href: '/cost_performance.html', key: 'cost', label: '成本与验证', icon: Activity },
+  { href: './', key: 'graph', label: '研究', icon: Network },
+  { href: './agent_architecture.html', key: 'architecture', label: '研究流程', icon: Boxes },
+  { href: './cost_performance.html', key: 'cost', label: '成本与验证', icon: Activity },
 ]
 
 export function Header({ page, snapshot }: { page: PageKey; snapshot?: Snapshot }) {
   return (
     <header className="topbar">
-      <a className="brand" href="/" aria-label="ChainScope 产业透镜首页">
+      <a className="brand" href="./" aria-label="ChainScope 产业透镜首页">
         <span className="brand-mark" aria-hidden="true"><span /><span /><span /><span /></span>
         <span className="brand-wordmark">Chain<span>Scope</span></span>
         <span className="brand-cn">产业透镜</span>
@@ -67,7 +67,7 @@ export function PageFooter({ snapshot }: { snapshot: Snapshot }) {
       <span>ChainScope 产业透镜</span>
       <span>
         当前展示已发布的研究内容 ·{' '}
-        <a className="text-link" href="/prod_loop.html">查看流程说明</a>
+        <a className="text-link" href="./prod_loop.html">查看流程说明</a>
         {' '}· 数据截至 {snapshot.meta.as_of} · 不构成投资建议。
       </span>
       <ReleaseMeta snapshot={snapshot} />

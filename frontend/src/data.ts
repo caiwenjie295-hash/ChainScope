@@ -1,7 +1,7 @@
 import type { Snapshot } from './types'
 
 export async function loadSnapshot(): Promise<Snapshot> {
-  const response = await fetch('/data/snapshot.json', { cache: 'no-cache' })
+  const response = await fetch('./data/snapshot.json', { cache: 'no-cache' })
   if (!response.ok) throw new Error(`快照读取失败（HTTP ${response.status}）`)
   const value = (await response.json()) as Snapshot
   if (
