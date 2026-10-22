@@ -1,0 +1,20 @@
+{
+  "verified_at": "2026-10-22T10:41:31.175907",
+  "product_url": "https://emberscrolls.top/ChainScope-0.3.22/dist/",
+  "repository": "https://github.com/caiwenjie295-hash/ChainScope",
+  "browser_checks": [
+    "company summary and evidence visible",
+    "architecture navigation remains inside project subdirectory",
+    "architecture data loaded"
+  ],
+  "http_checks": {
+    "script": 200,
+    "snapshot": 200,
+    "architecture_html": 200,
+    "main_domain_homepage": 200
+  },
+  "snapshot_sha256": "d2d4c5d9f6b00850aef8cb8b9db3c4a67d72feddd07f9916bb7956637181729b",
+  "main_domain_homepage": "original default page retained",
+  "network_note": "One concurrent HTTP request to directory entry encountered SSL EOF; actual browser loaded product and company research successfully. No availability/load testing performed.",
+  "limitations": "Public deployment verified; prior source evidence and research unittest limitations remain."
+}

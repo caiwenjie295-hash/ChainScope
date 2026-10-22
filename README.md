@@ -9,7 +9,7 @@
 - 公开源码仓库：[caiwenjie295-hash/ChainScope](https://github.com/caiwenjie295-hash/ChainScope)。
 - 当前公开仓库是本地项目的发布快照。原始开发基线为本地提交 `1cb9e86`、标签 `v0.3.22`；本仓库的提交历史从公开发布开始，原始本地历史保留在原源码包中。
 - 本地入口：[http://127.0.0.1:5173/](http://127.0.0.1:5173/)，需要先按下文启动服务。
-- 公网产品 URL：**尚未记录，腾讯云部署完成后补充**。GitHub 仓库页面不能替代可操作产品网址。
+- 公网产品 URL：[打开 ChainScope](https://emberscrolls.top/ChainScope-0.3.22/dist/)。2026-10-22 已从外网浏览器验证公司总结、研究数据加载及研究流程导航。
 - [60 秒流程演示视频](demo/ChainScope_60秒流程演示_无旁白.mp4) · [AI 使用与验证记录](submission/03_AI使用与验证记录.md) · [测试说明](submission/04_测试说明.md)。
 - [部署说明](deployment/部署说明.md) · [提交要求核对（发布前盘点）](submission/05_提交要求逐项核对.md)。
 
@@ -44,7 +44,7 @@ npm run build
 npm run preview -- --host 127.0.0.1 --port 4173 --strictPort
 ```
 
-产物位于 `frontend/dist/`。静态部署时发布这个目录，并部署到站点根路径；前端以 `/data/snapshot.json` 绝对路径取数。多页入口包括 `index.html`、`agent_architecture.html`、`cost_performance.html`、`prod_loop.html`，应一并保留。
+产物位于 `frontend/dist/`。静态部署时发布其中的全部内容，可放在域名根目录或子目录；页面资源、研究数据和导航使用相对路径。子目录 URL 以 `/` 结尾或明确指定 `index.html`。多页入口包括 `index.html`、`agent_architecture.html`、`cost_performance.html`、`prod_loop.html`，应一并保留。
 
 ## 4. 环境变量和外部配置
 
