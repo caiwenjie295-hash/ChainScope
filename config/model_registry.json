@@ -1,0 +1,50 @@
+{
+  "_doc": "Chat model profiles for research DAG adapters. Switch with active_profile or CHAINSCOPE_MODEL_PROFILE env. Default remains deepseek (deepseek-flash baseline). deepseek-pro is the DeepSeek Pro tier (API id deepseek-v4-pro). Same DAG/gates/seeds — only registry changes. Credential files under ../API及接口: prefer deepseek_APIKEY.txt, fall back to spaced legacy name. Secrets never belong in this file.",
+  "active_profile": "deepseek",
+  "profiles": {
+    "deepseek": {
+      "base_url": "https://api.deepseek.com",
+      "model": "deepseek-flash",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "api_key_files": [
+        "deepseek_APIKEY.txt",
+        "deepseek APIKEY.txt"
+      ],
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        }
+      },
+      "temperature": 0.1,
+      "timeout_seconds": 75,
+      "notes": "Flash baseline used for 2026-10-21.p2.deep.b1c."
+    },
+    "deepseek-pro": {
+      "base_url": "https://api.deepseek.com",
+      "model": "deepseek-v4-pro",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "api_key_files": [
+        "deepseek_APIKEY.txt",
+        "deepseek APIKEY.txt"
+      ],
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        }
+      },
+      "temperature": 0.1,
+      "timeout_seconds": 120,
+      "notes": "DeepSeek Pro tier (DeepSeek-V4-Pro-0813). Same key files as flash; thinking disabled to match flash baseline gate behavior."
+    },
+    "assistant": {
+      "base_url": null,
+      "model": null,
+      "api_key_env": "ASSISTANT_API_KEY",
+      "api_key_files": [],
+      "extra_body": {},
+      "temperature": 0.1,
+      "timeout_seconds": 75,
+      "notes": "Legacy empty slot retained; prefer deepseek-pro for Finance online self-check. Missing base_url/model/key is a hard error."
+    }
+  }
+}

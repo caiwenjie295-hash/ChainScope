@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "duration_seconds": 60.0,
+  "frame_count": 1800,
+  "fps": 30.0,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "video_codec": "h264",
+  "audio_tracks": 0,
+  "full_decode": "passed",
+  "subtitles": "burned into video, SRT also supplied",
+  "personal_attribution": false,
+  "source": "local ChainScope UI captures, edited with framing, transitions and action hints",
+  "bytes": 4681112,
+  "sha256": "718432ba6cb80b3db783104180bd8b3e37dc97933314b990fc4716d1b8973508"
+}

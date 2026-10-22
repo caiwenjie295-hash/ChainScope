@@ -1,0 +1,9 @@
+[
+ {"id":"r2_envicool_cashflow","provider":"fuyao","path":"/api/a-share/financials/cash-flow-statements?thscode=002837.SZ&period=annual&limit=2"},
+ {"id":"r2_envicool_balance","provider":"fuyao","path":"/api/a-share/financials/balance-sheets?thscode=002837.SZ&period=annual&limit=2"},
+ {"id":"r2_inspur_cashflow","provider":"fuyao","path":"/api/a-share/financials/cash-flow-statements?thscode=000977.SZ&period=annual&limit=2"},
+ {"id":"r2_innolight_cashflow","provider":"fuyao","path":"/api/a-share/financials/cash-flow-statements?thscode=300308.SZ&period=annual&limit=2"},
+ {"id":"r2_kehua_cashflow","provider":"fuyao","path":"/api/a-share/financials/cash-flow-statements?thscode=002335.SZ&period=annual&limit=2"},
+ {"id":"r2_envicool_latest_notices","provider":"hexin-ifind-ds-mcp","tool":"search_notice","arguments":{"query":"英维克 2026 半年度报告或三季度报告 营业收入 净利润 经营现金流 应收账款 液冷 收入","time_start":"2026-07-01","time_end":"2026-10-21","size":6}},
+ {"id":"r2_vertiv_liquid_sales","provider":"hexin-ifind-ds-mcp","tool":"search_notice","arguments":{"query":"Vertiv VRT 2025 annual report 2026 second quarter liquid cooling commercial sales revenue shipments backlog operating cash flow","time_start":"2026-01-01","time_end":"2026-10-21","size":5}}
+]

@@ -1,0 +1,68 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0",
+      "default": "0.1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "generated_at": {
+      "title": "Generated At",
+      "type": "string"
+    },
+    "model": {
+      "const": "deepseek-flash",
+      "title": "Model",
+      "type": "string"
+    },
+    "calls": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Calls",
+      "type": "array"
+    },
+    "usage": {
+      "additionalProperties": true,
+      "title": "Usage",
+      "type": "object"
+    },
+    "estimated_cost_cny": {
+      "additionalProperties": true,
+      "title": "Estimated Cost Cny",
+      "type": "object"
+    },
+    "failure_cases": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Failure Cases",
+      "type": "array"
+    },
+    "validation": {
+      "additionalProperties": true,
+      "title": "Validation",
+      "type": "object"
+    },
+    "comparison_experiment": {
+      "const": "not_run",
+      "default": "not_run",
+      "title": "Comparison Experiment",
+      "type": "string"
+    }
+  },
+  "required": [
+    "generated_at",
+    "model",
+    "calls",
+    "usage",
+    "estimated_cost_cny",
+    "failure_cases",
+    "validation"
+  ],
+  "title": "Evaluation",
+  "type": "object"
+}

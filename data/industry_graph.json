@@ -1,0 +1,1170 @@
+{
+  "schema_version": "0.1.0",
+  "taxonomy_basis": "研究者按设备功能分为四分支；分支为平行技术功能，不强行串成单一上下游链；公司归属依据事实材料并明确推断属性",
+  "nodes": [
+    {
+      "id": "theme.ai_dc",
+      "label": "AI数据中心基础设施",
+      "type": "theme",
+      "parent_id": null,
+      "company_id": null,
+      "market": null,
+      "layer": 0,
+      "distance_basis": "人工定义产业分类层级，不是统计相关系数",
+      "size": 1.0,
+      "size_basis": "固定大小",
+      "impact": "unclear"
+    },
+    {
+      "id": "branch.compute",
+      "label": "算力与AI服务器",
+      "type": "branch",
+      "parent_id": "theme.ai_dc",
+      "company_id": null,
+      "market": null,
+      "layer": 1,
+      "distance_basis": "人工定义分类第1层",
+      "size": 1.0,
+      "size_basis": "固定大小",
+      "impact": "unclear"
+    },
+    {
+      "id": "segment.accelerator",
+      "label": "计算芯片",
+      "type": "segment",
+      "parent_id": "branch.compute",
+      "company_id": null,
+      "market": null,
+      "layer": 2,
+      "distance_basis": "人工定义分类第2层",
+      "size": 1.0,
+      "size_basis": "固定大小",
+      "impact": "unclear"
+    },
+    {
+      "id": "segment.server",
+      "label": "服务器与整机",
+      "type": "segment",
+      "parent_id": "branch.compute",
+      "company_id": null,
+      "market": null,
+      "layer": 2,
+      "distance_basis": "人工定义分类第2层",
+      "size": 1.0,
+      "size_basis": "固定大小",
+      "impact": "unclear"
+    },
+    {
+      "id": "branch.optics",
+      "label": "高速光通信",
+      "type": "branch",
+      "parent_id": "theme.ai_dc",
+      "company_id": null,
+      "market": null,
+      "layer": 1,
+      "distance_basis": "人工定义分类第1层",
+      "size": 1.0,
+      "size_basis": "固定大小",
+      "impact": "unclear"
+    },
+    {
+      "id": "segment.optical_component",
+      "label": "光器件",
+      "type": "segment",
+      "parent_id": "branch.optics",
+      "company_id": null,
+      "market": null,
+      "layer": 2,
+      "distance_basis": "人工定义分类第2层",
+      "size": 1.0,
+      "size_basis": "固定大小",
+      "impact": "unclear"
+    },
+    {
+      "id": "segment.transceiver",
+      "label": "光收发模块",
+      "type": "segment",
+      "parent_id": "branch.optics",
+      "company_id": null,
+      "market": null,
+      "layer": 2,
+      "distance_basis": "人工定义分类第2层",
+      "size": 1.0,
+      "size_basis": "固定大小",
+      "impact": "unclear"
+    },
+    {
+      "id": "segment.network_switch",
+      "label": "网络交换设备（光互联配套）",
+      "type": "segment",
+      "parent_id": "branch.optics",
+      "company_id": null,
+      "market": null,
+      "layer": 2,
+      "distance_basis": "人工定义分类第2层",
+      "size": 1.0,
+      "size_basis": "固定大小",
+      "impact": "unclear"
+    },
+    {
+      "id": "segment.network_chip",
+      "label": "网络芯片（光互联配套）",
+      "type": "segment",
+      "parent_id": "branch.optics",
+      "company_id": null,
+      "market": null,
+      "layer": 2,
+      "distance_basis": "人工定义分类第2层",
+      "size": 1.0,
+      "size_basis": "固定大小",
+      "impact": "unclear"
+    },
+    {
+      "id": "branch.power",
+      "label": "供配电",
+      "type": "branch",
+      "parent_id": "theme.ai_dc",
+      "company_id": null,
+      "market": null,
+      "layer": 1,
+      "distance_basis": "人工定义分类第1层",
+      "size": 1.0,
+      "size_basis": "固定大小",
+      "impact": "unclear"
+    },
+    {
+      "id": "segment.power_equipment",
+      "label": "供配电设备与UPS",
+      "type": "segment",
+      "parent_id": "branch.power",
+      "company_id": null,
+      "market": null,
+      "layer": 2,
+      "distance_basis": "人工定义分类第2层",
+      "size": 1.0,
+      "size_basis": "固定大小",
+      "impact": "unclear"
+    },
+    {
+      "id": "branch.cooling",
+      "label": "液冷散热",
+      "type": "branch",
+      "parent_id": "theme.ai_dc",
+      "company_id": null,
+      "market": null,
+      "layer": 1,
+      "distance_basis": "人工定义分类第1层",
+      "size": 1.0,
+      "size_basis": "固定大小",
+      "impact": "unclear"
+    },
+    {
+      "id": "segment.thermal",
+      "label": "温控与液冷相关设备",
+      "type": "segment",
+      "parent_id": "branch.cooling",
+      "company_id": null,
+      "market": null,
+      "layer": 2,
+      "distance_basis": "人工定义分类第2层",
+      "size": 1.0,
+      "size_basis": "固定大小",
+      "impact": "unclear"
+    },
+    {
+      "id": "company.inspur",
+      "label": "浪潮信息",
+      "type": "company",
+      "parent_id": "segment.server",
+      "company_id": "inspur",
+      "market": "CN",
+      "layer": 3,
+      "distance_basis": "按已披露主营业务或候选归属分层，非相关系数",
+      "size": 1.0,
+      "size_basis": "统一默认尺寸；相关收入口径不可比，不按集团总收入放大",
+      "impact": "unclear"
+    },
+    {
+      "id": "company.innolight",
+      "label": "中际旭创",
+      "type": "company",
+      "parent_id": "segment.transceiver",
+      "company_id": "innolight",
+      "market": "CN",
+      "layer": 3,
+      "distance_basis": "按已披露主营业务或候选归属分层，非相关系数",
+      "size": 1.0,
+      "size_basis": "统一默认尺寸；相关收入口径不可比，不按集团总收入放大",
+      "impact": "unclear"
+    },
+    {
+      "id": "company.kehua",
+      "label": "科华数据",
+      "type": "company",
+      "parent_id": "segment.power_equipment",
+      "company_id": "kehua",
+      "market": "CN",
+      "layer": 3,
+      "distance_basis": "按已披露主营业务或候选归属分层，非相关系数",
+      "size": 1.0,
+      "size_basis": "统一默认尺寸；相关收入口径不可比，不按集团总收入放大",
+      "impact": "unclear"
+    },
+    {
+      "id": "company.envicool",
+      "label": "英维克",
+      "type": "company",
+      "parent_id": "segment.thermal",
+      "company_id": "envicool",
+      "market": "CN",
+      "layer": 3,
+      "distance_basis": "按已披露主营业务或候选归属分层，非相关系数",
+      "size": 1.0,
+      "size_basis": "统一默认尺寸；相关收入口径不可比，不按集团总收入放大",
+      "impact": "unclear"
+    },
+    {
+      "id": "company.smci",
+      "label": "Supermicro",
+      "type": "company",
+      "parent_id": "segment.server",
+      "company_id": "smci",
+      "market": "US",
+      "layer": 3,
+      "distance_basis": "按已披露主营业务或候选归属分层，非相关系数",
+      "size": 1.0,
+      "size_basis": "统一默认尺寸；相关收入口径不可比，不按集团总收入放大",
+      "impact": "unclear"
+    },
+    {
+      "id": "company.cohr",
+      "label": "Coherent",
+      "type": "company",
+      "parent_id": "segment.transceiver",
+      "company_id": "cohr",
+      "market": "US",
+      "layer": 3,
+      "distance_basis": "按已披露主营业务或候选归属分层，非相关系数",
+      "size": 1.0,
+      "size_basis": "统一默认尺寸；相关收入口径不可比，不按集团总收入放大",
+      "impact": "unclear"
+    },
+    {
+      "id": "company.etn",
+      "label": "Eaton",
+      "type": "company",
+      "parent_id": "segment.power_equipment",
+      "company_id": "etn",
+      "market": "US",
+      "layer": 3,
+      "distance_basis": "按已披露主营业务或候选归属分层，非相关系数",
+      "size": 1.0,
+      "size_basis": "统一默认尺寸；相关收入口径不可比，不按集团总收入放大",
+      "impact": "unclear"
+    },
+    {
+      "id": "company.vrt",
+      "label": "Vertiv",
+      "type": "company",
+      "parent_id": "segment.thermal",
+      "company_id": "vrt",
+      "market": "US",
+      "layer": 3,
+      "distance_basis": "按已披露主营业务或候选归属分层，非相关系数",
+      "size": 1.0,
+      "size_basis": "统一默认尺寸；相关收入口径不可比，不按集团总收入放大",
+      "impact": "unclear"
+    },
+    {
+      "id": "company.unis",
+      "label": "紫光股份",
+      "type": "company",
+      "parent_id": "segment.network_switch",
+      "company_id": "unis",
+      "market": "CN",
+      "layer": 3,
+      "distance_basis": "按已披露主营业务或候选归属分层，非相关系数",
+      "size": 1.0,
+      "size_basis": "统一默认尺寸；相关收入口径不可比，不按集团总收入放大",
+      "impact": "unclear"
+    },
+    {
+      "id": "company.fii",
+      "label": "工业富联",
+      "type": "company",
+      "parent_id": "segment.server",
+      "company_id": "fii",
+      "market": "CN",
+      "layer": 3,
+      "distance_basis": "按已披露主营业务或候选归属分层，非相关系数",
+      "size": 1.0,
+      "size_basis": "统一默认尺寸；相关收入口径不可比，不按集团总收入放大",
+      "impact": "unclear"
+    },
+    {
+      "id": "company.sugon",
+      "label": "中科曙光",
+      "type": "company",
+      "parent_id": "segment.server",
+      "company_id": "sugon",
+      "market": "CN",
+      "layer": 3,
+      "distance_basis": "按已披露主营业务或候选归属分层，非相关系数",
+      "size": 1.0,
+      "size_basis": "统一默认尺寸；相关收入口径不可比，不按集团总收入放大",
+      "impact": "unclear"
+    },
+    {
+      "id": "company.tfc",
+      "label": "天孚通信",
+      "type": "company",
+      "parent_id": "segment.optical_component",
+      "company_id": "tfc",
+      "market": "CN",
+      "layer": 3,
+      "distance_basis": "按已披露主营业务或候选归属分层，非相关系数",
+      "size": 1.0,
+      "size_basis": "统一默认尺寸；相关收入口径不可比，不按集团总收入放大",
+      "impact": "unclear"
+    },
+    {
+      "id": "company.eoptolink",
+      "label": "新易盛",
+      "type": "company",
+      "parent_id": "segment.transceiver",
+      "company_id": "eoptolink",
+      "market": "CN",
+      "layer": 3,
+      "distance_basis": "按已披露主营业务或候选归属分层，非相关系数",
+      "size": 1.0,
+      "size_basis": "统一默认尺寸；相关收入口径不可比，不按集团总收入放大",
+      "impact": "unclear"
+    },
+    {
+      "id": "company.accelink",
+      "label": "光迅科技",
+      "type": "company",
+      "parent_id": "segment.optical_component",
+      "company_id": "accelink",
+      "market": "CN",
+      "layer": 3,
+      "distance_basis": "按已披露主营业务或候选归属分层，非相关系数",
+      "size": 1.0,
+      "size_basis": "统一默认尺寸；相关收入口径不可比，不按集团总收入放大",
+      "impact": "unclear"
+    },
+    {
+      "id": "company.shenling",
+      "label": "申菱环境",
+      "type": "company",
+      "parent_id": "segment.thermal",
+      "company_id": "shenling",
+      "market": "CN",
+      "layer": 3,
+      "distance_basis": "按已披露主营业务或候选归属分层，非相关系数",
+      "size": 1.0,
+      "size_basis": "统一默认尺寸；相关收入口径不可比，不按集团总收入放大",
+      "impact": "unclear"
+    },
+    {
+      "id": "company.kstar",
+      "label": "科士达",
+      "type": "company",
+      "parent_id": "segment.power_equipment",
+      "company_id": "kstar",
+      "market": "CN",
+      "layer": 3,
+      "distance_basis": "按已披露主营业务或候选归属分层，非相关系数",
+      "size": 1.0,
+      "size_basis": "统一默认尺寸；相关收入口径不可比，不按集团总收入放大",
+      "impact": "unclear"
+    },
+    {
+      "id": "company.nvda",
+      "label": "英伟达",
+      "type": "company",
+      "parent_id": "segment.accelerator",
+      "company_id": "nvda",
+      "market": "US",
+      "layer": 3,
+      "distance_basis": "按已披露主营业务或候选归属分层，非相关系数",
+      "size": 1.0,
+      "size_basis": "统一默认尺寸；相关收入口径不可比，不按集团总收入放大",
+      "impact": "unclear"
+    },
+    {
+      "id": "company.lite",
+      "label": "Lumentum控股",
+      "type": "company",
+      "parent_id": "segment.optical_component",
+      "company_id": "lite",
+      "market": "US",
+      "layer": 3,
+      "distance_basis": "按已披露主营业务或候选归属分层，非相关系数",
+      "size": 1.0,
+      "size_basis": "统一默认尺寸；相关收入口径不可比，不按集团总收入放大",
+      "impact": "unclear"
+    },
+    {
+      "id": "company.avgo",
+      "label": "博通",
+      "type": "company",
+      "parent_id": "segment.network_chip",
+      "company_id": "avgo",
+      "market": "US",
+      "layer": 3,
+      "distance_basis": "按已披露主营业务或候选归属分层，非相关系数",
+      "size": 1.0,
+      "size_basis": "统一默认尺寸；相关收入口径不可比，不按集团总收入放大",
+      "impact": "unclear"
+    },
+    {
+      "id": "company.dell",
+      "label": "戴尔科技",
+      "type": "company",
+      "parent_id": "segment.server",
+      "company_id": "dell",
+      "market": "US",
+      "layer": 3,
+      "distance_basis": "按已披露主营业务或候选归属分层，非相关系数",
+      "size": 1.0,
+      "size_basis": "统一默认尺寸；相关收入口径不可比，不按集团总收入放大",
+      "impact": "unclear"
+    },
+    {
+      "id": "company.anet",
+      "label": "Arista Networks",
+      "type": "company",
+      "parent_id": "segment.network_switch",
+      "company_id": "anet",
+      "market": "US",
+      "layer": 3,
+      "distance_basis": "按已披露主营业务或候选归属分层，非相关系数",
+      "size": 1.0,
+      "size_basis": "统一默认尺寸；相关收入口径不可比，不按集团总收入放大",
+      "impact": "unclear"
+    },
+    {
+      "id": "company.amd",
+      "label": "超威半导体",
+      "type": "company",
+      "parent_id": "segment.accelerator",
+      "company_id": "amd",
+      "market": "US",
+      "layer": 3,
+      "distance_basis": "按已披露主营业务或候选归属分层，非相关系数",
+      "size": 1.0,
+      "size_basis": "统一默认尺寸；相关收入口径不可比，不按集团总收入放大",
+      "impact": "unclear"
+    },
+    {
+      "id": "company.luxshare",
+      "label": "立讯精密",
+      "type": "company",
+      "parent_id": "segment.server",
+      "company_id": "luxshare",
+      "market": "CN",
+      "layer": 3,
+      "distance_basis": "按已披露主营业务或候选归属分层，非相关系数",
+      "size": 1.0,
+      "size_basis": "统一默认尺寸；相关收入口径不可比，不按集团总收入放大",
+      "impact": "unclear"
+    },
+    {
+      "id": "company.shengyi",
+      "label": "生益科技",
+      "type": "company",
+      "parent_id": "segment.server",
+      "company_id": "shengyi",
+      "market": "CN",
+      "layer": 3,
+      "distance_basis": "按已披露主营业务或候选归属分层，非相关系数",
+      "size": 1.0,
+      "size_basis": "统一默认尺寸；相关收入口径不可比，不按集团总收入放大",
+      "impact": "unclear"
+    },
+    {
+      "id": "company.cambricon",
+      "label": "寒武纪",
+      "type": "company",
+      "parent_id": "segment.accelerator",
+      "company_id": "cambricon",
+      "market": "CN",
+      "layer": 3,
+      "distance_basis": "按已披露主营业务或候选归属分层，非相关系数",
+      "size": 1.0,
+      "size_basis": "统一默认尺寸；相关收入口径不可比，不按集团总收入放大",
+      "impact": "unclear"
+    },
+    {
+      "id": "company.sanhua",
+      "label": "三花智控",
+      "type": "company",
+      "parent_id": "segment.thermal",
+      "company_id": "sanhua",
+      "market": "CN",
+      "layer": 3,
+      "distance_basis": "按已披露主营业务或候选归属分层，非相关系数",
+      "size": 1.0,
+      "size_basis": "统一默认尺寸；相关收入口径不可比，不按集团总收入放大",
+      "impact": "unclear"
+    },
+    {
+      "id": "company.hygon",
+      "label": "海光信息",
+      "type": "company",
+      "parent_id": "segment.accelerator",
+      "company_id": "hygon",
+      "market": "CN",
+      "layer": 3,
+      "distance_basis": "按已披露主营业务或候选归属分层，非相关系数",
+      "size": 1.0,
+      "size_basis": "统一默认尺寸；相关收入口径不可比，不按集团总收入放大",
+      "impact": "unclear"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge.branch.compute",
+      "source": "theme.ai_dc",
+      "target": "branch.compute",
+      "type": "taxonomy",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "medium",
+      "source_ids": [],
+      "mechanism": "按技术功能分类；不是供应关系",
+      "conditions": []
+    },
+    {
+      "id": "edge.segment.accelerator",
+      "source": "branch.compute",
+      "target": "segment.accelerator",
+      "type": "taxonomy",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "medium",
+      "source_ids": [],
+      "mechanism": "业务功能子类；不表示所有子类均为AI专用",
+      "conditions": []
+    },
+    {
+      "id": "edge.segment.server",
+      "source": "branch.compute",
+      "target": "segment.server",
+      "type": "taxonomy",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "medium",
+      "source_ids": [],
+      "mechanism": "业务功能子类；不表示所有子类均为AI专用",
+      "conditions": []
+    },
+    {
+      "id": "edge.branch.optics",
+      "source": "theme.ai_dc",
+      "target": "branch.optics",
+      "type": "taxonomy",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "medium",
+      "source_ids": [],
+      "mechanism": "按技术功能分类；不是供应关系",
+      "conditions": []
+    },
+    {
+      "id": "edge.segment.optical_component",
+      "source": "branch.optics",
+      "target": "segment.optical_component",
+      "type": "taxonomy",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "medium",
+      "source_ids": [],
+      "mechanism": "业务功能子类；不表示所有子类均为AI专用",
+      "conditions": []
+    },
+    {
+      "id": "edge.segment.transceiver",
+      "source": "branch.optics",
+      "target": "segment.transceiver",
+      "type": "taxonomy",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "medium",
+      "source_ids": [],
+      "mechanism": "业务功能子类；不表示所有子类均为AI专用",
+      "conditions": []
+    },
+    {
+      "id": "edge.segment.network_switch",
+      "source": "branch.optics",
+      "target": "segment.network_switch",
+      "type": "taxonomy",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "medium",
+      "source_ids": [],
+      "mechanism": "业务功能子类；不表示所有子类均为AI专用",
+      "conditions": []
+    },
+    {
+      "id": "edge.segment.network_chip",
+      "source": "branch.optics",
+      "target": "segment.network_chip",
+      "type": "taxonomy",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "medium",
+      "source_ids": [],
+      "mechanism": "业务功能子类；不表示所有子类均为AI专用",
+      "conditions": []
+    },
+    {
+      "id": "edge.branch.power",
+      "source": "theme.ai_dc",
+      "target": "branch.power",
+      "type": "taxonomy",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "medium",
+      "source_ids": [],
+      "mechanism": "按技术功能分类；不是供应关系",
+      "conditions": []
+    },
+    {
+      "id": "edge.segment.power_equipment",
+      "source": "branch.power",
+      "target": "segment.power_equipment",
+      "type": "taxonomy",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "medium",
+      "source_ids": [],
+      "mechanism": "业务功能子类；不表示所有子类均为AI专用",
+      "conditions": []
+    },
+    {
+      "id": "edge.branch.cooling",
+      "source": "theme.ai_dc",
+      "target": "branch.cooling",
+      "type": "taxonomy",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "medium",
+      "source_ids": [],
+      "mechanism": "按技术功能分类；不是供应关系",
+      "conditions": []
+    },
+    {
+      "id": "edge.segment.thermal",
+      "source": "branch.cooling",
+      "target": "segment.thermal",
+      "type": "taxonomy",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "medium",
+      "source_ids": [],
+      "mechanism": "业务功能子类；不表示所有子类均为AI专用",
+      "conditions": []
+    },
+    {
+      "id": "edge.company.inspur",
+      "source": "segment.server",
+      "target": "company.inspur",
+      "type": "industry_membership",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "medium",
+      "source_ids": [
+        "src.inspur_annual_2025.business",
+        "src.inspur_annual_2025.narrow_business"
+      ],
+      "mechanism": "服务器等云计算基础设施；收入包含通用服务器与AI服务器。",
+      "conditions": [
+        "不把集团或母类别收入等同AI收入"
+      ]
+    },
+    {
+      "id": "edge.company.innolight",
+      "source": "segment.transceiver",
+      "target": "company.innolight",
+      "type": "industry_membership",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "medium",
+      "source_ids": [
+        "src.innolight_annual_2025.business",
+        "src.innolight_annual_2025.narrow_business",
+        "src.p2_constituents.concept.ai_optics"
+      ],
+      "mechanism": "高速光通信收发模块；产品用于数据中心及通信网络。",
+      "conditions": [
+        "不把集团或母类别收入等同AI收入"
+      ]
+    },
+    {
+      "id": "edge.company.kehua",
+      "source": "segment.power_equipment",
+      "target": "company.kehua",
+      "type": "industry_membership",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "medium",
+      "source_ids": [
+        "src.kehua_annual_2025.business",
+        "src.kehua_annual_2025.narrow_business"
+      ],
+      "mechanism": "数据中心基础设施、电源、新能源及IDC服务。",
+      "conditions": [
+        "不把集团或母类别收入等同AI收入"
+      ]
+    },
+    {
+      "id": "edge.company.envicool",
+      "source": "segment.thermal",
+      "target": "company.envicool",
+      "type": "industry_membership",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "medium",
+      "source_ids": [
+        "src.envicool_annual_2025.business",
+        "src.envicool_annual_2025.narrow_business"
+      ],
+      "mechanism": "精密温控设备，覆盖机房、储能等应用；提供液冷产品。",
+      "conditions": [
+        "不把集团或母类别收入等同AI收入"
+      ]
+    },
+    {
+      "id": "edge.company.smci",
+      "source": "segment.server",
+      "target": "company.smci",
+      "type": "industry_membership",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "medium",
+      "source_ids": [
+        "src.smci_fy2025.business"
+      ],
+      "mechanism": "服务器及存储等IT系统，包含多种冷却方案。",
+      "conditions": [
+        "不把集团或母类别收入等同AI收入"
+      ]
+    },
+    {
+      "id": "edge.company.cohr",
+      "source": "segment.transceiver",
+      "target": "company.cohr",
+      "type": "industry_membership",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "medium",
+      "source_ids": [
+        "src.coherent_fy2025_tables.business",
+        "src.coherent_optics_product.product"
+      ],
+      "mechanism": "光子与光学器件，覆盖数据通信、电信及工业等市场；1.6T数通模块已有收入发货。",
+      "conditions": [
+        "不把集团或母类别收入等同AI收入"
+      ]
+    },
+    {
+      "id": "edge.company.etn",
+      "source": "segment.power_equipment",
+      "target": "company.etn",
+      "type": "industry_membership",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "medium",
+      "source_ids": [
+        "src.eaton_fy2025.business"
+      ],
+      "mechanism": "电气和电力管理等多元业务；数据中心相关需求属于部分业务。",
+      "conditions": [
+        "不把集团或母类别收入等同AI收入"
+      ]
+    },
+    {
+      "id": "edge.company.vrt",
+      "source": "segment.thermal",
+      "target": "company.vrt",
+      "type": "industry_membership",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "medium",
+      "source_ids": [
+        "src.vertiv_fy2025.business",
+        "src.vertiv_cooling_product.product"
+      ],
+      "mechanism": "关键数字基础设施产品与服务；液冷单品不能用公司总收入计量。",
+      "conditions": [
+        "不把集团或母类别收入等同AI收入"
+      ]
+    },
+    {
+      "id": "edge.company.unis",
+      "source": "segment.network_switch",
+      "target": "company.unis",
+      "type": "industry_membership",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "low",
+      "source_ids": [
+        "src.cn_profiles_compute.unis"
+      ],
+      "mechanism": "自有品牌产品、系统集成及IT服务和增值分销业务。",
+      "conditions": [
+        "宽口径产业归属，不构成具体客户/供应商关系",
+        "广度候选AI关联待核验"
+      ]
+    },
+    {
+      "id": "edge.company.fii",
+      "source": "segment.server",
+      "target": "company.fii",
+      "type": "industry_membership",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "medium",
+      "source_ids": [
+        "src.fii_annual_2025.business",
+        "src.fii_annual_2025.segment",
+        "src.p2_constituents.concept.ai_server",
+        "src.p2_constituents.concept.ai"
+      ],
+      "mechanism": "年报披露云计算分部与AI服务器业务；同花顺AI/服务器概念板成分含本公司。",
+      "conditions": [
+        "云计算分部≠AI专项收入",
+        "在板≠已核验AI专项收入"
+      ]
+    },
+    {
+      "id": "edge.company.sugon",
+      "source": "segment.server",
+      "target": "company.sugon",
+      "type": "industry_membership",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "low",
+      "source_ids": [
+        "src.cn_profiles_compute.sugon"
+      ],
+      "mechanism": "研究、开发、生产制造高性能计算机、通用服务器及存储产品、软件开发、系统集成与技术服务",
+      "conditions": [
+        "宽口径产业归属，不构成具体客户/供应商关系",
+        "广度候选AI关联待核验"
+      ]
+    },
+    {
+      "id": "edge.company.tfc",
+      "source": "segment.optical_component",
+      "target": "company.tfc",
+      "type": "industry_membership",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "medium",
+      "source_ids": [
+        "src.tfc_annual_2025.business",
+        "src.tfc_annual_2025.segment",
+        "src.p2_constituents.concept.ai_optics"
+      ],
+      "mechanism": "年报披露光互连元器件主业与分产品收入；同花顺CPO/光模块概念板成分含本公司。",
+      "conditions": [
+        "光互连元器件≠AI专用器件收入",
+        "在板≠已核验AI专项收入"
+      ]
+    },
+    {
+      "id": "edge.company.eoptolink",
+      "source": "segment.transceiver",
+      "target": "company.eoptolink",
+      "type": "industry_membership",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "medium",
+      "source_ids": [
+        "src.eoptolink_annual_2025.business",
+        "src.eoptolink_annual_2025.segment",
+        "src.p2_constituents.concept.ai_optics"
+      ],
+      "mechanism": "年报披露光互联产品收入与高速光模块产品线；同花顺CPO/光模块概念板成分含本公司。",
+      "conditions": [
+        "光互联产品收入≠AI专项收入",
+        "在板≠已核验AI专项收入"
+      ]
+    },
+    {
+      "id": "edge.company.accelink",
+      "source": "segment.optical_component",
+      "target": "company.accelink",
+      "type": "industry_membership",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "low",
+      "source_ids": [
+        "src.cn_profiles_optics.accelink"
+      ],
+      "mechanism": "信息科技领域光、电器件技术及产品的研制、生产、销售和相关技术服务",
+      "conditions": [
+        "宽口径产业归属，不构成具体客户/供应商关系",
+        "广度候选AI关联待核验"
+      ]
+    },
+    {
+      "id": "edge.company.shenling",
+      "source": "segment.thermal",
+      "target": "company.shenling",
+      "type": "industry_membership",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "low",
+      "source_ids": [
+        "src.cn_profiles_power_cooling.shenling"
+      ],
+      "mechanism": "为数据服务产业环境、工业工艺产研环境、专业特种应用环境、公共建筑室内环境等应用场景提供人工环境调控整体解决方案。",
+      "conditions": [
+        "宽口径产业归属，不构成具体客户/供应商关系",
+        "广度候选AI关联待核验"
+      ]
+    },
+    {
+      "id": "edge.company.kstar",
+      "source": "segment.power_equipment",
+      "target": "company.kstar",
+      "type": "industry_membership",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "low",
+      "source_ids": [
+        "src.cn_profiles_power_cooling.kstar"
+      ],
+      "mechanism": "研发、生产及销售UPS、太阳能逆变器及UPS配套的阀控式密封铅酸蓄电池",
+      "conditions": [
+        "宽口径产业归属，不构成具体客户/供应商关系",
+        "广度候选AI关联待核验"
+      ]
+    },
+    {
+      "id": "edge.company.nvda",
+      "source": "segment.accelerator",
+      "target": "company.nvda",
+      "type": "industry_membership",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "low",
+      "source_ids": [
+        "src.us_profiles_more.nvda"
+      ],
+      "mechanism": "图形和通信处理器",
+      "conditions": [
+        "宽口径产业归属，不构成具体客户/供应商关系",
+        "广度候选AI关联待核验"
+      ]
+    },
+    {
+      "id": "edge.company.lite",
+      "source": "segment.optical_component",
+      "target": "company.lite",
+      "type": "industry_membership",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "medium",
+      "source_ids": [
+        "src.lumentum_fy2025.business",
+        "src.lumentum_fy2025.segment",
+        "src.lumentum_fy2025_10k.business"
+      ],
+      "mechanism": "FY2025业绩稿与10-K披露Cloud & Networking光学光子产品（芯片/组件/模块/子系统）。",
+      "conditions": [
+        "Cloud & Networking跨模块层，不得当作纯器件层与天孚同环节对标",
+        "非AI专项收入"
+      ]
+    },
+    {
+      "id": "edge.company.avgo",
+      "source": "segment.network_chip",
+      "target": "company.avgo",
+      "type": "industry_membership",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "low",
+      "source_ids": [
+        "src.us_profiles_more.avgo"
+      ],
+      "mechanism": "半导体器件设计制造",
+      "conditions": [
+        "宽口径产业归属，不构成具体客户/供应商关系",
+        "广度候选AI关联待核验"
+      ]
+    },
+    {
+      "id": "edge.company.dell",
+      "source": "segment.server",
+      "target": "company.dell",
+      "type": "industry_membership",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "low",
+      "source_ids": [
+        "src.us_profiles_more.dell"
+      ],
+      "mechanism": "开发、制造和销售IT产品和服务",
+      "conditions": [
+        "宽口径产业归属，不构成具体客户/供应商关系",
+        "广度候选AI关联待核验"
+      ]
+    },
+    {
+      "id": "edge.company.anet",
+      "source": "segment.network_switch",
+      "target": "company.anet",
+      "type": "industry_membership",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "low",
+      "source_ids": [
+        "src.us_profiles_more.anet"
+      ],
+      "mechanism": "设计、开发和销售网络硬件和软件。",
+      "conditions": [
+        "宽口径产业归属，不构成具体客户/供应商关系",
+        "广度候选AI关联待核验"
+      ]
+    },
+    {
+      "id": "edge.company.amd",
+      "source": "segment.accelerator",
+      "target": "company.amd",
+      "type": "industry_membership",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "low",
+      "source_ids": [
+        "src.us_profiles_more.amd"
+      ],
+      "mechanism": "制造计算和图形相关半导体产品",
+      "conditions": [
+        "宽口径产业归属，不构成具体客户/供应商关系",
+        "广度候选AI关联待核验"
+      ]
+    },
+    {
+      "id": "edge.optical_components_to_modules",
+      "source": "segment.optical_component",
+      "target": "segment.transceiver",
+      "type": "technology",
+      "kind": "fact",
+      "direction": "unclear",
+      "confidence": "high",
+      "source_ids": [
+        "src.innolight_annual_2025.industry_chain"
+      ],
+      "mechanism": "年报描述光模块上游包含光芯片、有源及无源光器件；下游包含数通、电信等应用。此为环节关系，不推定任意两家公司存在供应合同。",
+      "conditions": [
+        "不把产业层级关系当作具体客户关系"
+      ]
+    },
+    {
+      "id": "edge.company.luxshare",
+      "source": "segment.server",
+      "target": "company.luxshare",
+      "type": "industry_membership",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "medium",
+      "source_ids": [
+        "src.luxshare_annual_2025.business",
+        "src.luxshare_annual_2025.segment",
+        "src.p2_constituents.concept.ai_server",
+        "src.p2_constituents.concept.ai_optics"
+      ],
+      "mechanism": "年报披露通讯及数据中心板块（含高速电/光互联、热管理、服务器相关）；多块AI概念市值榜成分含本公司。",
+      "conditions": [
+        "通讯及数据中心≠AI专项收入",
+        "消费电子仍为收入主体",
+        "在板≠已核验AI专项收入"
+      ]
+    },
+    {
+      "id": "edge.company.shengyi",
+      "source": "segment.server",
+      "target": "company.shengyi",
+      "type": "industry_membership",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "medium",
+      "source_ids": [
+        "src.shengyi_annual_2025.business",
+        "src.shengyi_annual_2025.segment",
+        "src.p2_constituents.concept.ai_chip",
+        "src.p2_constituents.concept.ai_optics"
+      ],
+      "mechanism": "年报披露覆铜板/PCB主业并叙述AI服务器高算力应用；AI芯片/光模块相关概念市值榜成分含本公司。",
+      "conditions": [
+        "覆铜板/PCB≠AI专项收入",
+        "在板≠已核验AI专项收入"
+      ]
+    },
+    {
+      "id": "edge.company.cambricon",
+      "source": "segment.accelerator",
+      "target": "company.cambricon",
+      "type": "industry_membership",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "medium",
+      "source_ids": [
+        "src.cambricon_annual_2025.business",
+        "src.cambricon_annual_2025.segment",
+        "src.p2_constituents.concept.ai_chip",
+        "src.p2_constituents.concept.ai"
+      ],
+      "mechanism": "年报披露云端智能芯片及板卡/整机为主业；人工智能/AI芯片概念市值榜成分含本公司。",
+      "conditions": [
+        "云端产品线含整机，≠纯芯片专项拆分",
+        "在板≠已拆专项"
+      ]
+    },
+    {
+      "id": "edge.company.sanhua",
+      "source": "segment.thermal",
+      "target": "company.sanhua",
+      "type": "industry_membership",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "low",
+      "source_ids": [
+        "src.sanhua_annual_2025.business",
+        "src.sanhua_annual_2025.missing_dc_cooling",
+        "src.p2_constituents.concept.ai_cooling"
+      ],
+      "mechanism": "冷却概念市值榜成分含本公司；年报主业为制冷空调与汽车零部件，无数据中心液冷专项收入可引。",
+      "conditions": [
+        "在板≠已核验AI液冷收入",
+        "禁把制冷/汽车分部当作液冷专项"
+      ]
+    },
+    {
+      "id": "edge.company.hygon",
+      "source": "segment.accelerator",
+      "target": "company.hygon",
+      "type": "industry_membership",
+      "kind": "inference",
+      "direction": "unclear",
+      "confidence": "medium",
+      "source_ids": [
+        "src.hygon_annual_2025.business",
+        "src.hygon_annual_2025.segment",
+        "src.p2_constituents.concept.ai_chip",
+        "src.p2_constituents.concept.ai"
+      ],
+      "mechanism": "年报披露高端处理器（CPU+DCU）主业；人工智能/AI芯片概念市值榜成分含本公司。",
+      "conditions": [
+        "高端处理器含CPU，≠DCU/AI专项拆分",
+        "在板≠已拆专项"
+      ]
+    }
+  ]
+}

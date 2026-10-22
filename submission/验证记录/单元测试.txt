@@ -1,0 +1,493 @@
+test_dangling_citation_rejected (test_contract.ResearchSafetyTests.test_dangling_citation_rejected) ... ok
+test_grounded_technical_identifier_allowed (test_contract.ResearchSafetyTests.test_grounded_technical_identifier_allowed) ... ok
+test_missing_company_edge_rejected (test_contract.ResearchSafetyTests.test_missing_company_edge_rejected) ... ok
+test_new_numeric_estimate_rejected (test_contract.ResearchSafetyTests.test_new_numeric_estimate_rejected) ... ok
+test_null_without_reason_rejected (test_contract.ResearchSafetyTests.test_null_without_reason_rejected) ... ok
+test_obsolete_instrument_rejected (test_contract.ResearchSafetyTests.test_obsolete_instrument_rejected) ... ok
+test_real_bundle (test_contract.ResearchSafetyTests.test_real_bundle) ... ERROR
+test_tampered_source_rejected (test_contract.ResearchSafetyTests.test_tampered_source_rejected) ... FAIL
+test_total_revenue_cannot_prove_concept_A (test_contract.ResearchSafetyTests.test_total_revenue_cannot_prove_concept_A) ... ok
+test_unsupported_technical_identifier_rejected (test_contract.ResearchSafetyTests.test_unsupported_technical_identifier_rejected) ... ok
+test_data_tampering_rejected (test_frontend_export.FrontendBoundaryTests.test_data_tampering_rejected) ... ok
+test_export_is_consistent (test_frontend_export.FrontendBoundaryTests.test_export_is_consistent) ... ok
+test_group_revenue_cannot_become_ai_revenue (test_frontend_export.FrontendBoundaryTests.test_group_revenue_cannot_become_ai_revenue) ... ok
+test_income_coverage_excludes_parent_categories_and_paths_exclude_scenarios (test_frontend_export.FrontendBoundaryTests.test_income_coverage_excludes_parent_categories_and_paths_exclude_scenarios) ... FAIL
+test_missing_evidence_rejected (test_frontend_export.FrontendBoundaryTests.test_missing_evidence_rejected) ... ok
+test_new_investor_metric_mixed_period_rejected (test_frontend_export.FrontendBoundaryTests.test_new_investor_metric_mixed_period_rejected) ... ok
+test_parent_category_not_ai_exposure (test_frontend_export.FrontendBoundaryTests.test_parent_category_not_ai_exposure) ... ok
+test_parent_profit_denominator_rejected (test_frontend_export.FrontendBoundaryTests.test_parent_profit_denominator_rejected) ... ok
+test_quarterly_margin_not_used_as_full_year (test_frontend_export.FrontendBoundaryTests.test_quarterly_margin_not_used_as_full_year) ... ok
+test_unverified_candidate_cannot_show_financials (test_frontend_export.FrontendBoundaryTests.test_unverified_candidate_cannot_show_financials) ... ok
+test_ai_concept_cannot_use_related_revenue_for_A (test_gate_fake_a.FakeAGradeGates.test_ai_concept_cannot_use_related_revenue_for_A) ... ok
+test_consolidated_total_cannot_be_A (test_gate_fake_a.FakeAGradeGates.test_consolidated_total_cannot_be_A) ... ok
+test_null_metric_cannot_be_A (test_gate_fake_a.FakeAGradeGates.test_null_metric_cannot_be_A) ... ok
+test_snapshot_rejects_uncited_claim_digits (test_gate_fake_a.FakeAGradeGates.test_snapshot_rejects_uncited_claim_digits) ... ERROR
+test_impact_gate (unittest.loader._FailedTest.test_impact_gate) ... ERROR
+test_round2 (unittest.loader._FailedTest.test_round2) ... ERROR
+
+======================================================================
+ERROR: test_real_bundle (test_contract.ResearchSafetyTests.test_real_bundle)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/IOS开发/01同花顺笔试/chainscope/tests/test_contract.py", line 19, in test_real_bundle
+    def test_real_bundle(self):check_bundle(self.r,self.s,self.g)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/IOS开发/01同花顺笔试/chainscope/scripts/validate.py", line 68, in check_bundle
+    if failures:raise ValueError('\n'.join(failures))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: src.inspur_annual_2025.business: local provenance missing
+src.fuyao_inspur_financial.FY2025: local provenance missing
+src.inspur_annual_2025.financial: local provenance missing
+src.inspur_annual_2025.narrow_business: local provenance missing
+src.innolight_annual_2025.business: local provenance missing
+src.fuyao_innolight_financial.FY2025: local provenance missing
+src.innolight_annual_2025.financial: local provenance missing
+src.innolight_annual_2025.narrow_business: local provenance missing
+src.kehua_annual_2025.business: local provenance missing
+src.fuyao_kehua_financial.FY2025: local provenance missing
+src.kehua_annual_2025.financial: local provenance missing
+src.kehua_annual_2025.narrow_business: local provenance missing
+src.envicool_annual_2025.business: local provenance missing
+src.fuyao_envicool_financial.FY2025: local provenance missing
+src.envicool_annual_2025.financial: local provenance missing
+src.envicool_annual_2025.narrow_business: local provenance missing
+src.smci_fy2025.financial: local provenance missing
+src.smci_fy2025.business: local provenance missing
+src.coherent_fy2025_tables.financial: local provenance missing
+src.coherent_fy2025_tables.business: local provenance missing
+src.coherent_optics_product.product: local provenance missing
+src.eaton_fy2025.financial: local provenance missing
+src.eaton_fy2025.business: local provenance missing
+src.vertiv_fy2025.financial: local provenance missing
+src.vertiv_fy2025.business: local provenance missing
+src.vertiv_cooling_product.product: local provenance missing
+src.cn_profiles_compute.unis: local provenance missing
+src.cn_profiles_compute.fii: local provenance missing
+src.cn_profiles_compute.sugon: local provenance missing
+src.cn_profiles_optics.tfc: local provenance missing
+src.cn_profiles_optics.eoptolink: local provenance missing
+src.cn_profiles_optics.accelink: local provenance missing
+src.cn_profiles_power_cooling.shenling: local provenance missing
+src.cn_profiles_power_cooling.kstar: local provenance missing
+src.us_profiles_more.nvda: local provenance missing
+src.us_profiles_more.lite: local provenance missing
+src.us_profiles_more.avgo: local provenance missing
+src.us_profiles_more.dell: local provenance missing
+src.us_profiles_more.anet: local provenance missing
+src.us_profiles_more.amd: local provenance missing
+src.cn_notice_inspur.0: local provenance missing
+src.cn_notice_inspur.1: local provenance missing
+src.cn_notice_inspur.2: local provenance missing
+src.cn_notice_inspur.3: local provenance missing
+src.cn_notice_innolight.0: local provenance missing
+src.cn_notice_innolight.1: local provenance missing
+src.cn_notice_innolight.2: local provenance missing
+src.cn_notice_innolight.3: local provenance missing
+src.cn_notice_kehua.0: local provenance missing
+src.cn_notice_kehua.1: local provenance missing
+src.cn_notice_kehua.2: local provenance missing
+src.cn_notice_kehua.3: local provenance missing
+src.cn_notice_envicool.0: local provenance missing
+src.cn_notice_envicool.1: local provenance missing
+src.cn_notice_envicool.2: local provenance missing
+src.cn_notice_envicool.3: local provenance missing
+src.cn_notice_breadth_compute.0: local provenance missing
+src.cn_notice_breadth_compute.1: local provenance missing
+src.cn_notice_breadth_compute.2: local provenance missing
+src.cn_notice_breadth_compute.3: local provenance missing
+src.cn_notice_breadth_compute.4: local provenance missing
+src.cn_notice_breadth_compute.5: local provenance missing
+src.cn_notice_breadth_compute.6: local provenance missing
+src.cn_notice_breadth_compute.7: local provenance missing
+src.cn_notice_breadth_compute.8: local provenance missing
+src.cn_notice_breadth_optics.0: local provenance missing
+src.cn_notice_breadth_optics.1: local provenance missing
+src.cn_notice_breadth_optics.2: local provenance missing
+src.cn_notice_breadth_optics.3: local provenance missing
+src.cn_notice_breadth_optics.4: local provenance missing
+src.cn_notice_breadth_optics.5: local provenance missing
+src.cn_notice_breadth_optics.6: local provenance missing
+src.cn_notice_breadth_optics.7: local provenance missing
+src.cn_notice_breadth_optics.8: local provenance missing
+src.cn_notice_breadth_power_cooling.0: local provenance missing
+src.cn_notice_breadth_power_cooling.1: local provenance missing
+src.cn_notice_breadth_power_cooling.2: local provenance missing
+src.cn_notice_breadth_power_cooling.3: local provenance missing
+src.cn_notice_breadth_power_cooling.4: local provenance missing
+src.cn_notice_breadth_power_cooling.5: local provenance missing
+src.innolight_annual_2025.industry_chain: local provenance missing
+src.p2_fuyao_ths_concept_catalog: local provenance missing
+src.p2_constituents.concept.ai: local provenance missing
+src.p2_constituents.concept.ai_chip: local provenance missing
+src.p2_constituents.concept.ai_server: local provenance missing
+src.p2_constituents.concept.ai_optics: local provenance missing
+src.p2_constituents.concept.ai_cooling: local provenance missing
+src.p2_constituents.concept.ai_power: local provenance missing
+src.p2_constituents.concept.ai_software: local provenance missing
+src.fii_annual_2025.business: local provenance missing
+src.fii_annual_2025.segment: local provenance missing
+src.fii_annual_2025.narrow_business: local provenance missing
+src.fii_annual_2025.financial: local provenance missing
+src.tfc_annual_2025.business: local provenance missing
+src.tfc_annual_2025.segment: local provenance missing
+src.tfc_annual_2025.narrow_business: local provenance missing
+src.tfc_annual_2025.financial: local provenance missing
+src.eoptolink_annual_2025.business: local provenance missing
+src.eoptolink_annual_2025.segment: local provenance missing
+src.eoptolink_annual_2025.narrow_business: local provenance missing
+src.eoptolink_annual_2025.financial: local provenance missing
+src.fuyao_fii_financial.FY2025: local provenance missing
+src.fuyao_tfc_financial.FY2025: local provenance missing
+src.fuyao_eoptolink_financial.FY2025: local provenance missing
+src.lumentum_fy2025.business: local provenance missing
+src.lumentum_fy2025.segment: local provenance missing
+src.lumentum_fy2025.financial: local provenance missing
+src.lumentum_fy2025_10k.business: local provenance missing
+src.luxshare_annual_2025.business: local provenance missing
+src.luxshare_annual_2025.segment: local provenance missing
+src.luxshare_annual_2025.narrow_business: local provenance missing
+src.luxshare_annual_2025.financial: local provenance missing
+src.shengyi_annual_2025.business: local provenance missing
+src.shengyi_annual_2025.segment: local provenance missing
+src.shengyi_annual_2025.narrow_business: local provenance missing
+src.shengyi_annual_2025.financial: local provenance missing
+src.cambricon_annual_2025.business: local provenance missing
+src.cambricon_annual_2025.segment: local provenance missing
+src.cambricon_annual_2025.narrow_business: local provenance missing
+src.cambricon_annual_2025.financial: local provenance missing
+src.sanhua_annual_2025.business: local provenance missing
+src.sanhua_annual_2025.segment: local provenance missing
+src.sanhua_annual_2025.financial: local provenance missing
+src.sanhua_annual_2025.missing_dc_cooling: local provenance missing
+src.hygon_annual_2025.business: local provenance missing
+src.hygon_annual_2025.segment: local provenance missing
+src.hygon_annual_2025.narrow_business: local provenance missing
+src.hygon_annual_2025.financial: local provenance missing
+
+======================================================================
+ERROR: test_snapshot_rejects_uncited_claim_digits (test_gate_fake_a.FakeAGradeGates.test_snapshot_rejects_uncited_claim_digits)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/IOS开发/01同花顺笔试/chainscope/tests/test_gate_fake_a.py", line 48, in test_snapshot_rejects_uncited_claim_digits
+    from export_frontend import assert_claim_citations
+  File "/Volumes/IOS开发/01同花顺笔试/chainscope/scripts/export_frontend.py", line 19, in <module>
+    from investor_fields import enrich, overview
+  File "/Volumes/IOS开发/01同花顺笔试/chainscope/scripts/investor_fields.py", line 4, in <module>
+    from bs4 import BeautifulSoup
+ModuleNotFoundError: No module named 'bs4'
+
+======================================================================
+ERROR: test_impact_gate (unittest.loader._FailedTest.test_impact_gate)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_impact_gate
+Traceback (most recent call last):
+  File "/Users/jay/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jay/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "/Volumes/IOS开发/01同花顺笔试/chainscope/tests/test_impact_gate.py", line 10, in <module>
+    from export_frontend import export, write_impact_report
+  File "/Volumes/IOS开发/01同花顺笔试/chainscope/scripts/export_frontend.py", line 19, in <module>
+    from investor_fields import enrich, overview
+  File "/Volumes/IOS开发/01同花顺笔试/chainscope/scripts/investor_fields.py", line 4, in <module>
+    from bs4 import BeautifulSoup
+ModuleNotFoundError: No module named 'bs4'
+
+
+======================================================================
+ERROR: test_round2 (unittest.loader._FailedTest.test_round2)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_round2
+Traceback (most recent call last):
+  File "/Users/jay/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jay/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "/Volumes/IOS开发/01同花顺笔试/chainscope/tests/test_round2.py", line 8, in <module>
+    from prepare_round2 import ratio
+  File "/Volumes/IOS开发/01同花顺笔试/chainscope/scripts/prepare_round2.py", line 7, in <module>
+    from bs4 import BeautifulSoup
+ModuleNotFoundError: No module named 'bs4'
+
+
+======================================================================
+FAIL: test_tampered_source_rejected (test_contract.ResearchSafetyTests.test_tampered_source_rejected)
+----------------------------------------------------------------------
+ValueError: src.inspur_annual_2025.business: local provenance missing
+src.fuyao_inspur_financial.FY2025: local provenance missing
+src.inspur_annual_2025.financial: local provenance missing
+src.inspur_annual_2025.narrow_business: local provenance missing
+src.innolight_annual_2025.business: local provenance missing
+src.fuyao_innolight_financial.FY2025: local provenance missing
+src.innolight_annual_2025.financial: local provenance missing
+src.innolight_annual_2025.narrow_business: local provenance missing
+src.kehua_annual_2025.business: local provenance missing
+src.fuyao_kehua_financial.FY2025: local provenance missing
+src.kehua_annual_2025.financial: local provenance missing
+src.kehua_annual_2025.narrow_business: local provenance missing
+src.envicool_annual_2025.business: local provenance missing
+src.fuyao_envicool_financial.FY2025: local provenance missing
+src.envicool_annual_2025.financial: local provenance missing
+src.envicool_annual_2025.narrow_business: local provenance missing
+src.smci_fy2025.financial: local provenance missing
+src.smci_fy2025.business: local provenance missing
+src.coherent_fy2025_tables.financial: local provenance missing
+src.coherent_fy2025_tables.business: local provenance missing
+src.coherent_optics_product.product: local provenance missing
+src.eaton_fy2025.financial: local provenance missing
+src.eaton_fy2025.business: local provenance missing
+src.vertiv_fy2025.financial: local provenance missing
+src.vertiv_fy2025.business: local provenance missing
+src.vertiv_cooling_product.product: local provenance missing
+src.cn_profiles_compute.unis: local provenance missing
+src.cn_profiles_compute.fii: local provenance missing
+src.cn_profiles_compute.sugon: local provenance missing
+src.cn_profiles_optics.tfc: local provenance missing
+src.cn_profiles_optics.eoptolink: local provenance missing
+src.cn_profiles_optics.accelink: local provenance missing
+src.cn_profiles_power_cooling.shenling: local provenance missing
+src.cn_profiles_power_cooling.kstar: local provenance missing
+src.us_profiles_more.nvda: local provenance missing
+src.us_profiles_more.lite: local provenance missing
+src.us_profiles_more.avgo: local provenance missing
+src.us_profiles_more.dell: local provenance missing
+src.us_profiles_more.anet: local provenance missing
+src.us_profiles_more.amd: local provenance missing
+src.cn_notice_inspur.0: local provenance missing
+src.cn_notice_inspur.1: local provenance missing
+src.cn_notice_inspur.2: local provenance missing
+src.cn_notice_inspur.3: local provenance missing
+src.cn_notice_innolight.0: local provenance missing
+src.cn_notice_innolight.1: local provenance missing
+src.cn_notice_innolight.2: local provenance missing
+src.cn_notice_innolight.3: local provenance missing
+src.cn_notice_kehua.0: local provenance missing
+src.cn_notice_kehua.1: local provenance missing
+src.cn_notice_kehua.2: local provenance missing
+src.cn_notice_kehua.3: local provenance missing
+src.cn_notice_envicool.0: local provenance missing
+src.cn_notice_envicool.1: local provenance missing
+src.cn_notice_envicool.2: local provenance missing
+src.cn_notice_envicool.3: local provenance missing
+src.cn_notice_breadth_compute.0: local provenance missing
+src.cn_notice_breadth_compute.1: local provenance missing
+src.cn_notice_breadth_compute.2: local provenance missing
+src.cn_notice_breadth_compute.3: local provenance missing
+src.cn_notice_breadth_compute.4: local provenance missing
+src.cn_notice_breadth_compute.5: local provenance missing
+src.cn_notice_breadth_compute.6: local provenance missing
+src.cn_notice_breadth_compute.7: local provenance missing
+src.cn_notice_breadth_compute.8: local provenance missing
+src.cn_notice_breadth_optics.0: local provenance missing
+src.cn_notice_breadth_optics.1: local provenance missing
+src.cn_notice_breadth_optics.2: local provenance missing
+src.cn_notice_breadth_optics.3: local provenance missing
+src.cn_notice_breadth_optics.4: local provenance missing
+src.cn_notice_breadth_optics.5: local provenance missing
+src.cn_notice_breadth_optics.6: local provenance missing
+src.cn_notice_breadth_optics.7: local provenance missing
+src.cn_notice_breadth_optics.8: local provenance missing
+src.cn_notice_breadth_power_cooling.0: local provenance missing
+src.cn_notice_breadth_power_cooling.1: local provenance missing
+src.cn_notice_breadth_power_cooling.2: local provenance missing
+src.cn_notice_breadth_power_cooling.3: local provenance missing
+src.cn_notice_breadth_power_cooling.4: local provenance missing
+src.cn_notice_breadth_power_cooling.5: local provenance missing
+src.innolight_annual_2025.industry_chain: local provenance missing
+src.p2_fuyao_ths_concept_catalog: local provenance missing
+src.p2_constituents.concept.ai: local provenance missing
+src.p2_constituents.concept.ai_chip: local provenance missing
+src.p2_constituents.concept.ai_server: local provenance missing
+src.p2_constituents.concept.ai_optics: local provenance missing
+src.p2_constituents.concept.ai_cooling: local provenance missing
+src.p2_constituents.concept.ai_power: local provenance missing
+src.p2_constituents.concept.ai_software: local provenance missing
+src.fii_annual_2025.business: local provenance missing
+src.fii_annual_2025.segment: local provenance missing
+src.fii_annual_2025.narrow_business: local provenance missing
+src.fii_annual_2025.financial: local provenance missing
+src.tfc_annual_2025.business: local provenance missing
+src.tfc_annual_2025.segment: local provenance missing
+src.tfc_annual_2025.narrow_business: local provenance missing
+src.tfc_annual_2025.financial: local provenance missing
+src.eoptolink_annual_2025.business: local provenance missing
+src.eoptolink_annual_2025.segment: local provenance missing
+src.eoptolink_annual_2025.narrow_business: local provenance missing
+src.eoptolink_annual_2025.financial: local provenance missing
+src.fuyao_fii_financial.FY2025: local provenance missing
+src.fuyao_tfc_financial.FY2025: local provenance missing
+src.fuyao_eoptolink_financial.FY2025: local provenance missing
+src.lumentum_fy2025.business: local provenance missing
+src.lumentum_fy2025.segment: local provenance missing
+src.lumentum_fy2025.financial: local provenance missing
+src.lumentum_fy2025_10k.business: local provenance missing
+src.luxshare_annual_2025.business: local provenance missing
+src.luxshare_annual_2025.segment: local provenance missing
+src.luxshare_annual_2025.narrow_business: local provenance missing
+src.luxshare_annual_2025.financial: local provenance missing
+src.shengyi_annual_2025.business: local provenance missing
+src.shengyi_annual_2025.segment: local provenance missing
+src.shengyi_annual_2025.narrow_business: local provenance missing
+src.shengyi_annual_2025.financial: local provenance missing
+src.cambricon_annual_2025.business: local provenance missing
+src.cambricon_annual_2025.segment: local provenance missing
+src.cambricon_annual_2025.narrow_business: local provenance missing
+src.cambricon_annual_2025.financial: local provenance missing
+src.sanhua_annual_2025.business: local provenance missing
+src.sanhua_annual_2025.segment: local provenance missing
+src.sanhua_annual_2025.financial: local provenance missing
+src.sanhua_annual_2025.missing_dc_cooling: local provenance missing
+src.hygon_annual_2025.business: local provenance missing
+src.hygon_annual_2025.segment: local provenance missing
+src.hygon_annual_2025.narrow_business: local provenance missing
+src.hygon_annual_2025.financial: local provenance missing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Volumes/IOS开发/01同花顺笔试/chainscope/tests/test_contract.py", line 42, in test_tampered_source_rejected
+    with self.assertRaisesRegex(ValueError,'hash mismatch'):check_bundle(self.r,self.s,self.g)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "hash mismatch" does not match "src.inspur_annual_2025.business: local provenance missing
+src.fuyao_inspur_financial.FY2025: local provenance missing
+src.inspur_annual_2025.financial: local provenance missing
+src.inspur_annual_2025.narrow_business: local provenance missing
+src.innolight_annual_2025.business: local provenance missing
+src.fuyao_innolight_financial.FY2025: local provenance missing
+src.innolight_annual_2025.financial: local provenance missing
+src.innolight_annual_2025.narrow_business: local provenance missing
+src.kehua_annual_2025.business: local provenance missing
+src.fuyao_kehua_financial.FY2025: local provenance missing
+src.kehua_annual_2025.financial: local provenance missing
+src.kehua_annual_2025.narrow_business: local provenance missing
+src.envicool_annual_2025.business: local provenance missing
+src.fuyao_envicool_financial.FY2025: local provenance missing
+src.envicool_annual_2025.financial: local provenance missing
+src.envicool_annual_2025.narrow_business: local provenance missing
+src.smci_fy2025.financial: local provenance missing
+src.smci_fy2025.business: local provenance missing
+src.coherent_fy2025_tables.financial: local provenance missing
+src.coherent_fy2025_tables.business: local provenance missing
+src.coherent_optics_product.product: local provenance missing
+src.eaton_fy2025.financial: local provenance missing
+src.eaton_fy2025.business: local provenance missing
+src.vertiv_fy2025.financial: local provenance missing
+src.vertiv_fy2025.business: local provenance missing
+src.vertiv_cooling_product.product: local provenance missing
+src.cn_profiles_compute.unis: local provenance missing
+src.cn_profiles_compute.fii: local provenance missing
+src.cn_profiles_compute.sugon: local provenance missing
+src.cn_profiles_optics.tfc: local provenance missing
+src.cn_profiles_optics.eoptolink: local provenance missing
+src.cn_profiles_optics.accelink: local provenance missing
+src.cn_profiles_power_cooling.shenling: local provenance missing
+src.cn_profiles_power_cooling.kstar: local provenance missing
+src.us_profiles_more.nvda: local provenance missing
+src.us_profiles_more.lite: local provenance missing
+src.us_profiles_more.avgo: local provenance missing
+src.us_profiles_more.dell: local provenance missing
+src.us_profiles_more.anet: local provenance missing
+src.us_profiles_more.amd: local provenance missing
+src.cn_notice_inspur.0: local provenance missing
+src.cn_notice_inspur.1: local provenance missing
+src.cn_notice_inspur.2: local provenance missing
+src.cn_notice_inspur.3: local provenance missing
+src.cn_notice_innolight.0: local provenance missing
+src.cn_notice_innolight.1: local provenance missing
+src.cn_notice_innolight.2: local provenance missing
+src.cn_notice_innolight.3: local provenance missing
+src.cn_notice_kehua.0: local provenance missing
+src.cn_notice_kehua.1: local provenance missing
+src.cn_notice_kehua.2: local provenance missing
+src.cn_notice_kehua.3: local provenance missing
+src.cn_notice_envicool.0: local provenance missing
+src.cn_notice_envicool.1: local provenance missing
+src.cn_notice_envicool.2: local provenance missing
+src.cn_notice_envicool.3: local provenance missing
+src.cn_notice_breadth_compute.0: local provenance missing
+src.cn_notice_breadth_compute.1: local provenance missing
+src.cn_notice_breadth_compute.2: local provenance missing
+src.cn_notice_breadth_compute.3: local provenance missing
+src.cn_notice_breadth_compute.4: local provenance missing
+src.cn_notice_breadth_compute.5: local provenance missing
+src.cn_notice_breadth_compute.6: local provenance missing
+src.cn_notice_breadth_compute.7: local provenance missing
+src.cn_notice_breadth_compute.8: local provenance missing
+src.cn_notice_breadth_optics.0: local provenance missing
+src.cn_notice_breadth_optics.1: local provenance missing
+src.cn_notice_breadth_optics.2: local provenance missing
+src.cn_notice_breadth_optics.3: local provenance missing
+src.cn_notice_breadth_optics.4: local provenance missing
+src.cn_notice_breadth_optics.5: local provenance missing
+src.cn_notice_breadth_optics.6: local provenance missing
+src.cn_notice_breadth_optics.7: local provenance missing
+src.cn_notice_breadth_optics.8: local provenance missing
+src.cn_notice_breadth_power_cooling.0: local provenance missing
+src.cn_notice_breadth_power_cooling.1: local provenance missing
+src.cn_notice_breadth_power_cooling.2: local provenance missing
+src.cn_notice_breadth_power_cooling.3: local provenance missing
+src.cn_notice_breadth_power_cooling.4: local provenance missing
+src.cn_notice_breadth_power_cooling.5: local provenance missing
+src.innolight_annual_2025.industry_chain: local provenance missing
+src.p2_fuyao_ths_concept_catalog: local provenance missing
+src.p2_constituents.concept.ai: local provenance missing
+src.p2_constituents.concept.ai_chip: local provenance missing
+src.p2_constituents.concept.ai_server: local provenance missing
+src.p2_constituents.concept.ai_optics: local provenance missing
+src.p2_constituents.concept.ai_cooling: local provenance missing
+src.p2_constituents.concept.ai_power: local provenance missing
+src.p2_constituents.concept.ai_software: local provenance missing
+src.fii_annual_2025.business: local provenance missing
+src.fii_annual_2025.segment: local provenance missing
+src.fii_annual_2025.narrow_business: local provenance missing
+src.fii_annual_2025.financial: local provenance missing
+src.tfc_annual_2025.business: local provenance missing
+src.tfc_annual_2025.segment: local provenance missing
+src.tfc_annual_2025.narrow_business: local provenance missing
+src.tfc_annual_2025.financial: local provenance missing
+src.eoptolink_annual_2025.business: local provenance missing
+src.eoptolink_annual_2025.segment: local provenance missing
+src.eoptolink_annual_2025.narrow_business: local provenance missing
+src.eoptolink_annual_2025.financial: local provenance missing
+src.fuyao_fii_financial.FY2025: local provenance missing
+src.fuyao_tfc_financial.FY2025: local provenance missing
+src.fuyao_eoptolink_financial.FY2025: local provenance missing
+src.lumentum_fy2025.business: local provenance missing
+src.lumentum_fy2025.segment: local provenance missing
+src.lumentum_fy2025.financial: local provenance missing
+src.lumentum_fy2025_10k.business: local provenance missing
+src.luxshare_annual_2025.business: local provenance missing
+src.luxshare_annual_2025.segment: local provenance missing
+src.luxshare_annual_2025.narrow_business: local provenance missing
+src.luxshare_annual_2025.financial: local provenance missing
+src.shengyi_annual_2025.business: local provenance missing
+src.shengyi_annual_2025.segment: local provenance missing
+src.shengyi_annual_2025.narrow_business: local provenance missing
+src.shengyi_annual_2025.financial: local provenance missing
+src.cambricon_annual_2025.business: local provenance missing
+src.cambricon_annual_2025.segment: local provenance missing
+src.cambricon_annual_2025.narrow_business: local provenance missing
+src.cambricon_annual_2025.financial: local provenance missing
+src.sanhua_annual_2025.business: local provenance missing
+src.sanhua_annual_2025.segment: local provenance missing
+src.sanhua_annual_2025.financial: local provenance missing
+src.sanhua_annual_2025.missing_dc_cooling: local provenance missing
+src.hygon_annual_2025.business: local provenance missing
+src.hygon_annual_2025.segment: local provenance missing
+src.hygon_annual_2025.narrow_business: local provenance missing
+src.hygon_annual_2025.financial: local provenance missing"
+
+======================================================================
+FAIL: test_income_coverage_excludes_parent_categories_and_paths_exclude_scenarios (test_frontend_export.FrontendBoundaryTests.test_income_coverage_excludes_parent_categories_and_paths_exclude_scenarios)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/IOS开发/01同花顺笔试/chainscope/tests/test_frontend_export.py", line 54, in test_income_coverage_excludes_parent_categories_and_paths_exclude_scenarios
+    self.assertEqual(cv['revenue_evidence_denominator'],9)
+AssertionError: 17 != 9
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.036s
+
+FAILED (failures=2, errors=4)

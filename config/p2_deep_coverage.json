@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "as_of": "2026-10-21",
+    "timezone": "Asia/Hong_Kong",
+    "baseline_research_version": "2026-10-21.p2.joinable.2",
+    "inventory_doc": "docs/P2_DEEP_COVERAGE.md",
+    "notes": "覆盖与验收清单；供应商调用仍走 adapter + p2_collection_jobs / p2_pull，本文件不写死扶摇 URL。主题可替换。"
+  },
+  "acceptance": {
+    "require_four_metrics": true,
+    "forbid_fake_grade_a": true,
+    "shallow_concepts_skip_deep": [
+      "concept.ai_software"
+    ],
+    "concepts_need_source_ids": true,
+    "p2_complete_only_when": "non-shallow analysis_enabled concepts: deep_linked union has C1 source_ids + honest A-E + pair-or-explicit-none + event transmission with fact steps"
+  },
+  "ticker_to_slug": {
+    "601138.SH": "fii",
+    "300308.SZ": "innolight",
+    "300502.SZ": "eoptolink",
+    "300394.SZ": "tfc",
+    "002837.SZ": "envicool",
+    "000977.SZ": "inspur",
+    "002335.SZ": "kehua",
+    "002281.SZ": "accelink",
+    "301018.SZ": "shenling",
+    "002518.SZ": "kstar",
+    "000938.SZ": "unis",
+    "603019.SH": "sugon",
+    "002475.SZ": "luxshare",
+    "600183.SH": "shengyi",
+    "688256.SH": "cambricon",
+    "002050.SZ": "sanhua",
+    "688041.SH": "hygon"
+  },
+  "batch_b1_migrate_or_deepen": [
+    {
+      "slug": "innolight",
+      "ticker": "300308.SZ",
+      "priority": "P1",
+      "action": "keep_deep; add concept source_ids; align claims to concept.ai_optics narrow scope"
+    },
+    {
+      "slug": "fii",
+      "ticker": "601138.SH",
+      "priority": "P0",
+      "action": "breadth_to_deep; business evidence from filings; grade B/C/E if no scoped revenue; no fake A"
+    },
+    {
+      "slug": "eoptolink",
+      "ticker": "300502.SZ",
+      "priority": "P0",
+      "action": "breadth_to_deep; optics module evidence; pair only after verified numbers"
+    },
+    {
+      "slug": "tfc",
+      "ticker": "300394.SZ",
+      "priority": "P0",
+      "action": "breadth_to_deep; optical component evidence; default B/C/E"
+    },
+    {
+      "slug": "envicool",
+      "ticker": "002837.SZ",
+      "priority": "P1",
+      "action": "migrate_pool; keep pairs/events; not in mkt-cap top10 — label honestly; cooling narrative focus",
+      "in_mkt_cap_top10": false
+    },
+    {
+      "slug": "inspur",
+      "ticker": "000977.SZ",
+      "priority": "P1",
+      "action": "optional migrate for server narrative; not in mkt-cap top10",
+      "in_mkt_cap_top10": false
+    },
+    {
+      "slug": "kehua",
+      "ticker": "002335.SZ",
+      "priority": "P1",
+      "action": "optional migrate for power narrative; not in mkt-cap top10",
+      "in_mkt_cap_top10": false
+    }
+  ],
+  "batch_b2_new_top10_mark_e": [
+    {
+      "thscode": "002475.SZ",
+      "name": "立讯精密",
+      "board_hits": 5,
+      "default_grade": "E",
+      "forbid_grade_a_without_scoped_revenue": true
+    },
+    {
+      "thscode": "688256.SH",
+      "name": "寒武纪",
+      "board_hits": 4,
+      "default_grade": "E",
+      "forbid_grade_a_without_scoped_revenue": true
+    },
+    {
+      "thscode": "688041.SH",
+      "name": "海光信息",
+      "board_hits": 2,
+      "default_grade": "E",
+      "forbid_grade_a_without_scoped_revenue": true
+    },
+    {
+      "thscode": "600183.SH",
+      "name": "生益科技",
+      "board_hits": 2,
+      "default_grade": "E",
+      "forbid_grade_a_without_scoped_revenue": true
+    },
+    {
+      "thscode": "002050.SZ",
+      "name": "三花智控",
+      "board_hits": 1,
+      "default_grade": "E",
+      "note": "cooling-related candidate if business-screened",
+      "forbid_grade_a_without_scoped_revenue": true
+    }
+  ],
+  "batch_b2_keep_mkt_only_noise": [
+    "000333.SZ",
+    "000725.SZ",
+    "002352.SZ",
+    "601872.SH",
+    "300059.SZ",
+    "300760.SZ"
+  ],
+  "batch_b3_cross_cutting": [
+    "write concepts[].source_ids from constituent/board raw into sources",
+    "decide concept_board vs legacy industry_graph for C1 hierarchy export",
+    "keep weight board empty + missing_reason when API unavailable",
+    "do not block four-metric gate on feeds backfill"
+  ],
+  "mapped_in_mkt_top10_as_of_baseline": [
+    "cambricon",
+    "eoptolink",
+    "fii",
+    "hygon",
+    "innolight",
+    "luxshare",
+    "shengyi",
+    "tfc"
+  ],
+  "four_metric_gap_summary": {
+    "C1_taxonomy_membership": "B1h demo: mapped deep slugs have concept membership + annual/filing sources; board source_ids from catalog/constituents; weight board still empty",
+    "C2_grades": "demo grades honest: fii/eoptolink/innolight/tfc/luxshare/shengyi/cambricon/hygon narrow B; sanhua E; no fake narrow A",
+    "C3_pairs": "demo-ready pairs: fii_smci, eoptolink_cohr, innolight_cohr (+envicool_vrt); tfc/luxshare/shengyi/cambricon/hygon/sanhua missing_reason — no fake pairs this batch",
+    "C4_events": "demo events for all deep B seats except sanhua E; optics_high_speed_shipments / blackwell_ultra cover innolight/envicool",
+    "demo_tier1_note": "B1h: no new deep seats; 可演示清单 in docs/P2_DEEP_COVERAGE.md; 38 mkt-only remain noise/unmapped"
+  }
+}

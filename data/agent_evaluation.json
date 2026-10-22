@@ -1,0 +1,840 @@
+{
+  "schema_version": "0.1.0",
+  "generated_at": "2026-10-21T11:52:05.195442+00:00",
+  "model": "deepseek-flash",
+  "calls": [
+    {
+      "id": "connectivity_probe",
+      "model": "deepseek-flash",
+      "http_status": 200,
+      "elapsed_seconds": 0.915,
+      "usage": {
+        "prompt_tokens": 50,
+        "completion_tokens": 20,
+        "total_tokens": 70,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 50
+      },
+      "accepted": false,
+      "note": "首个JSON测试返回畸形JSON，未当作合格结构化输出"
+    },
+    {
+      "id": "cohr.2026-10-21T1145135894860000.attempt1.json",
+      "company_id": "cohr",
+      "http_status": 200,
+      "elapsed_seconds": 2.366,
+      "usage": {
+        "prompt_tokens": 3278,
+        "completion_tokens": 238,
+        "total_tokens": 3516,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 3278
+      },
+      "accepted": false,
+      "validation_error": "unreviewed_numeric_claim",
+      "trace_path": "artifacts/agent/cohr.2026-10-21T1145135894860000.attempt1.json"
+    },
+    {
+      "id": "cohr.2026-10-21T1145135894860000.attempt2.json",
+      "company_id": "cohr",
+      "http_status": 200,
+      "elapsed_seconds": 1.896,
+      "usage": {
+        "prompt_tokens": 3296,
+        "completion_tokens": 226,
+        "total_tokens": 3522,
+        "prompt_tokens_details": {
+          "cached_tokens": 3072
+        },
+        "prompt_cache_hit_tokens": 3072,
+        "prompt_cache_miss_tokens": 224
+      },
+      "accepted": false,
+      "validation_error": "unreviewed_numeric_claim",
+      "trace_path": "artifacts/agent/cohr.2026-10-21T1145135894860000.attempt2.json"
+    },
+    {
+      "id": "cohr.2026-10-21T1146139378600000.attempt1.json",
+      "company_id": "cohr",
+      "http_status": null,
+      "elapsed_seconds": 0.014,
+      "usage": null,
+      "accepted": false,
+      "validation_error": "transport_error",
+      "trace_path": "artifacts/agent/cohr.2026-10-21T1146139378600000.attempt1.json"
+    },
+    {
+      "id": "cohr.2026-10-21T1146139378600000.attempt2.json",
+      "company_id": "cohr",
+      "http_status": null,
+      "elapsed_seconds": 0.0,
+      "usage": null,
+      "accepted": false,
+      "validation_error": "transport_error",
+      "trace_path": "artifacts/agent/cohr.2026-10-21T1146139378600000.attempt2.json"
+    },
+    {
+      "id": "cohr.2026-10-21T1146338673190000.attempt1.json",
+      "company_id": "cohr",
+      "http_status": null,
+      "elapsed_seconds": 0.023,
+      "usage": null,
+      "accepted": false,
+      "validation_error": "transport_error",
+      "trace_path": "artifacts/agent/cohr.2026-10-21T1146338673190000.attempt1.json"
+    },
+    {
+      "id": "cohr.2026-10-21T1146338673190000.attempt2.json",
+      "company_id": "cohr",
+      "http_status": null,
+      "elapsed_seconds": 0.014,
+      "usage": null,
+      "accepted": false,
+      "validation_error": "transport_error",
+      "trace_path": "artifacts/agent/cohr.2026-10-21T1146338673190000.attempt2.json"
+    },
+    {
+      "id": "cohr.attempt1.json",
+      "company_id": "cohr",
+      "http_status": 200,
+      "elapsed_seconds": 2.395,
+      "usage": {
+        "prompt_tokens": 3232,
+        "completion_tokens": 354,
+        "total_tokens": 3586,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 3232
+      },
+      "accepted": false,
+      "validation_error": "1 validation error for AIAnalysis\nobservations\n  List should have at most 4 items after validation, not 5 [type=too_long, input_value=[{'text': '公司业务...tics_product.product']}], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.14/v/too_long",
+      "trace_path": "artifacts/agent/cohr.attempt1.json"
+    },
+    {
+      "id": "cohr.attempt2.json",
+      "company_id": "cohr",
+      "http_status": 200,
+      "elapsed_seconds": 2.401,
+      "usage": {
+        "prompt_tokens": 3250,
+        "completion_tokens": 347,
+        "total_tokens": 3597,
+        "prompt_tokens_details": {
+          "cached_tokens": 3072
+        },
+        "prompt_cache_hit_tokens": 3072,
+        "prompt_cache_miss_tokens": 178
+      },
+      "accepted": false,
+      "validation_error": "1 validation error for AIAnalysis\nobservations\n  List should have at most 4 items after validation, not 5 [type=too_long, input_value=[{'text': '公司业务...tics_product.product']}], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.14/v/too_long",
+      "trace_path": "artifacts/agent/cohr.attempt2.json"
+    },
+    {
+      "id": "envicool.2026-10-21T1145117805690000.attempt1.json",
+      "company_id": "envicool",
+      "http_status": 200,
+      "elapsed_seconds": 1.806,
+      "usage": {
+        "prompt_tokens": 3851,
+        "completion_tokens": 260,
+        "total_tokens": 4111,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 3851
+      },
+      "accepted": true,
+      "validation_error": null,
+      "trace_path": "artifacts/agent/envicool.2026-10-21T1145117805690000.attempt1.json"
+    },
+    {
+      "id": "envicool.2026-10-21T1146138925470000.attempt1.json",
+      "company_id": "envicool",
+      "http_status": null,
+      "elapsed_seconds": 0.011,
+      "usage": null,
+      "accepted": false,
+      "validation_error": "transport_error",
+      "trace_path": "artifacts/agent/envicool.2026-10-21T1146138925470000.attempt1.json"
+    },
+    {
+      "id": "envicool.2026-10-21T1146138925470000.attempt2.json",
+      "company_id": "envicool",
+      "http_status": null,
+      "elapsed_seconds": 0.014,
+      "usage": null,
+      "accepted": false,
+      "validation_error": "transport_error",
+      "trace_path": "artifacts/agent/envicool.2026-10-21T1146138925470000.attempt2.json"
+    },
+    {
+      "id": "envicool.2026-10-21T1151176669730000.attempt1.json",
+      "company_id": "envicool",
+      "http_status": 200,
+      "elapsed_seconds": 1.761,
+      "usage": {
+        "prompt_tokens": 3977,
+        "completion_tokens": 218,
+        "total_tokens": 4195,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        },
+        "prompt_cache_hit_tokens": 1152,
+        "prompt_cache_miss_tokens": 2825
+      },
+      "accepted": true,
+      "validation_error": null,
+      "trace_path": "artifacts/agent/envicool.2026-10-21T1151176669730000.attempt1.json"
+    },
+    {
+      "id": "envicool.attempt1.json",
+      "company_id": "envicool",
+      "http_status": 200,
+      "elapsed_seconds": 2.151,
+      "usage": {
+        "prompt_tokens": 3793,
+        "completion_tokens": 332,
+        "total_tokens": 4125,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 3793
+      },
+      "accepted": false,
+      "validation_error": "1 validation error for AIAnalysis\nobservations\n  List should have at most 4 items after validation, not 5 [type=too_long, input_value=[{'text': '公司主营...2025.narrow_business']}], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.14/v/too_long",
+      "trace_path": "artifacts/agent/envicool.attempt1.json"
+    },
+    {
+      "id": "envicool.attempt2.json",
+      "company_id": "envicool",
+      "http_status": 200,
+      "elapsed_seconds": 1.996,
+      "usage": {
+        "prompt_tokens": 3811,
+        "completion_tokens": 406,
+        "total_tokens": 4217,
+        "prompt_tokens_details": {
+          "cached_tokens": 3584
+        },
+        "prompt_cache_hit_tokens": 3584,
+        "prompt_cache_miss_tokens": 227
+      },
+      "accepted": false,
+      "validation_error": "1 validation error for AIAnalysis\nobservations\n  List should have at most 4 items after validation, not 6 [type=too_long, input_value=[{'text': '公司主营...ling_product.product']}], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.14/v/too_long",
+      "trace_path": "artifacts/agent/envicool.attempt2.json"
+    },
+    {
+      "id": "etn.2026-10-21T1145138643130000.attempt1.json",
+      "company_id": "etn",
+      "http_status": 200,
+      "elapsed_seconds": 1.646,
+      "usage": {
+        "prompt_tokens": 1534,
+        "completion_tokens": 173,
+        "total_tokens": 1707,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1534
+      },
+      "accepted": true,
+      "validation_error": null,
+      "trace_path": "artifacts/agent/etn.2026-10-21T1145138643130000.attempt1.json"
+    },
+    {
+      "id": "etn.2026-10-21T1146139805170000.attempt1.json",
+      "company_id": "etn",
+      "http_status": null,
+      "elapsed_seconds": 0.018,
+      "usage": null,
+      "accepted": false,
+      "validation_error": "transport_error",
+      "trace_path": "artifacts/agent/etn.2026-10-21T1146139805170000.attempt1.json"
+    },
+    {
+      "id": "etn.2026-10-21T1146139805170000.attempt2.json",
+      "company_id": "etn",
+      "http_status": null,
+      "elapsed_seconds": 0.001,
+      "usage": null,
+      "accepted": false,
+      "validation_error": "transport_error",
+      "trace_path": "artifacts/agent/etn.2026-10-21T1146139805170000.attempt2.json"
+    },
+    {
+      "id": "etn.attempt1.json",
+      "company_id": "etn",
+      "http_status": 200,
+      "elapsed_seconds": 1.84,
+      "usage": {
+        "prompt_tokens": 1489,
+        "completion_tokens": 292,
+        "total_tokens": 1781,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1489
+      },
+      "accepted": false,
+      "validation_error": "1 validation error for AIAnalysis\nobservations\n  List should have at most 4 items after validation, not 5 [type=too_long, input_value=[{'text': '公司为电...ton_fy2025.financial']}], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.14/v/too_long",
+      "trace_path": "artifacts/agent/etn.attempt1.json"
+    },
+    {
+      "id": "etn.attempt2.json",
+      "company_id": "etn",
+      "http_status": 200,
+      "elapsed_seconds": 1.745,
+      "usage": {
+        "prompt_tokens": 1507,
+        "completion_tokens": 289,
+        "total_tokens": 1796,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        },
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 227
+      },
+      "accepted": false,
+      "validation_error": "1 validation error for AIAnalysis\nobservations\n  List should have at most 4 items after validation, not 5 [type=too_long, input_value=[{'text': '公司为电...ton_fy2025.financial']}], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.14/v/too_long",
+      "trace_path": "artifacts/agent/etn.attempt2.json"
+    },
+    {
+      "id": "innolight.2026-10-21T1145082983430000.attempt1.json",
+      "company_id": "innolight",
+      "http_status": 200,
+      "elapsed_seconds": 1.933,
+      "usage": {
+        "prompt_tokens": 3980,
+        "completion_tokens": 204,
+        "total_tokens": 4184,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 3980
+      },
+      "accepted": true,
+      "validation_error": null,
+      "trace_path": "artifacts/agent/innolight.2026-10-21T1145082983430000.attempt1.json"
+    },
+    {
+      "id": "innolight.2026-10-21T1146138336890000.attempt1.json",
+      "company_id": "innolight",
+      "http_status": null,
+      "elapsed_seconds": 0.023,
+      "usage": null,
+      "accepted": false,
+      "validation_error": "transport_error",
+      "trace_path": "artifacts/agent/innolight.2026-10-21T1146138336890000.attempt1.json"
+    },
+    {
+      "id": "innolight.2026-10-21T1146138336890000.attempt2.json",
+      "company_id": "innolight",
+      "http_status": null,
+      "elapsed_seconds": 0.001,
+      "usage": null,
+      "accepted": false,
+      "validation_error": "transport_error",
+      "trace_path": "artifacts/agent/innolight.2026-10-21T1146138336890000.attempt2.json"
+    },
+    {
+      "id": "innolight.2026-10-21T1151157857030000.attempt1.json",
+      "company_id": "innolight",
+      "http_status": 200,
+      "elapsed_seconds": 1.871,
+      "usage": {
+        "prompt_tokens": 3951,
+        "completion_tokens": 233,
+        "total_tokens": 4184,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        },
+        "prompt_cache_hit_tokens": 1152,
+        "prompt_cache_miss_tokens": 2799
+      },
+      "accepted": true,
+      "validation_error": null,
+      "trace_path": "artifacts/agent/innolight.2026-10-21T1151157857030000.attempt1.json"
+    },
+    {
+      "id": "innolight.attempt1.json",
+      "company_id": "innolight",
+      "http_status": 200,
+      "elapsed_seconds": 2.009,
+      "usage": {
+        "prompt_tokens": 3920,
+        "completion_tokens": 362,
+        "total_tokens": 4282,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 3920
+      },
+      "accepted": false,
+      "validation_error": "1 validation error for AIAnalysis\nobservations\n  List should have at most 4 items after validation, not 6 [type=too_long, input_value=[{'text': '公司主营...2025.narrow_business']}], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.14/v/too_long",
+      "trace_path": "artifacts/agent/innolight.attempt1.json"
+    },
+    {
+      "id": "innolight.attempt2.json",
+      "company_id": "innolight",
+      "http_status": 200,
+      "elapsed_seconds": 2.274,
+      "usage": {
+        "prompt_tokens": 3938,
+        "completion_tokens": 332,
+        "total_tokens": 4270,
+        "prompt_tokens_details": {
+          "cached_tokens": 3712
+        },
+        "prompt_cache_hit_tokens": 3712,
+        "prompt_cache_miss_tokens": 226
+      },
+      "accepted": false,
+      "validation_error": "1 validation error for AIAnalysis\nobservations\n  List should have at most 4 items after validation, not 5 [type=too_long, input_value=[{'text': '年报披露...2025.narrow_business']}], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.14/v/too_long",
+      "trace_path": "artifacts/agent/innolight.attempt2.json"
+    },
+    {
+      "id": "inspur.2026-10-21T1145082973520000.attempt1.json",
+      "company_id": "inspur",
+      "http_status": 200,
+      "elapsed_seconds": 1.665,
+      "usage": {
+        "prompt_tokens": 3948,
+        "completion_tokens": 191,
+        "total_tokens": 4139,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 3948
+      },
+      "accepted": false,
+      "validation_error": "unreviewed_numeric_claim",
+      "trace_path": "artifacts/agent/inspur.2026-10-21T1145082973520000.attempt1.json"
+    },
+    {
+      "id": "inspur.2026-10-21T1145082973520000.attempt2.json",
+      "company_id": "inspur",
+      "http_status": 200,
+      "elapsed_seconds": 1.814,
+      "usage": {
+        "prompt_tokens": 3966,
+        "completion_tokens": 213,
+        "total_tokens": 4179,
+        "prompt_tokens_details": {
+          "cached_tokens": 3712
+        },
+        "prompt_cache_hit_tokens": 3712,
+        "prompt_cache_miss_tokens": 254
+      },
+      "accepted": true,
+      "validation_error": null,
+      "trace_path": "artifacts/agent/inspur.2026-10-21T1145082973520000.attempt2.json"
+    },
+    {
+      "id": "inspur.2026-10-21T1146138584040000.attempt1.json",
+      "company_id": "inspur",
+      "http_status": null,
+      "elapsed_seconds": 0.0,
+      "usage": null,
+      "accepted": false,
+      "validation_error": "transport_error",
+      "trace_path": "artifacts/agent/inspur.2026-10-21T1146138584040000.attempt1.json"
+    },
+    {
+      "id": "inspur.2026-10-21T1146138584040000.attempt2.json",
+      "company_id": "inspur",
+      "http_status": null,
+      "elapsed_seconds": 0.0,
+      "usage": null,
+      "accepted": false,
+      "validation_error": "transport_error",
+      "trace_path": "artifacts/agent/inspur.2026-10-21T1146138584040000.attempt2.json"
+    },
+    {
+      "id": "inspur.2026-10-21T1151157867040000.attempt1.json",
+      "company_id": "inspur",
+      "http_status": 200,
+      "elapsed_seconds": 1.877,
+      "usage": {
+        "prompt_tokens": 3980,
+        "completion_tokens": 171,
+        "total_tokens": 4151,
+        "prompt_tokens_details": {
+          "cached_tokens": 2432
+        },
+        "prompt_cache_hit_tokens": 2432,
+        "prompt_cache_miss_tokens": 1548
+      },
+      "accepted": true,
+      "validation_error": null,
+      "trace_path": "artifacts/agent/inspur.2026-10-21T1151157867040000.attempt1.json"
+    },
+    {
+      "id": "inspur.attempt1.json",
+      "company_id": "inspur",
+      "http_status": 200,
+      "elapsed_seconds": 2.547,
+      "usage": {
+        "prompt_tokens": 3888,
+        "completion_tokens": 343,
+        "total_tokens": 4231,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 3888
+      },
+      "accepted": false,
+      "validation_error": "1 validation error for AIAnalysis\nobservations\n  List should have at most 4 items after validation, not 6 [type=too_long, input_value=[{'text': '公司收入...annual_2025.business']}], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.14/v/too_long",
+      "trace_path": "artifacts/agent/inspur.attempt1.json"
+    },
+    {
+      "id": "inspur.attempt2.json",
+      "company_id": "inspur",
+      "http_status": 200,
+      "elapsed_seconds": 1.9,
+      "usage": {
+        "prompt_tokens": 3906,
+        "completion_tokens": 283,
+        "total_tokens": 4189,
+        "prompt_tokens_details": {
+          "cached_tokens": 3712
+        },
+        "prompt_cache_hit_tokens": 3712,
+        "prompt_cache_miss_tokens": 194
+      },
+      "accepted": false,
+      "validation_error": "1 validation error for AIAnalysis\nobservations\n  List should have at most 4 items after validation, not 5 [type=too_long, input_value=[{'text': '年报披露...annual_2025.business']}], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.14/v/too_long",
+      "trace_path": "artifacts/agent/inspur.attempt2.json"
+    },
+    {
+      "id": "kehua.2026-10-21T1145102357490000.attempt1.json",
+      "company_id": "kehua",
+      "http_status": 200,
+      "elapsed_seconds": 1.877,
+      "usage": {
+        "prompt_tokens": 3960,
+        "completion_tokens": 212,
+        "total_tokens": 4172,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 3960
+      },
+      "accepted": true,
+      "validation_error": null,
+      "trace_path": "artifacts/agent/kehua.2026-10-21T1145102357490000.attempt1.json"
+    },
+    {
+      "id": "kehua.2026-10-21T1146138865410000.attempt1.json",
+      "company_id": "kehua",
+      "http_status": null,
+      "elapsed_seconds": 0.017,
+      "usage": null,
+      "accepted": false,
+      "validation_error": "transport_error",
+      "trace_path": "artifacts/agent/kehua.2026-10-21T1146138865410000.attempt1.json"
+    },
+    {
+      "id": "kehua.2026-10-21T1146138865410000.attempt2.json",
+      "company_id": "kehua",
+      "http_status": null,
+      "elapsed_seconds": 0.001,
+      "usage": null,
+      "accepted": false,
+      "validation_error": "transport_error",
+      "trace_path": "artifacts/agent/kehua.2026-10-21T1146138865410000.attempt2.json"
+    },
+    {
+      "id": "kehua.2026-10-21T1151176597230000.attempt1.json",
+      "company_id": "kehua",
+      "http_status": 200,
+      "elapsed_seconds": 1.834,
+      "usage": {
+        "prompt_tokens": 3959,
+        "completion_tokens": 232,
+        "total_tokens": 4191,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        },
+        "prompt_cache_hit_tokens": 1152,
+        "prompt_cache_miss_tokens": 2807
+      },
+      "accepted": true,
+      "validation_error": null,
+      "trace_path": "artifacts/agent/kehua.2026-10-21T1151176597230000.attempt1.json"
+    },
+    {
+      "id": "kehua.attempt1.json",
+      "company_id": "kehua",
+      "http_status": 200,
+      "elapsed_seconds": 2.191,
+      "usage": {
+        "prompt_tokens": 3902,
+        "completion_tokens": 310,
+        "total_tokens": 4212,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 3902
+      },
+      "accepted": false,
+      "validation_error": "1 validation error for AIAnalysis\nobservations\n  List should have at most 4 items after validation, not 5 [type=too_long, input_value=[{'text': '公司业务...annual_2025.business']}], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.14/v/too_long",
+      "trace_path": "artifacts/agent/kehua.attempt1.json"
+    },
+    {
+      "id": "kehua.attempt2.json",
+      "company_id": "kehua",
+      "http_status": 200,
+      "elapsed_seconds": 2.412,
+      "usage": {
+        "prompt_tokens": 3920,
+        "completion_tokens": 336,
+        "total_tokens": 4256,
+        "prompt_tokens_details": {
+          "cached_tokens": 3712
+        },
+        "prompt_cache_hit_tokens": 3712,
+        "prompt_cache_miss_tokens": 208
+      },
+      "accepted": false,
+      "validation_error": "1 validation error for AIAnalysis\nobservations\n  List should have at most 4 items after validation, not 6 [type=too_long, input_value=[{'text': '年报分产...2025.narrow_business']}], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.14/v/too_long",
+      "trace_path": "artifacts/agent/kehua.attempt2.json"
+    },
+    {
+      "id": "smci.2026-10-21T1145121174150000.attempt1.json",
+      "company_id": "smci",
+      "http_status": 200,
+      "elapsed_seconds": 1.743,
+      "usage": {
+        "prompt_tokens": 2323,
+        "completion_tokens": 163,
+        "total_tokens": 2486,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 2323
+      },
+      "accepted": true,
+      "validation_error": null,
+      "trace_path": "artifacts/agent/smci.2026-10-21T1145121174150000.attempt1.json"
+    },
+    {
+      "id": "smci.2026-10-21T1146139337630000.attempt1.json",
+      "company_id": "smci",
+      "http_status": null,
+      "elapsed_seconds": 0.017,
+      "usage": null,
+      "accepted": false,
+      "validation_error": "transport_error",
+      "trace_path": "artifacts/agent/smci.2026-10-21T1146139337630000.attempt1.json"
+    },
+    {
+      "id": "smci.2026-10-21T1146139337630000.attempt2.json",
+      "company_id": "smci",
+      "http_status": null,
+      "elapsed_seconds": 0.001,
+      "usage": null,
+      "accepted": false,
+      "validation_error": "transport_error",
+      "trace_path": "artifacts/agent/smci.2026-10-21T1146139337630000.attempt2.json"
+    },
+    {
+      "id": "smci.attempt1.json",
+      "company_id": "smci",
+      "http_status": 200,
+      "elapsed_seconds": 2.112,
+      "usage": {
+        "prompt_tokens": 2278,
+        "completion_tokens": 348,
+        "total_tokens": 2626,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 2278
+      },
+      "accepted": false,
+      "validation_error": "1 validation error for AIAnalysis\nobservations\n  List should have at most 4 items after validation, not 5 [type=too_long, input_value=[{'text': '公司业务...mci_fy2025.financial']}], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.14/v/too_long",
+      "trace_path": "artifacts/agent/smci.attempt1.json"
+    },
+    {
+      "id": "smci.attempt2.json",
+      "company_id": "smci",
+      "http_status": 200,
+      "elapsed_seconds": 2.112,
+      "usage": {
+        "prompt_tokens": 2296,
+        "completion_tokens": 298,
+        "total_tokens": 2594,
+        "prompt_tokens_details": {
+          "cached_tokens": 2048
+        },
+        "prompt_cache_hit_tokens": 2048,
+        "prompt_cache_miss_tokens": 248
+      },
+      "accepted": false,
+      "validation_error": "1 validation error for AIAnalysis\nobservations\n  List should have at most 4 items after validation, not 5 [type=too_long, input_value=[{'text': '公司业务...smci_fy2025.business']}], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.14/v/too_long",
+      "trace_path": "artifacts/agent/smci.attempt2.json"
+    },
+    {
+      "id": "vrt.2026-10-21T1145155128190000.attempt1.json",
+      "company_id": "vrt",
+      "http_status": 200,
+      "elapsed_seconds": 1.403,
+      "usage": {
+        "prompt_tokens": 2889,
+        "completion_tokens": 184,
+        "total_tokens": 3073,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 2889
+      },
+      "accepted": true,
+      "validation_error": null,
+      "trace_path": "artifacts/agent/vrt.2026-10-21T1145155128190000.attempt1.json"
+    },
+    {
+      "id": "vrt.2026-10-21T1146139825100000.attempt1.json",
+      "company_id": "vrt",
+      "http_status": null,
+      "elapsed_seconds": 0.016,
+      "usage": null,
+      "accepted": false,
+      "validation_error": "transport_error",
+      "trace_path": "artifacts/agent/vrt.2026-10-21T1146139825100000.attempt1.json"
+    },
+    {
+      "id": "vrt.2026-10-21T1146139825100000.attempt2.json",
+      "company_id": "vrt",
+      "http_status": null,
+      "elapsed_seconds": 0.013,
+      "usage": null,
+      "accepted": false,
+      "validation_error": "transport_error",
+      "trace_path": "artifacts/agent/vrt.2026-10-21T1146139825100000.attempt2.json"
+    },
+    {
+      "id": "vrt.attempt1.json",
+      "company_id": "vrt",
+      "http_status": 200,
+      "elapsed_seconds": 2.149,
+      "usage": {
+        "prompt_tokens": 2844,
+        "completion_tokens": 314,
+        "total_tokens": 3158,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 2844
+      },
+      "accepted": false,
+      "validation_error": "1 validation error for AIAnalysis\nobservations\n  List should have at most 4 items after validation, not 6 [type=too_long, input_value=[{'text': '公司定位...tiv_fy2025.financial']}], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.14/v/too_long",
+      "trace_path": "artifacts/agent/vrt.attempt1.json"
+    },
+    {
+      "id": "vrt.attempt2.json",
+      "company_id": "vrt",
+      "http_status": 200,
+      "elapsed_seconds": 1.881,
+      "usage": {
+        "prompt_tokens": 2862,
+        "completion_tokens": 285,
+        "total_tokens": 3147,
+        "prompt_tokens_details": {
+          "cached_tokens": 2688
+        },
+        "prompt_cache_hit_tokens": 2688,
+        "prompt_cache_miss_tokens": 174
+      },
+      "accepted": false,
+      "validation_error": "1 validation error for AIAnalysis\nobservations\n  List should have at most 4 items after validation, not 5 [type=too_long, input_value=[{'text': '公司定位...rtiv_fy2025.business']}], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.14/v/too_long",
+      "trace_path": "artifacts/agent/vrt.attempt2.json"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 99778,
+    "completion_tokens": 8169,
+    "total_tokens": 107947,
+    "prompt_cache_hit_tokens": 36480,
+    "prompt_cache_miss_tokens": 63298,
+    "billable_successful_http_calls": 31,
+    "local_transport_failed_attempts": 18,
+    "accepted_deep_company_results": 8,
+    "sum_successful_call_seconds": 60.522,
+    "timing_note": "逐次调用耗时之和，不是并发流水线墙钟时间"
+  },
+  "estimated_cost_cny": {
+    "currency": "CNY",
+    "off_peak_estimate": 0.096704,
+    "peak_estimate": 0.193407,
+    "billing_status": "估算，不是账户实际扣费账单",
+    "pricing_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "pricing_retrieved_at": "2026-10-21T11:34:39.044248+00:00",
+    "includes_rejected_model_responses": true,
+    "excludes_codex_session_and_financial_data_license_cost": true
+  },
+  "failure_cases": [
+    {
+      "type": "malformed_json",
+      "observed": true,
+      "handling": "保留首个probe响应；不发布为研究结果"
+    },
+    {
+      "type": "schema_length_mismatch",
+      "observed": true,
+      "handling": "首轮提示未明确条目上限，输出被Schema拒绝；修正提示后重新执行；不将这次迭代声称为受控性能对比"
+    },
+    {
+      "type": "technical_identifier_false_positive",
+      "observed": true,
+      "handling": "数字守卫错误拦截已被原文支持的1.6T技术型号；修正为原文字面核验，并从原Trace离线复验，不增加调用"
+    },
+    {
+      "type": "fiscal_period_mismatch",
+      "observed": true,
+      "handling": "海外MCP没有按要求对齐财年，隔离整份财务结果，改用官网披露"
+    },
+    {
+      "type": "obsolete_ticker_collision",
+      "observed": true,
+      "handling": "VRT-1.N与VRT.N并存，仅保留已核实的VRT"
+    },
+    {
+      "type": "public_source_access",
+      "observed": true,
+      "handling": "Eaton官网直连超时、SEC拒绝；以网页工具读取官网并标记本地为人工事实转录"
+    },
+    {
+      "type": "sandbox_network_denied",
+      "observed": true,
+      "handling": "局部离线执行遇网络拒绝，未获HTTP响应，不记入Token收费调用；重放使用缓存"
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "deterministic_checks": 661,
+    "semantic_note": "Schema和引用存在性不等于事实蕴含证明。八家公司关键业务与财务由研究者抽核，广度层AI关联待核验。"
+  },
+  "comparison_experiment": "not_run"
+}

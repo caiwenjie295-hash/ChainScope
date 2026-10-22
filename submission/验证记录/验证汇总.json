@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-10-22T09:01:21.990771+08:00",
+  "ui_version": "0.3.22",
+  "code_commit": "1cb9e86",
+  "research_version": "2026-10-22.p2.deep.b1h.p1.c",
+  "snapshot_sha256": "d2d4c5d9f6b00850aef8cb8b9db3c4a67d72feddd07f9916bb7956637181729b",
+  "local_product_url": "http://127.0.0.1:5173/",
+  "public_product_url": null,
+  "remote_repository_url": null,
+  "production_build": "passed",
+  "frontend_validation_checks": 1516,
+  "unittest": {
+    "discovered_including_import_error_placeholders": 26,
+    "passed": 20,
+    "failures": 2,
+    "errors": 4,
+    "status": "not_passed"
+  },
+  "request_wrapper_offline_mock_cases_passed": 4,
+  "browser_main_flow": "passed for AI / thermal / envicool / summary; grade guide opened; refresh restored company and summary",
+  "limitations": [
+    "No artifacts or reports supplied",
+    "No full online research rerun",
+    "No full browser fault injection",
+    "No public deployment"
+  ],
+  "documentation_only": true
+}

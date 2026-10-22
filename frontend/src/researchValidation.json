@@ -1,0 +1,58 @@
+{
+  "snapshot_data_hash": "86cac60f923b837b1afb530078d1d39b9829ce117ee2ba1bd27e4ff21d666c53",
+  "snapshot_sha256": "d2d4c5d9f6b00850aef8cb8b9db3c4a67d72feddd07f9916bb7956637181729b",
+  "research_version": "2026-10-22.p2.deep.b1h.p1.c",
+  "checked_at": "2026-10-22T01:39:36+08:00",
+  "checked_date": "2026-10-22",
+  "timezone": "Asia/Hong_Kong",
+  "checks": 1516,
+  "status": "passed",
+  "scope": "当前研究数据的结构、引用与口径检查；不代表事实准确率或研究阶段运行次数",
+  "current_counts": {
+    "companies": 27,
+    "reviewed_companies": 17,
+    "candidate_companies": 10,
+    "sources": 116,
+    "public_sources": 81,
+    "restricted_sources": 35,
+    "graph_nodes": 40,
+    "structure_nodes": 13,
+    "company_nodes": 27,
+    "companies_with_cited_business_facts": 17,
+    "companies_with_numeric_metrics": 17,
+    "comparison_pairs": 6,
+    "events": 9
+  },
+  "archived_workflow": {
+    "source": "data/round2/evaluation.json",
+    "scope": "早期8家公司、4组对照的归档研究运行，不包括后续补充研究或本次界面开发",
+    "completed_stages": 29,
+    "validation_checks": 686,
+    "workflow": [
+      {
+        "label": "业务证据",
+        "count": 8
+      },
+      {
+        "label": "财务质量",
+        "count": 8
+      },
+      {
+        "label": "跨市场比较",
+        "count": 4
+      },
+      {
+        "label": "独立反证",
+        "count": 4
+      },
+      {
+        "label": "研究编辑",
+        "count": 4
+      },
+      {
+        "label": "事件传导",
+        "count": 1
+      }
+    ]
+  }
+}

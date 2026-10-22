@@ -1,0 +1,52 @@
+{
+  "reviewed_at": "2026-10-21T12:33:08.294355+00:00",
+  "reviewer": "Codex抽核原文与计算表",
+  "status": "passed_with_limitations",
+  "approved_observations": [
+    {
+      "text": "英维克上半年收入增长而归母利润下降；经营现金流由上年净流出转正，但覆盖合并净利润仍偏低。不能写成现金流继续恶化。",
+      "source_ids": [
+        "r2.envicool_h1_2026.p7",
+        "r2.envicool_h1_2026.p44",
+        "r2.envicool_h1_2026.p47"
+      ]
+    },
+    {
+      "text": "两家温控样本可对齐到同一自然年上半年。币种不同，不比较绝对金额大小；现金转化比率的集团业务结构与会计准则仍有差异。",
+      "source_ids": [
+        "r2.envicool_h1_2026.p7"
+      ],
+      "metric_ids": [
+        "m.envicool.H12026.cash_conversion",
+        "m.vrt.H12026.cash_conversion"
+      ]
+    },
+    {
+      "text": "Vertiv综合基础设施商业证据与具体液冷单品证据必须分开；集团收入和订单积压不能直接证明液冷单品收入。",
+      "source_ids": [
+        "r2.vertiv_annual_2025.p21"
+      ]
+    },
+    {
+      "text": "经营现金流减资本开支为分析代理。中国样本为长期资产购建支出，Vertiv该项不含资本化软件，不能视为完全同口径的公司披露自由现金流。",
+      "metric_ids": [
+        "m.envicool.H12026.ocf_less_cash_capex",
+        "m.vrt.H12026.ocf_less_cash_capex"
+      ]
+    }
+  ],
+  "corrections_to_agent_drafts": [
+    "不得把订单进展本身评为B级交付证据",
+    "不得把发出商品与应收增长直接解释成收入确认领先验收",
+    "资本开支是投资现金流项目，不能作为经营现金流变化的直接组成",
+    "不得笼统声称现金流必然滞后收入，预收可领先收入",
+    "不将未披露AI收入解释为没有AI业务",
+    "避免同一段混写事实与经营解释，解释保守标为推断"
+  ],
+  "limits": [
+    "本轮是研究辅助，没有全量人工事实审计",
+    "只有两家样本补齐同期间半年量化数据",
+    "Eaton仍是官网事实转录；Supermicro仍需正式审计年报对照",
+    "未实现任意主题自主规划、全网自动核实或定时更新"
+  ]
+}

@@ -1,0 +1,1868 @@
+{
+  "version": "round2.agents.v4",
+  "as_of": "2026-10-21",
+  "generated_at": "2026-10-21T15:00:43.689316+00:00",
+  "model": "deepseek-flash",
+  "orchestration": "固定阶段DAG；阶段内Agent自主选择工具；反证阶段可定向MCP补证；不声称全自主规划",
+  "results": {
+    "business_evidence": {
+      "inspur": {
+        "subject": "inspur",
+        "summary": "浪潮信息在AI数据中心产业链中的定位是整机与系统层供应商：服务器产品是绝对主体收入，AI算力产品（元脑R1推理服务器、SD200/HC1000超节点）与液冷数据中心方案（冷板服务器、整机柜、CDU、算力仓、交钥匙工程）均有公司披露的产品与交付描述，但公司未单独披露AI服务器收入或液冷收入口径，因此只能给到B级（销售/交付证据充分、缺对应口径收入数值）。集团收入与服务器母类别收入须分开看：集团总收入与服务器产品收入均由年报分产品表给出，二者不可混用；AI收入边界在披露层面不可量化。",
+        "findings": [
+          {
+            "text": "集团口径与母类别口径须分开：公司披露报告期营业总收入，其中服务器产品为绝对主体，存储类、交换类等产品为次要构成，其他业务占比极小；收入增长主因是服务器产品销售增长。因此任何“AI收入”表述都不能直接等同于集团收入或服务器产品收入。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.inspur_annual_2025.p12"
+            ],
+            "metric_ids": [
+              "m.inspur.FY2025.revenue",
+              "m.inspur.FY2025.related_revenue"
+            ],
+            "quote": "报告期内，公司实现营业总收入 1,647.82 亿元，较上年增长43.25%，主要系本期服务器产品销售增长所致"
+          },
+          {
+            "text": "AI数据中心相关业务有明确的产品与交付证据：公司披露推出元脑R1推理服务器（单机支持十六张标准PCIe双宽卡、可单机部署DeepSeek-671B）、超节点AI服务器元脑SD200与超扩展AI服务器元脑HC1000；液冷侧覆盖全液冷冷板服务器、全液冷机柜、兆瓦级冷量分配单元、液冷智算算力仓、兆瓦级两相液冷整机柜，并提供从规划设计到建设实施的液冷数据中心全生命周期方案；元脑算力工厂以预制化模块化方式建成十兆瓦级智算中心并已投运。这些属产品发布与自建交付证据，构成B级而非A级。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.inspur_annual_2025.p10",
+              "r2.inspur_annual_2025.p11"
+            ],
+            "metric_ids": [],
+            "quote": "公司从部件、整机到数据中心，持续进行液冷产品创新"
+          },
+          {
+            "text": "推断：公司AI数据中心敞口在收入结构上体现为服务器整机放量，而非独立可拆的AI业务线；液冷更多作为整机与数据中心方案的附加值环节，其收入被并入服务器产品与其他业务，无法从披露中分离。故“AI收入”只能作为定性边界，不能给出量化占比；若需A级，须取得AI服务器或液冷口径的单独收入数值。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.inspur_annual_2025.p12",
+              "r2.inspur_annual_2025.p11"
+            ],
+            "metric_ids": [
+              "m.inspur.FY2025.revenue",
+              "m.inspur.FY2025.related_revenue"
+            ],
+            "quote": null
+          },
+          {
+            "text": "情景：若后续披露将AI服务器或液冷方案单列收入，且该口径与服务器产品收入可勾稽，则评级可上调至A；在此之前，任何以“连续多年中国液冷服务器市场第一”等公司披露的排名表述替代收入证据的做法都不成立，排名属宣传性指标，不作独立实测。",
+            "kind": "scenario",
+            "source_ids": [
+              "r2.inspur_annual_2025.p11"
+            ],
+            "metric_ids": [],
+            "quote": null
+          }
+        ],
+        "missing": [
+          "AI服务器（智算产品）单独收入口径及占比未在检索到的年报段落中披露",
+          "液冷服务器/液冷数据中心方案单独收入与订单金额未披露",
+          "H12026财务指标在快照中为空，半年度收入与结构未核实",
+          "AI服务器客户交付合同金额、中标公告等B级以上商业证据未检索到"
+        ],
+        "followup_queries": [
+          "浪潮信息 2026年半年度报告 服务器产品 收入 分产品",
+          "浪潮信息 智算/AI服务器 中标 交付 订单 公告"
+        ],
+        "concept": "AI数据中心算力基础设施（AI服务器整机与液冷数据中心方案）",
+        "grade": "B",
+        "grade_metric_id": "m.inspur.FY2025.related_revenue"
+      },
+      "innolight": {
+        "subject": "innolight",
+        "summary": "公司是AI数据中心网络端高速光模块的主力供应商，产品线覆盖至1.6T，收入几乎全部来自光通信收发模块，且以境外云数据中心客户为主，具备量产交付与客户认证的商业证据。但公司披露口径为“光通信收发模块”，其中包含电信与固网等非AI应用，未单独披露AI收入，因此只能给B级：有对应口径的收入与交付证据，缺AI专属口径数值。",
+        "findings": [
+          {
+            "text": "公司披露主营为高端光通信收发模块的研发、生产及销售，为云数据中心客户提供100G、200G、400G、800G和1.6T高速光模块，1.6T产品含OSFP 224 DR8、2xFR4及DR8 LPO，采用EML与硅光双平台。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.innolight_annual_2025.p11"
+            ],
+            "metric_ids": [],
+            "quote": "为云数据中心客户提供 100G、200G、400G、800G 和 1.6T 的高速\n光模块"
+          },
+          {
+            "text": "商业证据落在交付与客户结构上：光通信收发模块产能、产量、销量均较上年同期明显放大，境外销售回款率处于高位；前五名客户合计占年度销售总额约四分之三，第一大客户占比约四分之一，说明需求集中于少数云厂商/设备商，客户认证与长期合作关系构成进入壁垒，同时带来集中度风险。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.innolight_annual_2025.p13",
+              "r2.innolight_annual_2025.p24",
+              "r2.innolight_annual_2025.p26",
+              "r2.innolight_annual_2025.p12"
+            ],
+            "metric_ids": [],
+            "quote": null
+          },
+          {
+            "text": "收入边界：集团营业收入与光通信收发模块收入接近，后者占营业收入绝大部分，其余为“其他”；该模块口径同时覆盖数据中心、5G无线与固网接入，公司未披露AI数据中心专属收入，故AI收入只能视为该口径内的未拆分部分，不能把模块收入整体当作AI收入。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.innolight_annual_2025.p24",
+              "r2.innolight_annual_2025.p11"
+            ],
+            "metric_ids": [
+              "m.innolight.FY2025.revenue",
+              "m.innolight.FY2025.related_revenue"
+            ],
+            "quote": null
+          },
+          {
+            "text": "经营质量侧：经营现金流对合并净利润的现金转化率接近一，经营现金流减购建长期资产现金支出后仍为正（该差额为分析代理，非公司披露自由现金流），说明高速产品放量伴随实际现金回收而非仅账面收入。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.api.innolight.cashflow.2025",
+              "r2.api.innolight.income.2025"
+            ],
+            "metric_ids": [
+              "m.innolight.FY2025.cash_conversion",
+              "m.innolight.FY2025.ocf_less_cash_capex"
+            ],
+            "quote": null
+          }
+        ],
+        "missing": [
+          "公司未单独披露AI数据中心相关收入，无法给出AI专属口径数值，故评级止于B",
+          "H12026财务指标在快照中为空，最新半年度收入与交付节奏未核实",
+          "1.6T产品的具体出货量、客户与量产规模未在原文中量化",
+          "未检索到公司对AI光模块订单能见度或客户资本开支指引的量化披露"
+        ],
+        "followup_queries": [
+          "中际旭创 2026年半年度报告 光通信收发模块 营业收入 销量",
+          "中际旭创 1.6T 光模块 批量出货 客户 订单"
+        ],
+        "concept": "AI数据中心高速光模块（800G/1.6T）供应商",
+        "grade": "B",
+        "grade_metric_id": "m.innolight.FY2025.related_revenue"
+      },
+      "kehua": {
+        "subject": "kehua",
+        "summary": "科华数据在AI数据中心链条中的真实位置是供配电与温控基础设施供应商，并叠加自建IDC运营。公司披露口径把数据中心拆为“数据中心产品”与“IDC服务”两块，前者是产品交付口径、含非AI应用，后者是自持机柜的运营收入，两者都不等于AI收入；公司未披露任何“AI收入”科目。商业证据层面，半年报披露弹性直流一体柜累计交付超三千台、与互联网大厂联合研发兆瓦级CDU与极简UPS，属可核验的交付/联合开发证据，但未给出对应金额，故评级为B而非A。集团收入、数据中心行业收入、数据中心产品收入三层口径必须分开使用。",
+        "findings": [
+          {
+            "text": "集团层面：公司披露全年营业收入与归母净利润，数据中心行业为第一大分行业口径之一，但该行业收入同时包含产品与IDC服务，不能直接当作AI基础设施收入。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.kehua_annual_2025.p20",
+              "r2.kehua_annual_2025.p7"
+            ],
+            "metric_ids": [
+              "m.kehua.FY2025.revenue",
+              "m.kehua.FY2025.parent_net_profit"
+            ],
+            "quote": "数据中心行业 3,522,928,409.32 43.17% 3,151,845,872.83 40.63% 11.77%"
+          },
+          {
+            "text": "母类别拆分：数据中心产品收入为可引用的产品口径收入，公司明确其不含IDC服务、包含非AI应用、且非UPS单品；IDC服务收入为自建机柜运营口径。二者相加构成数据中心行业收入，AI相关部分未被单独量化，因此AI收入边界只能界定为“未披露”，不得用产品收入替代。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.kehua_annual_2025.p20"
+            ],
+            "metric_ids": [
+              "m.kehua.FY2025.related_revenue"
+            ],
+            "quote": "IDC 服务收入 1,283,893,845.08 15.73% 1,230,635,512.89 15.86% 4.33%"
+          },
+          {
+            "text": "商业证据：半年资料披露与某互联网大厂联合研发的弹性直流一体柜面向AIDC负载、累计交付超三千台，并联合开发兆瓦级CDU、DC STS与极简UPS；同时自建北京山河湾谷智算中心投运并采用自研UPS、电力模组、液冷CDU等。这构成交付与联合开发级证据（B级），但公司未披露这些项目的收入金额或订单金额，故不足以支撑A级。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.notice.41d41cc2c9e53e206f"
+            ],
+            "metric_ids": [],
+            "quote": "目前已累计交付超3000台"
+          },
+          {
+            "text": "推断：产品侧增长由高密供电与液冷升级驱动，但数据中心行业毛利率同比下降，说明产品结构向项目型、大客户定制交付倾斜可能伴随价格与成本压力；IDC服务毛利率亦下滑，自建算力资产的回报节奏是独立变量，不宜与设备销售混同评估。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.kehua_annual_2025.p20"
+            ],
+            "metric_ids": [
+              "m.kehua.FY2025.related_revenue"
+            ],
+            "quote": null
+          }
+        ],
+        "missing": [
+          "公司未披露“AI收入”或“智算相关收入”的独立金额与占比，AI收入边界无法量化",
+          "半年资料仅有摘要级片段，H1财务指标快照为空，无法用同口径指标交叉验证半年产品与IDC结构",
+          "弹性直流一体柜、兆瓦级CDU等交付未披露对应合同金额、客户名称与确认收入期间",
+          "未取得在手订单/中标金额口径数据，无法判断交付证据向收入的转化率"
+        ],
+        "followup_queries": [
+          "科华数据 2026年半年度报告 数据中心产品 营业收入 毛利率 分产品",
+          "科华数据 智算 中标 订单金额 液冷 CDU 交付"
+        ],
+        "concept": "AI数据中心供配电与液冷基础设施（UPS/电力模组/液冷CDU/POD）",
+        "grade": "B",
+        "grade_metric_id": "m.kehua.FY2025.related_revenue"
+      },
+      "envicool": {
+        "subject": "envicool",
+        "summary": "英维克是数据中心/智算中心精密温控与全链条液冷供应商，产品线覆盖冷板、快接头、Manifold、CDU、机柜到冷源，客户为互联网与运营商大型数据中心。商业证据为B级：有分产品收入口径（机房温控节能产品）与客户/交付场景描述，但公司未单独披露“AI收入”或“液冷收入”，机房温控口径同时包含风冷与非AI应用，故不能把该口径等同于AI收入。集团收入、机房温控母类别收入与AI相关收入必须分层看待。半年报显示收入增长而利润下滑、毛利率承压，现金转化偏弱，属规模扩张期的经营特征而非AI订单验证。",
+        "findings": [
+          {
+            "text": "公司披露机房温控节能产品面向数据中心/智算中心与算力设备，液冷方案为Coolinside全链条（冷板、快速接头、Manifold、CDU、机柜、工质、管路、冷源），并称已为字节跳动、腾讯、阿里巴巴、秦淮数据、万国数据、数据港、中国移动、中国电信等用户大型数据中心提供制冷产品及系统。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.envicool_h1_2026.p9"
+            ],
+            "metric_ids": [],
+            "quote": "公司的产品直接或通过系统集成商提供给数据中心业主、IDC 运营商、大型互联网公司、通信运营商"
+          },
+          {
+            "text": "收入边界：半年报分产品口径中机房温控节能产品为母类别收入，占营业收入过半，同比增速高于集团整体；该口径含风冷与非AI应用，公司未披露液冷或AI专项收入，因此AI收入不可从该口径直接推导。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.envicool_h1_2026.p14"
+            ],
+            "metric_ids": [
+              "m.envicool.H12026.revenue",
+              "m.envicool.H12026.revenue_yoy_pct"
+            ],
+            "quote": null
+          },
+          {
+            "text": "经营质量：半年报收入同比增长而归母净利润同比下降，机房温控毛利率同比下降（区域与产品组合影响），经营现金流对净利润的覆盖偏低且经营现金流减资本开支为负，说明液冷/机房业务扩张尚未转化为现金回报。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.envicool_h1_2026.p9",
+              "r2.envicool_h1_2026.p14"
+            ],
+            "metric_ids": [
+              "m.envicool.H12026.parent_net_profit_yoy_pct",
+              "m.envicool.H12026.cash_conversion",
+              "m.envicool.H12026.ocf_less_cash_capex"
+            ],
+            "quote": null
+          },
+          {
+            "text": "情景：若海外机房温控收入占比继续提升且液冷在新建智算项目中渗透，机房温控母类别收入增速与毛利率可能同步改善；但公司未披露液冷订单/在手合同，该路径无法用现有披露验证。",
+            "kind": "scenario",
+            "source_ids": [
+              "r2.envicool_h1_2026.p9",
+              "r2.envicool_annual_2025.p9"
+            ],
+            "metric_ids": [],
+            "quote": null
+          }
+        ],
+        "missing": [
+          "液冷产品单独收入及占比（公司未按液冷/风冷拆分披露）",
+          "AI/智算中心专项收入口径与对应客户订单金额",
+          "Google Deschutes 5 CDU等海外定制项目的量产与交付规模证据",
+          "在手订单/合同负债中数据中心温控部分的拆分"
+        ],
+        "followup_queries": [
+          "英维克 液冷 订单 中标 交付 数据中心 公告",
+          "英维克 机房温控 毛利率 海外收入 分地区 年度报告"
+        ],
+        "concept": "AI数据中心液冷/精密温控（机房温控节能产品）",
+        "grade": "B",
+        "grade_metric_id": "m.envicool.H12026.revenue"
+      },
+      "smci": {
+        "subject": "smci",
+        "summary": "公司披露口径下，Supermicro是AI数据中心产业链中的服务器整机与机架级方案制造商，产品线覆盖GPU服务器、存储、交换、电源与风冷/液冷散热，并以DCBBS整机架交付模式切入大型数据中心客户。集团总收入有明确数值，但公司未按“AI收入”单独披露口径，AI相关收入边界只能定性描述，不能量化。商业证据以公司披露的客户类型（CSP、企业、主权实体）与大型数据中心客户数量指引为主，属B级；无对应AI口径收入数值，故不评A。",
+        "findings": [
+          {
+            "text": "公司披露其产品组合为服务器、AI、存储、物联网、交换系统、软件与支持服务，且散热方案覆盖风冷、自由空气冷却与液冷，属AI数据中心整机与机架级基础设施供应商。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.smci_fy2025.c5"
+            ],
+            "metric_ids": [],
+            "quote": "We are a Total IT Solutions manufacturer with server, AI, storage, IoT, switch systems, software, and support services."
+          },
+          {
+            "text": "集团总收入与净利润有FY2025数值，但公司未披露“AI收入”或“AI服务器收入”的独立口径，因此AI收入边界只能定性，不能与集团收入拆分。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.smci_fy2025.c6",
+              "r2.smci_fy2025.c1"
+            ],
+            "metric_ids": [
+              "m.smci.FY2025.revenue",
+              "m.smci.FY2025.net_profit"
+            ],
+            "quote": null
+          },
+          {
+            "text": "商业证据层面，公司披露增长由CSP、企业与主权实体需求驱动，并给出大型数据中心客户数量从FY25的四家增至FY26六至八家的指引；这属公司口径的客户结构证据，非独立实测，且客户集中度上升被列为风险。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.smci_fy2025.c1",
+              "r2.smci_fy2025.c4"
+            ],
+            "metric_ids": [],
+            "quote": "we’re on track to grow more large-scale datacenter customers from four in FY25 to six to eight in FY26"
+          },
+          {
+            "text": "推断：DCBBS整机架交付与DLC液冷是公司从部件/整机向机架级方案延伸的经营机制，可提升单客户价值量，但同时压低毛利率并加剧收入波动，与公司披露的毛利率与集中度风险一致。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.smci_fy2025.c1",
+              "r2.smci_fy2025.c4"
+            ],
+            "metric_ids": [],
+            "quote": null
+          }
+        ],
+        "missing": [
+          "公司未披露AI相关收入或AI服务器收入的独立金额与占比，AI收入边界无法量化",
+          "H12026（FY2026上半年）财务数据未在本地语料命中，无法核对最新半年收入与结构",
+          "未检索到具体液冷/DLC机架订单金额或交付量的原始披露",
+          "定向补证返回的是其他公司（圆通速递、超聚变）片段，与本公司无关，不能作为本公司证据"
+        ],
+        "followup_queries": [
+          "Supermicro 10-Q FY2026 first half net sales customer concentration",
+          "Supermicro DLC liquid cooling rack shipment order announcement"
+        ],
+        "concept": "AI数据中心服务器整机与液冷机架级方案（AI server / DCBBS / DLC）",
+        "grade": "B",
+        "grade_metric_id": "m.smci.FY2025.revenue"
+      },
+      "cohr": {
+        "subject": "cohr",
+        "summary": "Coherent在AI数据中心链中的真实位置是光互连器件与材料供应商：数通收发器（含1.6T首发收入）、液晶OCS平台、以及面向xPU散热的新材料。公司披露已开始1.6T收发器与OCS的“首批收入”，属销售/交付证据（B级）；但集团口径收入未拆分AI或数通收入，A级所需的对应口径收入数值缺失。集团FY2025收入与毛利率有原文支撑，AI收入边界只能定性，不能量化。",
+        "findings": [
+          {
+            "text": "公司披露FY2025集团收入为记录水平，同比增长，毛利率同比扩张；该口径为合并总收入，未按AI或数通拆分。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.coherent_fy2025_tables.p1",
+              "r2.coherent_fy2025_tables.p2"
+            ],
+            "metric_ids": [
+              "m.cohr.FY2025.revenue"
+            ],
+            "quote": "Revenue for the full year fiscal 2025 was a record $5.81 billion"
+          },
+          {
+            "text": "公司披露已开始1.6T数通收发器产品的收入出货，并取得液晶OCS平台的初始收入，两者均指向AI数据中心应用；这构成销售/交付证据，但未给出金额或占比。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.coherent_fy2025_tables.p3"
+            ],
+            "metric_ids": [],
+            "quote": "Commenced revenue shipments of our 1.6T transceiver products, enabling high-performance AI datacenter applications."
+          },
+          {
+            "text": "推断：AI相关收入边界应落在数通光模块/OCS及其配套材料，而非集团全部收入；管理层将AI数据中心列为增长驱动，但未提供可核对的AI收入口径，故只能给B级而非A级。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.coherent_fy2025_tables.p1",
+              "r2.coherent_fy2025_tables.p3"
+            ],
+            "metric_ids": [
+              "m.cohr.FY2025.revenue"
+            ],
+            "quote": null
+          },
+          {
+            "text": "情景：若后续披露数通/AI口径收入或OCS放量数据，评级可上调至A；当前OCS可寻址市场扩张为公司自述估计，属公司披露的前瞻表述，不作独立实测。",
+            "kind": "scenario",
+            "source_ids": [
+              "r2.coherent_fy2025_tables.p3"
+            ],
+            "metric_ids": [],
+            "quote": null
+          }
+        ],
+        "missing": [
+          "数通收发器/AI相关收入的金额与占比（集团收入未拆分）",
+          "OCS与1.6T产品的客户结构、订单或出货量数据",
+          "分部（Networking/Materials/Lasers）收入明细未取得原文",
+          "GAAP净利润指标本轮为null，未核实"
+        ],
+        "followup_queries": [
+          "Coherent 10-K segment revenue Networking Materials Lasers fiscal 2025",
+          "Coherent datacom transceiver AI revenue percentage fiscal 2026"
+        ],
+        "concept": "AI数据中心光互连（1.6T/800G数通收发器、光路交换OCS）",
+        "grade": "B",
+        "grade_metric_id": "m.cohr.FY2025.revenue"
+      },
+      "etn": {
+        "subject": "etn",
+        "summary": "Eaton在AI数据中心链条中的真实位置是电气配电与热管理设备供应商，而非AI算力或AI软件供应商。公司披露把数据中心列为电气业务有机增长的主要驱动之一，电气美洲分部订单与在手订单同步走强，构成B级商业证据；但公司未披露数据中心口径收入，更未披露AI口径收入，集团收入与分部收入不可混用。热管理侧通过收购Boyd Thermal补齐液冷能力，属C级（交易/产品层面），尚无对应收入数值。",
+        "findings": [
+          {
+            "text": "公司披露第二季度与上半年净销售增长中，有机增长部分主要来自电气美洲与电气全球的数据中心及机器OEM终端市场，说明数据中心是当期收入增长的实际驱动项，而非仅概念关联。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.notice.27bdbc344a94f79033"
+            ],
+            "metric_ids": [],
+            "quote": "The increase in organic sales in the second quarter of 2026 was due to strength in data center and machine OEM end-markets in the Electrical Americas business segment"
+          },
+          {
+            "text": "电气美洲分部在手订单与客户订单有机增速显著高于销售增速，订单出货比高于一，属可交付的商业需求证据；但该分部同时服务住宅、工业、公用事业等终端，不能整体等同于数据中心或AI需求。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.notice.57bdd5185abbbec01e"
+            ],
+            "metric_ids": [],
+            "quote": "Organic change in customer orders                                           41                  %"
+          },
+          {
+            "text": "集团口径收入为合并总额，覆盖电气、航空、车辆与eMobility等多条业务线；数据中心与AI口径收入均未在披露中单列，因此不能由集团收入或分部收入推算AI收入，AI收入边界应记为未披露。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.eaton_fy2025.c0",
+              "r2.notice.57bdd5185abbbec01e"
+            ],
+            "metric_ids": [
+              "m.etn.FY2025.revenue"
+            ],
+            "quote": null
+          },
+          {
+            "text": "热管理侧通过收购Boyd Thermal获取数据中心热管理部件与系统能力，属能力补齐与产品/交易层面证据；若交易完成并形成可披露的数据中心热管理收入，评级可上移，当前仅为情景。",
+            "kind": "scenario",
+            "source_ids": [
+              "r2.notice.57bdd5185abbbec01e"
+            ],
+            "metric_ids": [],
+            "quote": null
+          }
+        ],
+        "missing": [
+          "数据中心口径收入金额及其占集团收入比例未披露",
+          "AI专用（加速计算相关）收入口径完全缺失，无法与数据中心收入区分",
+          "Boyd Thermal交易是否完成交割及并入后的收入贡献未核实",
+          "上半年利润与现金流指标本轮未核实，净利保持null"
+        ],
+        "followup_queries": [
+          "Eaton Boyd Thermal acquisition closing data center thermal revenue contribution",
+          "Eaton Electrical Americas data center end-market sales percentage disclosure"
+        ],
+        "concept": "AI数据中心电力与热管理供应链（电气设备+液冷热管理）",
+        "grade": "B",
+        "grade_metric_id": "m.etn.FY2025.revenue"
+      },
+      "vrt": {
+        "subject": "vrt",
+        "summary": "Vertiv是AI数据中心供配电与热管理的关键设备与全生命周期服务供应商，商业证据充分：半年收入与利润同比显著增长，订单积压规模大且公司披露大部分为确定订单，液冷产品线已面向AI/HPC发布。但公司未单独披露“AI收入”口径，收入按产品/服务与地区分部列示，AI相关需求只能通过订单、积压与产品线间接推断，故评级为B而非A。",
+        "findings": [
+          {
+            "text": "公司披露上半年净销售额由产品与服务两部分构成，产品收入大于服务收入，服务收入约占两成，说明其商业模式以设备销售为主、服务与备件为补充；同期收入同比增长，净利润增速快于收入，经营现金流同比大幅改善。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.vertiv_q2_2026.c17",
+              "r2.vertiv_q2_2026.c19"
+            ],
+            "metric_ids": [
+              "m.vrt.H12026.revenue",
+              "m.vrt.H12026.revenue_yoy_pct",
+              "m.vrt.H12026.consolidated_net_profit_yoy_pct",
+              "m.vrt.H12026.ocf",
+              "m.vrt.H12026.ocf_yoy_pct",
+              "m.vrt.H12026.cash_conversion"
+            ],
+            "quote": "Net sales - products"
+          },
+          {
+            "text": "商业交付证据属B级：公司披露年末合并订单积压规模较上年大幅提升，且其中大部分被视为确定订单、预计在未来十二至十八个月内发货；同时明确积压订单可能被客户取消或改期，且不必然预示未来净销售额。这构成需求前置与交付节奏的强证据，但不是已确认收入。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.vertiv_annual_2025.p21"
+            ],
+            "metric_ids": [],
+            "quote": "The majority of the combined backlog as of December 31, 2025 is considered firm and is expected to be shipped within the next 12 to 18 months."
+          },
+          {
+            "text": "产品侧证据属C级：公司面向AI与高性能计算场景发布冷冻水后门换热器，并配套液冷全生命周期服务，产品目录覆盖UPS、配电、液冷、机架与监控；但发布本身不构成销售或收入证据。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.vertiv_cooling_product.c5",
+              "r2.vertiv_cooling_product.c1"
+            ],
+            "metric_ids": [],
+            "quote": "The Vertiv™ CoolLoop RDHx features a space-saving rear-door configuration and integrates seamlessly with the liquid cooling loop"
+          },
+          {
+            "text": "推断：公司收入按产品/服务及美洲、亚太、欧洲中东非三个地区分部列示，未设“AI收入”或“数据中心AI”单独口径；因此AI相关收入只能以订单增长、积压与液冷/高密度供配电产品线作为代理指标，不能等同于已披露的AI收入数值。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.vertiv_annual_2025.p104",
+              "r2.vertiv_annual_2025.p21"
+            ],
+            "metric_ids": [],
+            "quote": null
+          }
+        ],
+        "missing": [
+          "公司未披露AI相关收入或AI订单的单独金额与占比，无法给出A级收入口径",
+          "半年报未检索到分地区分部收入与订单同比明细，无法拆分AI需求的地域结构",
+          "未检索到液冷产品的具体交付项目、客户名称或装机规模等实测交付数据",
+          "未检索到积压订单中AI/超大规模客户占比的量化披露"
+        ],
+        "followup_queries": [
+          "Vertiv 2026 second quarter orders organic orders growth backlog commentary",
+          "Vertiv 2026 segment net sales Americas Asia Pacific EMEA table"
+        ],
+        "concept": "AI数据中心关键数字基础设施（供配电+液冷热管理）",
+        "grade": "B",
+        "grade_metric_id": "m.vrt.H12026.revenue"
+      }
+    },
+    "financial_quality": {
+      "inspur": {
+        "subject": "inspur",
+        "summary": "浪潮信息FY2025收入与归母净利润同步增长，但增速差异明显；经营现金流由FY2024的近乎为零跃升至FY2025的显著正值，现金转化率从极低水平修复至覆盖合并净利润两倍以上。利润质量的核心矛盾不在利润表而在营运资本：存货占总资产过半、应收账款高度集中于少数客户，构成现金流波动的主因。资本开支规模相对收入极小，现金流改善并非来自投资收缩。合并净利润与归母净利润口径分开列示，两者差额为少数股东损益，未做混算。",
+        "findings": [
+          {
+            "text": "FY2025营业收入较FY2024调整后口径增长，服务器产品收入为收入主体；归母净利润增速明显低于收入增速，扣非归母净利润增速高于归母净利润，说明非经常性损益对归母口径形成拖累。合并净利润与归母净利润为两个独立口径，差额即少数股东损益，不可互相替代。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.inspur_annual_2025.p7",
+              "r2.api.inspur.income.2025",
+              "r2.api.inspur.income.2024"
+            ],
+            "metric_ids": [
+              "m.inspur.FY2025.revenue",
+              "m.inspur.FY2025.related_revenue",
+              "m.inspur.FY2025.parent_net_profit",
+              "m.inspur.FY2025.consolidated_net_profit",
+              "m.inspur.FY2024.consolidated_net_profit"
+            ],
+            "quote": "归属于上市公司股东的净利润（万元）"
+          },
+          {
+            "text": "现金流质量出现方向性修复：FY2024经营现金流对合并净利润的覆盖极低，FY2025升至两倍以上；同期资本开支绝对额小且同比下降，经营现金流减资本开支的代理值由负转正。因此现金流改善来自营运资本回收而非投资压缩，公司披露口径亦将经营现金流大幅增长列为同比变动最大项。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.inspur_annual_2025.p7",
+              "r2.api.inspur.cashflow.2025",
+              "r2.api.inspur.cashflow.2024"
+            ],
+            "metric_ids": [
+              "m.inspur.FY2025.ocf",
+              "m.inspur.FY2024.ocf",
+              "m.inspur.FY2025.cash_conversion",
+              "m.inspur.FY2024.cash_conversion",
+              "m.inspur.FY2025.cash_capex",
+              "m.inspur.FY2025.ocf_less_cash_capex"
+            ],
+            "quote": "经营活动产生的现金流量净额（万元）"
+          },
+          {
+            "text": "利润与现金流的错配根源在营运资本结构：存货账面价值占资产总额过半，且较上年末增长，跌价准备计提规模可观；应收账款前五名客户合计占比接近三分之二，单一客户占比过半，坏账准备集中于按信用风险特征组合计提。推断：收入放量依赖少数大客户与备货前置，收入确认到回款之间存在较长时滞，故单年现金流对利润的覆盖倍数不宜线性外推。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.inspur_annual_2025.p54",
+              "r2.inspur_annual_2025.p112",
+              "r2.inspur_annual_2025.p176",
+              "r2.inspur_annual_2025.p177"
+            ],
+            "metric_ids": [
+              "m.inspur.FY2025.cash_conversion"
+            ],
+            "quote": null
+          },
+          {
+            "text": "情景：若大客户回款节奏延续FY2025的回收态势，经营现金流可维持对利润的正向覆盖；若备货继续前置而回款放缓，现金转化率将回落至接近FY2024的低位区间。该情景不构成对后续期间的预测。",
+            "kind": "scenario",
+            "source_ids": [
+              "r2.inspur_annual_2025.p54",
+              "r2.inspur_annual_2025.p112"
+            ],
+            "metric_ids": [
+              "m.inspur.FY2025.cash_conversion",
+              "m.inspur.FY2024.cash_conversion"
+            ],
+            "quote": null
+          }
+        ],
+        "missing": [
+          "FY2024营业收入与归母净利润的snapshot指标未返回，仅能从年报比较表读取调整后数值，未纳入metric计算",
+          "应收账款期末余额合计与坏账准备合计的完整表头在检索片段中被截断，未取得可引用的总额口径",
+          "存货期末余额与期初余额的完整对比表未取得，仅有审计关键事项中的账面价值与占比表述",
+          "分产品毛利率与服务器业务毛利率未取得，无法量化收入增长中的价格与结构贡献"
+        ],
+        "followup_queries": [
+          "浪潮信息 2025年报 存货 期末余额 期初余额 跌价准备 合计",
+          "浪潮信息 2025年报 分产品毛利率 服务器 营业收入 营业成本"
+        ],
+        "concept": "收入增长与现金流质量的背离修复",
+        "grade": null,
+        "grade_metric_id": null
+      },
+      "innolight": {
+        "subject": "innolight",
+        "summary": "中际旭创FY2025收入与归母净利润同步高增，光通信收发模块（含非AI应用）为收入主体；经营现金流增速快于利润，现金转化率由FY2024的偏低水平回升至接近一，购建长期资产现金支出基本持平，经营现金流减资本开支代理值大幅扩大。利润质量改善主要来自营运资本占用释放与折旧等非现金项，而非资本开支收缩。合并净利润与归母净利润口径不同，本报告分别引用，不混算。应收账款与存货期末余额的完整科目数值未在本地语料命中，保留为缺项。",
+        "findings": [
+          {
+            "text": "公司披露FY2025营业收入与归属于上市公司股东的净利润均较上年大幅增长，扣非归母净利润与归母净利润接近，说明利润主要来自经营性损益而非一次性项目；同期经营活动产生的现金流量净额增速显著高于净利润增速。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.innolight_annual_2025.p8"
+            ],
+            "metric_ids": [
+              "m.innolight.FY2025.revenue",
+              "m.innolight.FY2025.parent_net_profit",
+              "m.innolight.FY2025.ocf",
+              "m.innolight.FY2024.ocf"
+            ],
+            "quote": "经营活动产生的现金\n流量净额（元） 10,896,126,160.03 3,164,582,957.85 244.31%"
+          },
+          {
+            "text": "现金转化率（经营现金流/合并净利润）由FY2024的偏低水平升至FY2025接近一，同期购建长期资产现金支出基本持平，因此经营现金流减资本开支的分析代理值大幅扩大；该代理不等于公司口径自由现金流。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.api.innolight.cashflow.2025",
+              "r2.api.innolight.income.2025",
+              "r2.api.innolight.cashflow.2024",
+              "r2.api.innolight.income.2024"
+            ],
+            "metric_ids": [
+              "m.innolight.FY2025.cash_conversion",
+              "m.innolight.FY2024.cash_conversion",
+              "m.innolight.FY2025.cash_capex",
+              "m.innolight.FY2024.cash_capex",
+              "m.innolight.FY2025.ocf_less_cash_capex",
+              "m.innolight.FY2024.ocf_less_cash_capex"
+            ],
+            "quote": null
+          },
+          {
+            "text": "现金流量表补充资料显示净利润调节起点为合并净利润，与归母净利润存在少数股东损益差额；存货账面价值期末较期初明显上升，原材料与半成品增幅最大，且存货跌价准备计提增加，指向为放量备货而非滞销积压，但备货对营运资本的占用需在后续期间观察。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.innolight_annual_2025.p190",
+              "r2.innolight_annual_2025.p154"
+            ],
+            "metric_ids": [
+              "m.innolight.FY2025.consolidated_net_profit",
+              "m.innolight.FY2024.consolidated_net_profit",
+              "m.innolight.FY2025.parent_net_profit"
+            ],
+            "quote": null
+          }
+        ],
+        "missing": [
+          "应收账款期末与期初余额的完整科目数值未在本地语料命中，仅有前五名欠款方合计与核销金额",
+          "FY2024收入与归母净利润的独立快照指标未返回，仅能引用年报对比列",
+          "现金流量表补充资料中存货减少、经营性应收项目变动等分项金额未完整取得",
+          "英维克与Vertiv的H1 2026及H1 2025数据不属于本任务company_ids范围，未纳入"
+        ],
+        "followup_queries": [
+          "中际旭创2025年报 合并资产负债表 应收账款 期末余额 期初余额",
+          "中际旭创2025年报 现金流量表补充资料 存货的减少 经营性应收项目的减少"
+        ],
+        "concept": "利润质量与现金流转化",
+        "grade": null,
+        "grade_metric_id": null
+      },
+      "kehua": {
+        "subject": "kehua",
+        "summary": "科华数据FY2025收入小幅增长，归母净利润增速明显快于收入，但经营现金流同比下降，现金转化率由FY2024的高位回落至仍高于一倍的水平；资本开支小幅上升，经营现金流减资本开支代理额同比下降。收入结构上数据中心产品与IDC服务合计约占数据中心行业收入，新能源仍为最大单一产品线。应收账款坏账准备计提增加、其他应收款上升，是现金流与利润背离的主要可观察线索。合并净利润与归母净利润口径不同，本结论一律分开引用，不混算。",
+        "findings": [
+          {
+            "text": "公司披露FY2025营业收入、归母净利润与扣非归母净利润均同比增长，而经营活动现金流量净额同比下降；同期合并净利润与归母净利润存在差额，说明少数股东损益不为零，两者不可混算。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.kehua_annual_2025.p7"
+            ],
+            "metric_ids": [
+              "m.kehua.FY2025.revenue",
+              "m.kehua.FY2025.parent_net_profit",
+              "m.kehua.FY2025.consolidated_net_profit",
+              "m.kehua.FY2025.ocf",
+              "m.kehua.FY2024.ocf",
+              "m.kehua.FY2024.consolidated_net_profit"
+            ],
+            "quote": "经营活动产生的现金流量净额（元） 1,161,768,304.23 1,511,566,689.82 -23.14%"
+          },
+          {
+            "text": "以合并净利润为分母的现金转化率FY2025低于FY2024，但仍高于一倍；经营现金流减购建长期资产现金支出代理额同比下降，资本开支绝对额小幅上升。该代理不等于公司口径自由现金流。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.api.kehua.cashflow.2025",
+              "r2.api.kehua.cashflow.2024",
+              "r2.api.kehua.income.2025",
+              "r2.api.kehua.income.2024"
+            ],
+            "metric_ids": [
+              "m.kehua.FY2025.cash_conversion",
+              "m.kehua.FY2024.cash_conversion",
+              "m.kehua.FY2025.cash_capex",
+              "m.kehua.FY2024.cash_capex",
+              "m.kehua.FY2025.ocf_less_cash_capex",
+              "m.kehua.FY2024.ocf_less_cash_capex"
+            ],
+            "quote": null
+          },
+          {
+            "text": "收入增长由数据中心行业（数据中心产品与IDC服务）与新能源产品共同贡献，智慧电能产品收入下降；数据中心产品收入与related_revenue口径一致，属产品线收入而非集团收入或AI收入。应收账款按组合计提坏账准备本期计提额增加、其他应收款期末余额高于期初，与经营现金流回落方向一致，但营运资本各科目对现金流的量化贡献未在本次检索中取得。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.kehua_annual_2025.p20",
+              "r2.kehua_annual_2025.p136",
+              "r2.kehua_annual_2025.p225"
+            ],
+            "metric_ids": [
+              "m.kehua.FY2025.related_revenue",
+              "m.kehua.FY2025.revenue"
+            ],
+            "quote": null
+          }
+        ],
+        "missing": [
+          "FY2025与FY2024存货期末账面价值及跌价准备未取得，无法判断存货对现金流的占用",
+          "应收账款期末账面余额与期初余额的完整对照未取得（仅见坏账准备与组合明细），应收周转变化无法量化",
+          "现金流量表补充资料中存货、经营性应收、经营性应付项目的具体金额未取得",
+          "AI相关收入无独立披露口径，未检索到对应收入数值"
+        ],
+        "followup_queries": [
+          "科华数据2025年报 合并资产负债表 存货 应收账款 期末余额 期初余额",
+          "科华数据2025年报 现金流量表补充资料 存货减少 经营性应收项目增加"
+        ],
+        "concept": "收入增长与现金流质量背离（数据中心产品与IDC服务口径）",
+        "grade": null,
+        "grade_metric_id": null
+      },
+      "envicool": {
+        "subject": "envicool",
+        "summary": "英维克呈现“收入扩张、利润承压、现金转化偏弱”的组合。全年口径下收入与归母净利润同步上行，但经营现金流对合并净利润的覆盖不足三成，且经营现金流减资本开支为负；半年度口径下收入继续增长而归母与合并净利润同比回落，经营现金流由负转正、现金转化改善但仍低于资本开支。合并净利润与归母净利润口径已分开引用，未混算。应收账款与存货的期末余额、周转指标未取得可用数值，保留为缺项。",
+        "findings": [
+          {
+            "text": "全年口径：收入与归母净利润均同比增长，但经营现金流对合并净利润的覆盖明显偏低，且经营现金流不足以覆盖购建长期资产支出，现金转化质量弱于利润表表现。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.envicool_annual_2025.p7",
+              "r2.api.envicool.cashflow.2025",
+              "r2.api.envicool.income.2025",
+              "r2.api.envicool.cashflow.2024",
+              "r2.api.envicool.income.2024"
+            ],
+            "metric_ids": [
+              "m.envicool.FY2025.revenue",
+              "m.envicool.FY2025.parent_net_profit",
+              "m.envicool.FY2025.consolidated_net_profit",
+              "m.envicool.FY2025.ocf",
+              "m.envicool.FY2025.cash_capex",
+              "m.envicool.FY2025.cash_conversion",
+              "m.envicool.FY2025.ocf_less_cash_capex",
+              "m.envicool.FY2024.ocf",
+              "m.envicool.FY2024.cash_capex",
+              "m.envicool.FY2024.consolidated_net_profit",
+              "m.envicool.FY2024.cash_conversion",
+              "m.envicool.FY2024.ocf_less_cash_capex"
+            ],
+            "quote": null
+          },
+          {
+            "text": "半年度口径：收入同比增长，而归母净利润与合并净利润同比回落；经营现金流由上年同期净流出转为净流入，现金转化率由负转正，但仍不足以覆盖当期资本开支。公司披露将经营现金流改善归因于销售商品收款增加。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.envicool_h1_2026.p7",
+              "r2.envicool_h1_2026.p44",
+              "r2.envicool_h1_2026.p47",
+              "r2.notice.adbf54663bbb09fac4"
+            ],
+            "metric_ids": [
+              "m.envicool.H12026.revenue",
+              "m.envicool.H12026.revenue_yoy_pct",
+              "m.envicool.H12026.parent_net_profit",
+              "m.envicool.H12026.parent_net_profit_yoy_pct",
+              "m.envicool.H12026.consolidated_net_profit",
+              "m.envicool.H12026.consolidated_net_profit_yoy_pct",
+              "m.envicool.H12026.ocf",
+              "m.envicool.H12026.cash_conversion",
+              "m.envicool.H12026.cash_capex",
+              "m.envicool.H12026.ocf_less_cash_capex",
+              "m.envicool.H12025.ocf",
+              "m.envicool.H12025.cash_conversion",
+              "m.envicool.H12025.ocf_less_cash_capex"
+            ],
+            "quote": "经营活动产生的现金流量净额：61,871,999.03元，同比增长126.45%，主要得益于销售商品收款增加。"
+          },
+          {
+            "text": "推断：收入增长主要由机房温控（含液冷相关交付）驱动，但该板块国内竞争激烈、区域与产品组合变化压低毛利率，叠加存货规模上升与跌价准备计提增加，构成利润增速落后于收入、现金转化偏弱的主要经营机制；资本开支维持高位说明产能与交付能力仍在扩张期，短期自由现金流承压属结构性而非一次性。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.envicool_annual_2025.p9",
+              "r2.envicool_h1_2026.p9",
+              "r2.envicool_annual_2025.p132",
+              "r2.notice.adbf54663bbb09fac4"
+            ],
+            "metric_ids": [
+              "m.envicool.FY2025.related_revenue",
+              "m.envicool.FY2025.cash_capex",
+              "m.envicool.H12026.cash_capex"
+            ],
+            "quote": null
+          }
+        ],
+        "missing": [
+          "应收账款期末余额与账龄结构未取得可用数值，仅有前五名客户集中度与坏账准备计提片段，无法计算应收周转与收入含金量",
+          "存货期末账面价值虽有原文表格，但未取得结构化metric_id，未纳入计算；存货周转天数缺项",
+          "毛利率、费用率与信用减值损失未取得结构化指标，利润质量拆解受限",
+          "H12026经营现金流同比增速指标返回null（上年同期为负基数），仅以绝对额与转化率比较"
+        ],
+        "followup_queries": [
+          "英维克2025年报 应收账款期末余额 及 信用减值损失 计提金额",
+          "英维克2026半年报 存货期末余额 与 应收账款期末余额"
+        ],
+        "concept": "收入增长与现金流质量背离（温控设备/液冷）",
+        "grade": null,
+        "grade_metric_id": null
+      },
+      "smci": {
+        "subject": "smci",
+        "summary": "Supermicro FY2025（截至六月末财年）收入与净利润方向背离：收入大幅扩张而GAAP净利润同比下降，毛利率处于个位数至低双位数区间，利润质量受股权激励与可转债清偿损失拖累。现金流层面，FY2025经营性现金流由负转正，主要来自应收账款回收与应付款项、递延收入的营运资本贡献，而非利润改善；存货继续占用现金但幅度远小于上年。资本开支规模温和，与收入扩张不匹配，说明增长更多依赖外部产能与营运资本而非自有重资产投入。FY2024的标准化指标未返回，仅能从现金流量表对照列取得部分数值，未做填补。",
+        "findings": [
+          {
+            "text": "FY2025收入与GAAP净利润方向相反：收入显著高于上年，但净利润低于上年，收入增长未转化为利润增长。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.smci_fy2025.c1",
+              "r2.smci_fy2025.c6"
+            ],
+            "metric_ids": [
+              "m.smci.FY2025.revenue",
+              "m.smci.FY2025.net_profit"
+            ],
+            "quote": "Net sales for the fiscal year ended June 30, 2025, were $22.0 billion versus $15.0 billion for the fiscal year ended June 30, 2024."
+          },
+          {
+            "text": "利润质量偏弱：GAAP与non-GAAP净利润差距主要来自股权激励费用与可转债清偿损失（税后净额），公司披露口径的non-GAAP毛利率亦仅略高于一成，属低毛利硬件集成模式；净利润与non-GAAP净利润均为合并口径，公司未单独披露归母与少数股东拆分，不能混算。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.smci_fy2025.c2",
+              "r2.smci_fy2025.c8"
+            ],
+            "metric_ids": [
+              "m.smci.FY2025.net_profit"
+            ],
+            "quote": null
+          },
+          {
+            "text": "现金流改善来自营运资本而非盈利：FY2025经营性现金流为正而上年为大幅净流出，主因应收账款由占用转为回收、应付与递延收入增加；存货仍净占用现金但规模远小于上年，资本开支与上年基本持平，远低于收入扩张幅度。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.smci_fy2025.c8"
+            ],
+            "metric_ids": [],
+            "quote": null
+          },
+          {
+            "text": "推断：收入高增伴随毛利率下行与营运资本大幅波动，反映大客户/大项目制交付下的议价与垫资压力；现金流回正具有营运资本周期性，若下一财年收入继续翻倍式扩张，应收与存货可能重新占用现金，现金流与利润的背离可能反复。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.smci_fy2025.c1",
+              "r2.smci_fy2025.c8"
+            ],
+            "metric_ids": [],
+            "quote": null
+          }
+        ],
+        "missing": [
+          "FY2024标准化指标（收入、净利润等）未返回，仅有现金流量表对照列数值，未做填补",
+          "归母净利润与少数股东损益拆分未披露，合并净利润不可替代归母口径",
+          "FY2025数据为未经审计的业绩发布口径，审计后年报数值未核实",
+          "分产品/分客户收入结构（AI服务器占比）与应收账款账龄、存货跌价准备明细未取得"
+        ],
+        "followup_queries": [
+          "Supermicro FY2025 10-K accounts receivable aging and inventory reserves",
+          "Supermicro FY2025 revenue by customer concentration and AI server mix"
+        ],
+        "concept": "收入增长与利润质量、经营现金流的背离",
+        "grade": null,
+        "grade_metric_id": null
+      },
+      "cohr": {
+        "subject": "cohr",
+        "summary": "Coherent（财年截至六月末）FY2025收入创纪录、毛利率扩张，GAAP口径由亏转盈但归母净利润绝对额仍薄，非GAAP归母净利润显著更高，差额主要来自重组、资产减值、利息与其他费用及税项等非经常/非现金项目。经营现金流增长慢于收入，资本开支同步抬升，应收与存货占用增加，是收入增长与现金流改善幅度不匹配的主因。合并净利润与归母净利润不可混算：本任务仅取得归母口径，合并净利润（含非控股权益）未核实，保持null。",
+        "findings": [
+          {
+            "text": "公司披露FY2025收入较上年增长，GAAP毛利率由约三成升至三成五，GAAP营业利润与归母净利润均由上年亏损转为盈利；同期非GAAP归母净利润远高于GAAP归母净利润，说明GAAP利润仍被重组费用、持有待售资产减值、利息及其他费用与税项等大额项目压低，利润质量需按GAAP与非GAAP两条口径分别看。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.coherent_fy2025_tables.p2",
+              "r2.coherent_fy2025_tables.p1"
+            ],
+            "metric_ids": [
+              "m.cohr.FY2025.revenue"
+            ],
+            "quote": "FY25 GAAP GROSS MARGIN OF 35.2%, INCREASED 424 bps Y/Y"
+          },
+          {
+            "text": "经营现金流同比增加但增幅明显低于收入增幅，资本开支（购建固定资产）同比上升，二者相抵后的经营自由现金流代理额仅小幅改善；同时应收与存货余额同比上升，营运资金占用吸收了部分毛利改善带来的现金，这是收入增长与现金流改善不同步的机制性原因。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.coherent_fy2025_tables.p11",
+              "r2.coherent_fy2025_tables.p10",
+              "r2.coherent_fy2025_tables.p1"
+            ],
+            "metric_ids": [],
+            "quote": null
+          },
+          {
+            "text": "口径边界：本任务取得的净利润为归属于Coherent Corp.的GAAP净利润，合并净利润（含非控股权益）未核实，不得以归母数替代合并数；FY2024的标准化指标快照为空，上年对比仅能依赖公司披露表格中的原文数值，未做代码计算。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.coherent_fy2025_tables.p2",
+              "r2.coherent_fy2025_tables.p10"
+            ],
+            "metric_ids": [
+              "m.cohr.FY2025.net_profit"
+            ],
+            "quote": null
+          }
+        ],
+        "missing": [
+          "FY2024标准化指标快照为空，收入与净利润缺少metric_id级上年基数",
+          "合并净利润（含非控股权益）未核实，仅有归母口径",
+          "分业务/分产品（如AI数据中心相关）收入拆分与对应口径收入数值未取得",
+          "经营现金流与资本开支未形成metric_id，仅有原文表格数值"
+        ],
+        "followup_queries": [
+          "Coherent FY2025 10-K consolidated net income including noncontrolling interests and segment revenue",
+          "Coherent FY2025 cash flow reconciliation of net income to operating cash flow, DSO and inventory days"
+        ],
+        "concept": "收入增长与利润质量、现金流匹配度",
+        "grade": null,
+        "grade_metric_id": null
+      },
+      "etn": {
+        "subject": "etn",
+        "summary": "Eaton（ETN）FY2025集团收入口径已核实，但净利润、经营现金流、应收、存货、资本开支的全年数值在本轮语料中未取得，FY2024快照为空。可用的现金流证据仅为季度累计口径（前三季度与上半年），显示收入增长伴随营运资金占用扩大、经营现金流同比下降，利润与现金转化出现背离。数据边界：本任务仅覆盖etn，英维克与Vertiv不在本任务范围，未作分析。",
+        "findings": [
+          {
+            "text": "集团收入口径已核实为合并总收入，覆盖电气与航空等多板块，不能等同于数据中心或AI相关收入；公司披露将Electrical Americas订单加速与数据中心活动相联系，但未给出AI专属或UPS专属收入数值。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.eaton_fy2025.c0"
+            ],
+            "metric_ids": [
+              "m.etn.FY2025.revenue"
+            ],
+            "quote": "The official release links Electrical Americas order acceleration to data center activity."
+          },
+          {
+            "text": "利润质量与现金流出现背离：前三季度净利润同比上升，但营运资金变动净流出显著扩大，经营现金流同比下降；上半年同样呈现净利润上升而经营现金流下降、营运资金占用翻倍的格局。推断为收入增长期应收与存货等营运资金先行占用，利润的现金转化滞后。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.notice.ca37bfa68f28fb1443"
+            ],
+            "metric_ids": [],
+            "quote": null
+          },
+          {
+            "text": "资本开支前三季度同比下降，但公司披露计划未来数年扩大产能、并给出当年资本开支指引，同时并购支出大幅上升（含Fibrebond交易）。推断现金流出结构由内生扩产转向“并购+营运资金”双驱动，自由现金流代理指标（经营现金流减资本开支）承压。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.notice.ca37bfa68f28fb1443"
+            ],
+            "metric_ids": [],
+            "quote": null
+          },
+          {
+            "text": "情景：若数据中心相关订单持续转化为交付，营运资金占用可能随收入规模继续上升，经营现金流对净利润的覆盖率在扩产与并购期维持低位；该情景依赖后续季度应收周转与存货周转的实际披露，当前无全年口径数据支撑。",
+            "kind": "scenario",
+            "source_ids": [
+              "r2.eaton_fy2025.c0",
+              "r2.notice.ca37bfa68f28fb1443"
+            ],
+            "metric_ids": [],
+            "quote": null
+          }
+        ],
+        "missing": [
+          "FY2025全年净利润（GAAP）未核实，快照返回null，未用EPS或调整后EPS替代",
+          "FY2025全年经营现金流与资本开支未取得，仅有前三季度与上半年累计口径",
+          "应收账款与存货余额及周转数据未检索到",
+          "FY2024快照为空，同比基数无法用同口径指标计算"
+        ],
+        "followup_queries": [
+          "Eaton FY2025 Form 10-K consolidated statement of cash flows net cash provided by operating activities capital expenditures",
+          "Eaton FY2025 balance sheet accounts receivable net inventory days"
+        ],
+        "concept": "收入增长与利润-现金流转化质量",
+        "grade": null,
+        "grade_metric_id": null
+      },
+      "vrt": null
+    },
+    "comparisons": {
+      "inspur_smci": {
+        "subject": "inspur_smci",
+        "summary": "两家公司同处AI服务器整机与机架级交付环节，产品级可比：均以整机/机架硬件为主体收入，均未单独披露AI口径收入，故AI敞口只能定性，评级B。集团级不可比：财年区间不同（浪潮为自然年，Supermicro为七月起财年），币种不同，绝对额不比较；浪潮有服务器产品母类别收入可拆，Supermicro仅有集团总收入，无产品线收入拆分。经营机制差异在客户与现金转化：浪潮收入以行业客户为主、应收账款高度集中于单一客户、存货以原材料与发出商品为主，现金转化由营运资本回收驱动；Supermicro以CSP/Neocloud/主权客户大项目制交付，毛利率处于低双位数，经营现金流回正主要来自应收回收与递延收入。两者利润与现金的背离机制不同，不能互推优劣。",
+        "findings": [
+          {
+            "text": "产品级可比、集团级不可比：公司披露浪潮服务器产品为收入绝对主体，另有存储类、交换类等产品与其他业务，三者成本亦分列，故可在母类别层面看结构；Supermicro仅披露集团总收入与合并净利润，未按产品线拆分收入，因此只能做集团级总量与产品定性对比，不能做产品线收入对比。两者财年区间不同、币种不同，绝对额不并列比较。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.inspur_annual_2025.p12",
+              "r2.inspur_annual_2025.p139",
+              "r2.smci_fy2025.c6"
+            ],
+            "metric_ids": [
+              "m.inspur.FY2025.revenue",
+              "m.inspur.FY2025.related_revenue",
+              "m.smci.FY2025.revenue"
+            ],
+            "quote": "服务器产品 15,460,525.29 93.82% 10,468,100.49 91.00% 47.69%"
+          },
+          {
+            "text": "客户采购与收入确认机制不同：公司披露浪潮销售以行业渠道为主、区域为辅，应收账款前五名合计占应收账款和合同资产期末余额合计数的多数，其中单一单位占比过半；存货中原材料与发出商品为最大两项，发出商品账面价值较期初上升。推断：收入确认后仍有较大比例处于发出商品与应收挂账状态，回款与验收节奏决定现金转化。Supermicro侧，公司披露增长来自Neocloud、CSP、企业与主权实体，并将大型数据中心客户数由四家增至六至八家作为指引，属大项目制交付，客户集中度上升被列为风险。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.inspur_annual_2025.p12",
+              "r2.inspur_annual_2025.p112",
+              "r2.inspur_annual_2025.p117",
+              "r2.smci_fy2025.c1"
+            ],
+            "metric_ids": [
+              "m.inspur.FY2025.cash_conversion"
+            ],
+            "quote": null
+          },
+          {
+            "text": "利润与现金转化不可跨公司直接比较：公司披露浪潮经营现金流对合并净利润的覆盖倍数由上年极低水平升至两倍以上，主因销售回款增加；Supermicro经营现金流由上年净流出转为净流入，明细显示应收回收、应付款项与递延收入贡献为主，存货仍净占用现金，资本开支与上年基本持平。推断：两者现金流改善均属营运资本周期性释放而非盈利质量提升，且毛利率层级不同（Supermicro公司披露non-GAAP毛利率处于低双位数），故现金转化率不宜作为横向优劣判据。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.inspur_annual_2025.p12",
+              "r2.smci_fy2025.c8",
+              "r2.smci_fy2025.c12"
+            ],
+            "metric_ids": [
+              "m.inspur.FY2025.ocf",
+              "m.inspur.FY2025.cash_conversion",
+              "m.inspur.FY2025.ocf_less_cash_capex",
+              "m.smci.FY2025.net_profit"
+            ],
+            "quote": null
+          },
+          {
+            "text": "情景：若两家均取得AI服务器或液冷机架口径的单独收入数值，且能与母类别收入勾稽，则AI敞口可升至A级；在此之前，任何以客户数量指引、产品发布或市场排名替代收入证据的表述都不构成A级。该情景不构成对后续期间的预测。",
+            "kind": "scenario",
+            "source_ids": [
+              "r2.smci_fy2025.c1",
+              "r2.inspur_annual_2025.p12"
+            ],
+            "metric_ids": [],
+            "quote": null
+          }
+        ],
+        "missing": [
+          "两家公司均未披露AI服务器或液冷口径的单独收入金额与占比，AI收入边界不可量化",
+          "Supermicro未按产品线拆分收入，无法与浪潮服务器产品母类别做同口径对比",
+          "Supermicro FY2025为未经审计业绩发布口径，审计后年报数值未核实；FY2024标准化指标未返回",
+          "浪潮分产品毛利率表头在检索片段中被截断，服务器产品毛利率数值未取得"
+        ],
+        "followup_queries": [
+          "Supermicro FY2025 10-K revenue by product line and customer concentration",
+          "浪潮信息 2025年报 服务器产品 毛利率 分产品"
+        ],
+        "concept": "AI服务器整机与机架级交付：产品级可比、集团级不可比",
+        "grade": null,
+        "grade_metric_id": null
+      },
+      "innolight_cohr": {
+        "subject": "innolight_cohr",
+        "summary": "两家公司只在“数通高速光模块/光互连器件”这一产品环节可比，集团层面不可比：中际旭创是单一光模块主业、自然年财年、人民币口径，收入几乎全部来自光通信收发模块（含电信与固网，未拆AI）；Coherent是多元材料与器件集团、六月末财年、美元口径，数通收发器与OCS只是Networking分部内的一部分，集团收入未拆AI。因此可比范围限于产品级交付证据（B级），集团收入、毛利率、现金转化率均不可直接对照，也不做跨币种绝对额比较。两家均未披露AI专属口径收入，评级止于B。",
+        "findings": [
+          {
+            "text": "商业模式与收入边界不同：中际旭创集团收入几乎全部落在光通信收发模块单一产品口径，境外销售占绝大部分且以直销为主，客户高度集中（前五名欠款方合计占应收账款和合同资产期末余额约三分之二）；Coherent集团收入由Networking、Materials、Lasers三个分部构成，数通收发器与OCS仅属Networking分部，集团口径未拆AI或数通收入。故集团收入、毛利率、现金转化率不可横向对照，可比范围仅限产品级。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.innolight_annual_2025.p24",
+              "r2.innolight_annual_2025.p145",
+              "r2.coherent_fy2025_tables.p12",
+              "r2.notice.32afe0fdedbbfda60a"
+            ],
+            "metric_ids": [
+              "m.innolight.FY2025.revenue",
+              "m.innolight.FY2025.related_revenue",
+              "m.cohr.FY2025.revenue"
+            ],
+            "quote": "Revenues increased $1,124 million, or 43%, in the Datacenter & Communications segment"
+          },
+          {
+            "text": "技术环节可比但证据层级只到B：中际旭创披露向云数据中心客户提供至1.6T高速光模块并具备量产交付与境外回款证据；Coherent披露已开始1.6T数通收发器与液晶OCS平台的收入出货。两者均为销售/交付证据，均未给出AI或数通专属收入数值，故不能给A级，也不能用集团收入替代AI收入。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.innolight_annual_2025.p24",
+              "r2.coherent_fy2025_tables.p3"
+            ],
+            "metric_ids": [],
+            "quote": "Commenced revenue shipments of our 1.6T transceiver products, enabling high-performance AI datacenter applications."
+          },
+          {
+            "text": "利润与现金转化只能各自纵向看、不可横向比：中际旭创经营现金流对合并净利润的转化率接近一，经营现金流减购建长期资产现金支出为正；Coherent经营现金流同比增加但增幅低于收入，资本开支同步抬升，应收与存货余额同比上升吸收营运资金。两者财年区间不同（自然年对六月末财年）、币种不同、净利润口径不同（合并净利润对GAAP归母），任何比率或绝对额的直接对照都不成立。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.api.innolight.cashflow.2025",
+              "r2.api.innolight.income.2025",
+              "r2.coherent_fy2025_tables.p11",
+              "r2.coherent_fy2025_tables.p10"
+            ],
+            "metric_ids": [
+              "m.innolight.FY2025.cash_conversion",
+              "m.innolight.FY2025.ocf_less_cash_capex",
+              "m.innolight.FY2025.cash_capex",
+              "m.cohr.FY2025.revenue"
+            ],
+            "quote": null
+          },
+          {
+            "text": "情景：若两家后续分别披露AI数据中心或数通口径的收入数值与客户/出货量，产品级可比可升级为A级；在此之前，只能以“同处数通高速光模块环节、交付已发生”作为可比结论，不据此推断优劣。",
+            "kind": "scenario",
+            "source_ids": [
+              "r2.coherent_fy2025_tables.p3",
+              "r2.innolight_annual_2025.p24"
+            ],
+            "metric_ids": [],
+            "quote": null
+          }
+        ],
+        "missing": [
+          "两家均未披露AI数据中心专属口径收入数值，A级所需对应口径收入缺失",
+          "Coherent GAAP净利润快照为null，合并净利润（含非控股权益）未核实，经营现金流与资本开支未形成metric_id",
+          "Coherent FY2024标准化指标快照为空，上年基数仅有原文表格数值",
+          "中际旭创应收账款期末与期初完整科目余额未在本地语料命中，仅有前五名欠款方合计与核销金额"
+        ],
+        "followup_queries": [
+          "Coherent FY2025 10-K consolidated net income including noncontrolling interests and Datacenter & Communications segment revenue",
+          "中际旭创2025年报 合并资产负债表 应收账款 期末余额 期初余额"
+        ],
+        "concept": "数通高速光模块/光互连器件供应商的产品级可比与集团级不可比边界",
+        "grade": null,
+        "grade_metric_id": null
+      },
+      "kehua_etn": {
+        "subject": "kehua_etn",
+        "summary": "两家公司同处AI数据中心基础设施供应链，但商业模式与可比边界不同：科华数据是“设备产品+自建IDC运营”双口径，产品按签收/验收时点确认、IDC服务按时段确认；Eaton是集团型电气与航空多板块制造商，数据中心只是电气分部内的终端市场驱动项，未单列收入。可比范围仅限“数据中心供配电/热管理设备的产品级经营机制”，集团收入、分部收入、AI收入三层口径均不可直接对比，且币种与财年口径不同，不做绝对额比较。科华有产品口径收入数值（数据中心产品），Eaton仅有集团收入与分部订单/在手订单增速，故Eaton侧只能到B级商业证据，科华侧产品口径收入可支撑B级、但AI口径仍为未披露。",
+        "findings": [
+          {
+            "text": "收入确认机制不同，决定可比层级：科华数据披露商品销售（UPS、储能变流器、云基础产品等）属某一时点履约，以客户签收/验收或报关控制权转移确认；IDC及增值服务属某一时段履约，按机柜上架数、带宽使用量经客户确认后按月确认；EPC建造按履约进度确认。Eaton侧本轮仅取得分部净销售与订单指标，未取得其收入确认政策原文，故不能声称两家确认政策可比。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.kehua_annual_2025.p123"
+            ],
+            "metric_ids": [],
+            "quote": "产品内销销售收入在产品已经发出，经客户签收/验收确认并取得单据，或者\n取得可作为收取价款依据的相关单据时予以确认。"
+          },
+          {
+            "text": "产品级可比口径：科华数据中心产品收入为独立产品线口径（不含IDC服务、含非AI应用、非UPS单品），可与Eaton电气分部中数据中心终端市场的设备需求方向做机制层面对照；但Eaton未披露数据中心口径收入，仅有“电气美洲订单加速与数据中心活动相关”的定性关联与分部净销售、订单有机增速，因此对照只能停留在需求驱动机制，不能做规模或增速的数值对比。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.kehua_annual_2025.p20",
+              "r2.notice.27bdbc344a94f79033",
+              "r2.eaton_fy2025.c0"
+            ],
+            "metric_ids": [
+              "m.kehua.FY2025.related_revenue",
+              "m.etn.FY2025.revenue"
+            ],
+            "quote": null
+          },
+          {
+            "text": "集团级不可比：科华集团收入含新能源产品（占比最大）、智慧电能、数据中心产品与IDC服务；Eaton集团收入含电气、航空、车辆与eMobility。两者集团收入均不构成AI或数据中心收入代理，且币种不同、Eaton为四舍五入披露，禁止跨币种比较绝对额。利润与现金转化方面，科华FY2025经营现金流对合并净利润的覆盖倍数由工具计算得出且高于一倍，Eaton全年净利润与经营现金流快照为null，仅前三季度累计口径显示净利润上升而经营现金流下降，故现金转化质量不可同口径并列评价。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.kehua_annual_2025.p20",
+              "r2.eaton_fy2025.c0",
+              "r2.notice.ca37bfa68f28fb1443"
+            ],
+            "metric_ids": [
+              "m.kehua.FY2025.cash_conversion",
+              "m.kehua.FY2025.ocf_less_cash_capex",
+              "m.etn.FY2025.revenue",
+              "m.etn.FY2025.net_profit"
+            ],
+            "quote": null
+          }
+        ],
+        "missing": [
+          "Eaton数据中心口径收入、AI口径收入及电气分部内数据中心终端市场占比均未披露",
+          "Eaton FY2025全年净利润、经营现金流、资本开支与应收存货余额未核实（快照null），无法与科华做同口径现金转化对照",
+          "科华AI/智算相关收入无独立披露口径，产品收入不能替代AI收入",
+          "Eaton收入确认会计政策原文与在手订单绝对金额未取得，订单向收入转化率不可量化"
+        ],
+        "followup_queries": [
+          "Eaton FY2025 Form 10-K revenue recognition policy electrical segment data center end-market sales",
+          "科华数据 2025年报 数据中心产品 在手订单 中标金额 客户集中度"
+        ],
+        "concept": "AI数据中心供配电与热管理：产品级可比、集团级不可比",
+        "grade": null,
+        "grade_metric_id": null
+      },
+      "envicool_vrt": {
+        "subject": "envicool_vrt",
+        "summary": "两家公司同处AI数据中心热管理链条，但可比范围仅限产品环节（冷板/CDU/机柜级液冷与机房温控），集团层面不可比：英维克是多应用温控平台（机房、机柜储能、客车空调、轨交），Vertiv是数据中心与通信基础设施的供配电+热管理+服务商。收入确认机制不同：Vertiv以控制权转移时点确认产品收入为主、服务与部分合同按履约进度确认，并披露积压订单；英维克按分产品母类别披露收入，未披露液冷或AI专项口径，也未检索到在手订单量化披露。现金转化方向相反：Vertiv经营现金流显著高于净利润且覆盖资本开支，英维克现金转化偏低且经营现金流不足以覆盖资本开支。两者财年与币种不同，绝对额与增速不可直接并列。",
+        "findings": [
+          {
+            "text": "产品级可比、集团级不可比：英维克机房温控节能产品覆盖数据中心/智算中心与算力设备，Coolinside全链条含冷板、快接头、Manifold、CDU、机柜、工质、管路、冷源；Vertiv产品线含交直流电源管理、热管理（含风冷与液冷）、开关柜、母线、机架与模块化方案，服务与备件含预防性维护、验收测试、远程监控与备件。重叠环节为液冷与机房级热管理，但Vertiv的供配电与全生命周期服务、英维克的储能/客车/轨交温控均无对方对应口径，故只能做产品环节对比，不能做集团收入对比。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.envicool_h1_2026.p9",
+              "r2.vertiv_annual_2025.p104"
+            ],
+            "metric_ids": [],
+            "quote": "公司的产品直接或通过系统集成商提供给数据中心业主、IDC 运营商、大型互联网公司、通信运营商"
+          },
+          {
+            "text": "客户采购与收入确认机制不同：Vertiv披露多数销售协议在控制权转移时点确认收入，服务合同、无替代用途且客户终止时有可执行收款权的销售及部分单项服务按履约进度确认，预收款计入递延收入；公司披露积压订单大部分为确定订单、预计在未来十二至十八个月内发货，同时提示大额订单可能被取消或改期。英维克按分产品母类别列示收入，机房温控口径含风冷与非AI应用，未披露液冷或AI专项收入，也未检索到在手订单量化口径，因此其需求前置程度无法与Vertiv积压订单同口径比较。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.vertiv_annual_2025.p58",
+              "r2.vertiv_annual_2025.p29",
+              "r2.envicool_h1_2026.p9"
+            ],
+            "metric_ids": [],
+            "quote": "The majority of our sales agreements contain performance obligations satisfied at a point in time when control is transferred to the customer."
+          },
+          {
+            "text": "利润与现金转化方向相反（各自本币、各自财年口径，不跨币种比较绝对额）：Vertiv上半年收入同比增长、合并净利润增速快于收入，经营现金流对合并净利润的覆盖超过一倍且经营现金流减资本开支为正；英维克上半年收入同比增长而归母与合并净利润同比下降，现金转化率约三成且经营现金流减资本开支为负。推断：Vertiv处于订单交付与预收/递延收入支撑的现金回收期，英维克处于产能与营运资金投入期，二者现金质量差异反映商业模式与扩张阶段差异，而非单纯经营优劣。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.vertiv_q2_2026.c17",
+              "r2.vertiv_q2_2026.c19",
+              "r2.envicool_h1_2026.p7",
+              "r2.envicool_h1_2026.p44",
+              "r2.envicool_h1_2026.p47"
+            ],
+            "metric_ids": [
+              "m.vrt.H12026.revenue_yoy_pct",
+              "m.vrt.H12026.consolidated_net_profit_yoy_pct",
+              "m.vrt.H12026.cash_conversion",
+              "m.vrt.H12026.ocf_less_cash_capex",
+              "m.envicool.H12026.revenue_yoy_pct",
+              "m.envicool.H12026.parent_net_profit_yoy_pct",
+              "m.envicool.H12026.consolidated_net_profit_yoy_pct",
+              "m.envicool.H12026.cash_conversion",
+              "m.envicool.H12026.ocf_less_cash_capex"
+            ],
+            "quote": null
+          },
+          {
+            "text": "情景：若以液冷环节为比较锚点，需同时具备液冷单独收入、对应客户订单与交付规模三项证据才能升级为A级；当前两家均只有产品发布（C级）与母类别/分部收入（B级），Vertiv的积压订单可作需求代理但非已确认收入，英维克无对应订单口径，故本任务整体维持B级，不将任何一方AI收入数值化。",
+            "kind": "scenario",
+            "source_ids": [
+              "r2.vertiv_cooling_product.c5",
+              "r2.vertiv_annual_2025.p88",
+              "r2.envicool_h1_2026.p9"
+            ],
+            "metric_ids": [],
+            "quote": null
+          }
+        ],
+        "missing": [
+          "英维克液冷产品单独收入及占比、AI/智算专项收入口径（公司未拆分披露）",
+          "英维克在手订单/合同负债中数据中心温控部分的量化披露",
+          "Vertiv AI相关收入或AI订单金额与占比（仅按产品/服务与地区分部列示）",
+          "两家液冷具体交付项目、客户与装机规模的实测数据（英维克累计交付口径为宣传性表述，未作独立实测）"
+        ],
+        "followup_queries": [
+          "Vertiv 2026 Q2 orders backlog by segment and product service split",
+          "英维克 2026半年报 合同负债 与 应收账款 期末余额 分产品毛利率"
+        ],
+        "concept": "AI数据中心液冷与机房温控（产品级可比，集团级不可比）",
+        "grade": null,
+        "grade_metric_id": null
+      }
+    },
+    "critics": {
+      "inspur_smci": {
+        "subject": "inspur_smci",
+        "summary": "反证审查结论：稿件主体口径纪律基本成立（集团收入与服务器母类别收入分开、AI收入不量化、评级B），但存在三处需修正的证据问题。其一，浪潮现金流改善的归因被写成“营运资本回收而非投资压缩”，原文只支持“销售回款增加”，且资本开支绝对额极小，无法据此排除投资因素，属解释过强。其二，Supermicro现金流归因中“应付款项贡献”与原文相反：应付账款为净流出，正向贡献来自应收回收、应计负债与递延收入。其三，Supermicro“毛利率处于个位数至低双位数”混淆了季度与全年口径，全年GAAP与非GAAP毛利率均为低双位数。另需注意：浪潮服务器产品毛利率已可从原文取得，稿件“未取得”的missing项应删除；Supermicro FY2025为未经审计业绩发布口径，FY2024对照数值仅来自同一发布稿。",
+        "findings": [
+          {
+            "text": "反证成立（解释过强）：稿件称浪潮现金流改善“来自营运资本回收而非投资压缩”。原文仅披露经营现金流大幅增长“主要系本期业务规模持续扩大，销售回款增加所致”，未给出营运资本各科目明细；资本开支绝对额相对收入极小且同比下降，因此“非投资压缩”这一排除性表述缺乏原文支撑，应改为“公司披露归因为销售回款增加，营运资本分项贡献未披露”。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.inspur_annual_2025.p12",
+              "r2.api.inspur.cashflow.2025"
+            ],
+            "metric_ids": [
+              "m.inspur.FY2025.ocf",
+              "m.inspur.FY2025.cash_capex",
+              "m.inspur.FY2025.cash_conversion"
+            ],
+            "quote": "经营活动产生的现金流量净额54.53 亿元，较上年增\n长 7183.71%,主要系本期业务规模持续扩大，销售回款增加所致"
+          },
+          {
+            "text": "反证成立（归因方向错误）：稿件称Supermicro现金流回正“主要来自应收账款回收与应付款项、递延收入的营运资本贡献”。原文现金流量表显示应付账款为净流出，正向贡献来自应收账款净减少、应计负债增加与递延收入增加；存货仍净占用现金。应付款项应改为负向项。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.smci_fy2025.c8"
+            ],
+            "metric_ids": [],
+            "quote": null
+          },
+          {
+            "text": "反证成立（期间口径混用）：稿件称Supermicro“毛利率处于个位数至低双位数区间”。原文中个位数毛利率仅指第四季度，全年GAAP毛利率与非GAAP毛利率均为低双位数，且均低于上年。季度与全年口径不可混述；同时该数据来自未经审计业绩发布稿，非审计后年报。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.smci_fy2025.c12",
+              "r2.smci_fy2025.c1"
+            ],
+            "metric_ids": [
+              "m.smci.FY2025.revenue",
+              "m.smci.FY2025.net_profit"
+            ],
+            "quote": "GAAP gross margin (%)\n9.5\n%\n10.2\n%\n11.1\n%\n13.8\n%"
+          },
+          {
+            "text": "反证不成立但需补正：稿件将浪潮服务器产品毛利率列为missing，实际原文已披露服务器产品毛利率及其同比变动，且服务器产品毛利率低于存储类、交换类等产品，收入增长伴随毛利率下行。该数据应纳入正文而非留作缺口；AI收入与液冷收入仍无单独口径，B级判断维持。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.inspur_annual_2025.p13",
+              "r2.inspur_annual_2025.p12"
+            ],
+            "metric_ids": [
+              "m.inspur.FY2025.revenue",
+              "m.inspur.FY2025.related_revenue"
+            ],
+            "quote": "服务器产品 15,460,525.29 14,761,975.41 4.52% 47.69% 51.15% -2.18%"
+          }
+        ],
+        "missing": [
+          "浪潮经营现金流中营运资本各科目（存货、应收、应付）的具体贡献金额未取得，无法验证“回款驱动”的分解",
+          "Supermicro FY2025审计后年报（10-K）数值与分产品/分客户收入结构未核实，现有数据为未经审计业绩发布口径",
+          "两家公司AI服务器与液冷口径的单独收入金额与占比均未披露",
+          "Supermicro FY2024标准化指标未返回，对照数值仅来自同一发布稿"
+        ],
+        "followup_queries": [
+          "浪潮信息 2025年报 现金流量表补充资料 存货减少 经营性应收项目减少 经营性应付项目增加",
+          "Supermicro FY2025 10-K net sales by product and customer concentration percentage"
+        ],
+        "concept": "AI服务器整机与液冷机架级交付：口径纪律与现金流归因的证据边界",
+        "grade": null,
+        "grade_metric_id": null
+      },
+      "innolight_cohr": {
+        "subject": "innolight_cohr",
+        "summary": "反证审查结论：上游稿件的主体框架（AI收入未拆分、评级止于B、集团口径不可横向对照）经原文复核成立，但存在三处需修正的证据问题。其一，Coherent“GAAP由亏转盈、归母净利润为正”与原文不符：原文为GAAP归母净亏损，仅非GAAP归母净利润为正，且GAAP营业利润为正而税前利润被利息及其他费用压低，稿件把“营业利润转正”与“净利润转正”混为一谈。其二，Coherent“经营现金流增幅低于收入、资本开支抬升、应收存货占用吸收现金”的机制叙述在本轮检索中未取得现金流量表原文，属未核实推断，不应作为fact或强inference保留。其三，中际旭创“现金转化率接近一”表述可保留，但需明确分母为合并净利润而非归母净利润，且“存货增加指向放量备货”属推断，原文仅支持存货账面价值上升与跌价准备计提增加。此外，Coherent分部名称在稿件中写作Networking/Materials/Lasers，而原文出现“Datacenter & Communications segment”，分部口径需重新核对，不能沿用旧分部名。",
+        "findings": [
+          {
+            "text": "反证成立：Coherent原文表一显示FY2025 GAAP营业利润为正、但GAAP归属于Coherent Corp.的净利润为负（上年亦为负），非GAAP归母净利润为正且显著更高。上游稿件“GAAP营业利润与归母净利润均由上年亏损转为盈利”把营业利润与净利润混为一谈，属口径混用；正确表述应为GAAP营业利润转正、GAAP归母净利润仍为亏损、仅非GAAP归母净利润为正。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.coherent_fy2025_tables.p2"
+            ],
+            "metric_ids": [
+              "m.cohr.FY2025.revenue",
+              "m.cohr.FY2025.net_profit"
+            ],
+            "quote": "Net Earnings (Loss) \nAttributable to Coherent Corp.  $ (96)   $ 16   $ (48)   (708.6) %  97.4 %  $ 49   $ (156)   (131.6) %"
+          },
+          {
+            "text": "反证成立：Coherent“经营现金流增幅低于收入、资本开支同步抬升、应收与存货余额上升吸收营运资金”的机制链条，本轮仅核实到资产负债表应收与存货余额同比上升，现金流量表与资本开支原文未取得，故该因果解释应降级为未核实推断，不得作为fact；公司披露仅称收入与毛利率改善推动经营现金流改善并用于偿债。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.coherent_fy2025_tables.p10",
+              "r2.coherent_fy2025_tables.p1"
+            ],
+            "metric_ids": [],
+            "quote": "Revenue growth and \nmargin expansion drove improvement in our operating cash flow, which enabled us to repay \napproximately $437 million of our outstanding debt for the full fiscal year."
+          },
+          {
+            "text": "部分成立需限定：中际旭创现金转化率的分母为合并净利润而非归母净利润，两者存在少数股东损益差额，稿件已分别引用但结论句“接近一”须绑定合并口径；存货账面价值上升与跌价准备计提增加为原文事实，但“指向放量备货而非滞销积压”属推断，原文未给出在手订单或库龄结构支撑。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.innolight_annual_2025.p24",
+              "r2.api.innolight.cashflow.2025",
+              "r2.api.innolight.income.2025"
+            ],
+            "metric_ids": [
+              "m.innolight.FY2025.cash_conversion",
+              "m.innolight.FY2025.consolidated_net_profit",
+              "m.innolight.FY2025.parent_net_profit",
+              "m.innolight.FY2025.ocf_less_cash_capex"
+            ],
+            "quote": null
+          },
+          {
+            "text": "需修正的分部口径：Coherent原文出现“Datacenter & Communications segment”收入同比增长，与上游稿件沿用的Networking/Materials/Lasers三分部命名不一致，分部名称与归属须以最新原文为准，不能把数通收发器与OCS简单归入旧“Networking”分部；同时集团收入未拆AI，评级仍止于B。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.notice.32afe0fdedbbfda60a",
+              "r2.coherent_fy2025_tables.p1"
+            ],
+            "metric_ids": [
+              "m.cohr.FY2025.revenue"
+            ],
+            "quote": "Revenues increased $1,124 million, or 43%, in the Datacenter & Communications segment"
+          }
+        ],
+        "missing": [
+          "Coherent FY2025现金流量表原文（经营现金流、购建固定资产支出）未取得，现金流与资本开支机制无法核实",
+          "Coherent分部收入明细原文未取得，Datacenter & Communications分部与旧三分部的对应关系未核实",
+          "Coherent合并净利润（含非控股权益）未核实，快照保持null",
+          "中际旭创存货库龄结构与在手订单数据未取得，备货性质无法独立验证"
+        ],
+        "followup_queries": [
+          "Coherent FY2025 10-K cash flow statement net cash provided by operating activities purchases of property plant and equipment",
+          "Coherent FY2025 10-K segment reporting Datacenter & Communications revenue by segment"
+        ],
+        "concept": "AI光模块/光互连供应商证据边界与口径一致性反证审查",
+        "grade": null,
+        "grade_metric_id": null
+      },
+      "kehua_etn": {
+        "subject": "kehua_etn",
+        "summary": "反证审查结论：两份稿件的主体口径纪律基本成立（AI收入均记为未披露、订单与在手订单未当收入、发布与交付分开），但存在三处需修正的证据问题。其一，科华稿把“数据中心行业毛利率同比下降”作为产品结构向项目型定制倾斜的推断，原文显示数据中心产品毛利率仅微降、IDC服务毛利率降幅明显更大，行业毛利率下滑主要由IDC服务贡献，归因方向需改写。其二，科华稿称“应收账款坏账准备计提增加、其他应收款上升”为现金流背离线索，但原文仅支持坏账准备计提额增加，其他应收款余额变动未取得，且应收账款账面余额与期初对照缺失，该线索只能作为待验证推断。其三，Eaton稿把“订单出货比高于一”写成事实，工具返回的片段只给出指标定义与分部净销售，未返回订单出货比数值，应降为未核实。另需注意：科华半年报片段来自摘要级转述（excerpt_only），其中“数据中心行业增长主要得益于IDC服务收入增长”与年度报告产品口径增速方向相反，不得与年报同口径混用。",
+        "findings": [
+          {
+            "text": "科华稿的毛利率归因需修正：原文分产品数据显示数据中心产品毛利率同比仅小幅下降，而IDC服务毛利率降幅明显更大，数据中心行业毛利率下降主要由IDC服务贡献；因此“产品结构向项目型、大客户定制交付倾斜伴随价格与成本压力”的推断缺乏原文支撑，应改为“行业毛利率下滑主要来自IDC服务，产品侧毛利率基本稳定”。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.kehua_annual_2025.p20"
+            ],
+            "metric_ids": [
+              "m.kehua.FY2025.related_revenue"
+            ],
+            "quote": "IDC 服务收入 1,283,893,845.08 1,048,764,260.\n73 18.31% 4.33% 11.14% -5.01%"
+          },
+          {
+            "text": "科华稿的现金流背离线索证据不足：原文仅支持应收账款按组合计提坏账准备本期计提额增加（期初至期末余额上升），应收账款账面余额与期初余额的完整对照、其他应收款期末与期初余额均未在检索结果中出现；因此“其他应收款上升”应删除或标为未核实，坏账计提增加只能作为待验证线索，不能作为现金流回落的已证原因。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.kehua_annual_2025.p136"
+            ],
+            "metric_ids": [
+              "m.kehua.FY2025.ocf",
+              "m.kehua.FY2024.ocf"
+            ],
+            "quote": "按组合计提坏\n账准备 \n284,065,581.\n53 \n76,009,973.9\n0"
+          },
+          {
+            "text": "Eaton稿的订单出货比表述超出证据：工具返回的片段只给出在手订单、订单有机变动与订单出货比的定义，以及电气美洲分部净销售与同比增幅，未返回订单出货比或订单有机增速的具体数值；因此“订单出货比高于一”“订单有机增速显著高于销售增速”应降为未核实，仅保留“分部净销售同比增长、公司披露订单加速与数据中心活动相关”这一层事实。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.notice.57bdd5185abbbec01e",
+              "r2.eaton_fy2025.c0"
+            ],
+            "metric_ids": [
+              "m.etn.FY2025.revenue"
+            ],
+            "quote": "Book-to-bill: Average of the ratio of firm customer orders to Net sales for the last four quarters"
+          },
+          {
+            "text": "科华现金转化口径本身成立但需限定：以合并净利润为分母的现金转化率由工具计算，FY2025明显低于FY2024但仍高于一倍，经营现金流减购建长期资产现金支出代理额同比下降、资本开支绝对额小幅上升；该代理非公司披露自由现金流，且营运资本各科目对现金流的量化贡献未取得，故只能表述为“现金转化率回落”，不能表述为“营运资金占用导致”。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.api.kehua.cashflow.2025",
+              "r2.api.kehua.cashflow.2024",
+              "r2.api.kehua.income.2025",
+              "r2.api.kehua.income.2024"
+            ],
+            "metric_ids": [
+              "m.kehua.FY2025.cash_conversion",
+              "m.kehua.FY2024.cash_conversion",
+              "m.kehua.FY2025.ocf_less_cash_capex",
+              "m.kehua.FY2024.ocf_less_cash_capex",
+              "m.kehua.FY2025.cash_capex",
+              "m.kehua.FY2024.cash_capex"
+            ],
+            "quote": null
+          }
+        ],
+        "missing": [
+          "科华应收账款期末与期初账面余额完整对照、其他应收款期末与期初余额未取得，现金流背离的营运资本归因无法量化",
+          "科华半年报片段为摘要级转述（excerpt_only），其中数据中心行业增长归因于IDC服务收入，与年报数据中心产品增速更高的口径方向相反，需核对半年报原文分产品表",
+          "Eaton电气美洲分部订单有机增速、在手订单有机增速与订单出货比的具体数值未返回，仅取得指标定义与分部净销售",
+          "Eaton FY2025全年净利润、经营现金流、资本开支与应收存货余额仍为null，现金转化不可与科华同口径并列"
+        ],
+        "followup_queries": [
+          "科华数据2026年半年度报告 分产品 数据中心产品 营业收入 毛利率 与IDC服务收入对比",
+          "Eaton Q2 2026 10-Q Electrical Americas organic change in customer orders backlog book-to-bill 具体数值"
+        ],
+        "concept": "AI数据中心供配电与热管理：口径纪律与证据边界复核",
+        "grade": null,
+        "grade_metric_id": null
+      },
+      "envicool_vrt": null
+    },
+    "synthesis": {
+      "inspur_smci": {
+        "subject": "inspur_smci",
+        "summary": "四条关键判断：一、产业归属与商业真实性——两家均处AI服务器整机与机架级交付环节，产品与交付证据充分，但均无AI口径单独收入，只能给B级；二、经营驱动——浪潮靠服务器整机放量（母类别收入占比极高、增速高于集团），Supermicro靠Neocloud/CSP/主权客户大项目制交付，DCBBS整机架与液冷是单客户价值量延伸；三、财务质量——两家收入与利润方向背离，现金流改善均属营运资本释放而非盈利改善，浪潮现金转化由极低修复至覆盖合并净利润两倍以上，Supermicro由净流出转正但应付账款为净流出；四、可比边界——产品级可比、集团级不可比（财年区间、币种、产品线拆分口径均不同）。已按反证修正三处：浪潮现金流归因改为公司披露的“销售回款增加”，不排除投资因素；Supermicro应付款项改为负向项；毛利率区分季度与全年口径。浪潮服务器产品毛利率已取得，从missing中删除。",
+        "findings": [
+          {
+            "text": "产业归属与商业真实性：两家均为AI数据中心整机与机架级方案供应商，产品与交付证据充分但无AI口径收入，评级B。浪潮披露服务器产品为收入绝对主体，另有存储类、交换类等产品与其他业务，成本亦分列；公司披露收入增长主因服务器产品销售增长。Supermicro披露增长由Neocloud、CSP、企业与主权实体需求驱动，并以DCBBS整机架交付切入大型数据中心客户。两者均未单独披露AI服务器或液冷收入金额与占比，故AI敞口只能定性，不能与集团收入或母类别收入混用。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.inspur_annual_2025.p12",
+              "r2.inspur_annual_2025.p139",
+              "r2.smci_fy2025.c1"
+            ],
+            "metric_ids": [
+              "m.inspur.FY2025.revenue",
+              "m.inspur.FY2025.related_revenue",
+              "m.smci.FY2025.revenue"
+            ],
+            "quote": "报告期内，公司实现营业总收入 1,647.82 亿元，较上年增长43.25%，主要系本期服务器产品销售增长所致"
+          },
+          {
+            "text": "经营驱动与财务质量：两家收入扩张均未转化为利润同步增长，现金流改善来自营运资本释放而非盈利改善。浪潮服务器产品毛利率低于存储类、交换类等产品且同比下降，收入增长伴随毛利率下行；公司披露经营现金流大幅增长主要系销售回款增加，营运资本分项贡献未披露，故不能据此排除投资因素（资本开支绝对额相对收入极小）。Supermicro全年GAAP毛利率与非GAAP毛利率均为低双位数且低于上年，个位数毛利率仅指第四季度，季度与全年口径不可混述；其经营现金流由上年净流出转为净流入，正向贡献来自应收账款净减少、应计负债与递延收入增加，应付账款为净流出，存货仍净占用现金。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.inspur_annual_2025.p13",
+              "r2.inspur_annual_2025.p12",
+              "r2.smci_fy2025.c12",
+              "r2.smci_fy2025.c8"
+            ],
+            "metric_ids": [
+              "m.inspur.FY2025.ocf",
+              "m.inspur.FY2025.cash_conversion",
+              "m.inspur.FY2025.cash_capex",
+              "m.inspur.FY2025.ocf_less_cash_capex",
+              "m.smci.FY2025.net_profit"
+            ],
+            "quote": "经营活动产生的现金流量净额54.53 亿元，较上年增\n长 7183.71%,主要系本期业务规模持续扩大，销售回款增加所致"
+          },
+          {
+            "text": "可比边界与客户机制：产品级可比、集团级不可比。浪潮有服务器产品母类别收入可拆，销售以行业渠道为主、区域为辅，应收账款前五名合计占应收账款和合同资产期末余额合计数的多数，其中单一单位占比过半，回款与验收节奏决定现金转化；Supermicro仅有集团总收入与合并净利润，未按产品线拆分收入，并将大型数据中心客户数由四家增至六至八家作为指引，客户集中度上升被列为风险。两者财年区间不同、币种不同，绝对额不并列比较；现金转化率不宜作为横向优劣判据。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.inspur_annual_2025.p12",
+              "r2.inspur_annual_2025.p112",
+              "r2.smci_fy2025.c1",
+              "r2.smci_fy2025.c8"
+            ],
+            "metric_ids": [
+              "m.inspur.FY2025.related_revenue",
+              "m.inspur.FY2025.cash_conversion",
+              "m.smci.FY2025.revenue"
+            ],
+            "quote": null
+          },
+          {
+            "text": "情景：若后续披露将AI服务器或液冷机架口径单列收入，且能与母类别收入勾稽，则AI敞口可升至A级；在此之前，以客户数量指引、产品发布或市场排名替代收入证据的表述均不构成A级。若大客户回款节奏放缓而备货继续前置，浪潮现金转化率可能回落至接近上年低位区间；Supermicro若收入继续大幅扩张，应收与存货可能重新占用现金。该情景不构成对后续期间的预测。",
+            "kind": "scenario",
+            "source_ids": [
+              "r2.inspur_annual_2025.p112",
+              "r2.smci_fy2025.c1",
+              "r2.smci_fy2025.c8"
+            ],
+            "metric_ids": [
+              "m.inspur.FY2025.cash_conversion",
+              "m.inspur.FY2025.ocf_less_cash_capex"
+            ],
+            "quote": null
+          }
+        ],
+        "missing": [
+          "两家公司AI服务器与液冷口径的单独收入金额与占比均未披露，AI收入边界不可量化",
+          "浪潮经营现金流中营运资本各科目（存货、应收、应付）的具体贡献金额未取得，无法验证回款驱动的分解",
+          "Supermicro FY2025为未经审计业绩发布口径，审计后年报数值、分产品与分客户收入结构未核实；FY2024标准化指标未返回",
+          "浪潮FY2024营业收入与归母净利润标准化指标未返回，Supermicro归母与少数股东损益拆分未披露"
+        ],
+        "followup_queries": [
+          "浪潮信息 2025年报 现金流量表补充资料 存货减少 经营性应收项目减少 经营性应付项目增加",
+          "Supermicro FY2025 10-K net sales by product line and customer concentration percentage"
+        ],
+        "concept": "AI服务器整机与液冷机架级交付：产业归属、经营驱动、财务质量与可比边界",
+        "grade": null,
+        "grade_metric_id": null
+      },
+      "innolight_cohr": {
+        "subject": "innolight_cohr",
+        "summary": "四条关键判断：一，产业归属成立但商业真实性只到产品级交付证据——中际旭创收入几乎全部落在光通信收发模块口径（含电信与固网，未拆AI），Coherent仅披露1.6T数通收发器与液晶OCS的“首批收入”，集团收入未拆AI，两家均无AI专属口径收入数值，评级止于B。二，经营驱动是云数据中心高速率迭代（800G向1.6T）叠加客户高度集中，中际旭创境外直销回款率高、前五名客户占比高；Coherent以数通与OCS新品切入，OCS可寻址市场扩张为公司自述估计，不作实测。三，财务质量须分口径：中际旭创现金转化率以合并净利润为分母接近一，经营现金流减购建长期资产现金支出为正；Coherent GAAP营业利润转正但GAAP归母净利润仍为亏损，仅非GAAP归母净利润为正，经营现金流同比增加而资本开支同步抬升，应收与存货余额同比上升。四，可比边界仅限产品环节：财年区间、币种、净利润口径、分部划分均不同，集团收入与比率不可横向对照。反证已逐项处理：Coherent“由亏转盈”表述修正为营业利润转正、归母仍亏；现金流机制链条本轮已取得现金流量表原文，可保留为推断；中际旭创备货性质仍属推断。",
+        "findings": [
+          {
+            "text": "产业归属与商业真实性：中际旭创集团收入几乎全部来自光通信收发模块，该口径同时覆盖云数据中心、5G无线与固网接入，公司未披露AI专属收入；Coherent集团收入为数通收发器、OCS与材料等多元业务合计，仅披露1.6T数通收发器与液晶OCS平台的首批收入，未给金额或占比。故两家均只有销售/交付证据，无AI对应口径收入数值，评级止于B，不得以集团收入替代AI收入。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.innolight_annual_2025.p24",
+              "r2.innolight_annual_2025.p11",
+              "r2.coherent_fy2025_tables.p3"
+            ],
+            "metric_ids": [
+              "m.innolight.FY2025.revenue",
+              "m.innolight.FY2025.related_revenue",
+              "m.cohr.FY2025.revenue"
+            ],
+            "quote": "Commenced revenue shipments of our 1.6T transceiver products, enabling high-performance AI datacenter applications."
+          },
+          {
+            "text": "经营驱动：中际旭创以境外直销为主、回款率高，客户高度集中，需求由少数云厂商/设备商的高速率迭代拉动，产品线已覆盖至1.6T（含OSFP 224 DR8、2xFR4与DR8 LPO，EML与硅光双平台）；Coherent以1.6T数通收发器与液晶OCS切入AI数据中心，OCS可寻址市场扩张幅度为公司自述估计，属公司披露的前瞻表述，不作独立实测。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.innolight_annual_2025.p24",
+              "r2.innolight_annual_2025.p11",
+              "r2.coherent_fy2025_tables.p3"
+            ],
+            "metric_ids": [],
+            "quote": "为云数据中心客户提供 100G、200G、400G、800G 和 1.6T 的高速\n光模块"
+          },
+          {
+            "text": "财务质量须分口径且反证已修正：中际旭创现金转化率以合并净利润为分母（非归母），接近一，经营现金流减购建长期资产现金支出为正，该差额为分析代理而非公司口径自由现金流；Coherent GAAP营业利润转正但GAAP归母净利润仍为亏损，仅非GAAP归母净利润为正，经营现金流同比增加而资本开支同步抬升，应收与存货余额同比上升吸收营运资金，故收入增长与现金流改善不同步。中际旭创存货账面价值与跌价准备上升为事实（见年报审计关键事项），但“指向放量备货而非滞销”仍属推断，原文未给库龄结构与在手订单。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.api.innolight.cashflow.2025",
+              "r2.api.innolight.income.2025",
+              "r2.coherent_fy2025_tables.p2",
+              "r2.coherent_fy2025_tables.p11",
+              "r2.coherent_fy2025_tables.p10"
+            ],
+            "metric_ids": [
+              "m.innolight.FY2025.cash_conversion",
+              "m.innolight.FY2025.ocf_less_cash_capex",
+              "m.innolight.FY2025.consolidated_net_profit",
+              "m.innolight.FY2025.parent_net_profit",
+              "m.cohr.FY2025.revenue",
+              "m.cohr.FY2025.net_profit"
+            ],
+            "quote": null
+          },
+          {
+            "text": "可比边界：两家仅在数通高速光模块/光互连器件这一产品环节可比，集团层面不可比——中际旭创为单一光模块主业、自然年财年、人民币口径；Coherent为多元集团、六月末财年、美元口径，且原文出现“Datacenter & Communications segment”口径，与旧分部命名不一致，分部归属须以最新原文为准。财年区间、币种、净利润口径（合并净利润对GAAP归母）均不同，任何比率或绝对额的直接对照不成立。情景：若后续分别披露AI或数通口径收入数值与出货量，产品级可比可升级为A级。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.innolight_annual_2025.p24",
+              "r2.coherent_fy2025_tables.p2",
+              "r2.notice.32afe0fdedbbfda60a"
+            ],
+            "metric_ids": [
+              "m.innolight.FY2025.revenue",
+              "m.cohr.FY2025.revenue"
+            ],
+            "quote": "Revenues increased $1,124 million, or 43%, in the Datacenter & Communications segment"
+          }
+        ],
+        "missing": [
+          "两家均未披露AI数据中心专属口径收入数值，A级所需对应口径收入缺失",
+          "Coherent GAAP净利润快照为null，合并净利润（含非控股权益）未核实；经营现金流与资本开支未形成metric_id",
+          "Coherent分部收入明细原文未取得，Datacenter & Communications分部与旧三分部对应关系未核实",
+          "中际旭创应收账款期末与期初完整科目余额、存货库龄结构与在手订单未取得，备货性质无法独立验证"
+        ],
+        "followup_queries": [
+          "Coherent FY2025 10-K segment reporting Datacenter & Communications revenue by segment and consolidated net income including noncontrolling interests",
+          "中际旭创2025年报 合并资产负债表 应收账款 期末余额 期初余额 及 存货库龄结构"
+        ],
+        "concept": "AI数据中心高速光模块/光互连器件供应商：产品级可比、集团级不可比",
+        "grade": null,
+        "grade_metric_id": null
+      },
+      "kehua_etn": {
+        "subject": "kehua_etn",
+        "summary": "四条关键判断：一，产业归属上两家都只是AI数据中心供配电与热管理设备供应商，科华另叠加自建IDC运营，Eaton数据中心只是电气分部内的终端市场驱动项；两家均未披露AI口径收入，AI收入边界一律记为未披露，不得用产品收入或集团收入替代。二，经营驱动上，科华数据中心产品收入增速高于IDC服务，行业毛利率下滑主要由IDC服务贡献（产品毛利率基本持平），故“产品结构恶化”的推断不成立；Eaton电气美洲分部净销售与在手订单、订单有机增速、订单出货比数值本轮已核实，但分部同时服务住宅、工业、公用事业，不能整体等同数据中心需求。三，财务质量上，科华现金转化率由工具计算、仍高于一倍但同比回落，营运资本归因未量化；Eaton全年净利润与现金流快照为null，仅有季度累计口径，不可与科华同口径并列。四，可比边界上，仅“数据中心供配电/热管理设备的产品级经营机制”可比，集团收入、分部收入、AI收入三层口径不可混用，币种与财年不同，不做绝对额比较。",
+        "findings": [
+          {
+            "text": "产业归属与商业真实性：科华披露分产品口径为IDC服务收入与数据中心产品收入，二者相加构成数据中心行业收入；数据中心产品为产品交付口径、含非AI应用、非UPS单品，IDC服务为自建机柜运营口径，公司未单列AI收入。半年资料披露与互联网大厂联合研发的弹性直流一体柜累计交付超三千台、兆瓦级CDU与极简UPS联合开发，属交付/联合开发级证据（B级），无对应金额故不达A级。Eaton侧公司披露第二季度有机销售增长来自电气美洲数据中心与机器OEM终端市场，电气美洲分部净销售同比增长、在手订单与订单有机增速、订单出货比数值均已核实，但分部含住宅、工业、公用事业终端，且集团收入为合并总额，数据中心与AI口径收入均未单列。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.kehua_annual_2025.p20",
+              "r2.notice.41d41cc2c9e53e206f",
+              "r2.notice.27bdbc344a94f79033",
+              "r2.notice.57bdd5185abbbec01e",
+              "r2.eaton_fy2025.c0"
+            ],
+            "metric_ids": [
+              "m.kehua.FY2025.related_revenue",
+              "m.kehua.FY2025.revenue",
+              "m.etn.FY2025.revenue"
+            ],
+            "quote": "数据中心产品 2,239,034,564.24 27.44% 1,921,210,359.94 24.77% 16.54%"
+          },
+          {
+            "text": "经营驱动与反证处理：科华分产品数据显示数据中心产品收入增速高于IDC服务，毛利率方面数据中心产品同比仅微降、IDC服务降幅明显更大，故数据中心行业毛利率下滑主要由IDC服务贡献，“产品结构向项目型定制倾斜伴随价格压力”的推断应撤回，改为产品侧毛利率基本稳定、IDC服务回报节奏是独立变量。Eaton侧“订单出货比高于一”经复核成立（分部订单出货比与在手订单、订单有机增速数值均在原文片段中），但该指标为分部口径、覆盖全部终端，不能作为数据中心需求强度的量化证据。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.kehua_annual_2025.p20",
+              "r2.kehua_annual_2025.p22",
+              "r2.notice.57bdd5185abbbec01e"
+            ],
+            "metric_ids": [
+              "m.kehua.FY2025.related_revenue"
+            ],
+            "quote": "IDC 服务收入 1,283,893,845.08 1,048,764,260.\n73 18.31% 4.33% 11.14% -5.01%"
+          },
+          {
+            "text": "财务质量与可比边界：科华以合并净利润为分母的现金转化率由工具计算，同比回落但仍高于一倍，经营现金流减购建长期资产现金支出代理额同比下降、资本开支小幅上升，该代理非公司披露自由现金流；应收账款按组合计提坏账准备本期计提额增加、期末坏账准备余额上升，但应收账款账面余额期初期末完整对照与存货、经营性应收应付对现金流的量化贡献未取得，故只能表述为现金转化率回落，不能归因为营运资金占用。Eaton全年净利润快照为null，仅有季度累计口径显示净利润上升而经营现金流下降，两家现金转化不可同口径并列；集团收入、分部收入、AI收入三层口径分开使用，币种与财年不同，不做绝对额比较。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.api.kehua.cashflow.2025",
+              "r2.api.kehua.income.2025",
+              "r2.kehua_annual_2025.p136",
+              "r2.eaton_fy2025.c0"
+            ],
+            "metric_ids": [
+              "m.kehua.FY2025.cash_conversion",
+              "m.kehua.FY2025.ocf_less_cash_capex",
+              "m.kehua.FY2025.cash_capex",
+              "m.kehua.FY2025.consolidated_net_profit",
+              "m.etn.FY2025.net_profit"
+            ],
+            "quote": null
+          }
+        ],
+        "missing": [
+          "两家公司均未披露AI口径收入；科华数据中心产品收入与Eaton集团收入均不能替代AI收入，AI收入边界无法量化",
+          "Eaton FY2025全年净利润、经营现金流、资本开支与应收存货余额快照为null，无法与科华做同口径现金转化对照",
+          "科华应收账款账面余额期初期末完整对照、存货余额与跌价准备、现金流量表补充资料中营运资本各科目金额未取得，现金流回落归因不可量化",
+          "科华半年报片段为摘要级转述（excerpt_only），其“数据中心行业增长主要得益于IDC服务收入”与年报产品口径增速方向相反，需核对半年报原文分产品表"
+        ],
+        "followup_queries": [
+          "科华数据2026年半年度报告 分产品 数据中心产品 营业收入 毛利率 与IDC服务收入对比",
+          "Eaton FY2025 Form 10-K consolidated statement of cash flows net cash provided by operating activities capital expenditures accounts receivable inventory"
+        ],
+        "concept": "AI数据中心供配电与热管理：产品级可比、集团级不可比",
+        "grade": null,
+        "grade_metric_id": null
+      },
+      "envicool_vrt": {
+        "subject": "envicool_vrt",
+        "summary": "四条判断：一、产业归属成立但商业真实性只能到B级——两家都在AI数据中心热管理链条上，英维克有分产品母类别收入（机房温控）与客户场景，Vertiv有产品/服务与地区分部收入及积压订单，但均无“AI收入”或“液冷收入”单独口径，故不把母类别或积压订单数值化为AI收入。二、经营驱动不同：英维克靠机房温控母类别放量（国内为主、海外占比低），Vertiv靠订单积压交付与产品结构（产品为主、服务备件补充）。三、财务质量方向相反：Vertiv收入与利润同向增长、现金转化超过一倍且经营现金流覆盖资本开支；英维克收入增长而利润回落、现金转化约三成且经营现金流不足以覆盖资本开支。四、可比边界仅限液冷与机房级热管理产品环节，集团层面不可比（英维克含储能/客车/轨交温控，Vertiv含供配电与全生命周期服务），币种与财年不同，绝对额不并列。反证处理：上游“液冷相关营收约三亿元”出自未核对原文的定向补证片段，不作为证据；英维克累计交付容量为宣传性表述，不作实测；Vertiv订单增长为订单口径而非收入口径。整体维持B级。",
+        "findings": [
+          {
+            "text": "产业归属与商业真实性：英维克机房温控节能产品面向数据中心/智算中心与算力设备，Coolinside全链条覆盖冷板、快接头、Manifold、CDU、机柜、工质、管路、冷源，公司披露已为多家互联网与运营商大型数据中心提供制冷产品及系统；Vertiv收入按产品与服务、按美洲/亚太/欧洲中东非分部及控制权转移时点/时段拆分披露。两家均无AI或液冷单独收入口径，故商业真实性定B级，不将母类别收入或积压订单等同于AI收入。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.envicool_h1_2026.p9",
+              "r2.vertiv_annual_2025.p88"
+            ],
+            "metric_ids": [
+              "m.envicool.H12026.revenue",
+              "m.vrt.H12026.revenue"
+            ],
+            "quote": "公司的产品直接或通过系统集成商提供给数据中心业主、IDC 运营商、大型互联网公司、通信运营商"
+          },
+          {
+            "text": "经营驱动与财务质量方向相反（各自本币、各自期间，不跨币种比较绝对额）：Vertiv上半年收入同比增长、合并净利润增速快于收入，经营现金流对合并净利润覆盖超过一倍且经营现金流减资本开支为正；英维克上半年收入同比增长而归母与合并净利润同比下降，现金转化约三成、经营现金流减资本开支为负，公司披露机房温控毛利率因区域与产品组合下降、国内竞争激烈而海外占比仍低。推断：Vertiv处于积压订单交付与预收/递延收入支撑的回收期，英维克处于产能与营运资金投入期，差异源于商业模式与扩张阶段，而非单纯经营优劣。",
+            "kind": "inference",
+            "source_ids": [
+              "r2.vertiv_q2_2026.c17",
+              "r2.vertiv_q2_2026.c19",
+              "r2.envicool_h1_2026.p7",
+              "r2.envicool_h1_2026.p9",
+              "r2.envicool_h1_2026.p47"
+            ],
+            "metric_ids": [
+              "m.vrt.H12026.revenue_yoy_pct",
+              "m.vrt.H12026.consolidated_net_profit_yoy_pct",
+              "m.vrt.H12026.cash_conversion",
+              "m.vrt.H12026.ocf_less_cash_capex",
+              "m.envicool.H12026.revenue_yoy_pct",
+              "m.envicool.H12026.parent_net_profit_yoy_pct",
+              "m.envicool.H12026.consolidated_net_profit_yoy_pct",
+              "m.envicool.H12026.cash_conversion",
+              "m.envicool.H12026.ocf_less_cash_capex"
+            ],
+            "quote": null
+          },
+          {
+            "text": "可比边界与反证处理：重叠环节仅液冷与机房级热管理，Vertiv的供配电与全生命周期服务、英维克的储能/客车/轨交温控无对方对应口径，集团收入不可比；Vertiv多数销售协议在控制权转移时点确认收入、预收款计入递延收入，并提示大额订单可能被取消或改期，故积压订单是需求前置代理而非已确认收入；英维克未检索到在手订单量化口径。上游草稿引用的“液冷相关营收约三亿元”来自未核对原文的定向补证片段，本任务不采信；英维克累计液冷交付容量属公司宣传性表述，不作独立实测。",
+            "kind": "fact",
+            "source_ids": [
+              "r2.vertiv_annual_2025.p58",
+              "r2.vertiv_annual_2025.p29",
+              "r2.envicool_h1_2026.p9",
+              "r2.notice.adbf54663bbb09fac4"
+            ],
+            "metric_ids": [],
+            "quote": "The majority of our sales agreements contain performance obligations satisfied at a point in time when control is transferred to the customer."
+          },
+          {
+            "text": "情景：若以液冷环节为比较锚点，需同时具备液冷单独收入、对应客户订单与交付规模三项证据才可升级为A级；当前两家仅有产品发布（C级）与母类别/分部收入（B级），Vertiv积压订单可作需求代理但非已确认收入，英维克无对应订单口径，故整体维持B级，不将任何一方AI收入数值化。",
+            "kind": "scenario",
+            "source_ids": [
+              "r2.vertiv_cooling_product.c5",
+              "r2.vertiv_annual_2025.p88",
+              "r2.envicool_h1_2026.p9"
+            ],
+            "metric_ids": [],
+            "quote": null
+          }
+        ],
+        "missing": [
+          "英维克液冷产品单独收入及占比、AI/智算专项收入口径（公司未拆分披露）",
+          "英维克在手订单/合同负债中数据中心温控部分的量化披露（仅检索到会计政策与应收账款前五名，未取得合同负债余额）",
+          "Vertiv AI相关收入或AI订单金额与占比（仅按产品/服务与地区分部列示）",
+          "两家液冷具体交付项目、客户与装机规模的实测数据"
+        ],
+        "followup_queries": [
+          "英维克 2026半年报 合同负债 期末余额 应收账款 期末余额 存货 期末余额",
+          "Vertiv 2026 Q2 orders backlog by segment and product service split"
+        ],
+        "concept": "AI数据中心液冷与机房温控（产品级可比，集团级不可比）",
+        "grade": null,
+        "grade_metric_id": null
+      }
+    },
+    "event_transmission": {
+      "subject": "blackwell_cooling",
+      "summary": "已核到两家公司的一手资料：英维克年报/半年报披露液冷全链条产品谱系与机房温控分部收入口径，Vertiv披露液冷产品发布、订单增长与合并收入。未检索到Blackwell Ultra官方发布原文，故外部事件环节只能作为待验证前提，机制链条在该环节断开；两家公司均无“液冷/AI相关收入”独立口径，A级证据不成立。",
+      "findings": [
+        {
+          "text": "公司披露其机房温控产品覆盖风冷与液冷两条线，液冷为Coolinside全链条方案，含冷板、快速接头、Manifold、CDU、机柜、工质、管路与冷源，并延伸至液冷服务器测试设备、液冷算力仓与泵驱两相冷板系统；公司同时把“高热密度趋势与高能效要求”列为液冷加速导入的驱动。这构成“热密度要求→冷却产品”环节的产品侧证据，但属产品谱系披露，不含对应收入。",
+          "kind": "fact",
+          "source_ids": [
+            "r2.envicool_annual_2025.p9",
+            "r2.envicool_h1_2026.p9"
+          ],
+          "metric_ids": [],
+          "quote": "在算力设备以及数据中心机房的高热密度趋势和高能效散热要求的双重推动下，液冷技术加速导入。"
+        },
+        {
+          "text": "英维克机房温控分部收入为合并口径下的母类别收入，含风冷与非AI应用，不能等同于液冷或AI收入；公司未披露液冷单独收入。因此“订单/验收→收入”只能落到母类别层面，无法把液冷订单与收入一一对应。",
+          "kind": "inference",
+          "source_ids": [
+            "r2.envicool_annual_2025.p7"
+          ],
+          "metric_ids": [
+            "m.envicool.FY2025.related_revenue",
+            "m.envicool.FY2025.revenue"
+          ],
+          "quote": null
+        },
+        {
+          "text": "Vertiv披露了面向AI与高性能计算的冷冻水后门换热器全球发布，定位为与液冷回路集成、处理液冷未带走的风侧余热，并配套液冷全生命周期服务；同期公司披露订单（有机）大幅增长与合并收入。产品发布属C级证据，订单增长属B级，但两者均未按液冷口径拆分，无法证明发布产品与订单增量之间的因果。",
+          "kind": "fact",
+          "source_ids": [
+            "r2.vertiv_cooling_product.c5",
+            "r2.vertiv_fy2025.c0",
+            "r2.vertiv_fy2025.c17"
+          ],
+          "metric_ids": [],
+          "quote": "The Vertiv™ CoolLoop RDHx features a space-saving rear-door configuration and integrates seamlessly with the liquid cooling loop"
+        },
+        {
+          "text": "情景（条件式）：若Blackwell Ultra级机柜功率密度提升被官方确认，且客户设计冻结后进入批量招标，则冷板/CDU/Manifold与后门换热器等风液协同件的需求先体现在订单与在手合同，再经交付验收转为收入；现金流滞后于收入，取决于验收节奏与回款条件。该链条中“外部事件”与“订单归属”两环均未核实，故不成立为结论。",
+          "kind": "scenario",
+          "source_ids": [
+            "r2.envicool_annual_2025.p9",
+            "r2.vertiv_cooling_product.c5",
+            "r2.vertiv_annual_2025.p29"
+          ],
+          "metric_ids": [],
+          "quote": null
+        }
+      ],
+      "missing": [
+        "Blackwell Ultra官方发布原文（热设计/功率密度与散热要求）未在语料中检索到，外部事件环节无法核实",
+        "两家公司均无液冷或AI相关收入的独立披露口径，A级证据缺失",
+        "英维克在手订单/液冷订单金额与验收节点未披露",
+        "Vertiv液冷产品线收入拆分及订单与具体产品线的对应关系未披露"
+      ],
+      "followup_queries": [
+        "NVIDIA Blackwell Ultra / GB300 official product brief thermal design liquid cooling requirement",
+        "Vertiv 10-K segment or product-line disclosure liquid cooling revenue and backlog conversion"
+      ],
+      "concept": "AI高密度算力散热需求传导机制",
+      "grade": null,
+      "grade_metric_id": null
+    }
+  },
+  "failures": [
+    {
+      "role": "financial_quality",
+      "subject": "vrt",
+      "error": "RuntimeError"
+    },
+    {
+      "role": "adversarial_review",
+      "subject": "envicool_vrt",
+      "error": "RuntimeError"
+    }
+  ]
+}

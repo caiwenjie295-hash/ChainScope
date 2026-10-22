@@ -1,0 +1,6 @@
+[
+ {"id":"us_profiles_more","provider":"hexin-ifind-ds-global-stock-mcp","tool":"global_stock_profile","arguments":{"query":"查询NVIDIA NVDA、AMD AMD、Dell Technologies DELL、Arista Networks ANET、Lumentum LITE、Broadcom AVGO的上市市场、证券代码和主营业务，保留原始资料。"}},
+ {"id":"cn_notice_breadth_compute","provider":"hexin-ifind-ds-mcp","tool":"search_notice","arguments":{"query":"工业富联 中科曙光 紫光股份 2025年年度报告 AI服务器 服务器 交换机 实际业务","time_start":"2026-01-01","time_end":"2026-10-21","size":9}},
+ {"id":"cn_notice_breadth_optics","provider":"hexin-ifind-ds-mcp","tool":"search_notice","arguments":{"query":"新易盛 天孚通信 光迅科技 2025年年度报告 光模块 光器件 数据中心 实际业务","time_start":"2026-01-01","time_end":"2026-10-21","size":9}},
+ {"id":"cn_notice_breadth_power_cooling","provider":"hexin-ifind-ds-mcp","tool":"search_notice","arguments":{"query":"科士达 申菱环境 2025年年度报告 数据中心 UPS 温控 液冷 实际业务","time_start":"2026-01-01","time_end":"2026-10-21","size":6}}
+]

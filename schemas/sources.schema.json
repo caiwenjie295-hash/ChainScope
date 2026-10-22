@@ -1,0 +1,138 @@
+{
+  "$defs": {
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "provider": {
+          "title": "Provider",
+          "type": "string"
+        },
+        "source_type": {
+          "enum": [
+            "annual_report",
+            "earnings_release",
+            "api_financial",
+            "api_profile",
+            "notice_excerpt",
+            "product_release"
+          ],
+          "title": "Source Type",
+          "type": "string"
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Url"
+        },
+        "published_at": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Published At"
+        },
+        "retrieved_at": {
+          "title": "Retrieved At",
+          "type": "string"
+        },
+        "local_path": {
+          "title": "Local Path",
+          "type": "string"
+        },
+        "sha256": {
+          "title": "Sha256",
+          "type": "string"
+        },
+        "locator": {
+          "title": "Locator",
+          "type": "string"
+        },
+        "excerpt": {
+          "title": "Excerpt",
+          "type": "string"
+        },
+        "excerpt_kind": {
+          "default": "original",
+          "enum": [
+            "original",
+            "analyst_transcription"
+          ],
+          "title": "Excerpt Kind",
+          "type": "string"
+        },
+        "access": {
+          "enum": [
+            "public_verified",
+            "authenticated_api",
+            "excerpt_only"
+          ],
+          "title": "Access",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "provider",
+        "source_type",
+        "url",
+        "published_at",
+        "retrieved_at",
+        "local_path",
+        "sha256",
+        "locator",
+        "excerpt",
+        "access",
+        "limitations"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0",
+      "default": "0.1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "sources": {
+      "items": {
+        "$ref": "#/$defs/Evidence"
+      },
+      "title": "Sources",
+      "type": "array"
+    }
+  },
+  "required": [
+    "sources"
+  ],
+  "title": "Sources",
+  "type": "object"
+}

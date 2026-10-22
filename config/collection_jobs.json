@@ -1,0 +1,15 @@
+[
+  {"id":"fuyao_inspur_financial","provider":"fuyao","path":"/api/a-share/financials/income-statements?thscode=000977.SZ&period=annual&limit=2"},
+  {"id":"fuyao_innolight_financial","provider":"fuyao","path":"/api/a-share/financials/income-statements?thscode=300308.SZ&period=annual&limit=2"},
+  {"id":"fuyao_kehua_financial","provider":"fuyao","path":"/api/a-share/financials/income-statements?thscode=002335.SZ&period=annual&limit=2"},
+  {"id":"fuyao_envicool_financial","provider":"fuyao","path":"/api/a-share/financials/income-statements?thscode=002837.SZ&period=annual&limit=2"},
+  {"id":"cn_profiles_compute","provider":"hexin-ifind-ds-stock-mcp","tool":"get_stock_info","arguments":{"query":"查询浪潮信息000977.SZ、工业富联601138.SH、中科曙光603019.SH、紫光股份000938.SZ的证券代码、公司名称、主营业务。仅返回可用的原始资料，不给投资建议。"}},
+  {"id":"cn_profiles_optics","provider":"hexin-ifind-ds-stock-mcp","tool":"get_stock_info","arguments":{"query":"查询中际旭创300308.SZ、新易盛300502.SZ、天孚通信300394.SZ、光迅科技002281.SZ的证券代码、公司名称、主营业务。仅返回原始资料。"}},
+  {"id":"cn_profiles_power_cooling","provider":"hexin-ifind-ds-stock-mcp","tool":"get_stock_info","arguments":{"query":"查询科华数据002335.SZ、科士达002518.SZ、英维克002837.SZ、申菱环境301018.SZ的证券代码、公司名称、主营业务。仅返回原始资料。"}},
+  {"id":"us_profiles","provider":"hexin-ifind-ds-global-stock-mcp","tool":"global_stock_profile","arguments":{"query":"查询Super Micro Computer(SMCI)、Coherent(COHR)、Eaton(ETN)、Vertiv(VRT)的上市市场、代码、公司名称、主营业务。"}},
+  {"id":"cn_notice_inspur","provider":"hexin-ifind-ds-mcp","tool":"search_notice","arguments":{"query":"浪潮信息 2025年年度报告 服务器业务 营业收入 AI服务器 产品销售","time_start":"2026-01-01","time_end":"2026-10-21","size":4}},
+  {"id":"cn_notice_innolight","provider":"hexin-ifind-ds-mcp","tool":"search_notice","arguments":{"query":"中际旭创 2025年年度报告 高速光模块 数据中心 主营业务 收入","time_start":"2026-01-01","time_end":"2026-10-21","size":4}},
+  {"id":"cn_notice_kehua","provider":"hexin-ifind-ds-mcp","tool":"search_notice","arguments":{"query":"科华数据 2025年年度报告 智慧电能 UPS 数据中心 产品收入","time_start":"2026-01-01","time_end":"2026-10-21","size":4}},
+  {"id":"cn_notice_envicool","provider":"hexin-ifind-ds-mcp","tool":"search_notice","arguments":{"query":"英维克 2025年年度报告 数据中心 液冷 营业收入 商业交付","time_start":"2026-01-01","time_end":"2026-10-21","size":4}},
+  {"id":"us_financials","provider":"hexin-ifind-ds-global-stock-mcp","tool":"global_stock_financial","arguments":{"query":"Super Micro Computer SMCI、Coherent COHR截至2025-06-30的2025财年，以及Eaton ETN、Vertiv VRT截至2025-12-31的2025财年，营业收入、净利润、报告期、原始货币和单位。不要混用财年，不要预测值。"}}
+]

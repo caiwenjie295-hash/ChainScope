@@ -1,0 +1,24 @@
+{
+  "version": "2026-10-21.round2",
+  "generated_at": "2026-10-21T12:33:08.321502+00:00",
+  "model": "deepseek-flash",
+  "validation_status": "passed_with_limitations",
+  "companies": 8,
+  "research_stages": 29,
+  "source_chunks": 1292,
+  "files": {
+    "data/round2/agent_research.json": "392bc0e3accaabecdfa926dc1734b01cd5c19528df580d8433b4521a143b31c6",
+    "data/round2/company_registry.json": "59aa15f7de396935436cc5acb2aefda0d00483d916ead419bd3cadd6f3c3c6c5",
+    "data/round2/evaluation.json": "d4278148a719e9b7ddfc0b7e13c5214a70639ead8bd6a7ac25e28f6a31dbdb3b",
+    "data/round2/financial_metrics.json": "9e1ebf28257296c1eb5a74979cd24c02cff80c381b25a1b197de6b96e660616e",
+    "data/round2/semantic_review.json": "10ef99f7865392edd294fb92d5a7e4d79253ebb853a0f6c35d6c4721f3943516",
+    "data/round2/sources.json": "db5079134a9fb15dc5d4b979c7fc4b91f78d0304137e4a3068a59cdaef35280c"
+  },
+  "scope": "八家公司研究、四组比较，英维克和Vertiv补齐半年定量样板；不把八家全部称为完整专业深研",
+  "unresolved": [
+    "本轮是研究辅助，没有全量人工事实审计",
+    "只有两家样本补齐同期间半年量化数据",
+    "Eaton仍是官网事实转录；Supermicro仍需正式审计年报对照",
+    "未实现任意主题自主规划、全网自动核实或定时更新"
+  ]
+}

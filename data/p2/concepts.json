@@ -1,0 +1,1116 @@
+{
+  "meta": {
+    "theme_mode": "concept_board",
+    "research_version": "2026-10-22.p2.deep.b1h.p1",
+    "feeds_window_days": 30,
+    "rank_default": "mkt_cap",
+    "as_of": "2026-10-21",
+    "as_of_tz": "Asia/Hong_Kong",
+    "pulled_at": "2026-10-21T14:36:32.916464+00:00",
+    "b3_source_ids": true,
+    "c1_hierarchy_note": "C① 层级以 concepts[] 为准；legacy industry_graph 仍为 B 星图兼容（P1 树），本轮未切概念板 graph。"
+  },
+  "concepts": [
+    {
+      "id": "concept.ai",
+      "name": "AI",
+      "parent_id": null,
+      "level": 0,
+      "company_ids": [
+        "fii",
+        "cambricon",
+        "hygon"
+      ],
+      "company_count": 1085,
+      "analysis_enabled": true,
+      "ths_code": "885728.TI",
+      "ths_name": "人工智能",
+      "rank_by_mkt_cap": {
+        "metric": "mkt_cap",
+        "metric_label": "市值",
+        "as_of": "2026-10-21",
+        "unit": "CNY",
+        "items": [
+          {
+            "rank": 1,
+            "company_id": "fii",
+            "name": "工业富联",
+            "thscode": "601138.SH",
+            "value": 986251386514.8,
+            "value_display": "9862.51亿",
+            "ticker": "601138.SH",
+            "deep_company_id": "fii",
+            "deep_linked": true
+          },
+          {
+            "rank": 2,
+            "company_id": "cambricon",
+            "name": "寒武纪",
+            "thscode": "688256.SH",
+            "value": 576294390011.36,
+            "value_display": "5762.94亿",
+            "ticker": "688256.SH",
+            "deep_company_id": "cambricon",
+            "deep_linked": true
+          },
+          {
+            "rank": 3,
+            "company_id": "hygon",
+            "name": "海光信息",
+            "thscode": "688041.SH",
+            "value": 449294552990.30005,
+            "value_display": "4492.95亿",
+            "ticker": "688041.SH",
+            "deep_company_id": "hygon",
+            "deep_linked": true
+          },
+          {
+            "rank": 4,
+            "company_id": null,
+            "name": "海康威视",
+            "thscode": "002415.SZ",
+            "value": 292550670581.4,
+            "value_display": "2925.51亿",
+            "ticker": "002415.SZ",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.002415_sz"
+          },
+          {
+            "rank": 5,
+            "company_id": null,
+            "name": "东方财富",
+            "thscode": "300059.SZ",
+            "value": 239723346173.19998,
+            "value_display": "2397.23亿",
+            "ticker": "300059.SZ",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.300059_sz"
+          },
+          {
+            "rank": 6,
+            "company_id": null,
+            "name": "澜起科技",
+            "thscode": "688008.SH",
+            "value": 204157304675.14,
+            "value_display": "2041.57亿",
+            "ticker": "688008.SH",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.688008_sh"
+          },
+          {
+            "rank": 7,
+            "company_id": null,
+            "name": "京东方Ａ",
+            "thscode": "000725.SZ",
+            "value": 178604027290.85,
+            "value_display": "1786.04亿",
+            "ticker": "000725.SZ",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.000725_sz"
+          },
+          {
+            "rank": 8,
+            "company_id": null,
+            "name": "顺丰控股",
+            "thscode": "002352.SZ",
+            "value": 143065380187.56,
+            "value_display": "1430.65亿",
+            "ticker": "002352.SZ",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.002352_sz"
+          },
+          {
+            "rank": 9,
+            "company_id": null,
+            "name": "招商轮船",
+            "thscode": "601872.SH",
+            "value": 142192623020.22,
+            "value_display": "1421.93亿",
+            "ticker": "601872.SH",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.601872_sh"
+          },
+          {
+            "rank": 10,
+            "company_id": null,
+            "name": "中国联通",
+            "thscode": "600050.SH",
+            "value": 133568663445.12,
+            "value_display": "1335.69亿",
+            "ticker": "600050.SH",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.600050_sh"
+          }
+        ],
+        "missing_reason": null,
+        "empty_reason_zh": null
+      },
+      "rank_by_concept_weight": {
+        "metric": "concept_weight",
+        "metric_label": "概念权重",
+        "as_of": null,
+        "unit": null,
+        "items": [],
+        "missing_reason": "weight_api_unavailable",
+        "empty_reason_zh": "权重数据暂不可用"
+      },
+      "source_ids": [
+        "src.p2_fuyao_ths_concept_catalog",
+        "src.p2_constituents.concept.ai"
+      ]
+    },
+    {
+      "id": "concept.ai_chip",
+      "name": "AI芯片",
+      "parent_id": "concept.ai",
+      "level": 1,
+      "company_ids": [
+        "fii",
+        "innolight",
+        "cambricon",
+        "hygon",
+        "eoptolink",
+        "luxshare",
+        "shengyi"
+      ],
+      "company_count": 932,
+      "analysis_enabled": true,
+      "ths_code": "885756.TI",
+      "ths_name": "芯片概念",
+      "rank_by_mkt_cap": {
+        "metric": "mkt_cap",
+        "metric_label": "市值",
+        "as_of": "2026-10-21",
+        "unit": "CNY",
+        "items": [
+          {
+            "rank": 1,
+            "company_id": "fii",
+            "name": "工业富联",
+            "thscode": "601138.SH",
+            "value": 986251386514.8,
+            "value_display": "9862.51亿",
+            "ticker": "601138.SH",
+            "deep_company_id": "fii",
+            "deep_linked": true
+          },
+          {
+            "rank": 2,
+            "company_id": "innolight",
+            "name": "中际旭创",
+            "thscode": "300308.SZ",
+            "value": 717873955430.3099,
+            "value_display": "7178.74亿",
+            "ticker": "300308.SZ",
+            "deep_company_id": "innolight",
+            "deep_linked": true
+          },
+          {
+            "rank": 3,
+            "company_id": null,
+            "name": "美的集团",
+            "thscode": "000333.SZ",
+            "value": 577486575906.1,
+            "value_display": "5774.87亿",
+            "ticker": "000333.SZ",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.000333_sz"
+          },
+          {
+            "rank": 4,
+            "company_id": "cambricon",
+            "name": "寒武纪",
+            "thscode": "688256.SH",
+            "value": 576294390011.36,
+            "value_display": "5762.94亿",
+            "ticker": "688256.SH",
+            "deep_company_id": "cambricon",
+            "deep_linked": true
+          },
+          {
+            "rank": 5,
+            "company_id": "hygon",
+            "name": "海光信息",
+            "thscode": "688041.SH",
+            "value": 449294552990.30005,
+            "value_display": "4492.95亿",
+            "ticker": "688041.SH",
+            "deep_company_id": "hygon",
+            "deep_linked": true
+          },
+          {
+            "rank": 6,
+            "company_id": null,
+            "name": "北方华创",
+            "thscode": "002371.SZ",
+            "value": 407961239312.02,
+            "value_display": "4079.61亿",
+            "ticker": "002371.SZ",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.002371_sz"
+          },
+          {
+            "rank": 7,
+            "company_id": "eoptolink",
+            "name": "新易盛",
+            "thscode": "300502.SZ",
+            "value": 369039348761.76,
+            "value_display": "3690.39亿",
+            "ticker": "300502.SZ",
+            "deep_company_id": "eoptolink",
+            "deep_linked": true
+          },
+          {
+            "rank": 8,
+            "company_id": "luxshare",
+            "name": "立讯精密",
+            "thscode": "002475.SZ",
+            "value": 352520264678.61005,
+            "value_display": "3525.20亿",
+            "ticker": "002475.SZ",
+            "deep_company_id": "luxshare",
+            "deep_linked": true
+          },
+          {
+            "rank": 9,
+            "company_id": null,
+            "name": "海康威视",
+            "thscode": "002415.SZ",
+            "value": 292550670581.4,
+            "value_display": "2925.51亿",
+            "ticker": "002415.SZ",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.002415_sz"
+          },
+          {
+            "rank": 10,
+            "company_id": "shengyi",
+            "name": "生益科技",
+            "thscode": "600183.SH",
+            "value": 286973996494.43,
+            "value_display": "2869.74亿",
+            "ticker": "600183.SH",
+            "deep_company_id": "shengyi",
+            "deep_linked": true
+          }
+        ],
+        "missing_reason": null,
+        "empty_reason_zh": null
+      },
+      "rank_by_concept_weight": {
+        "metric": "concept_weight",
+        "metric_label": "概念权重",
+        "as_of": null,
+        "unit": null,
+        "items": [],
+        "missing_reason": "weight_api_unavailable",
+        "empty_reason_zh": "权重数据暂不可用"
+      },
+      "source_ids": [
+        "src.p2_fuyao_ths_concept_catalog",
+        "src.p2_constituents.concept.ai_chip"
+      ]
+    },
+    {
+      "id": "concept.ai_server",
+      "name": "算力服务器",
+      "parent_id": "concept.ai",
+      "level": 1,
+      "company_ids": [
+        "fii",
+        "innolight",
+        "cambricon",
+        "eoptolink",
+        "luxshare",
+        "tfc"
+      ],
+      "company_count": 663,
+      "analysis_enabled": true,
+      "ths_code": "885887.TI",
+      "ths_name": "数据中心(AIDC)",
+      "rank_by_mkt_cap": {
+        "metric": "mkt_cap",
+        "metric_label": "市值",
+        "as_of": "2026-10-21",
+        "unit": "CNY",
+        "items": [
+          {
+            "rank": 1,
+            "company_id": "fii",
+            "name": "工业富联",
+            "thscode": "601138.SH",
+            "value": 986251386514.8,
+            "value_display": "9862.51亿",
+            "ticker": "601138.SH",
+            "deep_company_id": "fii",
+            "deep_linked": true
+          },
+          {
+            "rank": 2,
+            "company_id": "innolight",
+            "name": "中际旭创",
+            "thscode": "300308.SZ",
+            "value": 717873955430.3099,
+            "value_display": "7178.74亿",
+            "ticker": "300308.SZ",
+            "deep_company_id": "innolight",
+            "deep_linked": true
+          },
+          {
+            "rank": 3,
+            "company_id": null,
+            "name": "美的集团",
+            "thscode": "000333.SZ",
+            "value": 577486575906.1,
+            "value_display": "5774.87亿",
+            "ticker": "000333.SZ",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.000333_sz"
+          },
+          {
+            "rank": 4,
+            "company_id": "cambricon",
+            "name": "寒武纪",
+            "thscode": "688256.SH",
+            "value": 576294390011.36,
+            "value_display": "5762.94亿",
+            "ticker": "688256.SH",
+            "deep_company_id": "cambricon",
+            "deep_linked": true
+          },
+          {
+            "rank": 5,
+            "company_id": null,
+            "name": "中国电信",
+            "thscode": "601728.SH",
+            "value": 513908803987.38,
+            "value_display": "5139.09亿",
+            "ticker": "601728.SH",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.601728_sh"
+          },
+          {
+            "rank": 6,
+            "company_id": "eoptolink",
+            "name": "新易盛",
+            "thscode": "300502.SZ",
+            "value": 369039348761.76,
+            "value_display": "3690.39亿",
+            "ticker": "300502.SZ",
+            "deep_company_id": "eoptolink",
+            "deep_linked": true
+          },
+          {
+            "rank": 7,
+            "company_id": "luxshare",
+            "name": "立讯精密",
+            "thscode": "002475.SZ",
+            "value": 352520264678.61005,
+            "value_display": "3525.20亿",
+            "ticker": "002475.SZ",
+            "deep_company_id": "luxshare",
+            "deep_linked": true
+          },
+          {
+            "rank": 8,
+            "company_id": null,
+            "name": "比亚迪",
+            "thscode": "002594.SZ",
+            "value": 281406445865.4,
+            "value_display": "2814.06亿",
+            "ticker": "002594.SZ",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.002594_sz"
+          },
+          {
+            "rank": 9,
+            "company_id": "tfc",
+            "name": "天孚通信",
+            "thscode": "300394.SZ",
+            "value": 233981662774.02,
+            "value_display": "2339.82亿",
+            "ticker": "300394.SZ",
+            "deep_company_id": "tfc",
+            "deep_linked": true
+          },
+          {
+            "rank": 10,
+            "company_id": null,
+            "name": "沪电股份",
+            "thscode": "002463.SZ",
+            "value": 221070264087.91998,
+            "value_display": "2210.70亿",
+            "ticker": "002463.SZ",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.002463_sz"
+          }
+        ],
+        "missing_reason": null,
+        "empty_reason_zh": null
+      },
+      "rank_by_concept_weight": {
+        "metric": "concept_weight",
+        "metric_label": "概念权重",
+        "as_of": null,
+        "unit": null,
+        "items": [],
+        "missing_reason": "weight_api_unavailable",
+        "empty_reason_zh": "权重数据暂不可用"
+      },
+      "description": "用数据中心(AIDC)板代理算力服务器",
+      "source_ids": [
+        "src.p2_fuyao_ths_concept_catalog",
+        "src.p2_constituents.concept.ai_server"
+      ]
+    },
+    {
+      "id": "concept.ai_optics",
+      "name": "光模块与光通信",
+      "parent_id": "concept.ai",
+      "level": 1,
+      "company_ids": [
+        "fii",
+        "innolight",
+        "eoptolink",
+        "luxshare",
+        "shengyi",
+        "tfc"
+      ],
+      "company_count": 228,
+      "analysis_enabled": true,
+      "ths_code": "886033.TI",
+      "ths_name": "共封装光学(CPO)",
+      "rank_by_mkt_cap": {
+        "metric": "mkt_cap",
+        "metric_label": "市值",
+        "as_of": "2026-10-21",
+        "unit": "CNY",
+        "items": [
+          {
+            "rank": 1,
+            "company_id": "fii",
+            "name": "工业富联",
+            "thscode": "601138.SH",
+            "value": 986251386514.8,
+            "value_display": "9862.51亿",
+            "ticker": "601138.SH",
+            "deep_company_id": "fii",
+            "deep_linked": true
+          },
+          {
+            "rank": 2,
+            "company_id": "innolight",
+            "name": "中际旭创",
+            "thscode": "300308.SZ",
+            "value": 717873955430.3099,
+            "value_display": "7178.74亿",
+            "ticker": "300308.SZ",
+            "deep_company_id": "innolight",
+            "deep_linked": true
+          },
+          {
+            "rank": 3,
+            "company_id": "eoptolink",
+            "name": "新易盛",
+            "thscode": "300502.SZ",
+            "value": 369039348761.76,
+            "value_display": "3690.39亿",
+            "ticker": "300502.SZ",
+            "deep_company_id": "eoptolink",
+            "deep_linked": true
+          },
+          {
+            "rank": 4,
+            "company_id": "luxshare",
+            "name": "立讯精密",
+            "thscode": "002475.SZ",
+            "value": 352520264678.61005,
+            "value_display": "3525.20亿",
+            "ticker": "002475.SZ",
+            "deep_company_id": "luxshare",
+            "deep_linked": true
+          },
+          {
+            "rank": 5,
+            "company_id": "shengyi",
+            "name": "生益科技",
+            "thscode": "600183.SH",
+            "value": 286973996494.43,
+            "value_display": "2869.74亿",
+            "ticker": "600183.SH",
+            "deep_company_id": "shengyi",
+            "deep_linked": true
+          },
+          {
+            "rank": 6,
+            "company_id": "tfc",
+            "name": "天孚通信",
+            "thscode": "300394.SZ",
+            "value": 233981662774.02,
+            "value_display": "2339.82亿",
+            "ticker": "300394.SZ",
+            "deep_company_id": "tfc",
+            "deep_linked": true
+          },
+          {
+            "rank": 7,
+            "company_id": null,
+            "name": "三环集团",
+            "thscode": "300408.SZ",
+            "value": 179444098221.99,
+            "value_display": "1794.44亿",
+            "ticker": "300408.SZ",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.300408_sz"
+          },
+          {
+            "rank": 8,
+            "company_id": null,
+            "name": "京东方Ａ",
+            "thscode": "000725.SZ",
+            "value": 178604027290.85,
+            "value_display": "1786.04亿",
+            "ticker": "000725.SZ",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.000725_sz"
+          },
+          {
+            "rank": 9,
+            "company_id": null,
+            "name": "鹏鼎控股",
+            "thscode": "002938.SZ",
+            "value": 171981081353.34,
+            "value_display": "1719.81亿",
+            "ticker": "002938.SZ",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.002938_sz"
+          },
+          {
+            "rank": 10,
+            "company_id": null,
+            "name": "东山精密",
+            "thscode": "002384.SZ",
+            "value": 170753246621.91,
+            "value_display": "1707.53亿",
+            "ticker": "002384.SZ",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.002384_sz"
+          }
+        ],
+        "missing_reason": null,
+        "empty_reason_zh": null
+      },
+      "rank_by_concept_weight": {
+        "metric": "concept_weight",
+        "metric_label": "概念权重",
+        "as_of": null,
+        "unit": null,
+        "items": [],
+        "missing_reason": "weight_api_unavailable",
+        "empty_reason_zh": "权重数据暂不可用"
+      },
+      "description": "扶摇无「光模块」独立概念；本轮用 CPO 板代理，边界写入可比说明",
+      "source_ids": [
+        "src.p2_fuyao_ths_concept_catalog",
+        "src.p2_constituents.concept.ai_optics"
+      ]
+    },
+    {
+      "id": "concept.ai_cooling",
+      "name": "数据中心液冷",
+      "parent_id": "concept.ai",
+      "level": 1,
+      "company_ids": [
+        "fii",
+        "innolight",
+        "luxshare",
+        "sanhua"
+      ],
+      "company_count": 240,
+      "analysis_enabled": true,
+      "ths_code": "886044.TI",
+      "ths_name": "液冷服务器",
+      "rank_by_mkt_cap": {
+        "metric": "mkt_cap",
+        "metric_label": "市值",
+        "as_of": "2026-10-21",
+        "unit": "CNY",
+        "items": [
+          {
+            "rank": 1,
+            "company_id": "fii",
+            "name": "工业富联",
+            "thscode": "601138.SH",
+            "value": 986251386514.8,
+            "value_display": "9862.51亿",
+            "ticker": "601138.SH",
+            "deep_company_id": "fii",
+            "deep_linked": true
+          },
+          {
+            "rank": 2,
+            "company_id": "innolight",
+            "name": "中际旭创",
+            "thscode": "300308.SZ",
+            "value": 717873955430.3099,
+            "value_display": "7178.74亿",
+            "ticker": "300308.SZ",
+            "deep_company_id": "innolight",
+            "deep_linked": true
+          },
+          {
+            "rank": 3,
+            "company_id": null,
+            "name": "美的集团",
+            "thscode": "000333.SZ",
+            "value": 577486575906.1,
+            "value_display": "5774.87亿",
+            "ticker": "000333.SZ",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.000333_sz"
+          },
+          {
+            "rank": 4,
+            "company_id": "luxshare",
+            "name": "立讯精密",
+            "thscode": "002475.SZ",
+            "value": 352520264678.61005,
+            "value_display": "3525.20亿",
+            "ticker": "002475.SZ",
+            "deep_company_id": "luxshare",
+            "deep_linked": true
+          },
+          {
+            "rank": 5,
+            "company_id": null,
+            "name": "格力电器",
+            "thscode": "000651.SZ",
+            "value": 204693716755.83002,
+            "value_display": "2046.94亿",
+            "ticker": "000651.SZ",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.000651_sz"
+          },
+          {
+            "rank": 6,
+            "company_id": null,
+            "name": "蓝思科技",
+            "thscode": "300433.SZ",
+            "value": 132263592846.45,
+            "value_display": "1322.64亿",
+            "ticker": "300433.SZ",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.300433_sz"
+          },
+          {
+            "rank": 7,
+            "company_id": null,
+            "name": "亨通光电",
+            "thscode": "600487.SH",
+            "value": 126240099922.65001,
+            "value_display": "1262.40亿",
+            "ticker": "600487.SH",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.600487_sh"
+          },
+          {
+            "rank": 8,
+            "company_id": null,
+            "name": "海尔智家",
+            "thscode": "600690.SH",
+            "value": 121654407553.25002,
+            "value_display": "1216.54亿",
+            "ticker": "600690.SH",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.600690_sh"
+          },
+          {
+            "rank": 9,
+            "company_id": "sanhua",
+            "name": "三花智控",
+            "thscode": "002050.SZ",
+            "value": 121546111586.56,
+            "value_display": "1215.46亿",
+            "ticker": "002050.SZ",
+            "deep_company_id": "sanhua",
+            "deep_linked": true
+          },
+          {
+            "rank": 10,
+            "company_id": null,
+            "name": "汇川技术",
+            "thscode": "300124.SZ",
+            "value": 120385170403.5,
+            "value_display": "1203.85亿",
+            "ticker": "300124.SZ",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.300124_sz"
+          }
+        ],
+        "missing_reason": null,
+        "empty_reason_zh": null
+      },
+      "rank_by_concept_weight": {
+        "metric": "concept_weight",
+        "metric_label": "概念权重",
+        "as_of": null,
+        "unit": null,
+        "items": [],
+        "missing_reason": "weight_api_unavailable",
+        "empty_reason_zh": "权重数据暂不可用"
+      },
+      "source_ids": [
+        "src.p2_fuyao_ths_concept_catalog",
+        "src.p2_constituents.concept.ai_cooling"
+      ]
+    },
+    {
+      "id": "concept.ai_power",
+      "name": "AIDC供配电",
+      "parent_id": "concept.ai",
+      "level": 1,
+      "company_ids": [
+        "fii",
+        "innolight",
+        "cambricon",
+        "eoptolink",
+        "luxshare",
+        "tfc"
+      ],
+      "company_count": 663,
+      "analysis_enabled": true,
+      "ths_code": "885887.TI",
+      "ths_name": "数据中心(AIDC)",
+      "rank_by_mkt_cap": {
+        "metric": "mkt_cap",
+        "metric_label": "市值",
+        "as_of": "2026-10-21",
+        "unit": "CNY",
+        "items": [
+          {
+            "rank": 1,
+            "company_id": "fii",
+            "name": "工业富联",
+            "thscode": "601138.SH",
+            "value": 986251386514.8,
+            "value_display": "9862.51亿",
+            "ticker": "601138.SH",
+            "deep_company_id": "fii",
+            "deep_linked": true
+          },
+          {
+            "rank": 2,
+            "company_id": "innolight",
+            "name": "中际旭创",
+            "thscode": "300308.SZ",
+            "value": 717873955430.3099,
+            "value_display": "7178.74亿",
+            "ticker": "300308.SZ",
+            "deep_company_id": "innolight",
+            "deep_linked": true
+          },
+          {
+            "rank": 3,
+            "company_id": null,
+            "name": "美的集团",
+            "thscode": "000333.SZ",
+            "value": 577486575906.1,
+            "value_display": "5774.87亿",
+            "ticker": "000333.SZ",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.000333_sz"
+          },
+          {
+            "rank": 4,
+            "company_id": "cambricon",
+            "name": "寒武纪",
+            "thscode": "688256.SH",
+            "value": 576294390011.36,
+            "value_display": "5762.94亿",
+            "ticker": "688256.SH",
+            "deep_company_id": "cambricon",
+            "deep_linked": true
+          },
+          {
+            "rank": 5,
+            "company_id": null,
+            "name": "中国电信",
+            "thscode": "601728.SH",
+            "value": 513908803987.38,
+            "value_display": "5139.09亿",
+            "ticker": "601728.SH",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.601728_sh"
+          },
+          {
+            "rank": 6,
+            "company_id": "eoptolink",
+            "name": "新易盛",
+            "thscode": "300502.SZ",
+            "value": 369039348761.76,
+            "value_display": "3690.39亿",
+            "ticker": "300502.SZ",
+            "deep_company_id": "eoptolink",
+            "deep_linked": true
+          },
+          {
+            "rank": 7,
+            "company_id": "luxshare",
+            "name": "立讯精密",
+            "thscode": "002475.SZ",
+            "value": 352520264678.61005,
+            "value_display": "3525.20亿",
+            "ticker": "002475.SZ",
+            "deep_company_id": "luxshare",
+            "deep_linked": true
+          },
+          {
+            "rank": 8,
+            "company_id": null,
+            "name": "比亚迪",
+            "thscode": "002594.SZ",
+            "value": 281406445865.4,
+            "value_display": "2814.06亿",
+            "ticker": "002594.SZ",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.002594_sz"
+          },
+          {
+            "rank": 9,
+            "company_id": "tfc",
+            "name": "天孚通信",
+            "thscode": "300394.SZ",
+            "value": 233981662774.02,
+            "value_display": "2339.82亿",
+            "ticker": "300394.SZ",
+            "deep_company_id": "tfc",
+            "deep_linked": true
+          },
+          {
+            "rank": 10,
+            "company_id": null,
+            "name": "沪电股份",
+            "thscode": "002463.SZ",
+            "value": 221070264087.91998,
+            "value_display": "2210.70亿",
+            "ticker": "002463.SZ",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.002463_sz"
+          }
+        ],
+        "missing_reason": null,
+        "empty_reason_zh": null
+      },
+      "rank_by_concept_weight": {
+        "metric": "concept_weight",
+        "metric_label": "概念权重",
+        "as_of": null,
+        "unit": null,
+        "items": [],
+        "missing_reason": "weight_api_unavailable",
+        "empty_reason_zh": "权重数据暂不可用"
+      },
+      "description": "无独立供配电板；暂与 AIDC 共用成分，深核时按业务筛选",
+      "source_ids": [
+        "src.p2_fuyao_ths_concept_catalog",
+        "src.p2_constituents.concept.ai_power"
+      ]
+    },
+    {
+      "id": "concept.ai_software",
+      "name": "AI应用软件",
+      "parent_id": "concept.ai",
+      "level": 1,
+      "company_ids": [],
+      "company_count": 550,
+      "analysis_enabled": true,
+      "ths_code": "886108.TI",
+      "ths_name": "AI应用",
+      "rank_by_mkt_cap": {
+        "metric": "mkt_cap",
+        "metric_label": "市值",
+        "as_of": "2026-10-21",
+        "unit": "CNY",
+        "items": [
+          {
+            "rank": 1,
+            "company_id": null,
+            "name": "中国电信",
+            "thscode": "601728.SH",
+            "value": 513908803987.38,
+            "value_display": "5139.09亿",
+            "ticker": "601728.SH",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.601728_sh"
+          },
+          {
+            "rank": 2,
+            "company_id": null,
+            "name": "海康威视",
+            "thscode": "002415.SZ",
+            "value": 292550670581.4,
+            "value_display": "2925.51亿",
+            "ticker": "002415.SZ",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.002415_sz"
+          },
+          {
+            "rank": 3,
+            "company_id": null,
+            "name": "东方财富",
+            "thscode": "300059.SZ",
+            "value": 239723346173.19998,
+            "value_display": "2397.23亿",
+            "ticker": "300059.SZ",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.300059_sz"
+          },
+          {
+            "rank": 4,
+            "company_id": null,
+            "name": "迈瑞医疗",
+            "thscode": "300760.SZ",
+            "value": 205909417621.6,
+            "value_display": "2059.09亿",
+            "ticker": "300760.SZ",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.300760_sz"
+          },
+          {
+            "rank": 5,
+            "company_id": null,
+            "name": "京东方Ａ",
+            "thscode": "000725.SZ",
+            "value": 178604027290.85,
+            "value_display": "1786.04亿",
+            "ticker": "000725.SZ",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.000725_sz"
+          },
+          {
+            "rank": 6,
+            "company_id": null,
+            "name": "海尔智家",
+            "thscode": "600690.SH",
+            "value": 121654407553.25002,
+            "value_display": "1216.54亿",
+            "ticker": "600690.SH",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.600690_sh"
+          },
+          {
+            "rank": 7,
+            "company_id": null,
+            "name": "汇川技术",
+            "thscode": "300124.SZ",
+            "value": 120385170403.5,
+            "value_display": "1203.85亿",
+            "ticker": "300124.SZ",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.300124_sz"
+          },
+          {
+            "rank": 8,
+            "company_id": null,
+            "name": "中兴通讯",
+            "thscode": "000063.SZ",
+            "value": 111283174640.15999,
+            "value_display": "1112.83亿",
+            "ticker": "000063.SZ",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.000063_sz"
+          },
+          {
+            "rank": 9,
+            "company_id": null,
+            "name": "金山办公",
+            "thscode": "688111.SH",
+            "value": 110050066378.95,
+            "value_display": "1100.50亿",
+            "ticker": "688111.SH",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.688111_sh"
+          },
+          {
+            "rank": 10,
+            "company_id": null,
+            "name": "协创数据",
+            "thscode": "300857.SZ",
+            "value": 104305046703.48001,
+            "value_display": "1043.05亿",
+            "ticker": "300857.SZ",
+            "deep_company_id": null,
+            "deep_linked": false,
+            "market_id": "mkt.300857_sz"
+          }
+        ],
+        "missing_reason": null,
+        "empty_reason_zh": null
+      },
+      "rank_by_concept_weight": {
+        "metric": "concept_weight",
+        "metric_label": "概念权重",
+        "as_of": null,
+        "unit": null,
+        "items": [],
+        "missing_reason": "weight_api_unavailable",
+        "empty_reason_zh": "权重数据暂不可用"
+      },
+      "shallow": true,
+      "description": "本轮浅覆盖",
+      "source_ids": [
+        "src.p2_fuyao_ths_concept_catalog",
+        "src.p2_constituents.concept.ai_software"
+      ]
+    },
+    {
+      "id": "concept.other_demo_disabled",
+      "name": "其他板块（Demo不可分析）",
+      "parent_id": null,
+      "level": 0,
+      "company_ids": [],
+      "company_count": 0,
+      "analysis_enabled": false,
+      "rank_by_mkt_cap": null,
+      "rank_by_concept_weight": null,
+      "source_ids": []
+    }
+  ]
+}

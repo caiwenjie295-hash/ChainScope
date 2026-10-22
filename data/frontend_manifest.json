@@ -1,0 +1,15 @@
+{
+  "ui_version": "0.2.0-mvp.2",
+  "research_version": "2026-10-21.round2.p1",
+  "exported_at": "2026-10-21T15:07:34.052057+00:00",
+  "data_hash": "5ddce0f54b5f1a2d614baaf04692ac35f54f9ad2596cf536d9155d867c4ed405",
+  "path": "artifacts/frontend/snapshot.round2.p1.json",
+  "public_owner": "export_p2_joinable",
+  "editorial_changes": [
+    "浪潮AI服务器/液冷证据保守列C，混含自建投运，未据此认定对外商业交付。",
+    "Vertiv B仅限综合数字基础设施，不扩大到液冷单品。",
+    "未核验广度候选不展示财务或商业证据结论。"
+  ],
+  "frontend_coding_model": "gpt-6-luna",
+  "frontend_coding_reasoning": "max"
+}

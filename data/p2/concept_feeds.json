@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "feeds_window_days": 30,
+    "window_start": "2026-09-21",
+    "window_end": "2026-10-21",
+    "as_of_tz": "Asia/Hong_Kong",
+    "pulled_at": "2026-10-21T14:36:38.981057+00:00",
+    "status": {
+      "flash": {
+        "ok": true,
+        "n": 20
+      },
+      "timeline": {
+        "ok": true,
+        "thscode": "601138.SH",
+        "transport": {
+          "http_status": 200,
+          "elapsed_seconds": 2.958
+        }
+      },
+      "note": "minimal probe for联调"
+    },
+    "source_policy": "industry_concept_only",
+    "blind_p1": "b1h.p1"
+  },
+  "concept_feeds": {
+    "concept.ai": [
+      {
+        "id": "feed.flash.5437023",
+        "title": "科技部有关负责人就《关于推动科技创新和产业创新深度融合的意见》答记者问",
+        "date": "2026-10-21",
+        "url": "https://news.10jqka.com.cn/20261021/9d84576661131728843.shtml",
+        "kind": "news",
+        "source_id": "src.fuyao.news.flash",
+        "publisher": null
+      },
+      {
+        "id": "feed.flash.5436881",
+        "title": "超算互联网同步上线 DeepSeek-V4.1-Flash-1017与 MiniMax M3.1 Flash 两款前沿大模型 API 调用服务",
+        "date": "2026-10-21",
+        "url": "https://news.10jqka.com.cn/20261021/600083072227185256e.shtml",
+        "kind": "news",
+        "source_id": "src.fuyao.news.flash",
+        "publisher": null
+      },
+      {
+        "id": "feed.flash.5436769",
+        "title": "超微电脑股价上涨12%，创两个月来最大涨幅",
+        "date": "2026-10-21",
+        "url": "https://news.10jqka.com.cn/20261021/5e0d222949744895e9a.shtml",
+        "kind": "news",
+        "source_id": "src.fuyao.news.flash",
+        "publisher": null
+      },
+      {
+        "id": "feed.flash.5436541",
+        "title": "谷歌CEO：太空算力项目才启动两到三年 相信未来大有前景",
+        "date": "2026-10-21",
+        "url": "https://news.10jqka.com.cn/20261021/e4e920715532500975d.shtml",
+        "kind": "news",
+        "source_id": "src.fuyao.news.flash",
+        "publisher": null
+      }
+    ],
+    "concept.ai_chip": [],
+    "concept.ai_server": [],
+    "concept.ai_optics": [],
+    "concept.ai_cooling": [],
+    "concept.ai_power": [],
+    "concept.ai_software": [],
+    "concept.other_demo_disabled": []
+  },
+  "concept_feeds_meta": {
+    "concept.ai": {
+      "empty_reason_zh": null,
+      "source_policy": "industry_concept_only",
+      "filtered": true,
+      "raw_count": 20,
+      "kept_count": 4
+    },
+    "concept.ai_chip": {
+      "empty_reason_zh": "本轮暂无与该概念直接相关的产业资讯",
+      "source_policy": "industry_concept_only",
+      "filtered": true,
+      "raw_count": 0,
+      "kept_count": 0
+    },
+    "concept.ai_server": {
+      "empty_reason_zh": "本轮暂无与该概念直接相关的产业资讯",
+      "source_policy": "industry_concept_only",
+      "filtered": true,
+      "raw_count": 0,
+      "kept_count": 0
+    },
+    "concept.ai_optics": {
+      "empty_reason_zh": "本轮暂无与该概念直接相关的产业资讯",
+      "source_policy": "industry_concept_only",
+      "filtered": true,
+      "raw_count": 0,
+      "kept_count": 0
+    },
+    "concept.ai_cooling": {
+      "empty_reason_zh": "本轮暂无与该概念直接相关的产业资讯",
+      "source_policy": "industry_concept_only",
+      "filtered": true,
+      "raw_count": 0,
+      "kept_count": 0
+    },
+    "concept.ai_power": {
+      "empty_reason_zh": "本轮暂无与该概念直接相关的产业资讯",
+      "source_policy": "industry_concept_only",
+      "filtered": true,
+      "raw_count": 0,
+      "kept_count": 0
+    },
+    "concept.ai_software": {
+      "empty_reason_zh": "本轮暂无与该概念直接相关的产业资讯",
+      "source_policy": "industry_concept_only",
+      "filtered": true,
+      "raw_count": 0,
+      "kept_count": 0
+    },
+    "concept.other_demo_disabled": {
+      "empty_reason_zh": "本轮暂无与该概念直接相关的产业资讯",
+      "source_policy": "industry_concept_only",
+      "filtered": true,
+      "raw_count": 0,
+      "kept_count": 0
+    }
+  }
+}

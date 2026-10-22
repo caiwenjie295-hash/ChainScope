@@ -1,0 +1,86 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0",
+      "default": "0.1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "research_version": {
+      "title": "Research Version",
+      "type": "string"
+    },
+    "topic": {
+      "title": "Topic",
+      "type": "string"
+    },
+    "research_as_of": {
+      "title": "Research As Of",
+      "type": "string"
+    },
+    "generated_at": {
+      "title": "Generated At",
+      "type": "string"
+    },
+    "financial_baseline": {
+      "title": "Financial Baseline",
+      "type": "string"
+    },
+    "freshness_note": {
+      "title": "Freshness Note",
+      "type": "string"
+    },
+    "is_mock": {
+      "const": false,
+      "default": false,
+      "title": "Is Mock",
+      "type": "boolean"
+    },
+    "validation_status": {
+      "enum": [
+        "passed_with_limitations",
+        "failed"
+      ],
+      "title": "Validation Status",
+      "type": "string"
+    },
+    "company_count": {
+      "title": "Company Count",
+      "type": "integer"
+    },
+    "deep_company_count": {
+      "title": "Deep Company Count",
+      "type": "integer"
+    },
+    "files": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Files",
+      "type": "object"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    }
+  },
+  "required": [
+    "research_version",
+    "topic",
+    "research_as_of",
+    "generated_at",
+    "financial_baseline",
+    "freshness_note",
+    "validation_status",
+    "company_count",
+    "deep_company_count",
+    "files",
+    "limitations"
+  ],
+  "title": "Manifest",
+  "type": "object"
+}

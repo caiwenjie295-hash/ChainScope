@@ -1,0 +1,16 @@
+
+> chainscope-frontend@0.3.22 build
+> tsc -b && vite build
+
+vite v6.4.5 building for production...
+transforming...
+✓ 1594 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/prod_loop.html              0.56 kB │ gzip:  0.37 kB
+dist/agent_architecture.html     0.57 kB │ gzip:  0.39 kB
+dist/cost_performance.html       0.58 kB │ gzip:  0.40 kB
+dist/index.html                  0.59 kB │ gzip:  0.40 kB
+dist/assets/main-Bc9PywLa.css   91.90 kB │ gzip: 18.81 kB
+dist/assets/main-CiLlNnQc.js   232.53 kB │ gzip: 72.75 kB
+✓ built in 704ms

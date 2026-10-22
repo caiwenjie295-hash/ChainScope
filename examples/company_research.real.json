@@ -1,0 +1,158 @@
+{
+  "schema_version": "0.1.0",
+  "companies": [
+    {
+      "id": "inspur",
+      "name": "浪潮信息",
+      "ticker": "000977.SZ",
+      "exchange": "SZSE",
+      "market": "CN",
+      "domicile": "中国",
+      "research_depth": "deep",
+      "business_summary": "服务器等云计算基础设施；收入包含通用服务器与AI服务器。",
+      "claims": [
+        {
+          "id": "inspur.business",
+          "text": "服务器等云计算基础设施；收入包含通用服务器与AI服务器。",
+          "kind": "fact",
+          "source_ids": [
+            "src.inspur_annual_2025.business",
+            "src.inspur_annual_2025.narrow_business"
+          ],
+          "verification": "primary_checked",
+          "limitations": []
+        },
+        {
+          "id": "inspur.scope_boundary",
+          "text": "相关业务收入不等于AI专用业务收入。",
+          "kind": "inference",
+          "source_ids": [
+            "src.inspur_annual_2025.business"
+          ],
+          "verification": "analyst_inference",
+          "limitations": []
+        }
+      ],
+      "assessments": [
+        {
+          "concept": "服务器",
+          "grade": "A",
+          "rationale": "年报披露可核验的相关业务收入；等级仅适用于本条概念及收入口径。",
+          "revenue_metric_id": "inspur.related_revenue",
+          "source_ids": [
+            "src.inspur_annual_2025.business"
+          ],
+          "limitations": []
+        },
+        {
+          "concept": "AI服务器",
+          "grade": "C",
+          "rationale": "本次核验到明确产品发布；未单独核实AI产品销售交付，保守C。",
+          "revenue_metric_id": null,
+          "source_ids": [
+            "src.inspur_annual_2025.narrow_business"
+          ],
+          "limitations": [
+            "不能解释成已知AI收入占比"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "id": "inspur.revenue",
+          "name": "revenue",
+          "value": 164781997658.23,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "consolidated_total",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.fuyao_inspur_financial.FY2025",
+            "src.inspur_annual_2025.financial"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "inspur.parent_net_profit",
+          "name": "parent_net_profit",
+          "value": 2412866308.76,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "attributable_to_parent",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.fuyao_inspur_financial.FY2025"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "inspur.related_revenue",
+          "name": "related_revenue",
+          "value": 154605252900.0,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "服务器产品（年报万元换算为元，原表四舍五入）",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.inspur_annual_2025.business"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "inspur.ai_specific_revenue",
+          "name": "ai_specific_revenue",
+          "value": null,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "AI服务器",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.inspur_annual_2025.business"
+          ],
+          "missing_reason": "当前核验材料未单列该窄口径收入；不得用母类别或公司总收入替代"
+        }
+      ],
+      "comparisons": [
+        {
+          "peer_id": "smci",
+          "comparable": [
+            "均设计生产销售服务器等IT基础设施",
+            "可比较产品组合、利润率与营运资本"
+          ],
+          "non_comparable": [
+            "AI服务器与全部服务器口径不同",
+            "中国企业会计准则与US GAAP；CNY与USD",
+            "自然年与6月末财年不同，未做汇率归一"
+          ],
+          "source_ids": [
+            "src.inspur_annual_2025.business",
+            "src.inspur_annual_2025.narrow_business",
+            "src.smci_fy2025.business"
+          ]
+        }
+      ],
+      "uncertainties": [
+        "不将母类别收入当作AI业务收入",
+        "当前采用FY2025作为财务比较基线，未声称为研究日最新季度",
+        "年报对2024年比较数据作同一控制合并追溯调整，增长率需使用调整后口径；服务器收入由万元换算且带原表舍入误差"
+      ],
+      "ai_analysis": null
+    }
+  ]
+}

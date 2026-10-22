@@ -1,0 +1,7 @@
+验证日期：2026-10-22（北京时间）
+实际操作：首页选择 AI → 开始分析 → 温控环节 → 英维克 → AI智能总结；打开 A–E 说明，按 Escape，刷新后确认公司与总结状态恢复。
+以下为刷新后的可访问性状态：
+
+Browser tab: 2, Title: "研究 · ChainScope", URL: "http://127.0.0.1:5173/?concept=concept.ai&stage=structure&summary=1&segment=segment.thermal&company=envicool".
+There has been no change in the accessibility tree.
+The focused UI element is 1 AXWebArea 研究 · ChainScope, URL: 127.0.0.1:5173/?concept=concept.ai&stage=structure&summary=1&segment=segment.thermal&company=envicool

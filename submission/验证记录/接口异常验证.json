@@ -1,0 +1,41 @@
+{
+  "method": "离线mock实际probe.request；未发送网络请求，不代表外部服务端到端验证",
+  "cases": [
+    {
+      "case": "HTTP 401",
+      "result": "passed",
+      "response": {
+        "http_status": 401,
+        "error": "HTTPError",
+        "elapsed_seconds": 0.0
+      }
+    },
+    {
+      "case": "HTTP 500",
+      "result": "passed",
+      "response": {
+        "http_status": 500,
+        "error": "HTTPError",
+        "elapsed_seconds": 0.0
+      }
+    },
+    {
+      "case": "网络超时",
+      "result": "passed",
+      "response": {
+        "http_status": null,
+        "error": "TimeoutError",
+        "elapsed_seconds": 0.0
+      }
+    },
+    {
+      "case": "HTTP 200但非JSON",
+      "result": "passed",
+      "response": {
+        "http_status": null,
+        "error": "JSONDecodeError",
+        "elapsed_seconds": 0.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,476 @@
+{
+  "$defs": {
+    "AIAnalysis": {
+      "additionalProperties": false,
+      "properties": {
+        "company_id": {
+          "title": "Company Id",
+          "type": "string"
+        },
+        "summary": {
+          "title": "Summary",
+          "type": "string"
+        },
+        "observations": {
+          "items": {
+            "$ref": "#/$defs/Observation"
+          },
+          "maxItems": 4,
+          "minItems": 1,
+          "title": "Observations",
+          "type": "array"
+        },
+        "uncertainties": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Uncertainties",
+          "type": "array"
+        }
+      },
+      "required": [
+        "company_id",
+        "summary",
+        "observations",
+        "uncertainties"
+      ],
+      "title": "AIAnalysis",
+      "type": "object"
+    },
+    "Assessment": {
+      "additionalProperties": false,
+      "properties": {
+        "concept": {
+          "title": "Concept",
+          "type": "string"
+        },
+        "grade": {
+          "enum": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+          ],
+          "title": "Grade",
+          "type": "string",
+          "description": "See docs/CONCEPT_GRADES.md (2026-10-21.p0). A requires scoped non-consolidated revenue; AI narrow A requires ai_specific_revenue."
+        },
+        "rationale": {
+          "title": "Rationale",
+          "type": "string"
+        },
+        "revenue_metric_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Revenue Metric Id"
+        },
+        "source_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Source Ids",
+          "type": "array"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "concept",
+        "grade",
+        "rationale",
+        "revenue_metric_id",
+        "source_ids",
+        "limitations"
+      ],
+      "title": "Assessment",
+      "type": "object"
+    },
+    "Claim": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "fact",
+            "inference",
+            "scenario"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "source_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Source Ids",
+          "type": "array"
+        },
+        "verification": {
+          "enum": [
+            "primary_checked",
+            "provider_only",
+            "analyst_inference",
+            "pending"
+          ],
+          "title": "Verification",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "text",
+        "kind",
+        "source_ids",
+        "verification",
+        "limitations"
+      ],
+      "title": "Claim",
+      "type": "object"
+    },
+    "Company": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "ticker": {
+          "title": "Ticker",
+          "type": "string"
+        },
+        "exchange": {
+          "title": "Exchange",
+          "type": "string"
+        },
+        "market": {
+          "enum": [
+            "CN",
+            "US"
+          ],
+          "title": "Market",
+          "type": "string"
+        },
+        "domicile": {
+          "title": "Domicile",
+          "type": "string"
+        },
+        "research_depth": {
+          "enum": [
+            "deep",
+            "breadth"
+          ],
+          "title": "Research Depth",
+          "type": "string"
+        },
+        "business_summary": {
+          "title": "Business Summary",
+          "type": "string"
+        },
+        "claims": {
+          "items": {
+            "$ref": "#/$defs/Claim"
+          },
+          "minItems": 1,
+          "title": "Claims",
+          "type": "array"
+        },
+        "assessments": {
+          "items": {
+            "$ref": "#/$defs/Assessment"
+          },
+          "title": "Assessments",
+          "type": "array"
+        },
+        "metrics": {
+          "items": {
+            "$ref": "#/$defs/Metric"
+          },
+          "title": "Metrics",
+          "type": "array"
+        },
+        "comparisons": {
+          "items": {
+            "$ref": "#/$defs/Comparison"
+          },
+          "title": "Comparisons",
+          "type": "array"
+        },
+        "uncertainties": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Uncertainties",
+          "type": "array"
+        },
+        "ai_analysis": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/AIAnalysis"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "ticker",
+        "exchange",
+        "market",
+        "domicile",
+        "research_depth",
+        "business_summary",
+        "claims",
+        "assessments",
+        "metrics",
+        "comparisons",
+        "uncertainties",
+        "ai_analysis"
+      ],
+      "title": "Company",
+      "type": "object"
+    },
+    "Comparison": {
+      "additionalProperties": false,
+      "properties": {
+        "peer_id": {
+          "title": "Peer Id",
+          "type": "string"
+        },
+        "comparable": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Comparable",
+          "type": "array"
+        },
+        "non_comparable": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Non Comparable",
+          "type": "array"
+        },
+        "source_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Source Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "peer_id",
+        "comparable",
+        "non_comparable",
+        "source_ids"
+      ],
+      "title": "Comparison",
+      "type": "object"
+    },
+    "Metric": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Value"
+        },
+        "unit": {
+          "enum": [
+            "currency_units",
+            "percent",
+            "per_share"
+          ],
+          "title": "Unit",
+          "type": "string"
+        },
+        "currency": {
+          "anyOf": [
+            {
+              "enum": [
+                "CNY",
+                "USD"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Currency"
+        },
+        "period": {
+          "title": "Period",
+          "type": "string"
+        },
+        "period_start": {
+          "title": "Period Start",
+          "type": "string"
+        },
+        "period_end": {
+          "title": "Period End",
+          "type": "string"
+        },
+        "scope": {
+          "title": "Scope",
+          "type": "string"
+        },
+        "accounting_basis": {
+          "enum": [
+            "CAS",
+            "US_GAAP",
+            "not_applicable"
+          ],
+          "title": "Accounting Basis",
+          "type": "string"
+        },
+        "disclosure_status": {
+          "title": "Disclosure Status",
+          "type": "string"
+        },
+        "source_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Source Ids",
+          "type": "array"
+        },
+        "missing_reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Missing Reason"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "value",
+        "unit",
+        "currency",
+        "period",
+        "period_start",
+        "period_end",
+        "scope",
+        "accounting_basis",
+        "disclosure_status",
+        "source_ids",
+        "missing_reason"
+      ],
+      "title": "Metric",
+      "type": "object"
+    },
+    "Observation": {
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "fact",
+            "inference"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "source_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Source Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "text",
+        "kind",
+        "source_ids"
+      ],
+      "title": "Observation",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0",
+      "default": "0.1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "companies": {
+      "items": {
+        "$ref": "#/$defs/Company"
+      },
+      "title": "Companies",
+      "type": "array"
+    }
+  },
+  "required": [
+    "companies"
+  ],
+  "title": "Research",
+  "type": "object"
+}

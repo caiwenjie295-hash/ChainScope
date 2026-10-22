@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "research_version": "2026-10-21.p2.deep.b1g",
+  "topic": "AI数据中心基础设施",
+  "research_as_of": "2026-10-21",
+  "generated_at": "2026-10-21T23:50:42.533292+08:00",
+  "financial_baseline": "FY2025；A股/Eaton/Vertiv为2025自然年；Supermicro/Coherent/Lumentum为截至2025-06前后财年",
+  "freshness_note": "本轮是FY2025基线研究；未全面采集研究截至日最新季报，也不声称信息已穷尽。",
+  "is_mock": false,
+  "validation_status": "passed_with_limitations",
+  "company_count": 27,
+  "deep_company_count": 16,
+  "files": {
+    "data/industry_graph.json": "97be014dbc7d7866b2be0b54e89a01da891e1512e97f478a5bc7f3291f40f80d",
+    "data/company_research.json": "860df2ad16e798c81b80aa474540b33b0b7a7542a7c374c07b2d03fbdb0ab942",
+    "data/sources.json": "34da4fbfd9ad289484f1421a9a65f77386e92783aa54d21a6bd257b7eebb142c",
+    "data/agent_evaluation.json": "dc49777a2b7fb2fc6b52771bdbcdd89b47d651d4e0d0e1dc6a031188badb81f8"
+  },
+  "limitations": [
+    "22家公司含8家首轮深度研究及14家仅广度候选；不得标成22家AI业务已验证",
+    "概念等级针对具体概念和口径，不是给公司整体背书",
+    "无实时行情、自动定时刷新或股票收益预测",
+    "Eaton使用官网人工事实转录；原始HTML未归档",
+    "Supermicro为未审计业绩稿；正式10-K对照待补",
+    "未运行Baseline对优化流程的受控实验",
+    "AI窄口径缺失保留null；集团总收入不能替代",
+    "P2 B1g：hygon 年报深核（宽高端处理器A/窄AI芯片B）；tfc/luxshare/shengyi/cambricon/hygon C③仍 missing；禁假A/假pair；噪声名仍仅市值行；四硬指标未齐。"
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EventTransmission",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "date",
+    "summary",
+    "steps",
+    "limitations"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "summary": {
+      "type": "string"
+    },
+    "steps": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "label",
+          "text",
+          "kind",
+          "source_ids"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "fact",
+              "inference",
+              "scenario"
+            ]
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "company_touchpoints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "company_id",
+          "status"
+        ],
+        "properties": {
+          "company_id": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "evidence",
+              "missing",
+              "scenario_only"
+            ]
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

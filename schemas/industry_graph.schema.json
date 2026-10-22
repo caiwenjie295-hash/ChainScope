@@ -1,0 +1,229 @@
+{
+  "$defs": {
+    "Edge": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "source": {
+          "title": "Source",
+          "type": "string"
+        },
+        "target": {
+          "title": "Target",
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "taxonomy",
+            "industry_membership",
+            "supply",
+            "demand",
+            "technology",
+            "financial_transmission"
+          ],
+          "title": "Type",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "fact",
+            "inference",
+            "scenario"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "direction": {
+          "enum": [
+            "positive",
+            "negative",
+            "unclear"
+          ],
+          "title": "Direction",
+          "type": "string"
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ],
+          "title": "Confidence",
+          "type": "string"
+        },
+        "source_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Ids",
+          "type": "array"
+        },
+        "mechanism": {
+          "title": "Mechanism",
+          "type": "string"
+        },
+        "conditions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Conditions",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "source",
+        "target",
+        "type",
+        "kind",
+        "direction",
+        "confidence",
+        "source_ids",
+        "mechanism",
+        "conditions"
+      ],
+      "title": "Edge",
+      "type": "object"
+    },
+    "Node": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "theme",
+            "branch",
+            "segment",
+            "company"
+          ],
+          "title": "Type",
+          "type": "string"
+        },
+        "parent_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Parent Id"
+        },
+        "company_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Company Id"
+        },
+        "market": {
+          "anyOf": [
+            {
+              "enum": [
+                "CN",
+                "US"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Market"
+        },
+        "layer": {
+          "maximum": 3,
+          "minimum": 0,
+          "title": "Layer",
+          "type": "integer"
+        },
+        "distance_basis": {
+          "title": "Distance Basis",
+          "type": "string"
+        },
+        "size": {
+          "exclusiveMinimum": 0,
+          "title": "Size",
+          "type": "number"
+        },
+        "size_basis": {
+          "title": "Size Basis",
+          "type": "string"
+        },
+        "impact": {
+          "enum": [
+            "positive",
+            "negative",
+            "unclear"
+          ],
+          "title": "Impact",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "type",
+        "parent_id",
+        "company_id",
+        "market",
+        "layer",
+        "distance_basis",
+        "size",
+        "size_basis",
+        "impact"
+      ],
+      "title": "Node",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0",
+      "default": "0.1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "taxonomy_basis": {
+      "title": "Taxonomy Basis",
+      "type": "string"
+    },
+    "nodes": {
+      "items": {
+        "$ref": "#/$defs/Node"
+      },
+      "title": "Nodes",
+      "type": "array"
+    },
+    "edges": {
+      "items": {
+        "$ref": "#/$defs/Edge"
+      },
+      "title": "Edges",
+      "type": "array"
+    }
+  },
+  "required": [
+    "taxonomy_basis",
+    "nodes",
+    "edges"
+  ],
+  "title": "Graph",
+  "type": "object"
+}

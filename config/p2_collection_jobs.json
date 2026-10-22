@@ -1,0 +1,244 @@
+[
+  {
+    "id": "p2_stocks_ai_chip",
+    "provider": "hexin-ifind-ds-stock-mcp",
+    "tool": "search_stocks",
+    "arguments": {
+      "query": "同花顺概念或主题：AI芯片，列出主要成分股代码与简称（尽量多，注明来自概念成分）"
+    },
+    "refresh": true,
+    "concept_id": "concept.ai_chip"
+  },
+  {
+    "id": "p2_stocks_ai_server",
+    "provider": "hexin-ifind-ds-stock-mcp",
+    "tool": "search_stocks",
+    "arguments": {
+      "query": "同花顺概念或主题：AI服务器，列出主要成分股代码与简称（尽量多，注明来自概念成分）"
+    },
+    "refresh": true,
+    "concept_id": "concept.ai_server"
+  },
+  {
+    "id": "p2_stocks_ai_optics",
+    "provider": "hexin-ifind-ds-stock-mcp",
+    "tool": "search_stocks",
+    "arguments": {
+      "query": "同花顺概念或主题：光模块，列出主要成分股代码与简称（尽量多，注明来自概念成分）"
+    },
+    "refresh": true,
+    "concept_id": "concept.ai_optics"
+  },
+  {
+    "id": "p2_stocks_ai_cooling",
+    "provider": "hexin-ifind-ds-stock-mcp",
+    "tool": "search_stocks",
+    "arguments": {
+      "query": "同花顺概念或主题：液冷，列出主要成分股代码与简称（尽量多，注明来自概念成分）"
+    },
+    "refresh": true,
+    "concept_id": "concept.ai_cooling"
+  },
+  {
+    "id": "p2_stocks_ai_power",
+    "provider": "hexin-ifind-ds-stock-mcp",
+    "tool": "search_stocks",
+    "arguments": {
+      "query": "同花顺概念或主题：数据中心电源，列出主要成分股代码与简称（尽量多，注明来自概念成分）"
+    },
+    "refresh": true,
+    "concept_id": "concept.ai_power"
+  },
+  {
+    "id": "p2_stocks_ai_software",
+    "provider": "hexin-ifind-ds-stock-mcp",
+    "tool": "search_stocks",
+    "arguments": {
+      "query": "同花顺概念或主题：人工智能应用，列出主要成分股代码与简称（尽量多，注明来自概念成分）"
+    },
+    "refresh": true,
+    "concept_id": "concept.ai_software"
+  },
+  {
+    "id": "p2_news_ai",
+    "provider": "hexin-ifind-ds-news-mcp",
+    "tool": "search_news",
+    "arguments": {
+      "query": "人工智能概念 产业与公司要闻",
+      "size": 10,
+      "time_start": "20260921",
+      "time_end": "20261021"
+    },
+    "refresh": true,
+    "concept_id": "concept.ai"
+  },
+  {
+    "id": "p2_notice_ai",
+    "provider": "hexin-ifind-ds-news-mcp",
+    "tool": "search_notice",
+    "arguments": {
+      "query": "人工智能概念 年报 半年报 业绩 公告",
+      "size": 10,
+      "time_start": "20260921",
+      "time_end": "20261021"
+    },
+    "refresh": true,
+    "concept_id": "concept.ai"
+  },
+  {
+    "id": "p2_news_ai_chip",
+    "provider": "hexin-ifind-ds-news-mcp",
+    "tool": "search_news",
+    "arguments": {
+      "query": "AI芯片 产业与公司要闻",
+      "size": 10,
+      "time_start": "20260921",
+      "time_end": "20261021"
+    },
+    "refresh": true,
+    "concept_id": "concept.ai_chip"
+  },
+  {
+    "id": "p2_notice_ai_chip",
+    "provider": "hexin-ifind-ds-news-mcp",
+    "tool": "search_notice",
+    "arguments": {
+      "query": "AI芯片 年报 半年报 业绩 公告",
+      "size": 10,
+      "time_start": "20260921",
+      "time_end": "20261021"
+    },
+    "refresh": true,
+    "concept_id": "concept.ai_chip"
+  },
+  {
+    "id": "p2_news_ai_server",
+    "provider": "hexin-ifind-ds-news-mcp",
+    "tool": "search_news",
+    "arguments": {
+      "query": "AI服务器 产业与公司要闻",
+      "size": 10,
+      "time_start": "20260921",
+      "time_end": "20261021"
+    },
+    "refresh": true,
+    "concept_id": "concept.ai_server"
+  },
+  {
+    "id": "p2_notice_ai_server",
+    "provider": "hexin-ifind-ds-news-mcp",
+    "tool": "search_notice",
+    "arguments": {
+      "query": "AI服务器 年报 半年报 业绩 公告",
+      "size": 10,
+      "time_start": "20260921",
+      "time_end": "20261021"
+    },
+    "refresh": true,
+    "concept_id": "concept.ai_server"
+  },
+  {
+    "id": "p2_news_ai_optics",
+    "provider": "hexin-ifind-ds-news-mcp",
+    "tool": "search_news",
+    "arguments": {
+      "query": "光模块 产业与公司要闻",
+      "size": 10,
+      "time_start": "20260921",
+      "time_end": "20261021"
+    },
+    "refresh": true,
+    "concept_id": "concept.ai_optics"
+  },
+  {
+    "id": "p2_notice_ai_optics",
+    "provider": "hexin-ifind-ds-news-mcp",
+    "tool": "search_notice",
+    "arguments": {
+      "query": "光模块 年报 半年报 业绩 公告",
+      "size": 10,
+      "time_start": "20260921",
+      "time_end": "20261021"
+    },
+    "refresh": true,
+    "concept_id": "concept.ai_optics"
+  },
+  {
+    "id": "p2_news_ai_cooling",
+    "provider": "hexin-ifind-ds-news-mcp",
+    "tool": "search_news",
+    "arguments": {
+      "query": "液冷 产业与公司要闻",
+      "size": 10,
+      "time_start": "20260921",
+      "time_end": "20261021"
+    },
+    "refresh": true,
+    "concept_id": "concept.ai_cooling"
+  },
+  {
+    "id": "p2_notice_ai_cooling",
+    "provider": "hexin-ifind-ds-news-mcp",
+    "tool": "search_notice",
+    "arguments": {
+      "query": "液冷 年报 半年报 业绩 公告",
+      "size": 10,
+      "time_start": "20260921",
+      "time_end": "20261021"
+    },
+    "refresh": true,
+    "concept_id": "concept.ai_cooling"
+  },
+  {
+    "id": "p2_news_ai_power",
+    "provider": "hexin-ifind-ds-news-mcp",
+    "tool": "search_news",
+    "arguments": {
+      "query": "数据中心电源 产业与公司要闻",
+      "size": 10,
+      "time_start": "20260921",
+      "time_end": "20261021"
+    },
+    "refresh": true,
+    "concept_id": "concept.ai_power"
+  },
+  {
+    "id": "p2_notice_ai_power",
+    "provider": "hexin-ifind-ds-news-mcp",
+    "tool": "search_notice",
+    "arguments": {
+      "query": "数据中心电源 年报 半年报 业绩 公告",
+      "size": 10,
+      "time_start": "20260921",
+      "time_end": "20261021"
+    },
+    "refresh": true,
+    "concept_id": "concept.ai_power"
+  },
+  {
+    "id": "p2_news_ai_software",
+    "provider": "hexin-ifind-ds-news-mcp",
+    "tool": "search_news",
+    "arguments": {
+      "query": "人工智能应用 产业与公司要闻",
+      "size": 10,
+      "time_start": "20260921",
+      "time_end": "20261021"
+    },
+    "refresh": true,
+    "concept_id": "concept.ai_software"
+  },
+  {
+    "id": "p2_notice_ai_software",
+    "provider": "hexin-ifind-ds-news-mcp",
+    "tool": "search_notice",
+    "arguments": {
+      "query": "人工智能应用 年报 半年报 业绩 公告",
+      "size": 10,
+      "time_start": "20260921",
+      "time_end": "20261021"
+    },
+    "refresh": true,
+    "concept_id": "concept.ai_software"
+  }
+]

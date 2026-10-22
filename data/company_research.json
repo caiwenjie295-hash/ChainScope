@@ -1,0 +1,3416 @@
+{
+  "schema_version": "0.1.0",
+  "companies": [
+    {
+      "id": "inspur",
+      "name": "浪潮信息",
+      "ticker": "000977.SZ",
+      "exchange": "SZSE",
+      "market": "CN",
+      "domicile": "中国",
+      "research_depth": "deep",
+      "business_summary": "服务器等云计算基础设施；收入包含通用服务器与AI服务器。",
+      "claims": [
+        {
+          "id": "inspur.business",
+          "text": "服务器等云计算基础设施；收入包含通用服务器与AI服务器。",
+          "kind": "fact",
+          "source_ids": [
+            "src.inspur_annual_2025.business",
+            "src.inspur_annual_2025.narrow_business"
+          ],
+          "verification": "primary_checked",
+          "limitations": []
+        },
+        {
+          "id": "inspur.scope_boundary",
+          "text": "相关业务收入不等于AI专用业务收入。",
+          "kind": "inference",
+          "source_ids": [
+            "src.inspur_annual_2025.business"
+          ],
+          "verification": "analyst_inference",
+          "limitations": []
+        }
+      ],
+      "assessments": [
+        {
+          "concept": "服务器",
+          "grade": "A",
+          "rationale": "年报披露可核验的相关业务收入；等级仅适用于本条概念及收入口径。",
+          "revenue_metric_id": "inspur.related_revenue",
+          "source_ids": [
+            "src.inspur_annual_2025.business"
+          ],
+          "limitations": []
+        },
+        {
+          "concept": "AI服务器",
+          "grade": "C",
+          "rationale": "本次核验到明确产品发布；未单独核实AI产品销售交付，保守C。",
+          "revenue_metric_id": null,
+          "source_ids": [
+            "src.inspur_annual_2025.narrow_business"
+          ],
+          "limitations": [
+            "不能解释成已知AI收入占比"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "id": "inspur.revenue",
+          "name": "revenue",
+          "value": 164781997658.23,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "consolidated_total",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.fuyao_inspur_financial.FY2025",
+            "src.inspur_annual_2025.financial"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "inspur.parent_net_profit",
+          "name": "parent_net_profit",
+          "value": 2412866308.76,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "attributable_to_parent",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.fuyao_inspur_financial.FY2025"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "inspur.related_revenue",
+          "name": "related_revenue",
+          "value": 154605252900.0,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "服务器产品（年报万元换算为元，原表四舍五入）",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.inspur_annual_2025.business"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "inspur.ai_specific_revenue",
+          "name": "ai_specific_revenue",
+          "value": null,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "AI服务器",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.inspur_annual_2025.business"
+          ],
+          "missing_reason": "当前核验材料未单列该窄口径收入；不得用母类别或公司总收入替代"
+        }
+      ],
+      "comparisons": [
+        {
+          "peer_id": "smci",
+          "comparable": [
+            "均设计生产销售服务器等IT基础设施",
+            "可比较产品组合、利润率与营运资本"
+          ],
+          "non_comparable": [
+            "AI服务器与全部服务器口径不同",
+            "中国企业会计准则与US GAAP；CNY与USD",
+            "自然年与6月末财年不同，未做汇率归一"
+          ],
+          "source_ids": [
+            "src.inspur_annual_2025.business",
+            "src.inspur_annual_2025.narrow_business",
+            "src.smci_fy2025.business"
+          ]
+        }
+      ],
+      "uncertainties": [
+        "不将母类别收入当作AI业务收入",
+        "当前采用FY2025作为财务比较基线，未声称为研究日最新季度",
+        "年报对2024年比较数据作同一控制合并追溯调整，增长率需使用调整后口径；服务器收入由万元换算且带原表舍入误差"
+      ],
+      "ai_analysis": {
+        "company_id": "inspur",
+        "summary": "服务器产品构成收入主体，年报未单列AI服务器收入；产品发布与专利标准进展可核验，但不得等同于AI收入或交付。",
+        "observations": [
+          {
+            "text": "服务器产品收入为年报披露的母类别口径，不能当作AI专用收入。",
+            "kind": "inference",
+            "source_ids": [
+              "src.inspur_annual_2025.business"
+            ]
+          },
+          {
+            "text": "年报披露推出元脑推理服务器与超节点AI服务器等产品。",
+            "kind": "fact",
+            "source_ids": [
+              "src.inspur_annual_2025.narrow_business"
+            ]
+          }
+        ],
+        "uncertainties": [
+          "AI服务器收入未单列，规模与占比未知",
+          "产品发布不能升级为收入或交付",
+          "年报比较数据经追溯调整，增长率需用调整后口径"
+        ]
+      }
+    },
+    {
+      "id": "innolight",
+      "name": "中际旭创",
+      "ticker": "300308.SZ",
+      "exchange": "SZSE",
+      "market": "CN",
+      "domicile": "中国",
+      "research_depth": "deep",
+      "business_summary": "高速光通信收发模块；产品用于数据中心及通信网络。",
+      "claims": [
+        {
+          "id": "innolight.business",
+          "text": "高速光通信收发模块；产品用于数据中心及通信网络。",
+          "kind": "fact",
+          "source_ids": [
+            "src.innolight_annual_2025.business",
+            "src.innolight_annual_2025.narrow_business"
+          ],
+          "verification": "primary_checked",
+          "limitations": []
+        },
+        {
+          "id": "innolight.scope_boundary",
+          "text": "相关业务收入不等于AI专用业务收入。",
+          "kind": "inference",
+          "source_ids": [
+            "src.innolight_annual_2025.business"
+          ],
+          "verification": "analyst_inference",
+          "limitations": []
+        }
+      ],
+      "assessments": [
+        {
+          "concept": "光通信收发模块",
+          "grade": "A",
+          "rationale": "年报披露可核验的相关业务收入；等级仅适用于本条概念及收入口径。",
+          "revenue_metric_id": "innolight.related_revenue",
+          "source_ids": [
+            "src.innolight_annual_2025.business"
+          ],
+          "limitations": []
+        },
+        {
+          "concept": "AI专用高速光模块",
+          "grade": "B",
+          "rationale": "年报存在商业业务或规模应用证据，未单列对应窄口径收入。",
+          "revenue_metric_id": null,
+          "source_ids": [
+            "src.innolight_annual_2025.narrow_business"
+          ],
+          "limitations": [
+            "不能解释成已知AI收入占比"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "id": "innolight.revenue",
+          "name": "revenue",
+          "value": 38239935640.67,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "consolidated_total",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.fuyao_innolight_financial.FY2025",
+            "src.innolight_annual_2025.financial"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "innolight.parent_net_profit",
+          "name": "parent_net_profit",
+          "value": 10797254300.45,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "attributable_to_parent",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.fuyao_innolight_financial.FY2025"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "innolight.related_revenue",
+          "name": "related_revenue",
+          "value": 37456518745.9,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "光通信收发模块（包含非AI应用）",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.innolight_annual_2025.business"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "innolight.ai_specific_revenue",
+          "name": "ai_specific_revenue",
+          "value": null,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "AI专用高速光模块",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.innolight_annual_2025.business"
+          ],
+          "missing_reason": "当前核验材料未单列该窄口径收入；不得用母类别或公司总收入替代"
+        }
+      ],
+      "comparisons": [
+        {
+          "peer_id": "cohr",
+          "comparable": [
+            "高速光互联产品与数据中心需求存在交集"
+          ],
+          "non_comparable": [
+            "Coherent含上游器件、材料、工业业务，业务边界更宽",
+            "中际旭创披露模块收入；Coherent总收入不能代替光模块收入",
+            "财年、币种和会计准则不同"
+          ],
+          "source_ids": [
+            "src.innolight_annual_2025.business",
+            "src.innolight_annual_2025.narrow_business",
+            "src.coherent_fy2025_tables.business",
+            "src.coherent_optics_product.product"
+          ]
+        }
+      ],
+      "uncertainties": [
+        "不将母类别收入当作AI业务收入",
+        "当前采用FY2025作为财务比较基线，未声称为研究日最新季度",
+        "P2 B1：保留既有深核；概念板 source_ids 由 B3 补齐"
+      ],
+      "ai_analysis": {
+        "company_id": "innolight",
+        "summary": "公司主营高速光通信收发模块，产品服务数据中心与通信网络，年报披露了模块业务的收入与毛利率。AI相关需求构成行业背景，但未单列AI专用收入，相关业务收入不可等同AI收入。",
+        "observations": [
+          {
+            "text": "年报按光通信收发模块口径披露收入与毛利率，该口径包含非AI应用，不能视为AI专用收入。",
+            "kind": "inference",
+            "source_ids": [
+              "src.innolight_annual_2025.business"
+            ]
+          },
+          {
+            "text": "公司具备高速光模块产品与规模应用证据，但缺少AI专用窄口径收入，因此不宜据此推断AI收入占比。",
+            "kind": "inference",
+            "source_ids": [
+              "src.innolight_annual_2025.narrow_business",
+              "src.innolight_annual_2025.business"
+            ]
+          }
+        ],
+        "uncertainties": [
+          "AI专用高速光模块收入未单列，具体规模未知",
+          "财务基线为全年口径，未声称为研究日最新季度数据",
+          "与同业比较受业务边界、财年、币种和会计准则差异限制"
+        ]
+      }
+    },
+    {
+      "id": "kehua",
+      "name": "科华数据",
+      "ticker": "002335.SZ",
+      "exchange": "SZSE",
+      "market": "CN",
+      "domicile": "中国",
+      "research_depth": "deep",
+      "business_summary": "数据中心基础设施、电源、新能源及IDC服务。",
+      "claims": [
+        {
+          "id": "kehua.business",
+          "text": "数据中心基础设施、电源、新能源及IDC服务。",
+          "kind": "fact",
+          "source_ids": [
+            "src.kehua_annual_2025.business",
+            "src.kehua_annual_2025.narrow_business"
+          ],
+          "verification": "primary_checked",
+          "limitations": []
+        },
+        {
+          "id": "kehua.scope_boundary",
+          "text": "相关业务收入不等于AI专用业务收入。",
+          "kind": "inference",
+          "source_ids": [
+            "src.kehua_annual_2025.business"
+          ],
+          "verification": "analyst_inference",
+          "limitations": []
+        }
+      ],
+      "assessments": [
+        {
+          "concept": "数据中心基础设施产品",
+          "grade": "A",
+          "rationale": "年报披露可核验的相关业务收入；等级仅适用于本条概念及收入口径。",
+          "revenue_metric_id": "kehua.related_revenue",
+          "source_ids": [
+            "src.kehua_annual_2025.business"
+          ],
+          "limitations": []
+        },
+        {
+          "concept": "AI数据中心UPS",
+          "grade": "B",
+          "rationale": "年报存在商业业务或规模应用证据，未单列对应窄口径收入。",
+          "revenue_metric_id": null,
+          "source_ids": [
+            "src.kehua_annual_2025.narrow_business"
+          ],
+          "limitations": [
+            "不能解释成已知AI收入占比"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "id": "kehua.revenue",
+          "name": "revenue",
+          "value": 8160262477.61,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "consolidated_total",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.fuyao_kehua_financial.FY2025",
+            "src.kehua_annual_2025.financial"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "kehua.parent_net_profit",
+          "name": "parent_net_profit",
+          "value": 417988029.54,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "attributable_to_parent",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.fuyao_kehua_financial.FY2025"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "kehua.related_revenue",
+          "name": "related_revenue",
+          "value": 2239034564.24,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "数据中心产品（不含IDC服务，包含非AI应用，非UPS单品）",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.kehua_annual_2025.business"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "kehua.ai_specific_revenue",
+          "name": "ai_specific_revenue",
+          "value": null,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "AI数据中心UPS",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.kehua_annual_2025.business"
+          ],
+          "missing_reason": "当前核验材料未单列该窄口径收入；不得用母类别或公司总收入替代"
+        }
+      ],
+      "comparisons": [
+        {
+          "peer_id": "etn",
+          "comparable": [
+            "数据中心供配电、UPS等基础设施需求有交集"
+          ],
+          "non_comparable": [
+            "科华包含IDC与新能源；Eaton包含航空等多元业务",
+            "总收入、数据中心产品收入和UPS收入不是同一口径",
+            "同为12月末财年，币种与会计准则仍不同"
+          ],
+          "source_ids": [
+            "src.kehua_annual_2025.business",
+            "src.kehua_annual_2025.narrow_business",
+            "src.eaton_fy2025.business"
+          ]
+        }
+      ],
+      "uncertainties": [
+        "不将母类别收入当作AI业务收入",
+        "当前采用FY2025作为财务比较基线，未声称为研究日最新季度"
+      ],
+      "ai_analysis": {
+        "company_id": "kehua",
+        "summary": "科华数据业务覆盖数据中心基础设施、智慧电能、新能源及IDC服务。数据中心产品收入可核验，但未单列AI专用收入；UPS等产品有面向智算场景的发布与项目交付证据，不能据此确认AI收入或占比。",
+        "observations": [
+          {
+            "text": "数据中心产品收入可核验，但该口径包含非AI应用，不能等同AI专用收入。",
+            "kind": "inference",
+            "source_ids": [
+              "src.kehua_annual_2025.business"
+            ]
+          },
+          {
+            "text": "公司推出面向AI场景的高密UPS模块并获认证，另有预制式电力模组项目交付，但产品发布与项目交付不能升级为AI收入。",
+            "kind": "inference",
+            "source_ids": [
+              "src.kehua_annual_2025.narrow_business"
+            ]
+          }
+        ],
+        "uncertainties": [
+          "AI数据中心UPS的窄口径收入未单列，不得用数据中心产品收入或公司总收入替代",
+          "产品发布、认证与项目交付不等于收入确认或规模化交付",
+          "财务基线为FY2025，未声称为研究日最新季度"
+        ]
+      }
+    },
+    {
+      "id": "envicool",
+      "name": "英维克",
+      "ticker": "002837.SZ",
+      "exchange": "SZSE",
+      "market": "CN",
+      "domicile": "中国",
+      "research_depth": "deep",
+      "business_summary": "精密温控设备，覆盖机房、储能等应用；提供液冷产品。",
+      "claims": [
+        {
+          "id": "envicool.business",
+          "text": "精密温控设备，覆盖机房、储能等应用；提供液冷产品。",
+          "kind": "fact",
+          "source_ids": [
+            "src.envicool_annual_2025.business",
+            "src.envicool_annual_2025.narrow_business"
+          ],
+          "verification": "primary_checked",
+          "limitations": []
+        },
+        {
+          "id": "envicool.scope_boundary",
+          "text": "相关业务收入不等于AI专用业务收入。",
+          "kind": "inference",
+          "source_ids": [
+            "src.envicool_annual_2025.business"
+          ],
+          "verification": "analyst_inference",
+          "limitations": []
+        }
+      ],
+      "assessments": [
+        {
+          "concept": "机房温控",
+          "grade": "A",
+          "rationale": "年报披露可核验的相关业务收入；等级仅适用于本条概念及收入口径。",
+          "revenue_metric_id": "envicool.related_revenue",
+          "source_ids": [
+            "src.envicool_annual_2025.business"
+          ],
+          "limitations": []
+        },
+        {
+          "concept": "AI数据中心液冷",
+          "grade": "B",
+          "rationale": "年报存在商业业务或规模应用证据，未单列对应窄口径收入。",
+          "revenue_metric_id": null,
+          "source_ids": [
+            "src.envicool_annual_2025.narrow_business"
+          ],
+          "limitations": [
+            "不能解释成已知AI收入占比"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "id": "envicool.revenue",
+          "name": "revenue",
+          "value": 6067759091.55,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "consolidated_total",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.fuyao_envicool_financial.FY2025",
+            "src.envicool_annual_2025.financial"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "envicool.parent_net_profit",
+          "name": "parent_net_profit",
+          "value": 521914773.0,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "attributable_to_parent",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.fuyao_envicool_financial.FY2025"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "envicool.related_revenue",
+          "name": "related_revenue",
+          "value": 3448477492.62,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "机房温控节能产品（含风冷，包含非AI应用）",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.envicool_annual_2025.business"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "envicool.ai_specific_revenue",
+          "name": "ai_specific_revenue",
+          "value": null,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "AI数据中心液冷",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.envicool_annual_2025.business"
+          ],
+          "missing_reason": "当前核验材料未单列该窄口径收入；不得用母类别或公司总收入替代"
+        }
+      ],
+      "comparisons": [
+        {
+          "peer_id": "vrt",
+          "comparable": [
+            "面向高密度计算的温控与冷却需求有交集"
+          ],
+          "non_comparable": [
+            "英维克有储能温控；Vertiv含供配电与服务",
+            "机房温控包含风冷，不能与液冷单品直接比较",
+            "本次Vertiv液冷为产品证据C级，未核实交付，不能拔高等级"
+          ],
+          "source_ids": [
+            "src.envicool_annual_2025.business",
+            "src.envicool_annual_2025.narrow_business",
+            "src.vertiv_fy2025.business",
+            "src.vertiv_cooling_product.product"
+          ]
+        }
+      ],
+      "uncertainties": [
+        "不将母类别收入当作AI业务收入",
+        "当前采用FY2025作为财务比较基线，未声称为研究日最新季度",
+        "P2 B1：保留既有深核；概念板 source_ids 由 B3 补齐"
+      ],
+      "ai_analysis": {
+        "company_id": "envicool",
+        "summary": "精密温控设备商，机房与机柜温控为主要收入来源，液冷产品获算力芯片与设备厂商规模采购，但未单列AI专用收入。",
+        "observations": [
+          {
+            "text": "机房温控节能产品收入为已披露母类别口径，包含风冷及非AI应用，不能等同AI数据中心液冷收入。",
+            "kind": "inference",
+            "source_ids": [
+              "src.envicool_annual_2025.business"
+            ]
+          },
+          {
+            "text": "液冷部件获主流算力芯片厂商与头部设备制造商认可并规模采购，但未披露对应窄口径收入，不能据此推算AI收入占比。",
+            "kind": "inference",
+            "source_ids": [
+              "src.envicool_annual_2025.narrow_business"
+            ]
+          }
+        ],
+        "uncertainties": [
+          "AI数据中心液冷未单列收入，规模与占比未知",
+          "机房温控母类别含风冷与非AI应用，无法拆分AI贡献",
+          "财务基线为年度报告口径，未声称为研究日最新季度"
+        ]
+      }
+    },
+    {
+      "id": "smci",
+      "name": "Supermicro",
+      "ticker": "SMCI",
+      "exchange": "NASDAQ",
+      "market": "US",
+      "domicile": "美国",
+      "research_depth": "deep",
+      "business_summary": "服务器及存储等IT系统，包含多种冷却方案。",
+      "claims": [
+        {
+          "id": "smci.business",
+          "text": "服务器及存储等IT系统，包含多种冷却方案。",
+          "kind": "fact",
+          "source_ids": [
+            "src.smci_fy2025.business"
+          ],
+          "verification": "primary_checked",
+          "limitations": []
+        },
+        {
+          "id": "smci.scope_boundary",
+          "text": "未审计业绩新闻稿，后续应与10-K复核",
+          "kind": "inference",
+          "source_ids": [
+            "src.smci_fy2025.financial"
+          ],
+          "verification": "analyst_inference",
+          "limitations": []
+        }
+      ],
+      "assessments": [
+        {
+          "concept": "服务器与IT系统",
+          "grade": "B",
+          "rationale": "未审计业绩新闻稿，后续应与10-K复核",
+          "revenue_metric_id": null,
+          "source_ids": [
+            "src.smci_fy2025.business"
+          ],
+          "limitations": [
+            "未使用集团总收入证明窄口径收入"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "id": "smci.revenue",
+          "name": "revenue",
+          "value": 21972042000.0,
+          "unit": "currency_units",
+          "currency": "USD",
+          "period": "FY2025",
+          "period_start": "2024-07-01",
+          "period_end": "2025-06-30",
+          "scope": "consolidated_total",
+          "accounting_basis": "US_GAAP",
+          "disclosure_status": "unaudited_release",
+          "source_ids": [
+            "src.smci_fy2025.financial"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "smci.net_profit",
+          "name": "net_profit",
+          "value": 1048854000.0,
+          "unit": "currency_units",
+          "currency": "USD",
+          "period": "FY2025",
+          "period_start": "2024-07-01",
+          "period_end": "2025-06-30",
+          "scope": "GAAP_net_income_not_EPS",
+          "accounting_basis": "US_GAAP",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.smci_fy2025.financial"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "smci.ai_specific_revenue",
+          "name": "ai_specific_revenue",
+          "value": null,
+          "unit": "currency_units",
+          "currency": "USD",
+          "period": "FY2025",
+          "period_start": "2024-07-01",
+          "period_end": "2025-06-30",
+          "scope": "服务器与IT系统",
+          "accounting_basis": "US_GAAP",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.smci_fy2025.business"
+          ],
+          "missing_reason": "本次核验材料未给出对应AI专用业务收入"
+        }
+      ],
+      "comparisons": [
+        {
+          "peer_id": "inspur",
+          "comparable": [
+            "均设计生产销售服务器等IT基础设施",
+            "可比较产品组合、利润率与营运资本"
+          ],
+          "non_comparable": [
+            "AI服务器与全部服务器口径不同",
+            "中国企业会计准则与US GAAP；CNY与USD",
+            "自然年与6月末财年不同，未做汇率归一"
+          ],
+          "source_ids": [
+            "src.inspur_annual_2025.business",
+            "src.inspur_annual_2025.narrow_business",
+            "src.smci_fy2025.business"
+          ]
+        },
+        {
+          "peer_id": "fii",
+          "comparable": [
+            "均涉及AI服务器/云算力相关IT基础设施的设计、制造或交付"
+          ],
+          "non_comparable": [
+            "工业富联以EMS/ODM与云计算分部交付为主；Supermicro为品牌服务器与机架系统厂商，商业模式不同",
+            "工业富联云计算分部收入不等于AI服务器专项收入；Supermicro净销售额不能替代AI专项收入",
+            "财年、币种与会计准则不同（自然年/CNY/中国企业会计准则 vs 截至6月末财年/USD/US GAAP）；Supermicro本轮为未审计业绩稿"
+          ],
+          "source_ids": [
+            "src.fii_annual_2025.business",
+            "src.fii_annual_2025.segment",
+            "src.fii_annual_2025.narrow_business",
+            "src.smci_fy2025.business",
+            "src.smci_fy2025.financial"
+          ]
+        }
+      ],
+      "uncertainties": [
+        "未审计业绩新闻稿，后续应与10-K复核",
+        "FY2025基线，不等于2026年10月最新季度数据"
+      ],
+      "ai_analysis": {
+        "company_id": "smci",
+        "summary": "公司提供服务器与存储等IT系统及多种冷却方案，业绩来自未审计新闻稿，AI专用收入未披露，需与正式年报复核。",
+        "observations": [
+          {
+            "text": "业绩数据来自未审计新闻稿，应与正式年报复核。",
+            "kind": "inference",
+            "source_ids": [
+              "src.smci_fy2025.financial"
+            ]
+          },
+          {
+            "text": "材料未给出AI专用业务收入，不能以总收入替代。",
+            "kind": "inference",
+            "source_ids": [
+              "src.smci_fy2025.business"
+            ]
+          }
+        ],
+        "uncertainties": [
+          "未审计业绩新闻稿，后续应与正式年报复核",
+          "FY2025基线，不等于最新季度数据",
+          "AI专用收入口径缺失，无法与总收入区分"
+        ]
+      }
+    },
+    {
+      "id": "cohr",
+      "name": "Coherent",
+      "ticker": "COHR",
+      "exchange": "NYSE",
+      "market": "US",
+      "domicile": "美国",
+      "research_depth": "deep",
+      "business_summary": "光子与光学器件，覆盖数据通信、电信及工业等市场；1.6T数通模块已有收入发货。",
+      "claims": [
+        {
+          "id": "cohr.business",
+          "text": "光子与光学器件，覆盖数据通信、电信及工业等市场；1.6T数通模块已有收入发货。",
+          "kind": "fact",
+          "source_ids": [
+            "src.coherent_fy2025_tables.business",
+            "src.coherent_optics_product.product"
+          ],
+          "verification": "primary_checked",
+          "limitations": []
+        },
+        {
+          "id": "cohr.scope_boundary",
+          "text": "收入采用业绩披露四舍五入值；正净利润与负普通股EPS可能并存，不能混为同一指标",
+          "kind": "inference",
+          "source_ids": [
+            "src.coherent_fy2025_tables.financial"
+          ],
+          "verification": "analyst_inference",
+          "limitations": []
+        }
+      ],
+      "assessments": [
+        {
+          "concept": "数据中心光通信",
+          "grade": "B",
+          "rationale": "收入采用业绩披露四舍五入值；正净利润与负普通股EPS可能并存，不能混为同一指标",
+          "revenue_metric_id": null,
+          "source_ids": [
+            "src.coherent_fy2025_tables.business",
+            "src.coherent_optics_product.product"
+          ],
+          "limitations": [
+            "未使用集团总收入证明窄口径收入"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "id": "cohr.revenue",
+          "name": "revenue",
+          "value": 5810000000.0,
+          "unit": "currency_units",
+          "currency": "USD",
+          "period": "FY2025",
+          "period_start": "2024-07-01",
+          "period_end": "2025-06-30",
+          "scope": "consolidated_total",
+          "accounting_basis": "US_GAAP",
+          "disclosure_status": "rounded_reported",
+          "source_ids": [
+            "src.coherent_fy2025_tables.financial"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "cohr.net_profit",
+          "name": "net_profit",
+          "value": null,
+          "unit": "currency_units",
+          "currency": "USD",
+          "period": "FY2025",
+          "period_start": "2024-07-01",
+          "period_end": "2025-06-30",
+          "scope": "GAAP_net_income_not_EPS",
+          "accounting_basis": "US_GAAP",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.coherent_fy2025_tables.financial"
+          ],
+          "missing_reason": "本次不提取该净利润值，避免与普通股EPS、优先股调整或合并口径混淆"
+        },
+        {
+          "id": "cohr.ai_specific_revenue",
+          "name": "ai_specific_revenue",
+          "value": null,
+          "unit": "currency_units",
+          "currency": "USD",
+          "period": "FY2025",
+          "period_start": "2024-07-01",
+          "period_end": "2025-06-30",
+          "scope": "数据中心光通信",
+          "accounting_basis": "US_GAAP",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.coherent_fy2025_tables.business",
+            "src.coherent_optics_product.product"
+          ],
+          "missing_reason": "本次核验材料未给出对应AI专用业务收入"
+        }
+      ],
+      "comparisons": [
+        {
+          "peer_id": "innolight",
+          "comparable": [
+            "高速光互联产品与数据中心需求存在交集"
+          ],
+          "non_comparable": [
+            "Coherent含上游器件、材料、工业业务，业务边界更宽",
+            "中际旭创披露模块收入；Coherent总收入不能代替光模块收入",
+            "财年、币种和会计准则不同"
+          ],
+          "source_ids": [
+            "src.innolight_annual_2025.business",
+            "src.innolight_annual_2025.narrow_business",
+            "src.coherent_fy2025_tables.business",
+            "src.coherent_optics_product.product"
+          ]
+        },
+        {
+          "peer_id": "eoptolink",
+          "comparable": [
+            "高速光通信收发/光互联产品与数据中心、AI算力集群互连需求存在交集"
+          ],
+          "non_comparable": [
+            "Coherent含上游器件、材料、工业等更宽业务；新易盛以光模块/光互联产品为主",
+            "新易盛光互联产品收入不能等同AI专用高速光模块收入；Coherent集团或数通相关披露不能代替双方AI专项收入",
+            "财年、币种和会计准则不同"
+          ],
+          "source_ids": [
+            "src.eoptolink_annual_2025.business",
+            "src.eoptolink_annual_2025.segment",
+            "src.eoptolink_annual_2025.narrow_business",
+            "src.coherent_fy2025_tables.business",
+            "src.coherent_optics_product.product"
+          ]
+        }
+      ],
+      "uncertainties": [
+        "收入采用业绩披露四舍五入值；正净利润与负普通股EPS可能并存，不能混为同一指标",
+        "FY2025基线，不等于2026年10月最新季度数据"
+      ],
+      "ai_analysis": {
+        "company_id": "cohr",
+        "summary": "公司为光子与光学器件供应商，覆盖数通、电信与工业市场；业绩材料显示数通高速模块与光路交换产品已开始产生收入，但未披露AI专用收入口径。",
+        "observations": [
+          {
+            "text": "业绩材料称已开始1.6T数通模块的收入发货，属产品进展事实，不能等同于AI专用收入规模。",
+            "kind": "inference",
+            "source_ids": [
+              "src.coherent_fy2025_tables.business"
+            ]
+          },
+          {
+            "text": "公司总收入为合并口径，不能直接当作数据中心光通信或AI相关收入。",
+            "kind": "inference",
+            "source_ids": [
+              "src.coherent_fy2025_tables.financial",
+              "src.coherent_fy2025_tables.business"
+            ]
+          }
+        ],
+        "uncertainties": [
+          "未披露AI专用或数据中心光通信的窄口径收入，相关规模保持未知",
+          "收入为业绩披露四舍五入值，且正净利润与负每股亏损并存，不能混为同一指标",
+          "材料为FY2025基线，不代表后续季度最新经营数据"
+        ]
+      }
+    },
+    {
+      "id": "etn",
+      "name": "Eaton",
+      "ticker": "ETN",
+      "exchange": "NYSE",
+      "market": "US",
+      "domicile": "爱尔兰",
+      "research_depth": "deep",
+      "business_summary": "电气和电力管理等多元业务；数据中心相关需求属于部分业务。",
+      "claims": [
+        {
+          "id": "etn.business",
+          "text": "电气和电力管理等多元业务；数据中心相关需求属于部分业务。",
+          "kind": "fact",
+          "source_ids": [
+            "src.eaton_fy2025.business"
+          ],
+          "verification": "primary_checked",
+          "limitations": []
+        },
+        {
+          "id": "etn.scope_boundary",
+          "text": "本次核验到数据中心推动订单进展，但未单独核实对应销售交付，保守C；公司收入含航空等业务；收入采用官网舍入值",
+          "kind": "inference",
+          "source_ids": [
+            "src.eaton_fy2025.financial"
+          ],
+          "verification": "analyst_inference",
+          "limitations": []
+        }
+      ],
+      "assessments": [
+        {
+          "concept": "AI数据中心供配电",
+          "grade": "C",
+          "rationale": "本次核验到数据中心推动订单进展，但未单独核实对应销售交付，保守C；公司收入含航空等业务；收入采用官网舍入值",
+          "revenue_metric_id": null,
+          "source_ids": [
+            "src.eaton_fy2025.business"
+          ],
+          "limitations": [
+            "未使用集团总收入证明窄口径收入"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "id": "etn.revenue",
+          "name": "revenue",
+          "value": 27400000000.0,
+          "unit": "currency_units",
+          "currency": "USD",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "consolidated_total",
+          "accounting_basis": "US_GAAP",
+          "disclosure_status": "rounded_reported",
+          "source_ids": [
+            "src.eaton_fy2025.financial"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "etn.net_profit",
+          "name": "net_profit",
+          "value": null,
+          "unit": "currency_units",
+          "currency": "USD",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "GAAP_net_income_not_EPS",
+          "accounting_basis": "US_GAAP",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.eaton_fy2025.financial"
+          ],
+          "missing_reason": "本次不提取该净利润值，避免与普通股EPS、优先股调整或合并口径混淆"
+        },
+        {
+          "id": "etn.ai_specific_revenue",
+          "name": "ai_specific_revenue",
+          "value": null,
+          "unit": "currency_units",
+          "currency": "USD",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "AI数据中心供配电",
+          "accounting_basis": "US_GAAP",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.eaton_fy2025.business"
+          ],
+          "missing_reason": "本次核验材料未给出对应AI专用业务收入"
+        }
+      ],
+      "comparisons": [
+        {
+          "peer_id": "kehua",
+          "comparable": [
+            "数据中心供配电、UPS等基础设施需求有交集"
+          ],
+          "non_comparable": [
+            "科华包含IDC与新能源；Eaton包含航空等多元业务",
+            "总收入、数据中心产品收入和UPS收入不是同一口径",
+            "同为12月末财年，币种与会计准则仍不同"
+          ],
+          "source_ids": [
+            "src.kehua_annual_2025.business",
+            "src.kehua_annual_2025.narrow_business",
+            "src.eaton_fy2025.business"
+          ]
+        }
+      ],
+      "uncertainties": [
+        "本次核验到数据中心推动订单进展，但未单独核实对应销售交付，保守C；公司收入含航空等业务；收入采用官网舍入值",
+        "FY2025基线，不等于2026年10月最新季度数据"
+      ],
+      "ai_analysis": {
+        "company_id": "etn",
+        "summary": "公司为多元电气与电力管理企业，数据中心需求带动电气业务订单，但未单独披露AI专用收入，集团收入含航空等业务，不能等同数据中心供配电收入。",
+        "observations": [
+          {
+            "text": "官方材料将电气业务订单加速与数据中心活动相联系，属商业关联而非量化收入",
+            "kind": "fact",
+            "source_ids": [
+              "src.eaton_fy2025.business"
+            ]
+          },
+          {
+            "text": "集团总收入覆盖航空等多元业务，不能作为AI数据中心供配电收入",
+            "kind": "inference",
+            "source_ids": [
+              "src.eaton_fy2025.financial"
+            ]
+          }
+        ],
+        "uncertainties": [
+          "未单独核实数据中心相关销售交付与AI专用收入",
+          "集团收入为官网舍入值且含航空等业务",
+          "FY2025基线不等于后续最新季度数据"
+        ]
+      }
+    },
+    {
+      "id": "vrt",
+      "name": "Vertiv",
+      "ticker": "VRT",
+      "exchange": "NYSE",
+      "market": "US",
+      "domicile": "美国",
+      "research_depth": "deep",
+      "business_summary": "关键数字基础设施产品与服务；液冷单品不能用公司总收入计量。",
+      "claims": [
+        {
+          "id": "vrt.business",
+          "text": "关键数字基础设施产品与服务；液冷单品不能用公司总收入计量。",
+          "kind": "fact",
+          "source_ids": [
+            "src.vertiv_fy2025.business",
+            "src.vertiv_cooling_product.product"
+          ],
+          "verification": "primary_checked",
+          "limitations": []
+        },
+        {
+          "id": "vrt.scope_boundary",
+          "text": "已核验液冷产品发布；本次材料尚未核实对应交付和收入，保守标C",
+          "kind": "inference",
+          "source_ids": [
+            "src.vertiv_fy2025.financial"
+          ],
+          "verification": "analyst_inference",
+          "limitations": []
+        }
+      ],
+      "assessments": [
+        {
+          "concept": "AI液冷产品",
+          "grade": "C",
+          "rationale": "已核验液冷产品发布；本次材料尚未核实对应交付和收入，保守标C",
+          "revenue_metric_id": null,
+          "source_ids": [
+            "src.vertiv_fy2025.business",
+            "src.vertiv_cooling_product.product"
+          ],
+          "limitations": [
+            "未使用集团总收入证明窄口径收入"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "id": "vrt.revenue",
+          "name": "revenue",
+          "value": 10229900000.0,
+          "unit": "currency_units",
+          "currency": "USD",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "consolidated_total",
+          "accounting_basis": "US_GAAP",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.vertiv_fy2025.financial"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "vrt.net_profit",
+          "name": "net_profit",
+          "value": 1332800000.0,
+          "unit": "currency_units",
+          "currency": "USD",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "GAAP_net_income_not_EPS",
+          "accounting_basis": "US_GAAP",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.vertiv_fy2025.financial"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "vrt.ai_specific_revenue",
+          "name": "ai_specific_revenue",
+          "value": null,
+          "unit": "currency_units",
+          "currency": "USD",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "AI液冷产品",
+          "accounting_basis": "US_GAAP",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.vertiv_fy2025.business",
+            "src.vertiv_cooling_product.product"
+          ],
+          "missing_reason": "本次核验材料未给出对应AI专用业务收入"
+        }
+      ],
+      "comparisons": [
+        {
+          "peer_id": "envicool",
+          "comparable": [
+            "面向高密度计算的温控与冷却需求有交集"
+          ],
+          "non_comparable": [
+            "英维克有储能温控；Vertiv含供配电与服务",
+            "机房温控包含风冷，不能与液冷单品直接比较",
+            "本次Vertiv液冷为产品证据C级，未核实交付，不能拔高等级"
+          ],
+          "source_ids": [
+            "src.envicool_annual_2025.business",
+            "src.envicool_annual_2025.narrow_business",
+            "src.vertiv_fy2025.business",
+            "src.vertiv_cooling_product.product"
+          ]
+        }
+      ],
+      "uncertainties": [
+        "已核验液冷产品发布；本次材料尚未核实对应交付和收入，保守标C",
+        "FY2025基线，不等于2026年10月最新季度数据"
+      ],
+      "ai_analysis": {
+        "company_id": "vrt",
+        "summary": "关键数字基础设施供应商，液冷产品已发布但未核实对应交付与收入，AI专用收入口径缺失，仅能以集团总收入作背景。",
+        "observations": [
+          {
+            "text": "液冷后门换热器面向高密度计算发布，属产品证据，不能等同收入或交付。",
+            "kind": "inference",
+            "source_ids": [
+              "src.vertiv_cooling_product.product"
+            ]
+          },
+          {
+            "text": "集团总收入与净利为合并口径，不能据此推算AI液冷专用收入。",
+            "kind": "inference",
+            "source_ids": [
+              "src.vertiv_fy2025.financial",
+              "src.vertiv_fy2025.business"
+            ]
+          }
+        ],
+        "uncertainties": [
+          "液冷产品对应的交付与收入未核实，AI专用收入口径缺失",
+          "合并总收入不等于AI或液冷单品收入",
+          "财年基线不等于最新季度数据"
+        ]
+      }
+    },
+    {
+      "id": "unis",
+      "name": "紫光股份",
+      "ticker": "000938.SZ",
+      "exchange": "SZSE",
+      "market": "CN",
+      "domicile": "中国",
+      "research_depth": "breadth",
+      "business_summary": "自有品牌产品、系统集成及IT服务和增值分销业务。",
+      "claims": [
+        {
+          "id": "unis.business",
+          "text": "自有品牌产品、系统集成及IT服务和增值分销业务。",
+          "kind": "fact",
+          "source_ids": [
+            "src.cn_profiles_compute.unis"
+          ],
+          "verification": "provider_only",
+          "limitations": []
+        },
+        {
+          "id": "unis.membership",
+          "text": "基于主营业务的宽口径产业环节候选，尚未完成AI产品证据核验。",
+          "kind": "inference",
+          "source_ids": [
+            "src.cn_profiles_compute.unis"
+          ],
+          "verification": "pending",
+          "limitations": []
+        }
+      ],
+      "assessments": [
+        {
+          "concept": "AI数据中心相关窄口径业务",
+          "grade": "E",
+          "rationale": "本条仅有宽泛主营业务，尚未完成针对性核验；E不等于证明没有业务。",
+          "revenue_metric_id": null,
+          "source_ids": [
+            "src.cn_profiles_compute.unis"
+          ],
+          "limitations": []
+        }
+      ],
+      "metrics": [],
+      "comparisons": [],
+      "uncertainties": [
+        "仅广度层候选：主营业务已取数，AI关联与业务收入待核验",
+        "不据此编造供应商关系"
+      ],
+      "ai_analysis": null
+    },
+    {
+      "id": "fii",
+      "name": "工业富联",
+      "ticker": "601138.SH",
+      "exchange": "SSE",
+      "market": "CN",
+      "domicile": "中国",
+      "research_depth": "deep",
+      "business_summary": "高端智能制造及工业互联网解决方案；主要业务含云计算、通信及移动网络设备、工业互联网。2025年云计算分部收入6,026.79亿元；披露AI服务器业务与云服务商AI服务器收入同比大幅增长，但未单列AI服务器绝对收入。",
+      "claims": [
+        {
+          "id": "fii.business",
+          "text": "主要业务包含云计算、通信及移动网络设备、工业互联网；云计算分部2025年营业收入6,026.79亿元（年报分行业，单位换算自千元表）。",
+          "kind": "fact",
+          "source_ids": [
+            "src.fii_annual_2025.business",
+            "src.fii_annual_2025.segment"
+          ],
+          "verification": "primary_checked",
+          "limitations": [
+            "云计算分部含非AI云业务"
+          ]
+        },
+        {
+          "id": "fii.scope_boundary",
+          "text": "云计算分部收入与集团合并收入均不等于AI服务器专项收入；云服务商AI服务器仅披露同比增速（超过3倍），未披露可核验绝对金额。",
+          "kind": "inference",
+          "source_ids": [
+            "src.fii_annual_2025.narrow_business"
+          ],
+          "verification": "analyst_inference",
+          "limitations": []
+        },
+        {
+          "id": "fii.pair_boundary",
+          "text": "已挂 fii↔smci 可比 pair：同属AI服务器/云算力基础设施制造交付研究交集；EMS/ODM vs 品牌整机、云计算分部≠AI专项、财年/币种/准则差异均不可比；金额比较禁止。",
+          "kind": "inference",
+          "verification": "analyst_inference",
+          "source_ids": [
+            "src.fii_annual_2025.business",
+            "src.fii_annual_2025.segment",
+            "src.fii_annual_2025.narrow_business",
+            "src.smci_fy2025.business",
+            "src.smci_fy2025.financial"
+          ],
+          "limitations": [
+            "可比不等于可直接比金额或AI专项收入"
+          ]
+        }
+      ],
+      "assessments": [
+        {
+          "concept": "云计算",
+          "grade": "A",
+          "rationale": "年报分行业披露云计算营业收入602,678,703千元（=6,026.79亿元）；等级仅适用于云计算分部口径。",
+          "revenue_metric_id": "fii.related_revenue",
+          "source_ids": [
+            "src.fii_annual_2025.segment",
+            "src.fii_annual_2025.business"
+          ],
+          "limitations": [
+            "不得把云计算分部收入解释为AI服务器收入"
+          ]
+        },
+        {
+          "concept": "AI服务器",
+          "grade": "B",
+          "rationale": "年报披露AI服务器业务存在及云服务商AI服务器收入同比大幅增长；未单列AI服务器绝对收入，故不为A。",
+          "revenue_metric_id": null,
+          "source_ids": [
+            "src.fii_annual_2025.narrow_business",
+            "src.fii_annual_2025.business"
+          ],
+          "limitations": [
+            "不能解释成已知AI收入占比或金额"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "id": "fii.revenue",
+          "name": "revenue",
+          "value": 902887188000.0,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "consolidated_total",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.fuyao_fii_financial.FY2025",
+            "src.fii_annual_2025.financial"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "fii.parent_net_profit",
+          "name": "parent_net_profit",
+          "value": 35285561000.0,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "attributable_to_parent",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.fuyao_fii_financial.FY2025",
+            "src.fii_annual_2025.financial"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "fii.related_revenue",
+          "name": "related_revenue",
+          "value": 602678703000.0,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "segment_cloud_computing",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.fii_annual_2025.segment"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "fii.ai_specific_revenue",
+          "name": "ai_specific_revenue",
+          "value": null,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "ai_specific",
+          "accounting_basis": "CAS",
+          "disclosure_status": "not_disclosed",
+          "source_ids": [
+            "src.fii_annual_2025.narrow_business"
+          ],
+          "missing_reason": "年报未单列AI服务器专项收入金额；仅有同比增速与分部云计算收入"
+        }
+      ],
+      "comparisons": [
+        {
+          "peer_id": "smci",
+          "comparable": [
+            "均涉及AI服务器/云算力相关IT基础设施的设计、制造或交付"
+          ],
+          "non_comparable": [
+            "工业富联以EMS/ODM与云计算分部交付为主；Supermicro为品牌服务器与机架系统厂商，商业模式不同",
+            "工业富联云计算分部收入不等于AI服务器专项收入；Supermicro净销售额不能替代AI专项收入",
+            "财年、币种与会计准则不同（自然年/CNY/中国企业会计准则 vs 截至6月末财年/USD/US GAAP）；Supermicro本轮为未审计业绩稿"
+          ],
+          "source_ids": [
+            "src.fii_annual_2025.business",
+            "src.fii_annual_2025.segment",
+            "src.fii_annual_2025.narrow_business",
+            "src.smci_fy2025.business",
+            "src.smci_fy2025.financial"
+          ]
+        }
+      ],
+      "uncertainties": [
+        "AI服务器绝对收入未披露",
+        "云计算分部≠AI专项",
+        "已挂 pair fii_smci；金额/比率比较关闭",
+        "已挂事件 fii_ai_server_cloud（财务步为口径边界）",
+        "iFinD MCP 本轮不可用；依据巨潮年报PDF"
+      ],
+      "ai_analysis": {
+        "company_id": "fii",
+        "summary": "工业富联年报披露云计算分部收入及AI服务器业务存在；云服务商AI服务器收入同比高增但无绝对金额。宽口径云计算可评A；窄口径AI服务器止于B，禁假A。",
+        "observations": [
+          {
+            "text": "云计算分行业收入6,026.79亿元可核验；主要业务含云计算/通信网络/工业互联网。",
+            "kind": "fact",
+            "source_ids": [
+              "src.fii_annual_2025.segment",
+              "src.fii_annual_2025.business"
+            ]
+          },
+          {
+            "text": "AI服务器有业务与同比增速披露，但无专项收入金额，不得评窄口径A。",
+            "kind": "inference",
+            "source_ids": [
+              "src.fii_annual_2025.narrow_business"
+            ]
+          }
+        ],
+        "uncertainties": [
+          "AI专项收入金额未知",
+          "本轮无可比与事件传导"
+        ]
+      }
+    },
+    {
+      "id": "sugon",
+      "name": "中科曙光",
+      "ticker": "603019.SH",
+      "exchange": "SSE",
+      "market": "CN",
+      "domicile": "中国",
+      "research_depth": "breadth",
+      "business_summary": "研究、开发、生产制造高性能计算机、通用服务器及存储产品、软件开发、系统集成与技术服务",
+      "claims": [
+        {
+          "id": "sugon.business",
+          "text": "研究、开发、生产制造高性能计算机、通用服务器及存储产品、软件开发、系统集成与技术服务",
+          "kind": "fact",
+          "source_ids": [
+            "src.cn_profiles_compute.sugon"
+          ],
+          "verification": "provider_only",
+          "limitations": []
+        },
+        {
+          "id": "sugon.membership",
+          "text": "基于主营业务的宽口径产业环节候选，尚未完成AI产品证据核验。",
+          "kind": "inference",
+          "source_ids": [
+            "src.cn_profiles_compute.sugon"
+          ],
+          "verification": "pending",
+          "limitations": []
+        }
+      ],
+      "assessments": [
+        {
+          "concept": "AI数据中心相关窄口径业务",
+          "grade": "E",
+          "rationale": "本条仅有宽泛主营业务，尚未完成针对性核验；E不等于证明没有业务。",
+          "revenue_metric_id": null,
+          "source_ids": [
+            "src.cn_profiles_compute.sugon"
+          ],
+          "limitations": []
+        }
+      ],
+      "metrics": [],
+      "comparisons": [],
+      "uncertainties": [
+        "仅广度层候选：主营业务已取数，AI关联与业务收入待核验",
+        "不据此编造供应商关系"
+      ],
+      "ai_analysis": null
+    },
+    {
+      "id": "tfc",
+      "name": "天孚通信",
+      "ticker": "300394.SZ",
+      "exchange": "SZSE",
+      "market": "CN",
+      "domicile": "中国",
+      "research_depth": "deep",
+      "business_summary": "光互连一站式平台：无源/有源光器件及高速光引擎等，应用于数据中心与电信。2025年光互连元器件收入约50.82亿元（占营收98.43%）；有源/无源均有分产品收入。AI需求被表述为增长驱动，但未单列AI专项收入。",
+      "claims": [
+        {
+          "id": "tfc.business",
+          "text": "主营光互连元器件；2025年光互连元器件收入5,082,331,376.50元；分产品无源2,084,386,267.76元、有源2,997,945,108.74元。",
+          "kind": "fact",
+          "source_ids": [
+            "src.tfc_annual_2025.business",
+            "src.tfc_annual_2025.segment"
+          ],
+          "verification": "primary_checked",
+          "limitations": []
+        },
+        {
+          "id": "tfc.scope_boundary",
+          "text": "光器件/光互连收入不等于AI专用器件收入；年报将AI与数据中心建设表述为需求驱动，未披露AI专项金额。",
+          "kind": "inference",
+          "source_ids": [
+            "src.tfc_annual_2025.narrow_business"
+          ],
+          "verification": "analyst_inference",
+          "limitations": []
+        },
+        {
+          "id": "tfc.no_pair_this_round",
+          "text": "本轮无可比 pair（missing_reason）：天孚定位光互连元器件/有源无源器件与光引擎（模块上游）。已深核 Coherent 锚定光模块/数通收发，环节不齐。Lumentum 虽已补FY2025业绩与10-K，但 Cloud & Networking 明示含芯片、组件、模块与子系统，且业绩稿并列组件与800G模块，仍非纯器件层同环节；有把握才挂→本轮继续不编造 pair。",
+          "kind": "inference",
+          "source_ids": [
+            "src.tfc_annual_2025.business",
+            "src.tfc_annual_2025.segment",
+            "src.lumentum_fy2025_10k.business",
+            "src.lumentum_fy2025.business",
+            "src.lumentum_fy2025.segment"
+          ],
+          "verification": "analyst_inference",
+          "limitations": [
+            "不因海外已有深核披露而降低同环节门槛"
+          ]
+        }
+      ],
+      "assessments": [
+        {
+          "concept": "光互连元器件",
+          "grade": "A",
+          "rationale": "年报分行业披露光互连元器件营业收入5,082,331,376.50元；等级仅适用于该口径。",
+          "revenue_metric_id": "tfc.related_revenue",
+          "source_ids": [
+            "src.tfc_annual_2025.segment"
+          ],
+          "limitations": [
+            "不得解释为AI专项收入"
+          ]
+        },
+        {
+          "concept": "AI数据中心相关光器件",
+          "grade": "B",
+          "rationale": "年报支持数据中心光器件业务与AI需求驱动叙述；未单列AI专项收入，故不为A。",
+          "revenue_metric_id": null,
+          "source_ids": [
+            "src.tfc_annual_2025.narrow_business",
+            "src.tfc_annual_2025.business"
+          ],
+          "limitations": [
+            "不能解释成已知AI收入占比"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "id": "tfc.revenue",
+          "name": "revenue",
+          "value": 5163432471.16,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "consolidated_total",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.fuyao_tfc_financial.FY2025",
+            "src.tfc_annual_2025.financial"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "tfc.parent_net_profit",
+          "name": "parent_net_profit",
+          "value": 2017266034.08,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "attributable_to_parent",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.fuyao_tfc_financial.FY2025",
+            "src.tfc_annual_2025.financial"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "tfc.related_revenue",
+          "name": "related_revenue",
+          "value": 5082331376.5,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "segment_optical_interconnect",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.tfc_annual_2025.segment"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "tfc.ai_specific_revenue",
+          "name": "ai_specific_revenue",
+          "value": null,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "ai_specific",
+          "accounting_basis": "CAS",
+          "disclosure_status": "not_disclosed",
+          "source_ids": [
+            "src.tfc_annual_2025.narrow_business"
+          ],
+          "missing_reason": "年报未单列AI专用光器件收入"
+        }
+      ],
+      "comparisons": [],
+      "uncertainties": [
+        "AI专项收入未披露",
+        "C③仍 missing_reason：Lumentum/Coherent 同环节边界不清，禁假 pair",
+        "已挂事件 tfc_optical_interconnect_components；财务步为口径边界非弹性估算",
+        "iFinD MCP 本轮不可用；依据巨潮年报PDF + Lumentum公开披露"
+      ],
+      "ai_analysis": {
+        "company_id": "tfc",
+        "summary": "天孚通信年报披露光互连元器件主业与分产品收入；数据中心/AI为需求叙述。宽口径光互连可评A；窄口径AI相关止于B。B1d：Lumentum 已深核但仍跨模块层→C③继续 missing，不假 pair。",
+        "observations": [
+          {
+            "text": "光互连元器件收入50.82亿元可核验；有源/无源分产品收入已披露。",
+            "kind": "fact",
+            "source_ids": [
+              "src.tfc_annual_2025.segment"
+            ]
+          },
+          {
+            "text": "AI/数据中心需求驱动有表述，但无AI专项收入，禁评窄口径A。",
+            "kind": "inference",
+            "source_ids": [
+              "src.tfc_annual_2025.narrow_business"
+            ]
+          }
+        ],
+        "uncertainties": [
+          "AI专项收入未知",
+          "海外同环节器件层对标仍缺→不挂 pair"
+        ]
+      }
+    },
+    {
+      "id": "eoptolink",
+      "name": "新易盛",
+      "ticker": "300502.SZ",
+      "exchange": "SZSE",
+      "market": "CN",
+      "domicile": "中国",
+      "research_depth": "deep",
+      "business_summary": "光模块/光互联产品研发制造；2025年光互联产品收入247.71亿元。产品服务AI算力集群与云数据中心等；披露800G/1.6T等高速产品线。未见AI专项收入单列。",
+      "claims": [
+        {
+          "id": "eoptolink.business",
+          "text": "主营光模块/光互联产品；2025年光互联产品营业收入24,771,155,676.88元；产品含800G/1.6T等高速光互联，服务于AI算力集群与云数据中心等。",
+          "kind": "fact",
+          "source_ids": [
+            "src.eoptolink_annual_2025.business",
+            "src.eoptolink_annual_2025.segment"
+          ],
+          "verification": "primary_checked",
+          "limitations": [
+            "光互联收入含非AI场景"
+          ]
+        },
+        {
+          "id": "eoptolink.scope_boundary",
+          "text": "光互联/光模块收入不等于AI专用高速光模块收入；本轮无AI专项收入metric。",
+          "kind": "inference",
+          "source_ids": [
+            "src.eoptolink_annual_2025.narrow_business"
+          ],
+          "verification": "analyst_inference",
+          "limitations": []
+        },
+        {
+          "id": "eoptolink.pair_boundary",
+          "text": "已挂 eoptolink↔cohr 可比 pair：高速光互联/数通收发需求交集；业务边界、收入口径与财年币种准则均不可比；金额比较禁止。",
+          "kind": "inference",
+          "verification": "analyst_inference",
+          "source_ids": [
+            "src.eoptolink_annual_2025.business",
+            "src.eoptolink_annual_2025.segment",
+            "src.eoptolink_annual_2025.narrow_business",
+            "src.coherent_fy2025_tables.business",
+            "src.coherent_optics_product.product"
+          ],
+          "limitations": [
+            "可比不等于可直接比金额或AI专项收入"
+          ]
+        }
+      ],
+      "assessments": [
+        {
+          "concept": "光互联产品",
+          "grade": "A",
+          "rationale": "年报分产品披露光互联产品营业收入24,771,155,676.88元；等级仅适用于该口径。",
+          "revenue_metric_id": "eoptolink.related_revenue",
+          "source_ids": [
+            "src.eoptolink_annual_2025.segment"
+          ],
+          "limitations": [
+            "不得解释为AI专项收入"
+          ]
+        },
+        {
+          "concept": "AI专用高速光模块",
+          "grade": "B",
+          "rationale": "年报PDF支持高速光模块产品线与AI算力集群应用场景；未单列AI专项收入，故不为A。",
+          "revenue_metric_id": null,
+          "source_ids": [
+            "src.eoptolink_annual_2025.narrow_business",
+            "src.eoptolink_annual_2025.business"
+          ],
+          "limitations": [
+            "不能解释成已知AI收入占比"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "id": "eoptolink.revenue",
+          "name": "revenue",
+          "value": 24841854840.22,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "consolidated_total",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.fuyao_eoptolink_financial.FY2025",
+            "src.eoptolink_annual_2025.financial"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "eoptolink.parent_net_profit",
+          "name": "parent_net_profit",
+          "value": 9531922730.17,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "attributable_to_parent",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.fuyao_eoptolink_financial.FY2025",
+            "src.eoptolink_annual_2025.financial"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "eoptolink.related_revenue",
+          "name": "related_revenue",
+          "value": 24771155676.88,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "segment_optical_interconnect_products",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.eoptolink_annual_2025.segment"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "eoptolink.ai_specific_revenue",
+          "name": "ai_specific_revenue",
+          "value": null,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "ai_specific",
+          "accounting_basis": "CAS",
+          "disclosure_status": "not_disclosed",
+          "source_ids": [
+            "src.eoptolink_annual_2025.narrow_business"
+          ],
+          "missing_reason": "年报未单列AI专用高速光模块收入"
+        }
+      ],
+      "comparisons": [
+        {
+          "peer_id": "cohr",
+          "comparable": [
+            "高速光通信收发/光互联产品与数据中心、AI算力集群互连需求存在交集"
+          ],
+          "non_comparable": [
+            "Coherent含上游器件、材料、工业等更宽业务；新易盛以光模块/光互联产品为主",
+            "新易盛光互联产品收入不能等同AI专用高速光模块收入；Coherent集团或数通相关披露不能代替双方AI专项收入",
+            "财年、币种和会计准则不同"
+          ],
+          "source_ids": [
+            "src.eoptolink_annual_2025.business",
+            "src.eoptolink_annual_2025.segment",
+            "src.eoptolink_annual_2025.narrow_business",
+            "src.coherent_fy2025_tables.business",
+            "src.coherent_optics_product.product"
+          ]
+        }
+      ],
+      "uncertainties": [
+        "AI专项收入未披露",
+        "已挂 pair eoptolink_cohr；金额比较关闭",
+        "已挂事件 eoptolink_high_speed_optics（财务步为口径边界）",
+        "依据巨潮年报PDF"
+      ],
+      "ai_analysis": {
+        "company_id": "eoptolink",
+        "summary": "新易盛年报PDF全文已归档：光互联产品收入可核验；800G/1.6T高速产品线有披露。宽口径光互联可评A；AI专用高速光模块止于B。",
+        "observations": [
+          {
+            "text": "光互联产品收入247.71亿元可核验；主业为光模块研发制造。",
+            "kind": "fact",
+            "source_ids": [
+              "src.eoptolink_annual_2025.segment",
+              "src.eoptolink_annual_2025.business"
+            ]
+          },
+          {
+            "text": "高速光模块与AI算力集群场景有披露，但无AI专项收入，禁评窄口径A。",
+            "kind": "inference",
+            "source_ids": [
+              "src.eoptolink_annual_2025.narrow_business"
+            ]
+          }
+        ],
+        "uncertainties": [
+          "AI专项收入未知",
+          "本轮无可比与事件传导"
+        ]
+      }
+    },
+    {
+      "id": "accelink",
+      "name": "光迅科技",
+      "ticker": "002281.SZ",
+      "exchange": "SZSE",
+      "market": "CN",
+      "domicile": "中国",
+      "research_depth": "breadth",
+      "business_summary": "信息科技领域光、电器件技术及产品的研制、生产、销售和相关技术服务",
+      "claims": [
+        {
+          "id": "accelink.business",
+          "text": "信息科技领域光、电器件技术及产品的研制、生产、销售和相关技术服务",
+          "kind": "fact",
+          "source_ids": [
+            "src.cn_profiles_optics.accelink"
+          ],
+          "verification": "provider_only",
+          "limitations": []
+        },
+        {
+          "id": "accelink.membership",
+          "text": "基于主营业务的宽口径产业环节候选，尚未完成AI产品证据核验。",
+          "kind": "inference",
+          "source_ids": [
+            "src.cn_profiles_optics.accelink"
+          ],
+          "verification": "pending",
+          "limitations": []
+        }
+      ],
+      "assessments": [
+        {
+          "concept": "AI数据中心相关窄口径业务",
+          "grade": "E",
+          "rationale": "本条仅有宽泛主营业务，尚未完成针对性核验；E不等于证明没有业务。",
+          "revenue_metric_id": null,
+          "source_ids": [
+            "src.cn_profiles_optics.accelink"
+          ],
+          "limitations": []
+        }
+      ],
+      "metrics": [],
+      "comparisons": [],
+      "uncertainties": [
+        "仅广度层候选：主营业务已取数，AI关联与业务收入待核验",
+        "不据此编造供应商关系"
+      ],
+      "ai_analysis": null
+    },
+    {
+      "id": "shenling",
+      "name": "申菱环境",
+      "ticker": "301018.SZ",
+      "exchange": "SZSE",
+      "market": "CN",
+      "domicile": "中国",
+      "research_depth": "breadth",
+      "business_summary": "为数据服务产业环境、工业工艺产研环境、专业特种应用环境、公共建筑室内环境等应用场景提供人工环境调控整体解决方案。",
+      "claims": [
+        {
+          "id": "shenling.business",
+          "text": "为数据服务产业环境、工业工艺产研环境、专业特种应用环境、公共建筑室内环境等应用场景提供人工环境调控整体解决方案。",
+          "kind": "fact",
+          "source_ids": [
+            "src.cn_profiles_power_cooling.shenling"
+          ],
+          "verification": "provider_only",
+          "limitations": []
+        },
+        {
+          "id": "shenling.membership",
+          "text": "基于主营业务的宽口径产业环节候选，尚未完成AI产品证据核验。",
+          "kind": "inference",
+          "source_ids": [
+            "src.cn_profiles_power_cooling.shenling"
+          ],
+          "verification": "pending",
+          "limitations": []
+        }
+      ],
+      "assessments": [
+        {
+          "concept": "AI数据中心相关窄口径业务",
+          "grade": "E",
+          "rationale": "本条仅有宽泛主营业务，尚未完成针对性核验；E不等于证明没有业务。",
+          "revenue_metric_id": null,
+          "source_ids": [
+            "src.cn_profiles_power_cooling.shenling"
+          ],
+          "limitations": []
+        }
+      ],
+      "metrics": [],
+      "comparisons": [],
+      "uncertainties": [
+        "仅广度层候选：主营业务已取数，AI关联与业务收入待核验",
+        "不据此编造供应商关系"
+      ],
+      "ai_analysis": null
+    },
+    {
+      "id": "kstar",
+      "name": "科士达",
+      "ticker": "002518.SZ",
+      "exchange": "SZSE",
+      "market": "CN",
+      "domicile": "中国",
+      "research_depth": "breadth",
+      "business_summary": "研发、生产及销售UPS、太阳能逆变器及UPS配套的阀控式密封铅酸蓄电池",
+      "claims": [
+        {
+          "id": "kstar.business",
+          "text": "研发、生产及销售UPS、太阳能逆变器及UPS配套的阀控式密封铅酸蓄电池",
+          "kind": "fact",
+          "source_ids": [
+            "src.cn_profiles_power_cooling.kstar"
+          ],
+          "verification": "provider_only",
+          "limitations": []
+        },
+        {
+          "id": "kstar.membership",
+          "text": "基于主营业务的宽口径产业环节候选，尚未完成AI产品证据核验。",
+          "kind": "inference",
+          "source_ids": [
+            "src.cn_profiles_power_cooling.kstar"
+          ],
+          "verification": "pending",
+          "limitations": []
+        }
+      ],
+      "assessments": [
+        {
+          "concept": "AI数据中心相关窄口径业务",
+          "grade": "E",
+          "rationale": "本条仅有宽泛主营业务，尚未完成针对性核验；E不等于证明没有业务。",
+          "revenue_metric_id": null,
+          "source_ids": [
+            "src.cn_profiles_power_cooling.kstar"
+          ],
+          "limitations": []
+        }
+      ],
+      "metrics": [],
+      "comparisons": [],
+      "uncertainties": [
+        "仅广度层候选：主营业务已取数，AI关联与业务收入待核验",
+        "不据此编造供应商关系"
+      ],
+      "ai_analysis": null
+    },
+    {
+      "id": "nvda",
+      "name": "英伟达",
+      "ticker": "NVDA.O",
+      "exchange": "NASDAQ",
+      "market": "US",
+      "domicile": "美国",
+      "research_depth": "breadth",
+      "business_summary": "图形和通信处理器",
+      "claims": [
+        {
+          "id": "nvda.business",
+          "text": "图形和通信处理器",
+          "kind": "fact",
+          "source_ids": [
+            "src.us_profiles_more.nvda"
+          ],
+          "verification": "provider_only",
+          "limitations": []
+        },
+        {
+          "id": "nvda.membership",
+          "text": "基于主营业务的宽口径产业环节候选，尚未完成AI产品证据核验。",
+          "kind": "inference",
+          "source_ids": [
+            "src.us_profiles_more.nvda"
+          ],
+          "verification": "pending",
+          "limitations": []
+        }
+      ],
+      "assessments": [
+        {
+          "concept": "AI数据中心相关窄口径业务",
+          "grade": "E",
+          "rationale": "本条仅有宽泛主营业务，尚未完成针对性核验；E不等于证明没有业务。",
+          "revenue_metric_id": null,
+          "source_ids": [
+            "src.us_profiles_more.nvda"
+          ],
+          "limitations": []
+        }
+      ],
+      "metrics": [],
+      "comparisons": [],
+      "uncertainties": [
+        "仅广度层候选：主营业务已取数，AI关联与业务收入待核验",
+        "不据此编造供应商关系"
+      ],
+      "ai_analysis": null
+    },
+    {
+      "id": "lite",
+      "name": "Lumentum控股",
+      "ticker": "LITE.O",
+      "exchange": "NASDAQ",
+      "market": "US",
+      "domicile": "美国",
+      "research_depth": "deep",
+      "business_summary": "光学与光子产品；报告分部为 Cloud & Networking 与 Industrial Tech。Cloud & Networking 组合覆盖光学/光子芯片、组件、模块与子系统，服务云数据中心、AI/ML 与电信网络。FY2025（截至2025-06-28）净销售额16.45亿美元；Cloud & Networking 14.108亿美元。业绩稿同时强调组件（EML芯片、泵浦激光等）与800G模块，故不宜视为纯光器件层。",
+      "claims": [
+        {
+          "id": "lite.business",
+          "text": "FY2025净销售额1,645.0百万美元；Cloud & Networking分部收入1,410.8百万美元、Industrial Tech 234.2百万美元。",
+          "kind": "fact",
+          "source_ids": [
+            "src.lumentum_fy2025.segment",
+            "src.lumentum_fy2025.financial"
+          ],
+          "verification": "primary_checked",
+          "limitations": [
+            "百万美元四舍五入"
+          ]
+        },
+        {
+          "id": "lite.scope_boundary",
+          "text": "10-K写明 Cloud & Networking 产品组合含光学/光子芯片、组件、模块与子系统；业绩稿并列披露组件与800G模块。该口径宽于天孚光互连元器件/光引擎（模块上游），不能当作同环节纯器件层对标。",
+          "kind": "inference",
+          "source_ids": [
+            "src.lumentum_fy2025_10k.business",
+            "src.lumentum_fy2025.business"
+          ],
+          "verification": "analyst_inference",
+          "limitations": [
+            "不因此编造 tfc↔lite 同环节 pair"
+          ]
+        },
+        {
+          "id": "lite.no_ai_specific",
+          "text": "业绩稿将AI数据中心需求表述为云产品增长驱动，但未单列AI专用收入金额。",
+          "kind": "inference",
+          "source_ids": [
+            "src.lumentum_fy2025.business"
+          ],
+          "verification": "analyst_inference",
+          "limitations": []
+        }
+      ],
+      "assessments": [
+        {
+          "concept": "Cloud & Networking光学光子产品",
+          "grade": "A",
+          "rationale": "业绩稿披露可核验的Cloud & Networking分部净销售额1,410.8百万美元；等级仅适用于该分部口径，不得解释为纯器件层或AI专项。",
+          "revenue_metric_id": "lite.related_revenue",
+          "source_ids": [
+            "src.lumentum_fy2025.segment",
+            "src.lumentum_fy2025_10k.business"
+          ],
+          "limitations": [
+            "分部含芯片/组件/模块/子系统；禁裸比天孚器件收入"
+          ]
+        },
+        {
+          "concept": "AI数据中心相关光学产品",
+          "grade": "B",
+          "rationale": "业绩稿支持AI数据中心云产品需求叙述与组件/800G模块进展；未单列AI专项收入，故不为A。",
+          "revenue_metric_id": null,
+          "source_ids": [
+            "src.lumentum_fy2025.business",
+            "src.lumentum_fy2025.segment"
+          ],
+          "limitations": [
+            "不能解释成已知AI收入占比"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "id": "lite.revenue",
+          "name": "revenue",
+          "value": 1645000000.0,
+          "unit": "currency_units",
+          "currency": "USD",
+          "period": "FY2025",
+          "period_start": "2024-06-30",
+          "period_end": "2025-06-28",
+          "scope": "consolidated_total",
+          "accounting_basis": "US_GAAP",
+          "disclosure_status": "rounded_reported",
+          "source_ids": [
+            "src.lumentum_fy2025.financial"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "lite.related_revenue",
+          "name": "related_revenue",
+          "value": 1410800000.0,
+          "unit": "currency_units",
+          "currency": "USD",
+          "period": "FY2025",
+          "period_start": "2024-06-30",
+          "period_end": "2025-06-28",
+          "scope": "segment_cloud_and_networking",
+          "accounting_basis": "US_GAAP",
+          "disclosure_status": "rounded_reported",
+          "source_ids": [
+            "src.lumentum_fy2025.segment"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "lite.ai_specific_revenue",
+          "name": "ai_specific_revenue",
+          "value": null,
+          "unit": "currency_units",
+          "currency": "USD",
+          "period": "FY2025",
+          "period_start": "2024-06-30",
+          "period_end": "2025-06-28",
+          "scope": "AI数据中心相关光学产品",
+          "accounting_basis": "US_GAAP",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.lumentum_fy2025.business"
+          ],
+          "missing_reason": "业绩稿未单列AI专项收入金额；Cloud & Networking分部不能替代"
+        }
+      ],
+      "comparisons": [],
+      "uncertainties": [
+        "Cloud & Networking 非纯器件层，含模块/子系统",
+        "AI专项收入未披露",
+        "不与天孚挂同环节 pair",
+        "SEC.gov 直链本环境403；10-K字节来自公开镜像并交叉核对标题"
+      ],
+      "ai_analysis": {
+        "company_id": "lite",
+        "summary": "Lumentum FY2025业绩与10-K已归档：Cloud & Networking分部收入可核验，但产品组合跨芯片→模块；与天孚光互连元器件同环节边界不清，本轮不挂 pair。窄口径AI相关止于B，禁假A。",
+        "observations": [
+          {
+            "text": "Cloud & Networking FY2025收入1,410.8百万美元可核验；总净销售额1,645.0百万美元。",
+            "kind": "fact",
+            "source_ids": [
+              "src.lumentum_fy2025.segment",
+              "src.lumentum_fy2025.financial"
+            ]
+          },
+          {
+            "text": "10-K与业绩稿表明组合含芯片/组件/模块/子系统及800G模块，宽于天孚器件层，故不编造同环节 pair。",
+            "kind": "inference",
+            "source_ids": [
+              "src.lumentum_fy2025_10k.business",
+              "src.lumentum_fy2025.business"
+            ]
+          }
+        ],
+        "uncertainties": [
+          "AI专项收入未知",
+          "与天孚同环节边界不清→不挂 pair"
+        ]
+      }
+    },
+    {
+      "id": "avgo",
+      "name": "博通",
+      "ticker": "AVGO.O",
+      "exchange": "NASDAQ",
+      "market": "US",
+      "domicile": "美国",
+      "research_depth": "breadth",
+      "business_summary": "半导体器件设计制造",
+      "claims": [
+        {
+          "id": "avgo.business",
+          "text": "半导体器件设计制造",
+          "kind": "fact",
+          "source_ids": [
+            "src.us_profiles_more.avgo"
+          ],
+          "verification": "provider_only",
+          "limitations": []
+        },
+        {
+          "id": "avgo.membership",
+          "text": "基于主营业务的宽口径产业环节候选，尚未完成AI产品证据核验。",
+          "kind": "inference",
+          "source_ids": [
+            "src.us_profiles_more.avgo"
+          ],
+          "verification": "pending",
+          "limitations": []
+        }
+      ],
+      "assessments": [
+        {
+          "concept": "AI数据中心相关窄口径业务",
+          "grade": "E",
+          "rationale": "本条仅有宽泛主营业务，尚未完成针对性核验；E不等于证明没有业务。",
+          "revenue_metric_id": null,
+          "source_ids": [
+            "src.us_profiles_more.avgo"
+          ],
+          "limitations": []
+        }
+      ],
+      "metrics": [],
+      "comparisons": [],
+      "uncertainties": [
+        "仅广度层候选：主营业务已取数，AI关联与业务收入待核验",
+        "不据此编造供应商关系"
+      ],
+      "ai_analysis": null
+    },
+    {
+      "id": "dell",
+      "name": "戴尔科技",
+      "ticker": "DELL.N",
+      "exchange": "NYSE",
+      "market": "US",
+      "domicile": "美国",
+      "research_depth": "breadth",
+      "business_summary": "开发、制造和销售IT产品和服务",
+      "claims": [
+        {
+          "id": "dell.business",
+          "text": "开发、制造和销售IT产品和服务",
+          "kind": "fact",
+          "source_ids": [
+            "src.us_profiles_more.dell"
+          ],
+          "verification": "provider_only",
+          "limitations": []
+        },
+        {
+          "id": "dell.membership",
+          "text": "基于主营业务的宽口径产业环节候选，尚未完成AI产品证据核验。",
+          "kind": "inference",
+          "source_ids": [
+            "src.us_profiles_more.dell"
+          ],
+          "verification": "pending",
+          "limitations": []
+        }
+      ],
+      "assessments": [
+        {
+          "concept": "AI数据中心相关窄口径业务",
+          "grade": "E",
+          "rationale": "本条仅有宽泛主营业务，尚未完成针对性核验；E不等于证明没有业务。",
+          "revenue_metric_id": null,
+          "source_ids": [
+            "src.us_profiles_more.dell"
+          ],
+          "limitations": []
+        }
+      ],
+      "metrics": [],
+      "comparisons": [],
+      "uncertainties": [
+        "仅广度层候选：主营业务已取数，AI关联与业务收入待核验",
+        "不据此编造供应商关系"
+      ],
+      "ai_analysis": null
+    },
+    {
+      "id": "anet",
+      "name": "Arista Networks",
+      "ticker": "ANET.N",
+      "exchange": "NYSE",
+      "market": "US",
+      "domicile": "美国",
+      "research_depth": "breadth",
+      "business_summary": "设计、开发和销售网络硬件和软件。",
+      "claims": [
+        {
+          "id": "anet.business",
+          "text": "设计、开发和销售网络硬件和软件。",
+          "kind": "fact",
+          "source_ids": [
+            "src.us_profiles_more.anet"
+          ],
+          "verification": "provider_only",
+          "limitations": []
+        },
+        {
+          "id": "anet.membership",
+          "text": "基于主营业务的宽口径产业环节候选，尚未完成AI产品证据核验。",
+          "kind": "inference",
+          "source_ids": [
+            "src.us_profiles_more.anet"
+          ],
+          "verification": "pending",
+          "limitations": []
+        }
+      ],
+      "assessments": [
+        {
+          "concept": "AI数据中心相关窄口径业务",
+          "grade": "E",
+          "rationale": "本条仅有宽泛主营业务，尚未完成针对性核验；E不等于证明没有业务。",
+          "revenue_metric_id": null,
+          "source_ids": [
+            "src.us_profiles_more.anet"
+          ],
+          "limitations": []
+        }
+      ],
+      "metrics": [],
+      "comparisons": [],
+      "uncertainties": [
+        "仅广度层候选：主营业务已取数，AI关联与业务收入待核验",
+        "不据此编造供应商关系"
+      ],
+      "ai_analysis": null
+    },
+    {
+      "id": "amd",
+      "name": "超威半导体",
+      "ticker": "AMD.O",
+      "exchange": "NASDAQ",
+      "market": "US",
+      "domicile": "美国",
+      "research_depth": "breadth",
+      "business_summary": "制造计算和图形相关半导体产品",
+      "claims": [
+        {
+          "id": "amd.business",
+          "text": "制造计算和图形相关半导体产品",
+          "kind": "fact",
+          "source_ids": [
+            "src.us_profiles_more.amd"
+          ],
+          "verification": "provider_only",
+          "limitations": []
+        },
+        {
+          "id": "amd.membership",
+          "text": "基于主营业务的宽口径产业环节候选，尚未完成AI产品证据核验。",
+          "kind": "inference",
+          "source_ids": [
+            "src.us_profiles_more.amd"
+          ],
+          "verification": "pending",
+          "limitations": []
+        }
+      ],
+      "assessments": [
+        {
+          "concept": "AI数据中心相关窄口径业务",
+          "grade": "E",
+          "rationale": "本条仅有宽泛主营业务，尚未完成针对性核验；E不等于证明没有业务。",
+          "revenue_metric_id": null,
+          "source_ids": [
+            "src.us_profiles_more.amd"
+          ],
+          "limitations": []
+        }
+      ],
+      "metrics": [],
+      "comparisons": [],
+      "uncertainties": [
+        "仅广度层候选：主营业务已取数，AI关联与业务收入待核验",
+        "不据此编造供应商关系"
+      ],
+      "ai_analysis": null
+    },
+    {
+      "id": "luxshare",
+      "name": "立讯精密",
+      "ticker": "002475.SZ",
+      "exchange": "SZSE",
+      "market": "CN",
+      "domicile": "CN",
+      "research_depth": "deep",
+      "business_summary": "精密制造解决方案；三大板块为消费电子、汽车电子、通讯及数据中心。通讯及数据中心覆盖高速电/光互联、热管理、电源与服务器相关交付。2025年通讯及数据中心收入245.68亿元（占7.39%）；消费电子仍为主体。",
+      "claims": [
+        {
+          "id": "luxshare.segment",
+          "text": "2025年通讯及数据中心分行业收入24,567,610,128.22元（占比7.39%，同比+33.81%）；消费电子264,265,914,303.66元（79.52%）。",
+          "kind": "fact",
+          "source_ids": [
+            "src.luxshare_annual_2025.segment",
+            "src.luxshare_annual_2025.financial"
+          ],
+          "verification": "primary_checked",
+          "limitations": [
+            "通讯及数据中心≠AI专项收入"
+          ]
+        },
+        {
+          "id": "luxshare.datacenter_products",
+          "text": "年报披露数据中心铜缆/光模块（含800G/1.6T进展）、热管理与电源等产品线，并叙述AI服务器相关零部件与整机合作。",
+          "kind": "fact",
+          "source_ids": [
+            "src.luxshare_annual_2025.business",
+            "src.luxshare_annual_2025.narrow_business"
+          ],
+          "verification": "primary_checked",
+          "limitations": [
+            "产品进展≠已拆AI收入"
+          ]
+        },
+        {
+          "id": "luxshare.no_ai_specific",
+          "text": "年报未单列AI专项收入；不得把通讯及数据中心分部或集团收入解释为AI收入。",
+          "kind": "inference",
+          "source_ids": [
+            "src.luxshare_annual_2025.segment",
+            "src.luxshare_annual_2025.narrow_business"
+          ],
+          "verification": "analyst_inference",
+          "limitations": []
+        }
+      ],
+      "assessments": [
+        {
+          "concept": "通讯及数据中心",
+          "grade": "A",
+          "rationale": "年报分行业披露通讯及数据中心营业收入24,567,610,128.22元；等级仅适用于该分部口径。",
+          "revenue_metric_id": "luxshare.related_revenue",
+          "source_ids": [
+            "src.luxshare_annual_2025.segment",
+            "src.luxshare_annual_2025.business"
+          ],
+          "limitations": [
+            "不得解释为AI专项收入；消费电子仍为收入主体"
+          ]
+        },
+        {
+          "concept": "AI数据中心相关互联与部件",
+          "grade": "B",
+          "rationale": "年报支持AI服务器/智算中心需求叙述与光铜互联、热管理产品进展；未单列AI专项收入，故不为A。",
+          "revenue_metric_id": null,
+          "source_ids": [
+            "src.luxshare_annual_2025.narrow_business",
+            "src.luxshare_annual_2025.business"
+          ],
+          "limitations": [
+            "不能解释成已知AI收入占比"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "id": "luxshare.revenue",
+          "name": "revenue",
+          "value": 332344443143.39,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "consolidated_total",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.luxshare_annual_2025.financial"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "luxshare.related_revenue",
+          "name": "related_revenue",
+          "value": 24567610128.22,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "segment_comms_and_datacenter",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.luxshare_annual_2025.segment"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "luxshare.ai_specific_revenue",
+          "name": "ai_specific_revenue",
+          "value": null,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "ai_specific",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.luxshare_annual_2025.segment"
+          ],
+          "missing_reason": "年报未单列AI专项收入；通讯及数据中心分部不能替代"
+        }
+      ],
+      "comparisons": [],
+      "uncertainties": [
+        "AI专项收入未披露",
+        "通讯及数据中心分部含基站等非AI应用",
+        "本轮无中外可比 pair（禁假 pair）",
+        "消费电子仍占约八成收入，概念板噪声需知情"
+      ],
+      "ai_analysis": {
+        "company_id": "luxshare",
+        "summary": "立讯精密年报披露通讯及数据中心分部收入与AI服务器相关产品叙述；宽口径通讯及数据中心可评A；窄口径AI相关止于B，禁假A。本轮不挂中外 pair。",
+        "observations": [
+          {
+            "text": "通讯及数据中心收入245.68亿元可核验；消费电子2642.66亿元仍为主体。",
+            "kind": "fact",
+            "source_ids": [
+              "src.luxshare_annual_2025.segment"
+            ]
+          },
+          {
+            "text": "AI服务器/光铜互联有产品与客户叙述，但无AI专项收入，不得评窄口径A。",
+            "kind": "inference",
+            "source_ids": [
+              "src.luxshare_annual_2025.narrow_business"
+            ]
+          }
+        ],
+        "uncertainties": [
+          "AI专项收入未知",
+          "本轮无可比 pair"
+        ]
+      }
+    },
+    {
+      "id": "shengyi",
+      "name": "生益科技",
+      "ticker": "600183.SH",
+      "exchange": "SSE",
+      "market": "CN",
+      "domicile": "中国",
+      "research_depth": "deep",
+      "business_summary": "覆铜板（CCL）/粘结片与印制线路板（PCB）电子材料制造商。2025年覆铜板和粘结片收入177.74亿元、印制线路板91.44亿元；年报叙述AI服务器/高算力应用与订单转化，但未单列AI专项收入。",
+      "claims": [
+        {
+          "id": "shengyi.segment",
+          "text": "2025年主营业务分行业：覆铜板和粘结片营业收入17,774,100,611.83元；印制线路板9,144,009,119.00元；主营合计27,867,432,387.35元。",
+          "kind": "fact",
+          "source_ids": [
+            "src.shengyi_annual_2025.segment",
+            "src.shengyi_annual_2025.financial"
+          ],
+          "verification": "primary_checked",
+          "limitations": [
+            "含非AI应用场景"
+          ]
+        },
+        {
+          "id": "shengyi.ai_narrative",
+          "text": "年报将AI服务器与高算力需求表述为增长驱动，并称AI端产品认证与订单转化；未披露AI专项收入绝对金额。",
+          "kind": "fact",
+          "source_ids": [
+            "src.shengyi_annual_2025.narrow_business",
+            "src.shengyi_annual_2025.business"
+          ],
+          "verification": "primary_checked",
+          "limitations": [
+            "叙述≠专项收入"
+          ]
+        },
+        {
+          "id": "shengyi.no_pair",
+          "text": "本轮无中外可比 pair（missing_reason）：缺已深核同环节海外CCL/高速PCB材料对标；禁假 pair。",
+          "kind": "inference",
+          "source_ids": [
+            "src.shengyi_annual_2025.segment"
+          ],
+          "verification": "analyst_inference",
+          "limitations": []
+        }
+      ],
+      "assessments": [
+        {
+          "concept": "覆铜板与印制线路板",
+          "grade": "A",
+          "rationale": "年报分行业披露覆铜板和粘结片17,774,100,611.83元与印制线路板9,144,009,119.00元；等级仅适用于电子材料/PCB主业口径（合计相关收入）。",
+          "revenue_metric_id": "shengyi.related_revenue",
+          "source_ids": [
+            "src.shengyi_annual_2025.segment"
+          ],
+          "limitations": [
+            "不得解释为AI专项收入"
+          ]
+        },
+        {
+          "concept": "AI服务器相关电子材料",
+          "grade": "B",
+          "rationale": "年报支持AI服务器/高算力应用与订单叙述；未单列AI专项收入，故不为A。",
+          "revenue_metric_id": null,
+          "source_ids": [
+            "src.shengyi_annual_2025.narrow_business",
+            "src.shengyi_annual_2025.business"
+          ],
+          "limitations": [
+            "不能解释成已知AI收入占比"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "id": "shengyi.revenue",
+          "name": "revenue",
+          "value": 28431138459.44,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "consolidated_total",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.shengyi_annual_2025.financial"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "shengyi.parent_net_profit",
+          "name": "parent_net_profit",
+          "value": 3333954377.92,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "attributable_to_parent",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.shengyi_annual_2025.financial"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "shengyi.related_revenue",
+          "name": "related_revenue",
+          "value": 26918109730.83,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "segment_ccl_and_pcb",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.shengyi_annual_2025.segment"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "shengyi.ai_specific_revenue",
+          "name": "ai_specific_revenue",
+          "value": null,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "ai_specific",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.shengyi_annual_2025.segment",
+            "src.shengyi_annual_2025.narrow_business"
+          ],
+          "missing_reason": "年报未单列AI专项收入；覆铜板/PCB主业不能替代"
+        }
+      ],
+      "comparisons": [],
+      "uncertainties": [
+        "AI专项收入未披露",
+        "覆铜板/PCB主业含消费电子与通讯等非AI场景",
+        "本轮无中外可比 pair（missing_reason）"
+      ],
+      "ai_analysis": {
+        "company_id": "shengyi",
+        "summary": "生益科技年报披露CCL/PCB分部收入与AI服务器需求叙述；宽口径覆铜板+PCB可评A；窄口径AI相关止于B，禁假A。本轮不挂中外 pair。",
+        "observations": [
+          {
+            "text": "覆铜板和粘结片177.74亿元+印制线路板91.44亿元可核验。",
+            "kind": "fact",
+            "source_ids": [
+              "src.shengyi_annual_2025.segment"
+            ]
+          }
+        ],
+        "uncertainties": [
+          "AI专项收入未披露",
+          "覆铜板/PCB主业含消费电子与通讯等非AI场景",
+          "本轮无中外可比 pair（missing_reason）"
+        ]
+      }
+    },
+    {
+      "id": "cambricon",
+      "name": "寒武纪",
+      "ticker": "688256.SH",
+      "exchange": "SSE",
+      "market": "CN",
+      "domicile": "中国",
+      "research_depth": "deep",
+      "business_summary": "人工智能芯片公司；云端智能芯片及板卡、智能整机为主。2025年营业收入64.97亿元（集成电路行业口径与合并一致）；云端产品线64.77亿元。云端产品线含芯片/板卡/整机，未单列纯芯片专项金额。",
+      "claims": [
+        {
+          "id": "cambricon.segment",
+          "text": "2025年集成电路行业营业收入6,497,196,198.68元；分产品云端产品线6,476,855,244.59元（含云端智能芯片及板卡、智能整机）。",
+          "kind": "fact",
+          "source_ids": [
+            "src.cambricon_annual_2025.segment",
+            "src.cambricon_annual_2025.financial"
+          ],
+          "verification": "primary_checked",
+          "limitations": [
+            "云端产品线含整机"
+          ]
+        },
+        {
+          "id": "cambricon.scope_boundary",
+          "text": "云端产品线收入不等于“仅AI芯片”专项收入；年报未拆分芯片/板卡与智能整机金额。",
+          "kind": "inference",
+          "source_ids": [
+            "src.cambricon_annual_2025.business",
+            "src.cambricon_annual_2025.narrow_business"
+          ],
+          "verification": "analyst_inference",
+          "limitations": []
+        },
+        {
+          "id": "cambricon.no_pair",
+          "text": "本轮无中外可比 pair（missing_reason）：海外对标如NVDA仍为广度E且生态/客户/准则差异大；有把握才挂→本轮不编造。",
+          "kind": "inference",
+          "source_ids": [
+            "src.cambricon_annual_2025.segment"
+          ],
+          "verification": "analyst_inference",
+          "limitations": [
+            "不为凑pair降低门槛"
+          ]
+        }
+      ],
+      "assessments": [
+        {
+          "concept": "云端产品线",
+          "grade": "A",
+          "rationale": "年报分产品披露云端产品线营业收入6,476,855,244.59元；等级仅适用于该分部口径（含芯片/板卡/整机）。",
+          "revenue_metric_id": "cambricon.related_revenue",
+          "source_ids": [
+            "src.cambricon_annual_2025.segment",
+            "src.cambricon_annual_2025.business"
+          ],
+          "limitations": [
+            "含智能整机；不得解释为纯芯片或训练专用收入"
+          ]
+        },
+        {
+          "concept": "AI芯片专项",
+          "grade": "B",
+          "rationale": "主业为人工智能芯片及相关产品，云端产品线可核验；但未单列纯芯片绝对金额，故窄口径不为A。",
+          "revenue_metric_id": null,
+          "source_ids": [
+            "src.cambricon_annual_2025.narrow_business",
+            "src.cambricon_annual_2025.business"
+          ],
+          "limitations": [
+            "不能把云端产品线全部等同纯芯片收入"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "id": "cambricon.revenue",
+          "name": "revenue",
+          "value": 6497196198.68,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "consolidated_total",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.cambricon_annual_2025.financial"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "cambricon.parent_net_profit",
+          "name": "parent_net_profit",
+          "value": 2059228538.67,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "attributable_to_parent",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.cambricon_annual_2025.financial"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "cambricon.related_revenue",
+          "name": "related_revenue",
+          "value": 6476855244.59,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "segment_cloud_product_line",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.cambricon_annual_2025.segment"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "cambricon.ai_specific_revenue",
+          "name": "ai_specific_revenue",
+          "value": null,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "ai_chip_only",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.cambricon_annual_2025.segment",
+            "src.cambricon_annual_2025.business"
+          ],
+          "missing_reason": "云端产品线含芯片/板卡/智能整机，年报未单列纯芯片专项金额"
+        }
+      ],
+      "comparisons": [],
+      "uncertainties": [
+        "纯芯片专项金额未拆分",
+        "云端产品线含智能整机",
+        "本轮无中外可比 pair（missing_reason）"
+      ],
+      "ai_analysis": {
+        "company_id": "cambricon",
+        "summary": "寒武纪年报披露云端产品线收入；宽口径云端AI算力产品可评A；窄口径纯芯片止于B，禁假A。本轮不挂中外 pair。",
+        "observations": [
+          {
+            "text": "云端产品线64.77亿元可核验。",
+            "kind": "fact",
+            "source_ids": [
+              "src.cambricon_annual_2025.segment"
+            ]
+          }
+        ],
+        "uncertainties": [
+          "纯芯片专项金额未拆分",
+          "云端产品线含智能整机",
+          "本轮无中外可比 pair（missing_reason）"
+        ]
+      }
+    },
+    {
+      "id": "sanhua",
+      "name": "三花智控",
+      "ticker": "002050.SZ",
+      "exchange": "SZSE",
+      "market": "CN",
+      "domicile": "中国",
+      "research_depth": "breadth",
+      "business_summary": "制冷空调电器零部件与汽车零部件为主；年报提及推进数据中心领域，但分产品无数据中心液冷专项收入。本轮对AI冷却概念保持诚实E。",
+      "claims": [
+        {
+          "id": "sanhua.segment",
+          "text": "2025年分产品：制冷空调电器零部件18,584,743,718.09元；汽车零部件12,427,000,792.18元。",
+          "kind": "fact",
+          "source_ids": [
+            "src.sanhua_annual_2025.segment",
+            "src.sanhua_annual_2025.financial"
+          ],
+          "verification": "primary_checked",
+          "limitations": [
+            "非数据中心液冷专项"
+          ]
+        },
+        {
+          "id": "sanhua.missing_dc",
+          "text": "年报未披露可核验的数据中心液冷专项收入；制冷空调/汽车热管理收入不得冒充AI液冷收入（missing_reason）。",
+          "kind": "inference",
+          "source_ids": [
+            "src.sanhua_annual_2025.missing_dc_cooling",
+            "src.sanhua_annual_2025.segment"
+          ],
+          "verification": "analyst_inference",
+          "limitations": []
+        }
+      ],
+      "assessments": [
+        {
+          "concept": "数据中心液冷",
+          "grade": "E",
+          "rationale": "冷却概念板市值成分含本公司，但年报分产品仅为制冷空调电器零部件与汽车零部件；无数据中心液冷专项收入可引，故评E，禁假A。",
+          "revenue_metric_id": null,
+          "source_ids": [
+            "src.sanhua_annual_2025.missing_dc_cooling",
+            "src.sanhua_annual_2025.segment"
+          ],
+          "limitations": [
+            "在板≠已核验AI液冷收入"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "id": "sanhua.revenue",
+          "name": "revenue",
+          "value": 31011744510.27,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "consolidated_total",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.sanhua_annual_2025.financial"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "sanhua.parent_net_profit",
+          "name": "parent_net_profit",
+          "value": 4062891412.1,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "attributable_to_parent",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.sanhua_annual_2025.financial"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "sanhua.related_revenue",
+          "name": "related_revenue",
+          "value": null,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "segment_datacenter_liquid_cooling",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.sanhua_annual_2025.missing_dc_cooling"
+          ],
+          "missing_reason": "年报无数据中心液冷专项分部；制冷空调/汽车零部件不能替代"
+        },
+        {
+          "id": "sanhua.ai_specific_revenue",
+          "name": "ai_specific_revenue",
+          "value": null,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "ai_specific",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.sanhua_annual_2025.missing_dc_cooling"
+          ],
+          "missing_reason": "无AI液冷专项收入披露"
+        }
+      ],
+      "comparisons": [],
+      "uncertainties": [
+        "数据中心液冷专项收入未披露",
+        "制冷空调与汽车零部件为主体",
+        "本轮无 pair、无 event 财务传导"
+      ],
+      "ai_analysis": {
+        "company_id": "sanhua",
+        "summary": "三花智控年报可核验集团与两大分部收入，但对AI冷却窄口径明确无专项披露→诚实E。",
+        "observations": [
+          {
+            "text": "缺数据中心液冷专项收入。",
+            "kind": "inference",
+            "source_ids": [
+              "src.sanhua_annual_2025.missing_dc_cooling"
+            ]
+          }
+        ],
+        "uncertainties": [
+          "数据中心液冷专项收入未披露",
+          "制冷空调与汽车零部件为主体",
+          "本轮无 pair、无 event 财务传导"
+        ]
+      }
+    },
+    {
+      "id": "hygon",
+      "name": "海光信息",
+      "ticker": "688041.SH",
+      "exchange": "SSE",
+      "market": "CN",
+      "domicile": "中国",
+      "research_depth": "deep",
+      "business_summary": "高端处理器公司；产品为海光CPU与海光DCU。2025年营业收入143.77亿元；分产品高端处理器143.62亿元。年报未单列CPU与DCU专项金额。",
+      "claims": [
+        {
+          "id": "hygon.segment",
+          "text": "2025年分产品高端处理器营业收入14,361,846,484.49元；分行业集成电路产品同额；合并营业收入14,376,889,476.95元。",
+          "kind": "fact",
+          "source_ids": [
+            "src.hygon_annual_2025.segment",
+            "src.hygon_annual_2025.financial"
+          ],
+          "verification": "primary_checked",
+          "limitations": [
+            "未拆CPU/DCU"
+          ]
+        },
+        {
+          "id": "hygon.scope_boundary",
+          "text": "高端处理器收入含CPU与DCU；不得把该分部全部等同DCU或AI协处理器专项收入。",
+          "kind": "inference",
+          "source_ids": [
+            "src.hygon_annual_2025.business",
+            "src.hygon_annual_2025.narrow_business"
+          ],
+          "verification": "analyst_inference",
+          "limitations": []
+        },
+        {
+          "id": "hygon.no_pair",
+          "text": "本轮无中外可比pair（missing_reason）：海外对标如AMD/NVDA产品组合、生态与准则差异大，且本公司未拆CPU/DCU；有把握才挂→本轮不编造。",
+          "kind": "inference",
+          "source_ids": [
+            "src.hygon_annual_2025.segment"
+          ],
+          "verification": "analyst_inference",
+          "limitations": [
+            "不为凑pair降低门槛"
+          ]
+        }
+      ],
+      "assessments": [
+        {
+          "concept": "高端处理器",
+          "grade": "A",
+          "rationale": "年报分产品披露高端处理器营业收入14,361,846,484.49元；等级仅适用于该分部口径（含CPU+DCU）。",
+          "revenue_metric_id": "hygon.related_revenue",
+          "source_ids": [
+            "src.hygon_annual_2025.segment",
+            "src.hygon_annual_2025.business"
+          ],
+          "limitations": [
+            "含CPU与DCU；不得解释为仅DCU或仅AI加速收入"
+          ]
+        },
+        {
+          "concept": "AI芯片/DCU专项",
+          "grade": "B",
+          "rationale": "主业含DCU且叙述AI/大模型应用，高端处理器收入可核验；但未单列DCU或AI专项绝对金额，故窄口径不为A。",
+          "revenue_metric_id": null,
+          "source_ids": [
+            "src.hygon_annual_2025.narrow_business",
+            "src.hygon_annual_2025.business"
+          ],
+          "limitations": [
+            "不能把高端处理器全部等同DCU/AI专项收入"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "id": "hygon.revenue",
+          "name": "revenue",
+          "value": 14376889476.95,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "consolidated_total",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.hygon_annual_2025.financial"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "hygon.parent_net_profit",
+          "name": "parent_net_profit",
+          "value": 2544890905.62,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "attributable_to_parent",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.hygon_annual_2025.financial"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "hygon.related_revenue",
+          "name": "related_revenue",
+          "value": 14361846484.49,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "segment_high_end_processor",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.hygon_annual_2025.segment"
+          ],
+          "missing_reason": null
+        },
+        {
+          "id": "hygon.ai_specific_revenue",
+          "name": "ai_specific_revenue",
+          "value": null,
+          "unit": "currency_units",
+          "currency": "CNY",
+          "period": "FY2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "scope": "dcu_or_ai_only",
+          "accounting_basis": "CAS",
+          "disclosure_status": "reported",
+          "source_ids": [
+            "src.hygon_annual_2025.segment",
+            "src.hygon_annual_2025.business"
+          ],
+          "missing_reason": "高端处理器含CPU与DCU，年报未单列DCU或AI专项金额"
+        }
+      ],
+      "comparisons": [],
+      "uncertainties": [
+        "CPU与DCU专项金额未拆分",
+        "高端处理器≠仅AI协处理器收入",
+        "本轮无中外可比pair（missing_reason）"
+      ],
+      "ai_analysis": {
+        "company_id": "hygon",
+        "summary": "海光年报披露高端处理器分部收入；宽口径高端处理器可评A；窄口径DCU/AI专项止于B，禁假A。本轮不挂中外pair。",
+        "observations": [
+          {
+            "text": "高端处理器143.62亿元可核验。",
+            "kind": "fact",
+            "source_ids": [
+              "src.hygon_annual_2025.segment"
+            ]
+          }
+        ],
+        "uncertainties": [
+          "CPU与DCU专项金额未拆分",
+          "高端处理器≠仅AI协处理器收入",
+          "本轮无中外可比pair（missing_reason）"
+        ]
+      }
+    }
+  ]
+}

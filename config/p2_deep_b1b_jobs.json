@@ -1,0 +1,7 @@
+[
+  {"id":"cn_notice_fii","provider":"hexin-ifind-ds-mcp","tool":"search_notice","arguments":{"query":"工业富联 601138 2025年年度报告 服务器 云计算 AI 主营业务 收入","time_start":"2026-01-01","time_end":"2026-10-21","size":8},"refresh":true},
+  {"id":"cn_notice_tfc","provider":"hexin-ifind-ds-mcp","tool":"search_notice","arguments":{"query":"天孚通信 300394 2025年年度报告 光器件 光模块 数据中心 主营业务 收入","time_start":"2026-01-01","time_end":"2026-10-21","size":8},"refresh":true},
+  {"id":"cn_notice_eoptolink","provider":"hexin-ifind-ds-mcp","tool":"search_notice","arguments":{"query":"新易盛 300502 2025年年度报告 光模块 800G 1.6T 数据中心 主营业务 收入构成","time_start":"2026-01-01","time_end":"2026-10-21","size":8},"refresh":true},
+  {"id":"cn_notice_fii_h1","provider":"hexin-ifind-ds-mcp","tool":"search_notice","arguments":{"query":"工业富联 2026年半年度报告 服务器 AI 云计算 业务","time_start":"2026-07-01","time_end":"2026-10-21","size":5},"refresh":true},
+  {"id":"cn_notice_tfc_h1","provider":"hexin-ifind-ds-mcp","tool":"search_notice","arguments":{"query":"天孚通信 2026年半年度报告 光器件 光模块 数据中心","time_start":"2026-07-01","time_end":"2026-10-21","size":5},"refresh":true}
+]

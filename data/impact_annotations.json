@@ -1,0 +1,86 @@
+{
+  "schema_version": "impact.1",
+  "concept_grades_version": "2026-10-21.p0",
+  "narrative_focus": [
+    "cooling",
+    "optics"
+  ],
+  "reviewed_at": "2026-10-21T14:15:00+00:00",
+  "rule": "Only annotate nodes with primary disclosure evidence. No negative/green without hard displacement evidence this round. Unannotated nodes stay unclear.",
+  "annotations": [
+    {
+      "node_id": "branch.cooling",
+      "impact": "positive",
+      "rationale": "英维克与Vertiv均有数据中心热管理/液冷相关产品与商业披露；与AI高密机柜热管理主题同向，非股价预测。",
+      "source_ids": [
+        "r2.envicool_h1_2026.p9",
+        "r2.vertiv_annual_2025.p21",
+        "src.vertiv_cooling_product.product"
+      ]
+    },
+    {
+      "node_id": "segment.thermal",
+      "impact": "positive",
+      "rationale": "温控与液冷设备环节有产品交付及规模采购/综合基础设施商业证据；不代表AI专项收入已单列。",
+      "source_ids": [
+        "r2.envicool_h1_2026.p14",
+        "r2.vertiv_q2_2026.c17"
+      ]
+    },
+    {
+      "node_id": "branch.optics",
+      "impact": "positive",
+      "rationale": "高速光通信分支有模块销售与数据中心光互联产品披露，与AI集群互连需求同向。",
+      "source_ids": [
+        "r2.innolight_annual_2025.p11",
+        "src.coherent_optics_product.product"
+      ]
+    },
+    {
+      "node_id": "segment.transceiver",
+      "impact": "positive",
+      "rationale": "光收发模块环节有商业销售/收入出货类披露；集团或母类收入≠AI专属收入。",
+      "source_ids": [
+        "r2.innolight_annual_2025.p13",
+        "r2.coherent_fy2025_tables.p3",
+        "src.innolight_annual_2025.narrow_business"
+      ]
+    },
+    {
+      "node_id": "company.envicool",
+      "impact": "positive",
+      "rationale": "深研样本：液冷/温控产品与商业进展有披露，列入叙事主线。",
+      "source_ids": [
+        "r2.envicool_h1_2026.p9",
+        "r2.envicool_h1_2026.p14"
+      ]
+    },
+    {
+      "node_id": "company.vrt",
+      "impact": "positive",
+      "rationale": "深研样本：数字基础设施与热管理商业收入有披露；液冷单品仍需单独理解。",
+      "source_ids": [
+        "r2.vertiv_q2_2026.c17",
+        "r2.vertiv_annual_2025.p21"
+      ]
+    },
+    {
+      "node_id": "company.innolight",
+      "impact": "positive",
+      "rationale": "深研样本：高速光模块商业销售有披露。",
+      "source_ids": [
+        "r2.innolight_annual_2025.p11",
+        "r2.innolight_annual_2025.p13"
+      ]
+    },
+    {
+      "node_id": "company.cohr",
+      "impact": "positive",
+      "rationale": "深研样本：高速数通光模块/OCS相关产品与收入出货披露。",
+      "source_ids": [
+        "r2.coherent_fy2025_tables.p3",
+        "src.coherent_fy2025_tables.business"
+      ]
+    }
+  ]
+}

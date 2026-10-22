@@ -1,0 +1,107 @@
+{
+  "theme_mode": "concept_board",
+  "feeds_window_days": 30,
+  "root": {
+    "id": "concept.ai",
+    "name": "AI",
+    "analysis_enabled": true,
+    "query_hints": [
+      "人工智能概念",
+      "AI概念板块"
+    ],
+    "ths_code": "885728.TI",
+    "ths_name": "人工智能"
+  },
+  "children": [
+    {
+      "id": "concept.ai_chip",
+      "name": "AI芯片",
+      "analysis_enabled": true,
+      "query_hints": [
+        "AI芯片",
+        "人工智能芯片"
+      ],
+      "shallow": false,
+      "ths_code": "885756.TI",
+      "ths_name": "芯片概念"
+    },
+    {
+      "id": "concept.ai_server",
+      "name": "算力服务器",
+      "analysis_enabled": true,
+      "query_hints": [
+        "AI服务器",
+        "算力服务器"
+      ],
+      "shallow": false,
+      "ths_code": "885887.TI",
+      "ths_name": "数据中心(AIDC)",
+      "mapping_note": "用数据中心(AIDC)板代理算力服务器"
+    },
+    {
+      "id": "concept.ai_optics",
+      "name": "光模块与光通信",
+      "analysis_enabled": true,
+      "query_hints": [
+        "光模块",
+        "光通信 AI"
+      ],
+      "shallow": false,
+      "ths_code": "886033.TI",
+      "ths_name": "共封装光学(CPO)",
+      "mapping_note": "扶摇无「光模块」独立概念；本轮用 CPO 板代理，边界写入可比说明"
+    },
+    {
+      "id": "concept.ai_cooling",
+      "name": "数据中心液冷",
+      "analysis_enabled": true,
+      "query_hints": [
+        "液冷",
+        "数据中心液冷"
+      ],
+      "shallow": false,
+      "ths_code": "886044.TI",
+      "ths_name": "液冷服务器"
+    },
+    {
+      "id": "concept.ai_power",
+      "name": "AIDC供配电",
+      "analysis_enabled": true,
+      "query_hints": [
+        "数据中心电源",
+        "UPS 数据中心"
+      ],
+      "shallow": false,
+      "ths_code": "885887.TI",
+      "ths_name": "数据中心(AIDC)",
+      "mapping_note": "无独立供配电板；暂与 AIDC 共用成分，深核时按业务筛选"
+    },
+    {
+      "id": "concept.ai_software",
+      "name": "AI应用软件",
+      "analysis_enabled": true,
+      "query_hints": [
+        "人工智能应用",
+        "AI软件"
+      ],
+      "shallow": true,
+      "coverage_note": "本轮浅覆盖",
+      "ths_code": "886108.TI",
+      "ths_name": "AI应用"
+    }
+  ],
+  "non_demo_placeholder": {
+    "id": "concept.other_demo_disabled",
+    "name": "其他板块（Demo不可分析）",
+    "analysis_enabled": false,
+    "query_hints": []
+  },
+  "rank_top_n": 10,
+  "rank_modes": [
+    "mkt_cap",
+    "concept_weight"
+  ],
+  "rank_default": "mkt_cap",
+  "deep_coverage_config": "config/p2_deep_coverage.json",
+  "deep_coverage_doc": "docs/P2_DEEP_COVERAGE.md"
+}

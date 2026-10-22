@@ -1,0 +1,5 @@
+[
+  {"id":"fuyao_fii_financial","provider":"fuyao","path":"/api/a-share/financials/income-statements?thscode=601138.SH&period=annual&limit=2","refresh":true},
+  {"id":"fuyao_tfc_financial","provider":"fuyao","path":"/api/a-share/financials/income-statements?thscode=300394.SZ&period=annual&limit=2","refresh":true},
+  {"id":"fuyao_eoptolink_financial","provider":"fuyao","path":"/api/a-share/financials/income-statements?thscode=300502.SZ&period=annual&limit=2","refresh":true}
+]

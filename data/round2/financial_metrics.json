@@ -1,0 +1,2112 @@
+{
+  "metrics": {
+    "m.inspur.FY2025.revenue": {
+      "id": "m.inspur.FY2025.revenue",
+      "company_id": "inspur",
+      "period": "FY2025",
+      "name": "revenue",
+      "value": 164781997658.23,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "consolidated_total",
+      "source_ids": [
+        "r2.inspur_annual_2025.p7"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "reported",
+      "missing_reason": null
+    },
+    "m.inspur.FY2025.parent_net_profit": {
+      "id": "m.inspur.FY2025.parent_net_profit",
+      "company_id": "inspur",
+      "period": "FY2025",
+      "name": "parent_net_profit",
+      "value": 2412866308.76,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "attributable_to_parent",
+      "source_ids": [
+        "r2.inspur_annual_2025.p7"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "reported",
+      "missing_reason": null
+    },
+    "m.inspur.FY2025.related_revenue": {
+      "id": "m.inspur.FY2025.related_revenue",
+      "company_id": "inspur",
+      "period": "FY2025",
+      "name": "related_revenue",
+      "value": 154605252900.0,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "服务器产品（年报万元换算为元，原表四舍五入）",
+      "source_ids": [
+        "r2.inspur_annual_2025.p7"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "reported",
+      "missing_reason": null
+    },
+    "m.inspur.FY2025.ocf": {
+      "id": "m.inspur.FY2025.ocf",
+      "company_id": "inspur",
+      "period": "FY2025",
+      "name": "ocf",
+      "value": 5453052054.22,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "consolidated_operating_cash_flow",
+      "source_ids": [
+        "r2.api.inspur.cashflow.2025"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.inspur.FY2025.cash_capex": {
+      "id": "m.inspur.FY2025.cash_capex",
+      "company_id": "inspur",
+      "period": "FY2025",
+      "name": "cash_capex",
+      "value": 225095466.43,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "cash_paid_to_acquire_fixed_intangible_other_long_term_assets",
+      "source_ids": [
+        "r2.api.inspur.cashflow.2025"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.inspur.FY2025.consolidated_net_profit": {
+      "id": "m.inspur.FY2025.consolidated_net_profit",
+      "company_id": "inspur",
+      "period": "FY2025",
+      "name": "consolidated_net_profit",
+      "value": 2409055340.96,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "consolidated_net_profit",
+      "source_ids": [
+        "r2.api.inspur.income.2025"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "数值来自对应扶摇合并利润表；输入来源另列于raw/fuyao公司financial.json",
+      "missing_reason": null
+    },
+    "m.inspur.FY2025.cash_conversion": {
+      "id": "m.inspur.FY2025.cash_conversion",
+      "company_id": "inspur",
+      "period": "FY2025",
+      "name": "cash_conversion",
+      "value": 2.2635644609338774,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "ratio",
+      "scope": "consolidated_ocf / consolidated_net_profit",
+      "source_ids": [
+        "r2.api.inspur.cashflow.2025",
+        "r2.api.inspur.income.2025"
+      ],
+      "formula": "divide(ocf,consolidated_net_profit)",
+      "input_metric_ids": [
+        "m.inspur.FY2025.ocf",
+        "m.inspur.FY2025.consolidated_net_profit"
+      ],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.inspur.FY2025.ocf_less_cash_capex": {
+      "id": "m.inspur.FY2025.ocf_less_cash_capex",
+      "company_id": "inspur",
+      "period": "FY2025",
+      "name": "ocf_less_cash_capex",
+      "value": 5227956587.79,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "经营现金流减购建长期资产现金支出；分析代理，非公司披露自由现金流",
+      "source_ids": [
+        "r2.api.inspur.cashflow.2025"
+      ],
+      "formula": "subtract(ocf,cash_capex)",
+      "input_metric_ids": [
+        "m.inspur.FY2025.ocf",
+        "m.inspur.FY2025.cash_capex"
+      ],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.inspur.FY2024.ocf": {
+      "id": "m.inspur.FY2024.ocf",
+      "company_id": "inspur",
+      "period": "FY2024",
+      "name": "ocf",
+      "value": 74866359.36,
+      "currency": "CNY",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "unit": "currency_units",
+      "scope": "consolidated_operating_cash_flow",
+      "source_ids": [
+        "r2.api.inspur.cashflow.2024"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.inspur.FY2024.cash_capex": {
+      "id": "m.inspur.FY2024.cash_capex",
+      "company_id": "inspur",
+      "period": "FY2024",
+      "name": "cash_capex",
+      "value": 247874482.68,
+      "currency": "CNY",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "unit": "currency_units",
+      "scope": "cash_paid_to_acquire_fixed_intangible_other_long_term_assets",
+      "source_ids": [
+        "r2.api.inspur.cashflow.2024"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.inspur.FY2024.consolidated_net_profit": {
+      "id": "m.inspur.FY2024.consolidated_net_profit",
+      "company_id": "inspur",
+      "period": "FY2024",
+      "name": "consolidated_net_profit",
+      "value": 2291633605.97,
+      "currency": "CNY",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "unit": "currency_units",
+      "scope": "consolidated_net_profit",
+      "source_ids": [
+        "r2.api.inspur.income.2024"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "数值来自对应扶摇合并利润表；输入来源另列于raw/fuyao公司financial.json",
+      "missing_reason": null
+    },
+    "m.inspur.FY2024.cash_conversion": {
+      "id": "m.inspur.FY2024.cash_conversion",
+      "company_id": "inspur",
+      "period": "FY2024",
+      "name": "cash_conversion",
+      "value": 0.03266942811667778,
+      "currency": "CNY",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "unit": "ratio",
+      "scope": "consolidated_ocf / consolidated_net_profit",
+      "source_ids": [
+        "r2.api.inspur.cashflow.2024",
+        "r2.api.inspur.income.2024"
+      ],
+      "formula": "divide(ocf,consolidated_net_profit)",
+      "input_metric_ids": [
+        "m.inspur.FY2024.ocf",
+        "m.inspur.FY2024.consolidated_net_profit"
+      ],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.inspur.FY2024.ocf_less_cash_capex": {
+      "id": "m.inspur.FY2024.ocf_less_cash_capex",
+      "company_id": "inspur",
+      "period": "FY2024",
+      "name": "ocf_less_cash_capex",
+      "value": -173008123.32,
+      "currency": "CNY",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "unit": "currency_units",
+      "scope": "经营现金流减购建长期资产现金支出；分析代理，非公司披露自由现金流",
+      "source_ids": [
+        "r2.api.inspur.cashflow.2024"
+      ],
+      "formula": "subtract(ocf,cash_capex)",
+      "input_metric_ids": [
+        "m.inspur.FY2024.ocf",
+        "m.inspur.FY2024.cash_capex"
+      ],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.innolight.FY2025.revenue": {
+      "id": "m.innolight.FY2025.revenue",
+      "company_id": "innolight",
+      "period": "FY2025",
+      "name": "revenue",
+      "value": 38239935640.67,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "consolidated_total",
+      "source_ids": [
+        "r2.innolight_annual_2025.p8"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "reported",
+      "missing_reason": null
+    },
+    "m.innolight.FY2025.parent_net_profit": {
+      "id": "m.innolight.FY2025.parent_net_profit",
+      "company_id": "innolight",
+      "period": "FY2025",
+      "name": "parent_net_profit",
+      "value": 10797254300.45,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "attributable_to_parent",
+      "source_ids": [
+        "r2.innolight_annual_2025.p8"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "reported",
+      "missing_reason": null
+    },
+    "m.innolight.FY2025.related_revenue": {
+      "id": "m.innolight.FY2025.related_revenue",
+      "company_id": "innolight",
+      "period": "FY2025",
+      "name": "related_revenue",
+      "value": 37456518745.9,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "光通信收发模块（包含非AI应用）",
+      "source_ids": [
+        "r2.innolight_annual_2025.p8"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "reported",
+      "missing_reason": null
+    },
+    "m.innolight.FY2025.ocf": {
+      "id": "m.innolight.FY2025.ocf",
+      "company_id": "innolight",
+      "period": "FY2025",
+      "name": "ocf",
+      "value": 10896126160.03,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "consolidated_operating_cash_flow",
+      "source_ids": [
+        "r2.api.innolight.cashflow.2025"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.innolight.FY2025.cash_capex": {
+      "id": "m.innolight.FY2025.cash_capex",
+      "company_id": "innolight",
+      "period": "FY2025",
+      "name": "cash_capex",
+      "value": 2759994695.91,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "cash_paid_to_acquire_fixed_intangible_other_long_term_assets",
+      "source_ids": [
+        "r2.api.innolight.cashflow.2025"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.innolight.FY2025.consolidated_net_profit": {
+      "id": "m.innolight.FY2025.consolidated_net_profit",
+      "company_id": "innolight",
+      "period": "FY2025",
+      "name": "consolidated_net_profit",
+      "value": 11579754107.99,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "consolidated_net_profit",
+      "source_ids": [
+        "r2.api.innolight.income.2025"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "数值来自对应扶摇合并利润表；输入来源另列于raw/fuyao公司financial.json",
+      "missing_reason": null
+    },
+    "m.innolight.FY2025.cash_conversion": {
+      "id": "m.innolight.FY2025.cash_conversion",
+      "company_id": "innolight",
+      "period": "FY2025",
+      "name": "cash_conversion",
+      "value": 0.9409635177409944,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "ratio",
+      "scope": "consolidated_ocf / consolidated_net_profit",
+      "source_ids": [
+        "r2.api.innolight.cashflow.2025",
+        "r2.api.innolight.income.2025"
+      ],
+      "formula": "divide(ocf,consolidated_net_profit)",
+      "input_metric_ids": [
+        "m.innolight.FY2025.ocf",
+        "m.innolight.FY2025.consolidated_net_profit"
+      ],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.innolight.FY2025.ocf_less_cash_capex": {
+      "id": "m.innolight.FY2025.ocf_less_cash_capex",
+      "company_id": "innolight",
+      "period": "FY2025",
+      "name": "ocf_less_cash_capex",
+      "value": 8136131464.120001,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "经营现金流减购建长期资产现金支出；分析代理，非公司披露自由现金流",
+      "source_ids": [
+        "r2.api.innolight.cashflow.2025"
+      ],
+      "formula": "subtract(ocf,cash_capex)",
+      "input_metric_ids": [
+        "m.innolight.FY2025.ocf",
+        "m.innolight.FY2025.cash_capex"
+      ],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.innolight.FY2024.ocf": {
+      "id": "m.innolight.FY2024.ocf",
+      "company_id": "innolight",
+      "period": "FY2024",
+      "name": "ocf",
+      "value": 3164582957.85,
+      "currency": "CNY",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "unit": "currency_units",
+      "scope": "consolidated_operating_cash_flow",
+      "source_ids": [
+        "r2.api.innolight.cashflow.2024"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.innolight.FY2024.cash_capex": {
+      "id": "m.innolight.FY2024.cash_capex",
+      "company_id": "innolight",
+      "period": "FY2024",
+      "name": "cash_capex",
+      "value": 2866157321.96,
+      "currency": "CNY",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "unit": "currency_units",
+      "scope": "cash_paid_to_acquire_fixed_intangible_other_long_term_assets",
+      "source_ids": [
+        "r2.api.innolight.cashflow.2024"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.innolight.FY2024.consolidated_net_profit": {
+      "id": "m.innolight.FY2024.consolidated_net_profit",
+      "company_id": "innolight",
+      "period": "FY2024",
+      "name": "consolidated_net_profit",
+      "value": 5371775138.93,
+      "currency": "CNY",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "unit": "currency_units",
+      "scope": "consolidated_net_profit",
+      "source_ids": [
+        "r2.api.innolight.income.2024"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "数值来自对应扶摇合并利润表；输入来源另列于raw/fuyao公司financial.json",
+      "missing_reason": null
+    },
+    "m.innolight.FY2024.cash_conversion": {
+      "id": "m.innolight.FY2024.cash_conversion",
+      "company_id": "innolight",
+      "period": "FY2024",
+      "name": "cash_conversion",
+      "value": 0.5891130726816594,
+      "currency": "CNY",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "unit": "ratio",
+      "scope": "consolidated_ocf / consolidated_net_profit",
+      "source_ids": [
+        "r2.api.innolight.cashflow.2024",
+        "r2.api.innolight.income.2024"
+      ],
+      "formula": "divide(ocf,consolidated_net_profit)",
+      "input_metric_ids": [
+        "m.innolight.FY2024.ocf",
+        "m.innolight.FY2024.consolidated_net_profit"
+      ],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.innolight.FY2024.ocf_less_cash_capex": {
+      "id": "m.innolight.FY2024.ocf_less_cash_capex",
+      "company_id": "innolight",
+      "period": "FY2024",
+      "name": "ocf_less_cash_capex",
+      "value": 298425635.88999987,
+      "currency": "CNY",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "unit": "currency_units",
+      "scope": "经营现金流减购建长期资产现金支出；分析代理，非公司披露自由现金流",
+      "source_ids": [
+        "r2.api.innolight.cashflow.2024"
+      ],
+      "formula": "subtract(ocf,cash_capex)",
+      "input_metric_ids": [
+        "m.innolight.FY2024.ocf",
+        "m.innolight.FY2024.cash_capex"
+      ],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.kehua.FY2025.revenue": {
+      "id": "m.kehua.FY2025.revenue",
+      "company_id": "kehua",
+      "period": "FY2025",
+      "name": "revenue",
+      "value": 8160262477.61,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "consolidated_total",
+      "source_ids": [
+        "r2.kehua_annual_2025.p7"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "reported",
+      "missing_reason": null
+    },
+    "m.kehua.FY2025.parent_net_profit": {
+      "id": "m.kehua.FY2025.parent_net_profit",
+      "company_id": "kehua",
+      "period": "FY2025",
+      "name": "parent_net_profit",
+      "value": 417988029.54,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "attributable_to_parent",
+      "source_ids": [
+        "r2.kehua_annual_2025.p7"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "reported",
+      "missing_reason": null
+    },
+    "m.kehua.FY2025.related_revenue": {
+      "id": "m.kehua.FY2025.related_revenue",
+      "company_id": "kehua",
+      "period": "FY2025",
+      "name": "related_revenue",
+      "value": 2239034564.24,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "数据中心产品（不含IDC服务，包含非AI应用，非UPS单品）",
+      "source_ids": [
+        "r2.kehua_annual_2025.p7"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "reported",
+      "missing_reason": null
+    },
+    "m.kehua.FY2025.ocf": {
+      "id": "m.kehua.FY2025.ocf",
+      "company_id": "kehua",
+      "period": "FY2025",
+      "name": "ocf",
+      "value": 1161768304.23,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "consolidated_operating_cash_flow",
+      "source_ids": [
+        "r2.api.kehua.cashflow.2025"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.kehua.FY2025.cash_capex": {
+      "id": "m.kehua.FY2025.cash_capex",
+      "company_id": "kehua",
+      "period": "FY2025",
+      "name": "cash_capex",
+      "value": 343859208.69,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "cash_paid_to_acquire_fixed_intangible_other_long_term_assets",
+      "source_ids": [
+        "r2.api.kehua.cashflow.2025"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.kehua.FY2025.consolidated_net_profit": {
+      "id": "m.kehua.FY2025.consolidated_net_profit",
+      "company_id": "kehua",
+      "period": "FY2025",
+      "name": "consolidated_net_profit",
+      "value": 428983268.39,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "consolidated_net_profit",
+      "source_ids": [
+        "r2.api.kehua.income.2025"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "数值来自对应扶摇合并利润表；输入来源另列于raw/fuyao公司financial.json",
+      "missing_reason": null
+    },
+    "m.kehua.FY2025.cash_conversion": {
+      "id": "m.kehua.FY2025.cash_conversion",
+      "company_id": "kehua",
+      "period": "FY2025",
+      "name": "cash_conversion",
+      "value": 2.7081902485152543,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "ratio",
+      "scope": "consolidated_ocf / consolidated_net_profit",
+      "source_ids": [
+        "r2.api.kehua.cashflow.2025",
+        "r2.api.kehua.income.2025"
+      ],
+      "formula": "divide(ocf,consolidated_net_profit)",
+      "input_metric_ids": [
+        "m.kehua.FY2025.ocf",
+        "m.kehua.FY2025.consolidated_net_profit"
+      ],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.kehua.FY2025.ocf_less_cash_capex": {
+      "id": "m.kehua.FY2025.ocf_less_cash_capex",
+      "company_id": "kehua",
+      "period": "FY2025",
+      "name": "ocf_less_cash_capex",
+      "value": 817909095.54,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "经营现金流减购建长期资产现金支出；分析代理，非公司披露自由现金流",
+      "source_ids": [
+        "r2.api.kehua.cashflow.2025"
+      ],
+      "formula": "subtract(ocf,cash_capex)",
+      "input_metric_ids": [
+        "m.kehua.FY2025.ocf",
+        "m.kehua.FY2025.cash_capex"
+      ],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.kehua.FY2024.ocf": {
+      "id": "m.kehua.FY2024.ocf",
+      "company_id": "kehua",
+      "period": "FY2024",
+      "name": "ocf",
+      "value": 1511566689.82,
+      "currency": "CNY",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "unit": "currency_units",
+      "scope": "consolidated_operating_cash_flow",
+      "source_ids": [
+        "r2.api.kehua.cashflow.2024"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.kehua.FY2024.cash_capex": {
+      "id": "m.kehua.FY2024.cash_capex",
+      "company_id": "kehua",
+      "period": "FY2024",
+      "name": "cash_capex",
+      "value": 320704616.47,
+      "currency": "CNY",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "unit": "currency_units",
+      "scope": "cash_paid_to_acquire_fixed_intangible_other_long_term_assets",
+      "source_ids": [
+        "r2.api.kehua.cashflow.2024"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.kehua.FY2024.consolidated_net_profit": {
+      "id": "m.kehua.FY2024.consolidated_net_profit",
+      "company_id": "kehua",
+      "period": "FY2024",
+      "name": "consolidated_net_profit",
+      "value": 328401626.52,
+      "currency": "CNY",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "unit": "currency_units",
+      "scope": "consolidated_net_profit",
+      "source_ids": [
+        "r2.api.kehua.income.2024"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "数值来自对应扶摇合并利润表；输入来源另列于raw/fuyao公司financial.json",
+      "missing_reason": null
+    },
+    "m.kehua.FY2024.cash_conversion": {
+      "id": "m.kehua.FY2024.cash_conversion",
+      "company_id": "kehua",
+      "period": "FY2024",
+      "name": "cash_conversion",
+      "value": 4.60279903555211,
+      "currency": "CNY",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "unit": "ratio",
+      "scope": "consolidated_ocf / consolidated_net_profit",
+      "source_ids": [
+        "r2.api.kehua.cashflow.2024",
+        "r2.api.kehua.income.2024"
+      ],
+      "formula": "divide(ocf,consolidated_net_profit)",
+      "input_metric_ids": [
+        "m.kehua.FY2024.ocf",
+        "m.kehua.FY2024.consolidated_net_profit"
+      ],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.kehua.FY2024.ocf_less_cash_capex": {
+      "id": "m.kehua.FY2024.ocf_less_cash_capex",
+      "company_id": "kehua",
+      "period": "FY2024",
+      "name": "ocf_less_cash_capex",
+      "value": 1190862073.35,
+      "currency": "CNY",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "unit": "currency_units",
+      "scope": "经营现金流减购建长期资产现金支出；分析代理，非公司披露自由现金流",
+      "source_ids": [
+        "r2.api.kehua.cashflow.2024"
+      ],
+      "formula": "subtract(ocf,cash_capex)",
+      "input_metric_ids": [
+        "m.kehua.FY2024.ocf",
+        "m.kehua.FY2024.cash_capex"
+      ],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.envicool.FY2025.revenue": {
+      "id": "m.envicool.FY2025.revenue",
+      "company_id": "envicool",
+      "period": "FY2025",
+      "name": "revenue",
+      "value": 6067759091.55,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "consolidated_total",
+      "source_ids": [
+        "r2.envicool_annual_2025.p7"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "reported",
+      "missing_reason": null
+    },
+    "m.envicool.FY2025.parent_net_profit": {
+      "id": "m.envicool.FY2025.parent_net_profit",
+      "company_id": "envicool",
+      "period": "FY2025",
+      "name": "parent_net_profit",
+      "value": 521914773.0,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "attributable_to_parent",
+      "source_ids": [
+        "r2.envicool_annual_2025.p7"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "reported",
+      "missing_reason": null
+    },
+    "m.envicool.FY2025.related_revenue": {
+      "id": "m.envicool.FY2025.related_revenue",
+      "company_id": "envicool",
+      "period": "FY2025",
+      "name": "related_revenue",
+      "value": 3448477492.62,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "机房温控节能产品（含风冷，包含非AI应用）",
+      "source_ids": [
+        "r2.envicool_annual_2025.p7"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "reported",
+      "missing_reason": null
+    },
+    "m.envicool.FY2025.ocf": {
+      "id": "m.envicool.FY2025.ocf",
+      "company_id": "envicool",
+      "period": "FY2025",
+      "name": "ocf",
+      "value": 157273222.36,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "consolidated_operating_cash_flow",
+      "source_ids": [
+        "r2.api.envicool.cashflow.2025"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.envicool.FY2025.cash_capex": {
+      "id": "m.envicool.FY2025.cash_capex",
+      "company_id": "envicool",
+      "period": "FY2025",
+      "name": "cash_capex",
+      "value": 303000207.71,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "cash_paid_to_acquire_fixed_intangible_other_long_term_assets",
+      "source_ids": [
+        "r2.api.envicool.cashflow.2025"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.envicool.FY2025.consolidated_net_profit": {
+      "id": "m.envicool.FY2025.consolidated_net_profit",
+      "company_id": "envicool",
+      "period": "FY2025",
+      "name": "consolidated_net_profit",
+      "value": 542679980.86,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "consolidated_net_profit",
+      "source_ids": [
+        "r2.api.envicool.income.2025"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "数值来自对应扶摇合并利润表；输入来源另列于raw/fuyao公司financial.json",
+      "missing_reason": null
+    },
+    "m.envicool.FY2025.cash_conversion": {
+      "id": "m.envicool.FY2025.cash_conversion",
+      "company_id": "envicool",
+      "period": "FY2025",
+      "name": "cash_conversion",
+      "value": 0.28980840994127843,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "ratio",
+      "scope": "consolidated_ocf / consolidated_net_profit",
+      "source_ids": [
+        "r2.api.envicool.cashflow.2025",
+        "r2.api.envicool.income.2025"
+      ],
+      "formula": "divide(ocf,consolidated_net_profit)",
+      "input_metric_ids": [
+        "m.envicool.FY2025.ocf",
+        "m.envicool.FY2025.consolidated_net_profit"
+      ],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.envicool.FY2025.ocf_less_cash_capex": {
+      "id": "m.envicool.FY2025.ocf_less_cash_capex",
+      "company_id": "envicool",
+      "period": "FY2025",
+      "name": "ocf_less_cash_capex",
+      "value": -145726985.34999996,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "经营现金流减购建长期资产现金支出；分析代理，非公司披露自由现金流",
+      "source_ids": [
+        "r2.api.envicool.cashflow.2025"
+      ],
+      "formula": "subtract(ocf,cash_capex)",
+      "input_metric_ids": [
+        "m.envicool.FY2025.ocf",
+        "m.envicool.FY2025.cash_capex"
+      ],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.envicool.FY2024.ocf": {
+      "id": "m.envicool.FY2024.ocf",
+      "company_id": "envicool",
+      "period": "FY2024",
+      "name": "ocf",
+      "value": 199835014.95,
+      "currency": "CNY",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "unit": "currency_units",
+      "scope": "consolidated_operating_cash_flow",
+      "source_ids": [
+        "r2.api.envicool.cashflow.2024"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.envicool.FY2024.cash_capex": {
+      "id": "m.envicool.FY2024.cash_capex",
+      "company_id": "envicool",
+      "period": "FY2024",
+      "name": "cash_capex",
+      "value": 353302473.72,
+      "currency": "CNY",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "unit": "currency_units",
+      "scope": "cash_paid_to_acquire_fixed_intangible_other_long_term_assets",
+      "source_ids": [
+        "r2.api.envicool.cashflow.2024"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.envicool.FY2024.consolidated_net_profit": {
+      "id": "m.envicool.FY2024.consolidated_net_profit",
+      "company_id": "envicool",
+      "period": "FY2024",
+      "name": "consolidated_net_profit",
+      "value": 454120286.8,
+      "currency": "CNY",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "unit": "currency_units",
+      "scope": "consolidated_net_profit",
+      "source_ids": [
+        "r2.api.envicool.income.2024"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "数值来自对应扶摇合并利润表；输入来源另列于raw/fuyao公司financial.json",
+      "missing_reason": null
+    },
+    "m.envicool.FY2024.cash_conversion": {
+      "id": "m.envicool.FY2024.cash_conversion",
+      "company_id": "envicool",
+      "period": "FY2024",
+      "name": "cash_conversion",
+      "value": 0.4400486407646653,
+      "currency": "CNY",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "unit": "ratio",
+      "scope": "consolidated_ocf / consolidated_net_profit",
+      "source_ids": [
+        "r2.api.envicool.cashflow.2024",
+        "r2.api.envicool.income.2024"
+      ],
+      "formula": "divide(ocf,consolidated_net_profit)",
+      "input_metric_ids": [
+        "m.envicool.FY2024.ocf",
+        "m.envicool.FY2024.consolidated_net_profit"
+      ],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.envicool.FY2024.ocf_less_cash_capex": {
+      "id": "m.envicool.FY2024.ocf_less_cash_capex",
+      "company_id": "envicool",
+      "period": "FY2024",
+      "name": "ocf_less_cash_capex",
+      "value": -153467458.77000004,
+      "currency": "CNY",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "unit": "currency_units",
+      "scope": "经营现金流减购建长期资产现金支出；分析代理，非公司披露自由现金流",
+      "source_ids": [
+        "r2.api.envicool.cashflow.2024"
+      ],
+      "formula": "subtract(ocf,cash_capex)",
+      "input_metric_ids": [
+        "m.envicool.FY2024.ocf",
+        "m.envicool.FY2024.cash_capex"
+      ],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.smci.FY2025.revenue": {
+      "id": "m.smci.FY2025.revenue",
+      "company_id": "smci",
+      "period": "FY2025",
+      "name": "revenue",
+      "value": 21972042000.0,
+      "currency": "USD",
+      "period_start": "2024-07-01",
+      "period_end": "2025-06-30",
+      "unit": "currency_units",
+      "scope": "consolidated_total",
+      "source_ids": [
+        "r2.smci_fy2025.c6"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "unaudited_release",
+      "missing_reason": null
+    },
+    "m.smci.FY2025.net_profit": {
+      "id": "m.smci.FY2025.net_profit",
+      "company_id": "smci",
+      "period": "FY2025",
+      "name": "net_profit",
+      "value": 1048854000.0,
+      "currency": "USD",
+      "period_start": "2024-07-01",
+      "period_end": "2025-06-30",
+      "unit": "currency_units",
+      "scope": "GAAP_net_income_not_EPS",
+      "source_ids": [
+        "r2.smci_fy2025.c6"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "reported",
+      "missing_reason": null
+    },
+    "m.cohr.FY2025.revenue": {
+      "id": "m.cohr.FY2025.revenue",
+      "company_id": "cohr",
+      "period": "FY2025",
+      "name": "revenue",
+      "value": 5810000000.0,
+      "currency": "USD",
+      "period_start": "2024-07-01",
+      "period_end": "2025-06-30",
+      "unit": "currency_units",
+      "scope": "consolidated_total",
+      "source_ids": [
+        "r2.coherent_fy2025_tables.p2"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "rounded_reported",
+      "missing_reason": null
+    },
+    "m.cohr.FY2025.net_profit": {
+      "id": "m.cohr.FY2025.net_profit",
+      "company_id": "cohr",
+      "period": "FY2025",
+      "name": "net_profit",
+      "value": null,
+      "currency": "USD",
+      "period_start": "2024-07-01",
+      "period_end": "2025-06-30",
+      "unit": "currency_units",
+      "scope": "GAAP_net_income_not_EPS",
+      "source_ids": [
+        "r2.coherent_fy2025_tables.p2"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "reported",
+      "missing_reason": "本轮未核实该项，保持null"
+    },
+    "m.etn.FY2025.revenue": {
+      "id": "m.etn.FY2025.revenue",
+      "company_id": "etn",
+      "period": "FY2025",
+      "name": "revenue",
+      "value": 27400000000.0,
+      "currency": "USD",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "consolidated_total",
+      "source_ids": [
+        "r2.eaton_fy2025.c0"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "rounded_reported",
+      "missing_reason": null
+    },
+    "m.etn.FY2025.net_profit": {
+      "id": "m.etn.FY2025.net_profit",
+      "company_id": "etn",
+      "period": "FY2025",
+      "name": "net_profit",
+      "value": null,
+      "currency": "USD",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "GAAP_net_income_not_EPS",
+      "source_ids": [
+        "r2.eaton_fy2025.c0"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "reported",
+      "missing_reason": "本轮未核实该项，保持null"
+    },
+    "m.vrt.FY2025.revenue": {
+      "id": "m.vrt.FY2025.revenue",
+      "company_id": "vrt",
+      "period": "FY2025",
+      "name": "revenue",
+      "value": 10229900000.0,
+      "currency": "USD",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "consolidated_total",
+      "source_ids": [
+        "r2.vertiv_fy2025.c17"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "单位美元百万换算；原表列顺序为当季本期、当季同期、累计本期、累计同期",
+      "missing_reason": null
+    },
+    "m.vrt.FY2025.net_profit": {
+      "id": "m.vrt.FY2025.net_profit",
+      "company_id": "vrt",
+      "period": "FY2025",
+      "name": "net_profit",
+      "value": 1332800000.0,
+      "currency": "USD",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "GAAP_net_income_not_EPS",
+      "source_ids": [
+        "r2.vertiv_annual_2025.p20"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "reported",
+      "missing_reason": null
+    },
+    "m.envicool.H12026.revenue": {
+      "id": "m.envicool.H12026.revenue",
+      "company_id": "envicool",
+      "period": "H12026",
+      "name": "revenue",
+      "value": 3016714649.18,
+      "currency": "CNY",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "unit": "currency_units",
+      "scope": "consolidated_total",
+      "source_ids": [
+        "r2.envicool_h1_2026.p7"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.envicool.H12025.revenue": {
+      "id": "m.envicool.H12025.revenue",
+      "company_id": "envicool",
+      "period": "H12025",
+      "name": "revenue",
+      "value": 2573139460.9,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "unit": "currency_units",
+      "scope": "consolidated_total",
+      "source_ids": [
+        "r2.envicool_h1_2026.p7"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.envicool.H12026.parent_net_profit": {
+      "id": "m.envicool.H12026.parent_net_profit",
+      "company_id": "envicool",
+      "period": "H12026",
+      "name": "parent_net_profit",
+      "value": 184767516.83,
+      "currency": "CNY",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "unit": "currency_units",
+      "scope": "attributable_to_parent",
+      "source_ids": [
+        "r2.envicool_h1_2026.p7"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.envicool.H12025.parent_net_profit": {
+      "id": "m.envicool.H12025.parent_net_profit",
+      "company_id": "envicool",
+      "period": "H12025",
+      "name": "parent_net_profit",
+      "value": 215640426.56,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "unit": "currency_units",
+      "scope": "attributable_to_parent",
+      "source_ids": [
+        "r2.envicool_h1_2026.p7"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.envicool.H12026.ocf": {
+      "id": "m.envicool.H12026.ocf",
+      "company_id": "envicool",
+      "period": "H12026",
+      "name": "ocf",
+      "value": 61871999.03,
+      "currency": "CNY",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "unit": "currency_units",
+      "scope": "consolidated_operating_cash_flow",
+      "source_ids": [
+        "r2.envicool_h1_2026.p7"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.envicool.H12025.ocf": {
+      "id": "m.envicool.H12025.ocf",
+      "company_id": "envicool",
+      "period": "H12025",
+      "name": "ocf",
+      "value": -233913848.18,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "unit": "currency_units",
+      "scope": "consolidated_operating_cash_flow",
+      "source_ids": [
+        "r2.envicool_h1_2026.p7"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.envicool.H12026.consolidated_net_profit": {
+      "id": "m.envicool.H12026.consolidated_net_profit",
+      "company_id": "envicool",
+      "period": "H12026",
+      "name": "consolidated_net_profit",
+      "value": 196695259.71,
+      "currency": "CNY",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "unit": "currency_units",
+      "scope": "consolidated_net_profit",
+      "source_ids": [
+        "r2.envicool_h1_2026.p44"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.envicool.H12025.consolidated_net_profit": {
+      "id": "m.envicool.H12025.consolidated_net_profit",
+      "company_id": "envicool",
+      "period": "H12025",
+      "name": "consolidated_net_profit",
+      "value": 225891956.62,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "unit": "currency_units",
+      "scope": "consolidated_net_profit",
+      "source_ids": [
+        "r2.envicool_h1_2026.p44"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.envicool.H12026.cash_capex": {
+      "id": "m.envicool.H12026.cash_capex",
+      "company_id": "envicool",
+      "period": "H12026",
+      "name": "cash_capex",
+      "value": 218409614.46,
+      "currency": "CNY",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "unit": "currency_units",
+      "scope": "cash_paid_to_acquire_fixed_intangible_other_long_term_assets",
+      "source_ids": [
+        "r2.envicool_h1_2026.p47"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.envicool.H12025.cash_capex": {
+      "id": "m.envicool.H12025.cash_capex",
+      "company_id": "envicool",
+      "period": "H12025",
+      "name": "cash_capex",
+      "value": 141431294.28,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "unit": "currency_units",
+      "scope": "cash_paid_to_acquire_fixed_intangible_other_long_term_assets",
+      "source_ids": [
+        "r2.envicool_h1_2026.p47"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.envicool.H12026.cash_conversion": {
+      "id": "m.envicool.H12026.cash_conversion",
+      "company_id": "envicool",
+      "period": "H12026",
+      "name": "cash_conversion",
+      "value": 0.3145576518784526,
+      "currency": "CNY",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "unit": "ratio",
+      "scope": "consolidated_ocf / consolidated_net_profit",
+      "source_ids": [
+        "r2.envicool_h1_2026.p7",
+        "r2.envicool_h1_2026.p44"
+      ],
+      "formula": "divide(ocf,consolidated_net_profit)",
+      "input_metric_ids": [
+        "m.envicool.H12026.ocf",
+        "m.envicool.H12026.consolidated_net_profit"
+      ],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.envicool.H12026.ocf_less_cash_capex": {
+      "id": "m.envicool.H12026.ocf_less_cash_capex",
+      "company_id": "envicool",
+      "period": "H12026",
+      "name": "ocf_less_cash_capex",
+      "value": -156537615.43,
+      "currency": "CNY",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "unit": "currency_units",
+      "scope": "经营现金流减长期资产购建支出，非公司披露FCF",
+      "source_ids": [
+        "r2.envicool_h1_2026.p7",
+        "r2.envicool_h1_2026.p47"
+      ],
+      "formula": "subtract(ocf,cash_capex)",
+      "input_metric_ids": [
+        "m.envicool.H12026.ocf",
+        "m.envicool.H12026.cash_capex"
+      ],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.envicool.H12025.cash_conversion": {
+      "id": "m.envicool.H12025.cash_conversion",
+      "company_id": "envicool",
+      "period": "H12025",
+      "name": "cash_conversion",
+      "value": -1.0355120725856326,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "unit": "ratio",
+      "scope": "consolidated_ocf / consolidated_net_profit",
+      "source_ids": [
+        "r2.envicool_h1_2026.p7",
+        "r2.envicool_h1_2026.p44"
+      ],
+      "formula": "divide(ocf,consolidated_net_profit)",
+      "input_metric_ids": [
+        "m.envicool.H12025.ocf",
+        "m.envicool.H12025.consolidated_net_profit"
+      ],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.envicool.H12025.ocf_less_cash_capex": {
+      "id": "m.envicool.H12025.ocf_less_cash_capex",
+      "company_id": "envicool",
+      "period": "H12025",
+      "name": "ocf_less_cash_capex",
+      "value": -375345142.46000004,
+      "currency": "CNY",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "unit": "currency_units",
+      "scope": "经营现金流减长期资产购建支出，非公司披露FCF",
+      "source_ids": [
+        "r2.envicool_h1_2026.p7",
+        "r2.envicool_h1_2026.p47"
+      ],
+      "formula": "subtract(ocf,cash_capex)",
+      "input_metric_ids": [
+        "m.envicool.H12025.ocf",
+        "m.envicool.H12025.cash_capex"
+      ],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.vrt.H12026.revenue": {
+      "id": "m.vrt.H12026.revenue",
+      "company_id": "vrt",
+      "period": "H12026",
+      "name": "revenue",
+      "value": 5923800000.0,
+      "currency": "USD",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "unit": "currency_units",
+      "scope": "consolidated_total",
+      "source_ids": [
+        "r2.vertiv_q2_2026.c17"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "单位美元百万换算；原表列顺序为当季本期、当季同期、累计本期、累计同期",
+      "missing_reason": null
+    },
+    "m.vrt.H12025.revenue": {
+      "id": "m.vrt.H12025.revenue",
+      "company_id": "vrt",
+      "period": "H12025",
+      "name": "revenue",
+      "value": 4674100000.0,
+      "currency": "USD",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "unit": "currency_units",
+      "scope": "consolidated_total",
+      "source_ids": [
+        "r2.vertiv_q2_2026.c17"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "单位美元百万换算；原表列顺序为当季本期、当季同期、累计本期、累计同期",
+      "missing_reason": null
+    },
+    "m.vrt.H12026.consolidated_net_profit": {
+      "id": "m.vrt.H12026.consolidated_net_profit",
+      "company_id": "vrt",
+      "period": "H12026",
+      "name": "consolidated_net_profit",
+      "value": 887900000.0,
+      "currency": "USD",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "unit": "currency_units",
+      "scope": "consolidated_net_profit",
+      "source_ids": [
+        "r2.vertiv_q2_2026.c17"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "单位美元百万换算；原表列顺序为当季本期、当季同期、累计本期、累计同期",
+      "missing_reason": null
+    },
+    "m.vrt.H12025.consolidated_net_profit": {
+      "id": "m.vrt.H12025.consolidated_net_profit",
+      "company_id": "vrt",
+      "period": "H12025",
+      "name": "consolidated_net_profit",
+      "value": 488700000.0,
+      "currency": "USD",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "unit": "currency_units",
+      "scope": "consolidated_net_profit",
+      "source_ids": [
+        "r2.vertiv_q2_2026.c17"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "单位美元百万换算；原表列顺序为当季本期、当季同期、累计本期、累计同期",
+      "missing_reason": null
+    },
+    "m.vrt.H12026.ocf": {
+      "id": "m.vrt.H12026.ocf",
+      "company_id": "vrt",
+      "period": "H12026",
+      "name": "ocf",
+      "value": 1866600000.0,
+      "currency": "USD",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "unit": "currency_units",
+      "scope": "consolidated_operating_cash_flow",
+      "source_ids": [
+        "r2.vertiv_q2_2026.c19"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "单位美元百万换算；原表列顺序为当季本期、当季同期、累计本期、累计同期",
+      "missing_reason": null
+    },
+    "m.vrt.H12025.ocf": {
+      "id": "m.vrt.H12025.ocf",
+      "company_id": "vrt",
+      "period": "H12025",
+      "name": "ocf",
+      "value": 626200000.0,
+      "currency": "USD",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "unit": "currency_units",
+      "scope": "consolidated_operating_cash_flow",
+      "source_ids": [
+        "r2.vertiv_q2_2026.c19"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "单位美元百万换算；原表列顺序为当季本期、当季同期、累计本期、累计同期",
+      "missing_reason": null
+    },
+    "m.vrt.H12026.cash_capex": {
+      "id": "m.vrt.H12026.cash_capex",
+      "company_id": "vrt",
+      "period": "H12026",
+      "name": "cash_capex",
+      "value": 285900000.0,
+      "currency": "USD",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "unit": "currency_units",
+      "scope": "cash_capital_expenditures_excludes_capitalized_software",
+      "source_ids": [
+        "r2.vertiv_q2_2026.c19"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "单位美元百万换算；原表列顺序为当季本期、当季同期、累计本期、累计同期",
+      "missing_reason": null
+    },
+    "m.vrt.H12025.cash_capex": {
+      "id": "m.vrt.H12025.cash_capex",
+      "company_id": "vrt",
+      "period": "H12025",
+      "name": "cash_capex",
+      "value": 81500000.0,
+      "currency": "USD",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "unit": "currency_units",
+      "scope": "cash_capital_expenditures_excludes_capitalized_software",
+      "source_ids": [
+        "r2.vertiv_q2_2026.c19"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "单位美元百万换算；原表列顺序为当季本期、当季同期、累计本期、累计同期",
+      "missing_reason": null
+    },
+    "m.vrt.H12026.cash_conversion": {
+      "id": "m.vrt.H12026.cash_conversion",
+      "company_id": "vrt",
+      "period": "H12026",
+      "name": "cash_conversion",
+      "value": 2.102263768442392,
+      "currency": "USD",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "unit": "ratio",
+      "scope": "consolidated_ocf / consolidated_net_profit",
+      "source_ids": [
+        "r2.vertiv_q2_2026.c19",
+        "r2.vertiv_q2_2026.c17"
+      ],
+      "formula": "divide(ocf,consolidated_net_profit)",
+      "input_metric_ids": [
+        "m.vrt.H12026.ocf",
+        "m.vrt.H12026.consolidated_net_profit"
+      ],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.vrt.H12026.ocf_less_cash_capex": {
+      "id": "m.vrt.H12026.ocf_less_cash_capex",
+      "company_id": "vrt",
+      "period": "H12026",
+      "name": "ocf_less_cash_capex",
+      "value": 1580700000.0,
+      "currency": "USD",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "unit": "currency_units",
+      "scope": "经营现金流减资本开支，不等于公司adjusted FCF；未扣资本化软件",
+      "source_ids": [
+        "r2.vertiv_q2_2026.c19",
+        "r2.vertiv_q2_2026.c19"
+      ],
+      "formula": "subtract(ocf,cash_capex)",
+      "input_metric_ids": [
+        "m.vrt.H12026.ocf",
+        "m.vrt.H12026.cash_capex"
+      ],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.vrt.H12025.cash_conversion": {
+      "id": "m.vrt.H12025.cash_conversion",
+      "company_id": "vrt",
+      "period": "H12025",
+      "name": "cash_conversion",
+      "value": 1.2813587067730714,
+      "currency": "USD",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "unit": "ratio",
+      "scope": "consolidated_ocf / consolidated_net_profit",
+      "source_ids": [
+        "r2.vertiv_q2_2026.c19",
+        "r2.vertiv_q2_2026.c17"
+      ],
+      "formula": "divide(ocf,consolidated_net_profit)",
+      "input_metric_ids": [
+        "m.vrt.H12025.ocf",
+        "m.vrt.H12025.consolidated_net_profit"
+      ],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.vrt.H12025.ocf_less_cash_capex": {
+      "id": "m.vrt.H12025.ocf_less_cash_capex",
+      "company_id": "vrt",
+      "period": "H12025",
+      "name": "ocf_less_cash_capex",
+      "value": 544700000.0,
+      "currency": "USD",
+      "period_start": "2025-01-01",
+      "period_end": "2025-06-30",
+      "unit": "currency_units",
+      "scope": "经营现金流减资本开支，不等于公司adjusted FCF；未扣资本化软件",
+      "source_ids": [
+        "r2.vertiv_q2_2026.c19",
+        "r2.vertiv_q2_2026.c19"
+      ],
+      "formula": "subtract(ocf,cash_capex)",
+      "input_metric_ids": [
+        "m.vrt.H12025.ocf",
+        "m.vrt.H12025.cash_capex"
+      ],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.vrt.FY2024.revenue": {
+      "id": "m.vrt.FY2024.revenue",
+      "company_id": "vrt",
+      "period": "FY2024",
+      "name": "revenue",
+      "value": 8011800000.0,
+      "currency": "USD",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "unit": "currency_units",
+      "scope": "consolidated_total",
+      "source_ids": [
+        "r2.vertiv_fy2025.c17"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "单位美元百万换算；原表列顺序为当季本期、当季同期、累计本期、累计同期",
+      "missing_reason": null
+    },
+    "m.vrt.FY2025.consolidated_net_profit": {
+      "id": "m.vrt.FY2025.consolidated_net_profit",
+      "company_id": "vrt",
+      "period": "FY2025",
+      "name": "consolidated_net_profit",
+      "value": 1332800000.0,
+      "currency": "USD",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "consolidated_net_profit",
+      "source_ids": [
+        "r2.vertiv_fy2025.c17"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "单位美元百万换算；原表列顺序为当季本期、当季同期、累计本期、累计同期",
+      "missing_reason": null
+    },
+    "m.vrt.FY2024.consolidated_net_profit": {
+      "id": "m.vrt.FY2024.consolidated_net_profit",
+      "company_id": "vrt",
+      "period": "FY2024",
+      "name": "consolidated_net_profit",
+      "value": 495800000.0,
+      "currency": "USD",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "unit": "currency_units",
+      "scope": "consolidated_net_profit",
+      "source_ids": [
+        "r2.vertiv_fy2025.c17"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "单位美元百万换算；原表列顺序为当季本期、当季同期、累计本期、累计同期",
+      "missing_reason": null
+    },
+    "m.vrt.FY2025.ocf": {
+      "id": "m.vrt.FY2025.ocf",
+      "company_id": "vrt",
+      "period": "FY2025",
+      "name": "ocf",
+      "value": 2113800000.0000002,
+      "currency": "USD",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "consolidated_operating_cash_flow",
+      "source_ids": [
+        "r2.vertiv_fy2025.c19"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "单位美元百万换算；原表列顺序为当季本期、当季同期、累计本期、累计同期",
+      "missing_reason": null
+    },
+    "m.vrt.FY2024.ocf": {
+      "id": "m.vrt.FY2024.ocf",
+      "company_id": "vrt",
+      "period": "FY2024",
+      "name": "ocf",
+      "value": 1319300000.0,
+      "currency": "USD",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "unit": "currency_units",
+      "scope": "consolidated_operating_cash_flow",
+      "source_ids": [
+        "r2.vertiv_fy2025.c19"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "单位美元百万换算；原表列顺序为当季本期、当季同期、累计本期、累计同期",
+      "missing_reason": null
+    },
+    "m.vrt.FY2025.cash_capex": {
+      "id": "m.vrt.FY2025.cash_capex",
+      "company_id": "vrt",
+      "period": "FY2025",
+      "name": "cash_capex",
+      "value": 220000000.0,
+      "currency": "USD",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "cash_capital_expenditures_excludes_capitalized_software",
+      "source_ids": [
+        "r2.vertiv_fy2025.c19"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "单位美元百万换算；原表列顺序为当季本期、当季同期、累计本期、累计同期",
+      "missing_reason": null
+    },
+    "m.vrt.FY2024.cash_capex": {
+      "id": "m.vrt.FY2024.cash_capex",
+      "company_id": "vrt",
+      "period": "FY2024",
+      "name": "cash_capex",
+      "value": 167000000.0,
+      "currency": "USD",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "unit": "currency_units",
+      "scope": "cash_capital_expenditures_excludes_capitalized_software",
+      "source_ids": [
+        "r2.vertiv_fy2025.c20"
+      ],
+      "formula": null,
+      "input_metric_ids": [],
+      "note": "单位美元百万换算；原表列顺序为当季本期、当季同期、累计本期、累计同期",
+      "missing_reason": null
+    },
+    "m.vrt.FY2025.cash_conversion": {
+      "id": "m.vrt.FY2025.cash_conversion",
+      "company_id": "vrt",
+      "period": "FY2025",
+      "name": "cash_conversion",
+      "value": 1.585984393757503,
+      "currency": "USD",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "ratio",
+      "scope": "consolidated_ocf / consolidated_net_profit",
+      "source_ids": [
+        "r2.vertiv_fy2025.c19",
+        "r2.vertiv_fy2025.c17"
+      ],
+      "formula": "divide(ocf,consolidated_net_profit)",
+      "input_metric_ids": [
+        "m.vrt.FY2025.ocf",
+        "m.vrt.FY2025.consolidated_net_profit"
+      ],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.vrt.FY2025.ocf_less_cash_capex": {
+      "id": "m.vrt.FY2025.ocf_less_cash_capex",
+      "company_id": "vrt",
+      "period": "FY2025",
+      "name": "ocf_less_cash_capex",
+      "value": 1893800000.0000002,
+      "currency": "USD",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "currency_units",
+      "scope": "经营现金流减资本开支，不等于公司adjusted FCF；未扣资本化软件",
+      "source_ids": [
+        "r2.vertiv_fy2025.c19",
+        "r2.vertiv_fy2025.c19"
+      ],
+      "formula": "subtract(ocf,cash_capex)",
+      "input_metric_ids": [
+        "m.vrt.FY2025.ocf",
+        "m.vrt.FY2025.cash_capex"
+      ],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.vrt.FY2024.cash_conversion": {
+      "id": "m.vrt.FY2024.cash_conversion",
+      "company_id": "vrt",
+      "period": "FY2024",
+      "name": "cash_conversion",
+      "value": 2.6609519967728925,
+      "currency": "USD",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "unit": "ratio",
+      "scope": "consolidated_ocf / consolidated_net_profit",
+      "source_ids": [
+        "r2.vertiv_fy2025.c19",
+        "r2.vertiv_fy2025.c17"
+      ],
+      "formula": "divide(ocf,consolidated_net_profit)",
+      "input_metric_ids": [
+        "m.vrt.FY2024.ocf",
+        "m.vrt.FY2024.consolidated_net_profit"
+      ],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.vrt.FY2024.ocf_less_cash_capex": {
+      "id": "m.vrt.FY2024.ocf_less_cash_capex",
+      "company_id": "vrt",
+      "period": "FY2024",
+      "name": "ocf_less_cash_capex",
+      "value": 1152300000.0,
+      "currency": "USD",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "unit": "currency_units",
+      "scope": "经营现金流减资本开支，不等于公司adjusted FCF；未扣资本化软件",
+      "source_ids": [
+        "r2.vertiv_fy2025.c19",
+        "r2.vertiv_fy2025.c20"
+      ],
+      "formula": "subtract(ocf,cash_capex)",
+      "input_metric_ids": [
+        "m.vrt.FY2024.ocf",
+        "m.vrt.FY2024.cash_capex"
+      ],
+      "note": null,
+      "missing_reason": null
+    },
+    "m.envicool.H12026.revenue_yoy_pct": {
+      "id": "m.envicool.H12026.revenue_yoy_pct",
+      "company_id": "envicool",
+      "period": "H12026",
+      "name": "revenue_yoy_pct",
+      "value": 17.23867652804374,
+      "currency": "CNY",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "unit": "percent",
+      "scope": "revenue同比，负基期不输出常规增长率",
+      "source_ids": [
+        "r2.envicool_h1_2026.p7",
+        "r2.envicool_h1_2026.p7"
+      ],
+      "formula": "growth_positive_base",
+      "input_metric_ids": [
+        "m.envicool.H12026.revenue",
+        "m.envicool.H12025.revenue"
+      ],
+      "note": "若上年基数不为正，增长率置空并看绝对额变化",
+      "missing_reason": null
+    },
+    "m.envicool.H12026.parent_net_profit_yoy_pct": {
+      "id": "m.envicool.H12026.parent_net_profit_yoy_pct",
+      "company_id": "envicool",
+      "period": "H12026",
+      "name": "parent_net_profit_yoy_pct",
+      "value": -14.316846902271308,
+      "currency": "CNY",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "unit": "percent",
+      "scope": "parent_net_profit同比，负基期不输出常规增长率",
+      "source_ids": [
+        "r2.envicool_h1_2026.p7",
+        "r2.envicool_h1_2026.p7"
+      ],
+      "formula": "growth_positive_base",
+      "input_metric_ids": [
+        "m.envicool.H12026.parent_net_profit",
+        "m.envicool.H12025.parent_net_profit"
+      ],
+      "note": "若上年基数不为正，增长率置空并看绝对额变化",
+      "missing_reason": null
+    },
+    "m.envicool.H12026.consolidated_net_profit_yoy_pct": {
+      "id": "m.envicool.H12026.consolidated_net_profit_yoy_pct",
+      "company_id": "envicool",
+      "period": "H12026",
+      "name": "consolidated_net_profit_yoy_pct",
+      "value": -12.925071501822117,
+      "currency": "CNY",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "unit": "percent",
+      "scope": "consolidated_net_profit同比，负基期不输出常规增长率",
+      "source_ids": [
+        "r2.envicool_h1_2026.p44",
+        "r2.envicool_h1_2026.p44"
+      ],
+      "formula": "growth_positive_base",
+      "input_metric_ids": [
+        "m.envicool.H12026.consolidated_net_profit",
+        "m.envicool.H12025.consolidated_net_profit"
+      ],
+      "note": "若上年基数不为正，增长率置空并看绝对额变化",
+      "missing_reason": null
+    },
+    "m.envicool.H12026.ocf_yoy_pct": {
+      "id": "m.envicool.H12026.ocf_yoy_pct",
+      "company_id": "envicool",
+      "period": "H12026",
+      "name": "ocf_yoy_pct",
+      "value": null,
+      "currency": "CNY",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "unit": "percent",
+      "scope": "ocf同比，负基期不输出常规增长率",
+      "source_ids": [
+        "r2.envicool_h1_2026.p7",
+        "r2.envicool_h1_2026.p7"
+      ],
+      "formula": "growth_positive_base",
+      "input_metric_ids": [
+        "m.envicool.H12026.ocf",
+        "m.envicool.H12025.ocf"
+      ],
+      "note": "若上年基数不为正，增长率置空并看绝对额变化",
+      "missing_reason": "本轮未核实该项，保持null"
+    },
+    "m.vrt.H12026.revenue_yoy_pct": {
+      "id": "m.vrt.H12026.revenue_yoy_pct",
+      "company_id": "vrt",
+      "period": "H12026",
+      "name": "revenue_yoy_pct",
+      "value": 26.736697973941514,
+      "currency": "USD",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "unit": "percent",
+      "scope": "revenue同比，负基期不输出常规增长率",
+      "source_ids": [
+        "r2.vertiv_q2_2026.c17",
+        "r2.vertiv_q2_2026.c17"
+      ],
+      "formula": "growth_positive_base",
+      "input_metric_ids": [
+        "m.vrt.H12026.revenue",
+        "m.vrt.H12025.revenue"
+      ],
+      "note": "若上年基数不为正，增长率置空并看绝对额变化",
+      "missing_reason": null
+    },
+    "m.vrt.H12026.consolidated_net_profit_yoy_pct": {
+      "id": "m.vrt.H12026.consolidated_net_profit_yoy_pct",
+      "company_id": "vrt",
+      "period": "H12026",
+      "name": "consolidated_net_profit_yoy_pct",
+      "value": 81.68610599549825,
+      "currency": "USD",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "unit": "percent",
+      "scope": "consolidated_net_profit同比，负基期不输出常规增长率",
+      "source_ids": [
+        "r2.vertiv_q2_2026.c17",
+        "r2.vertiv_q2_2026.c17"
+      ],
+      "formula": "growth_positive_base",
+      "input_metric_ids": [
+        "m.vrt.H12026.consolidated_net_profit",
+        "m.vrt.H12025.consolidated_net_profit"
+      ],
+      "note": "若上年基数不为正，增长率置空并看绝对额变化",
+      "missing_reason": null
+    },
+    "m.vrt.H12026.ocf_yoy_pct": {
+      "id": "m.vrt.H12026.ocf_yoy_pct",
+      "company_id": "vrt",
+      "period": "H12026",
+      "name": "ocf_yoy_pct",
+      "value": 198.0836793356755,
+      "currency": "USD",
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "unit": "percent",
+      "scope": "ocf同比，负基期不输出常规增长率",
+      "source_ids": [
+        "r2.vertiv_q2_2026.c19",
+        "r2.vertiv_q2_2026.c19"
+      ],
+      "formula": "growth_positive_base",
+      "input_metric_ids": [
+        "m.vrt.H12026.ocf",
+        "m.vrt.H12025.ocf"
+      ],
+      "note": "若上年基数不为正，增长率置空并看绝对额变化",
+      "missing_reason": null
+    }
+  }
+}
