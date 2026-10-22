@@ -6,7 +6,7 @@
 
 ## 1. 源代码与访问入口
 
-- [可编辑 HTML 评审入口（下载后打开）](https://github.com/caiwenjie295-hash/ChainScope/blob/main/submission/00_评审阅读入口.html)：内嵌视频、完整正文、页签与指标筛选；支持文字编辑、浏览器草稿及保存修订 HTML。
+- [可编辑 HTML 评审入口（下载后打开）](https://github.com/caiwenjie295-hash/ChainScope/blob/main/submission/00_评审阅读入口.html)：内嵌视频、完整正文、页签与指标筛选；支持文字编辑、AI 使用记录表增删行列、浏览器草稿及保存修订 HTML。
 
 - 公开源码仓库：[caiwenjie295-hash/ChainScope](https://github.com/caiwenjie295-hash/ChainScope)。
 - 当前公开仓库是本地项目的发布快照。原始开发基线为本地提交 `1cb9e86`、标签 `v0.3.22`；本仓库的提交历史从公开发布开始，原始本地历史保留在原源码包中。
